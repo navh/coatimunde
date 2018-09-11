@@ -29,6 +29,7 @@ Initially TurtleBot, Kinnect, ROS will be used to make a robot that can find tar
 ### Communication
 ### Decisions
 ### Misc
+Unable to even start up ROS. Issue where IP addresses were not being updated.
 
 ## 2018-09-10
 ### Overview
