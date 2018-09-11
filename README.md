@@ -16,7 +16,7 @@ Links to software within the Repo and quick descriptions about what they do.
 
 Links to documents produced for this project.
 
-[Project Diary](https://github.com/navh/coatimunde/blob/master/diary.md) to be updated whenever work is done.
+[Project Diary](https://github.com/navh/coatimunde/blob/master/DIARY.md) to be updated whenever work is done.
 
 [Report]() to be submitted when project is finished.
 
@@ -24,7 +24,7 @@ Links to documents produced for this project.
 
 Links to each deliverable to be added once produced.
 
-* [EEE455/457-DID-01: Project Commitment Document (PCD)](https://github.com/navh/coatimunde/blob/master/Project%20Commitment%20Document.pdf)
+* EEE455/457-DID-01: Project Commitment Document (PCD)
 * EEE455/457-DID-02: Part Order Form
 * EEE455/457-DID-03: Statement of Requirement (SOR)
 * EEE455/457-DID-04: Preliminary Design Specification (PDS)
