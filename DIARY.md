@@ -20,3 +20,23 @@ Dr Givigi - Showed us lab space, initial wheeled robot, spoke about software
 ### Decisions
 Initially TurtleBot, Kinnect, ROS will be used to make a robot that can find targets on a wall
 ### Misc
+
+## 2018-09-09
+### Overview
+* Went to lab to make gameplan
+* Saw robot for the first time
+### Tasks
+### Communication
+### Decisions
+### Misc
+
+## 2018-09-10
+### Overview
+* Monday Meeting with Dr Givigi
+### Tasks
+* Google potential fields
+* Create request paperwork for computers and robots needed so far
+### Communication
+Dr Givigi - Spoke about gameplan created on 2018-09-09
+### Decisions
+### Misc
