@@ -41,3 +41,16 @@ Unable to even start up ROS. Issue where IP addresses were not being updated.
 Dr Givigi - Spoke about gameplan created on 2018-09-09
 ### Decisions
 ### Misc
+
+## 2018-09-13
+### Overview
+* Started statement of requirements
+* Created the part ordering form for TurtleBot and Laptop, submitted
+### Tasks
+* Finish statement of requirements
+### Communication
+* First meeting with Capt Marasco, talked about broad goals
+### Decisions
+We will make a website to host all of the larger files and share info with our supervisors
+### Misc
+
