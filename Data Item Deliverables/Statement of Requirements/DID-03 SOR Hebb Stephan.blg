@@ -1,0 +1,5 @@
+[0] Config.pm:302> INFO - This is Biber 2.11
+[0] Config.pm:305> INFO - Logfile is 'DID-03 SOR Hebb Stephan.blg'
+[51] biber-MSWIN64:313> INFO - === 
+[787] Utils.pm:209> ERROR - Cannot find control file 'DID-03 SOR Hebb Stephan.bcf'! - Did latex run successfully on your .tex file before you ran biber?
+[787] Biber.pm:114> INFO - ERRORS: 1

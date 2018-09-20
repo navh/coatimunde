@@ -62,7 +62,13 @@
 
 \section{Document Purpose}
 
+The purpose of this document is to outline the project requirements. That is, what the project is to accomplish once all of the requirements outlined in this document have been completed and to what standard they shall be considered done. The benefits of meeting these requirements and solving this problem will be. This document will then identify the constraints that these requirements impose on this project will be.
+
 \section{Background}
+
+Both in the consumer and professional sectors the use of autonomous aerial vehicles is growing quickly. 
+
+Background is going to be a long section and maybe we should have subsections
 
 \section{Aim}
 
@@ -84,9 +90,21 @@
 
 \section{Functional Requirements (FR)}
 
-\subsection{FR-01: First Thing To Do}
+\subsection{FR-01: Movement Toward Target}
 
-\subsection{FR-02: Second Thing To Do}
+Be able to control the robot using ROS. In particular, given that our task is to move toward a target the robot must be able to do so in a manner that is controlled.
+
+\subsection{FR-02: Identification of Target}
+
+The robot shall recognize optically a goal and be able to give information on the targets location relative to the robot.
+
+\subsection{FR-03: Avoiding Obstacle}
+
+The robot shall be able to make a deviation from its current movement pattern to avoid an obstacle in its path and then return to this pattern.
+
+\subsection{FR-04: Identification of Obstacle}
+
+The robot shall recognize optically obstacles in its environment and identify where they are relative to itself.
 
 \section{Performance Requirements (PR)}
 
