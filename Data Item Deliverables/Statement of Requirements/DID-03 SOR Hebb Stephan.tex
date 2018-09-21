@@ -86,51 +86,72 @@ Background is going to be a long section and maybe we should have subsections
 
 \subsection{Another Reference}
 
+
+
 \chapter{Product Requirements}
 
 \section{Functional Requirements (FR)}
 
-\subsection{FR-01: Movement Toward Target}
+\subsection{FR-01: State Machine}
+Create a state machine for both land and air robots that allows for a movement decision to be made based on an input from the robot. 
 
-Be able to control the robot using ROS. In particular, given that our task is to move toward a target the robot must be able to do so in a manner that is controlled.
+\subsection{FR-02: Movement Toward Target}
+Be able to control the robot using ROS. In particular, given that our task is to move toward a target the robot must be able to do so in a manner that is controlled. (Don't think talking about ROS goes here, I would say "The air and land robots will be able to move toward a target under control", maybe throw a speed in there?)
 
-\subsection{FR-02: Identification of Target}
+\subsection{FR-03: Trajectory Library}
+Create a trajectory library that contains all possible allowed movements for both the land and air robots.
 
-The robot shall recognize optically a goal and be able to give information on the targets location relative to the robot. HELLO HEEBBBBBBBBBBBBBBBBBBBBBBBB
+\subsection{FR-04: Trajectory Library Updating State Machine}
+The Trajectory Library will update the state machine when a movement was made. The state machine will then account for this displacement and later correct the movement to keep the robot on the path to the target. 
 
-\subsection{FR-03: Avoiding Obstacle}
+\subsection{FR-05: Identification of Target}
+The robot shall recognize optically a goal and be able to give information on the targets location relative to the robot. 
 
+\subsection{FR-06: Avoiding Obstacle}
 The robot shall be able to make a deviation from its current movement pattern to avoid an obstacle in its path and then return to this pattern.
 
-\subsection{FR-04: Identification of Obstacle}
-
+\subsection{FR-07: Identification of Obstacle}
 The robot shall recognize optically obstacles in its environment and identify where they are relative to itself.
+
+\subsection{FR-is 08: Multiple Obstacles}
+The robot shall be able identify multiple obstacles and determine which is the most dangerous and avoid it accordingly. 
+
 
 \section{Performance Requirements (PR)}
 
-\subsection{PR-01}
+\subsection{PR-01: Target Identification}
+The robot will be able to identify and locate an OpenCV SYMBOL within a 15m radius. See FR-05.
+
+\subsection{PR-02: State Machine Corrections}
+The state machine will be able to correct for movements made and put the robot back on its original path without deviating more than 15cm??. See FR-04.
+
 
 \section{Interface Requirements (IR)}
 
-\subsection{IR-01}
+\subsection{IR-01: Turtlebot Communication through ROS}
+Communication to the Turtlebot will be done through Robot Operating System through USB.
+
+\subsection{IR-02: Air Robot Communication}
+The air robot will be communicating through Robot Operating System over wireless network.
+
 
 \section{Simulation Requirements (SimR)}
 
-\subsection{SimR-01}
+\subsection{SimR-01: Air Robot}
+The final product will be an air robot, but for simulation we will be using a TurtleBot to create and test our systems. 
+
 
 \section{Implementation Requirements (ImpR)}
 
-\subsection{ImpR-01}
+\subsection{ImpR-01: Turtlebot Robot Operating System}
+The simplest obstacle avoidance algorithm must be implemented on a Turtlebot using the Robot Operating System.
 
-\subsection{ImpR-02: Turtlebot Robot Operating System}
-
-The simplest obstacle avoidance algorithm must be implemented on a Turtlebot using the Robot Operating System
 
 \section{Schedule Restrictions (SR)}
 
 \subsection{SchR-01: First Prototype}
 
-The first functional prototype shall be available for Beta testing no later than November \nth{1}
+The first functional prototype shall be available for Beta testing no later than November \nth{1} (Military standard is 01 Nov 18, but thats soon...)
 
 \chapter{Risk Assessment}
 
