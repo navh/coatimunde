@@ -66,36 +66,22 @@ The purpose of this document is to outline the project requirements. That is, wh
 
 \section{Background}
 
-\subsection{Obstacle Avoidance}
+Both in the consumer and professional sectors the use of autonomous aerial vehicles is growing quickly. 
 
-Obstacle avoidance is the task of satisfying a control objective, in this case moving toward a visual target, while subject to non-intersection or non-collision position constraints. Those later constraints are, in this case, to be dynamically created while moving in a reactive manner, instead of being pre-computed.
+Use the references here^
 
-\subsection{Uncrewed Aerial Vehicles}
-
-Very generally any powered vehicle that uses aerodynamic forces to provide lift that does not carry a human operator can be considered an uncrewed aerial vehicle. Currently most of these vehicles make up a single component of a larger Uncrewed aircraft system. 
-
-An Uncrewed aircraft system (UAS), or Remotely piloted aircraft system (RPAS), is an aircraft without a human pilot on-board, instead controlled from an operator on the ground. 
-
-Such a system can have varying levels of automation, something as simple as a model aircraft has limited capability. An UAS capable of detecting, recognizing, identifying, and tracking targets of interest in complex environments and integrate with the systems required to process and fuse the collected information into actionable intelligence while operating in a low-to-medium threat environment is the current goal of the RPAS project by the RCAF. 
-
-Flying a UAS requires a secure link to the operator off-board. Maintaining this link, particularly while flying close to the ground where more opportunities for interference are introduced, and in environments where potentially hostile actors may be attempting to jam communications, necessitate a level of automation on-board capable of maintaining flight while denied navigation information.
-
+Background is going to be a long section and maybe we should have subsections... 
 
 \section{Aim}
 
-Tracking targets of interest in complex environments with an uncrewed aerial vehicle is the ultimate goal of this project. 
-
-\subsection{Targets of Interest}
-
-This target will be an object in the environment that has already been identified visually by an operator before navigation information is denied, or pre-programmed into the UAV before operation.
-
-\subsection{Complex Environment}
-
-The proposed use case of this project would be an environment with obstacles that the UAV could potentially collide with. Flying at sufficiently low altitude that trees or buildings could come between the UAV and the target of interest is the core of the project.
+The aim of this project is to build an air robot that is able to identify a target and move to the target, effectively avoiding any obstacles that are in the way. 
+Maybe add a benefit or relation to the problem from background?
 
 \section{Scope}
-
-A system light enough to be transported on board a small UAV capable of identifying and moving toward a target while avoiding obstacles in the environment and operating in real time.
+The scope of the project is limited due to only testing indoors. This limits the range at which we can set up targets from the robot for identification, and it constraints certain characteristics of the obstacles. To fit everything inside for testing we will be using smaller obstacles. 
+(I don't know what else he wants, it says clearly state what you will do but isn't that the aim??).
+A possible end goal of this project is...  
+ 
 
 \chapter{Requirement Definition Activities}
 
@@ -106,9 +92,9 @@ A system light enough to be transported on board a small UAV capable of identify
 \section{How References Were Used}
 
 \subsection{First Reference}
+Don't forget most references will be used in the background part. 
 
 \subsection{Another Reference}
-
 
 
 \chapter{Product Requirements}
@@ -119,10 +105,10 @@ A system light enough to be transported on board a small UAV capable of identify
 Create a state machine for both land and air robots that allows for a movement decision to be made based on an input from the robot. 
 
 \subsection{FR-02: Movement Toward Target}
-Be able to control the robot using ROS. In particular, given that our task is to move toward a target the robot must be able to do so in a manner that is controlled. (Don't think talking about ROS goes here, I would say "The air and land robots will be able to move toward a target under control", maybe throw a speed in there?)
+The air and land robots will be able to move toward a target under control.
 
 \subsection{FR-03: Trajectory Library}
-Create a trajectory library that contains all possible allowed movements for both the land and air robots.
+Create a trajectory library that will contain all possible allowed movements for both the land and air robots.
 
 \subsection{FR-04: Trajectory Library Updating State Machine}
 The Trajectory Library will update the state machine when a movement was made. The state machine will then account for this displacement and later correct the movement to keep the robot on the path to the target. 
@@ -143,10 +129,10 @@ The robot shall be able identify multiple obstacles and determine which is the m
 \section{Performance Requirements (PR)}
 
 \subsection{PR-01: Target Identification}
-The robot will be able to identify and locate an OpenCV SYMBOL within a 15m radius. See FR-05.
+The robot will be able to identify and locate OpenCV's ArCuo shapes within a 15m radius. See FR-05.
 
 \subsection{PR-02: State Machine Corrections}
-The state machine will be able to correct for movements made and put the robot back on its original path without deviating more than 15cm??. See FR-04.
+The state machine will be able to correct for movements made and put the robot back on its original path without deviating more than 15cm (we need to pick a acceptable deviation). See FR-04.
 
 
 \section{Interface Requirements (IR)}
@@ -174,7 +160,7 @@ The simplest obstacle avoidance algorithm must be implemented on a Turtlebot usi
 
 \subsection{SchR-01: First Prototype}
 
-The first functional prototype shall be available for Beta testing no later than November \nth{1} (Military standard is 01 Nov 18, but thats soon...)
+The first functional prototype shall be available for Beta testing no later than November \nth{1}. (Still thats super soon to have a fully functioning Turtlebot)
 
 \chapter{Risk Assessment}
 
