@@ -64,18 +64,34 @@
 
 The purpose of this document is to outline the project requirements. That is, what the project is to accomplish once all of the requirements outlined in this document have been completed and to what standard they shall be considered done. The benefits of meeting these requirements and solving this problem will be. This document will then identify the constraints that these requirements impose on this project will be.
 
-\section{Background}
+\subsection{Obstacle Avoidance}
 
 Both in the consumer and professional sectors the use of autonomous aerial vehicles is growing quickly. 
+Obstacle avoidance is the task of satisfying a control objective, in this case moving toward a visual target, while subject to non-intersection or non-collision position constraints. Those later constraints are, in this case, to be dynamically created while moving in a reactive manner, instead of being pre-computed.
 
-Use the references here^
+\subsection{Uncrewed Aerial Vehicles}
 
-Background is going to be a long section and maybe we should have subsections... 
+Very generally any powered vehicle that uses aerodynamic forces to provide lift that does not carry a human operator can be considered an uncrewed aerial vehicle. Currently most of these vehicles make up a single component of a larger Uncrewed aircraft system. 
+
+An Uncrewed aircraft system (UAS), or Remotely piloted aircraft system (RPAS), is an aircraft without a human pilot on-board, instead controlled from an operator on the ground. 
+Such a system can have varying levels of automation, something as simple as a model aircraft has limited capability. An UAS capable of detecting, recognizing, identifying, and tracking targets of interest in complex environments and integrate with the systems required to process and fuse the collected information into actionable intelligence while operating in a low-to-medium threat environment is the current goal of the RPAS project by the RCAF. 
+
+Flying a UAS requires a secure link to the operator off-board. Maintaining this link, particularly while flying close to the ground where more opportunities for interference are introduced, and in environments where potentially hostile actors may be attempting to jam communications, necessitate a level of automation on-board capable of maintaining flight while denied navigation information.
 
 \section{Aim}
 
-The aim of this project is to build an air robot that is able to identify a target and move to the target, effectively avoiding any obstacles that are in the way. 
-Maybe add a benefit or relation to the problem from background?
+The aim of this project is to build an air robot that is able to identify a target and move to the target, avoiding any obstacles that are in the way. 
+
+Tracking targets of interest in complex environments with an uncrewed aerial vehicle is the ultimate goal of this project. 
+
+\subsection{Targets of Interest}
+
+This target will be an object in the environment that has already been identified visually by an operator before navigation information is denied, or pre-programmed into the UAV before operation.
+
+\subsection{Complex Environment}
+
+The proposed use case of this project would be an environment with obstacles that the UAV could potentially collide with. Flying at sufficiently low altitude that trees or buildings could come between the UAV and the target of interest is the core of the project.
+
 
 \section{Scope}
 The scope of the project is limited due to only testing indoors. This limits the range at which we can set up targets from the robot for identification, and it constraints certain characteristics of the obstacles. To fit everything inside for testing we will be using smaller obstacles. 
