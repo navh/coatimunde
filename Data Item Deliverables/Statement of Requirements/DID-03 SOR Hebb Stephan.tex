@@ -5,6 +5,11 @@
 \usepackage[margin=3cm]{geometry}
 \usepackage[super]{nth}
 
+
+\usepackage[backend=bibtex,style=ieee]{biblatex}
+\addbibresource{bibliographyDID03}
+
+
 \addto\captionsenglish{\renewcommand{\chaptername}{Part}}
 
 \pagestyle{fancy}
@@ -12,7 +17,6 @@
 \fancyhead[LE,LO]{DID - 03 SOR (Hebb \& Stephan)}
 \fancyfoot[CE,CO]{\leftmark}
 \fancyfoot[LE,RO]{\thepage}
-
 
 % Title Page
 \title{Statement of Requirements}
@@ -236,11 +240,11 @@ High likelihood, although hardware for flying robot has not yet been chosen ther
 
 \subsection{Impact}
 
-Medium impact, presumably we would still be able to prove our systems on the ground robot which is capable of carrying as much processing power as needed. It may also only be a limitation at higher speeds or may impose limits on what the air robot is capable of identifying and tracking.
+Medium impact, presumably we would still be able to prove our systems on the ground robot which is capable of carrying as much processing power as needed. It may also only be a limitation at higher speeds or may impose limits on what the air robot is capable of identifying and tracking. \cite{gregory2011}
 
 \subsection{Process Solution}
 
-Testing many algorithms and working to streamline the algorithm used, especially for the flying robot, as well as selecting hardware that is complimentary to the kind of loads created by running such an algorithm can mitigate these risks. 
+Testing many algorithms and working to streamline the algorithm used, especially for the flying robot, as well as selecting hardware that is complimentary to the kind of loads created by running such an algorithm can mitigate these risks. \cite{ExampleForKara}
 
 %\section{RISK NAME} 
 %risk description text 					ctrl - U for uncomment
@@ -258,5 +262,7 @@ Testing many algorithms and working to streamline the algorithm used, especially
 \section{Link to Preliminary Design Specification}
 
 \chapter*{References}
+
+\printbibliography
 
 \end{document}          

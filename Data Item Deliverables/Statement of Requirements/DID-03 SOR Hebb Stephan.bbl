@@ -1,0 +1,62 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{none/global//global/global}
+  \entry{gregory2011}{article}{}
+    \name{author}{1}{}{%
+      {{hash=GD}{%
+         family={Gregory},
+         familyi={G\bibinitperiod},
+         given={Derek},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Sage Publications Sage UK: London, England}%
+    }
+    \strng{namehash}{GD1}
+    \strng{fullhash}{GD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{7-8}
+    \field{pages}{188\bibrangedash 215}
+    \field{title}{From a view to a kill: Drones and late modern war}
+    \field{volume}{28}
+    \field{journaltitle}{Theory, Culture \& Society}
+    \field{year}{2011}
+  \endentry
+
+  \entry{ExampleForKara}{article}{}
+    \name{author}{1}{}{%
+      {{hash=BN}{%
+         family={Bell},
+         familyi={B\bibinitperiod},
+         given={Nick},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BN1}
+    \strng{fullhash}{BN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{How to be navy AF}
+    \field{journaltitle}{Official Journal of officialness}
+    \field{year}{2017}
+  \endentry
+\enddatalist
+\endinput
