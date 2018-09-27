@@ -64,6 +64,8 @@
 
 The purpose of this document is to outline the project requirements. That is, what the project is to accomplish once all of the requirements outlined in this document have been completed and to what standard they shall be considered done. The benefits of meeting these requirements and solving this problem will be. This document will then identify the constraints that these requirements impose on this project will be.
 
+\section{Background}
+
 \subsection{Obstacle Avoidance}
 
 Both in the consumer and professional sectors the use of autonomous aerial vehicles is growing quickly. 
@@ -74,9 +76,22 @@ Obstacle avoidance is the task of satisfying a control objective, in this case m
 Very generally any powered vehicle that uses aerodynamic forces to provide lift that does not carry a human operator can be considered an uncrewed aerial vehicle. Currently most of these vehicles make up a single component of a larger Uncrewed aircraft system. 
 
 An Uncrewed aircraft system (UAS), or Remotely piloted aircraft system (RPAS), is an aircraft without a human pilot on-board, instead controlled from an operator on the ground. 
+
 Such a system can have varying levels of automation, something as simple as a model aircraft has limited capability. An UAS capable of detecting, recognizing, identifying, and tracking targets of interest in complex environments and integrate with the systems required to process and fuse the collected information into actionable intelligence while operating in a low-to-medium threat environment is the current goal of the RPAS project by the RCAF. 
 
 Flying a UAS requires a secure link to the operator off-board. Maintaining this link, particularly while flying close to the ground where more opportunities for interference are introduced, and in environments where potentially hostile actors may be attempting to jam communications, necessitate a level of automation on-board capable of maintaining flight while denied navigation information.
+
+\section{Definitions}
+
+Many words used during this project have many synonyms, and similarly there are many different ways to word many of the things in this project and often no conventions. For this purpose we will define terms which we intend to have more specific meanings than in normal English, or will clarify what we mean by the often vague descriptions used for many of the components of this project.
+
+\subsection{Flying Robot}
+
+A Flying Robot refers to any vehicle that is able to execute instructions while in the air under its own power.
+
+\subsection{Marker}
+
+A marker will be specifically a high contrast shape, such as one output by ArUco or a QR Code generator, that is optimized for identification by a camera.
 
 \section{Aim}
 
@@ -127,7 +142,7 @@ The air and land robots will be able to move toward a target under control.
 Create a trajectory library that will contain all possible allowed movements for both the land and air robots.
 
 \subsection{FR-04: Trajectory Library Updating State Machine}
-The Trajectory Library will update the state machine when a movement was made. The state machine will then account for this displacement and later correct the movement to keep the robot on the path to the target. 
+The Trajectory Library will update the state machine when a movement was made. The state machine will then account for this displacement and later correct the movement to keep the robot on the path to the target.
 
 \subsection{FR-05: Identification of Target}
 The robot shall recognize optically a goal and be able to give information on the targets location relative to the robot. 
@@ -138,8 +153,8 @@ The robot shall be able to make a deviation from its current movement pattern to
 \subsection{FR-07: Identification of Obstacle}
 The robot shall recognize optically obstacles in its environment and identify where they are relative to itself.
 
-\subsection{FR-is 08: Multiple Obstacles}
-The robot shall be able identify multiple obstacles and determine which is the most dangerous and avoid it accordingly. 
+\subsection{FR-08: Multiple Obstacles}
+The robot should be able identify multiple obstacles and determine which is the most dangerous and avoid it accordingly. 
 
 
 \section{Performance Requirements (PR)}
@@ -154,37 +169,91 @@ The state machine will be able to correct for movements made and put the robot b
 \section{Interface Requirements (IR)}
 
 \subsection{IR-01: Turtlebot Communication through ROS}
+
 Communication to the Turtlebot will be done through Robot Operating System through USB.
 
 \subsection{IR-02: Air Robot Communication}
+
 The air robot will be communicating through Robot Operating System over wireless network.
+
+\subsection{IR-03: Air Robot Radio Denied}
+
+The air robot shall be able to identify a pre-determined marker and fly toward it while avoiding obstacles.
 
 
 \section{Simulation Requirements (SimR)}
 
 \subsection{SimR-01: Air Robot}
-The final product will be an air robot, but for simulation we will be using a TurtleBot to create and test our systems. 
+The final product will be an air robot, but for simulation we will be using Gazebo to create and test our systems. 
 
 
 \section{Implementation Requirements (ImpR)}
 
 \subsection{ImpR-01: Turtlebot Robot Operating System}
+
 The simplest obstacle avoidance algorithm must be implemented on a Turtlebot using the Robot Operating System.
+
+\subsection{ImpR-02: }
 
 
 \section{Schedule Restrictions (SR)}
 
-\subsection{SchR-01: First Prototype}
+\subsection{SchR-01: Simulation}
 
-The first functional prototype shall be available for Beta testing no later than November \nth{1}. 
+The first simulation shall be able to operate in a Gazebo simulation environment no later than November \nth{5}. It shall be able to identify a marker, move toward the marker, and avoid an obstacle placed into the simulation environment.
+
+\subsection{SchR-02: TurtleBot Prototype}
+
+The first functional prototype shall be a TurtleBot robot capable of positively identifying a marker, moving toward the marker, and avoiding an obstacle placed into its environment no later than December \nth{18}.
+
+\subsection{SchR-03: Flying Prototype}
+
+The first functional flying prototype shall be capable of identifying a marker, moving toward the marker, and avoiding an obstacle placed into its environment no later than February  \nth{18}.
 
 \chapter{Risk Assessment}
 
-\section{Risks}
+\section{Identifying Markers}
 
-\section{Likelihood}
+The markers we intend to use, at least initially, are intended for use in Augmented Reality purposes. Tests of these shapes show that they are capable of being identified at many angles, but the reliability with which they can be identified decreases quickly as the viewing angle changes. 
 
-\section{Impact}
+There is potential that markers which are reliably identified at low speeds and in simulation may not be detectable on a flying vehicle moving faster.
+
+\subsection{Likelihood}
+
+Low likelihood due to low speeds that even the flying robot will be operated at.
+
+\subsection{Impact}
+
+High impact, the primary task that our robot must accomplish is moving toward a visual target. If the robot is not able to reliably identify a marker then there will be no way to verify its capability.
+
+\subsection{Process Solution}
+
+Alternatives to the ArUco markers can be tested, or if these prove truly unreliable then coloured areas or illuminated targets could be incorporated. These are less desirable as ideally the robot would be able to fly toward an arbitrary target.
+
+\section{Hardware Limitations}
+
+Image processing, especially quickly and with multiple goals, is computationally expensive. While this should not be an issue on a ground vehicle moving at slower speeds, it may become more of an issue on a flying robot if it operates at higher speeds and is incapable of carrying as much on-board computational capability.
+
+\subsection{Likelihood}
+
+High likelihood, although hardware for flying robot has not yet been chosen there are currently very few hardware devices capable of executing complex computer vision instructions quickly. 
+
+\subsection{Impact}
+
+Medium impact, presumably we would still be able to prove our systems on the ground robot which is capable of carrying as much processing power as needed. It may also only be a limitation at higher speeds or may impose limits on what the air robot is capable of identifying and tracking.
+
+\subsection{Process Solution}
+
+Testing many algorithms and working to streamline the algorithm used, especially for the flying robot, as well as selecting hardware that is complimentary to the kind of loads created by running such an algorithm can mitigate these risks. 
+
+%\section{RISK NAME} 
+%risk description text 					ctrl - U for uncomment
+%\subsection{Likelihood}
+%likelihood text
+%\subsection{Impact}
+%impact text
+%\subsection{Process Solution}
+%plan b text
 
 \chapter{Conclusion}
 

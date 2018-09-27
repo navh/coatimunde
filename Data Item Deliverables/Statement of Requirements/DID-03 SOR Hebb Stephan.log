@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.6)  24 SEP 2018 08:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.6)  26 SEP 2018 20:24
 entering extended mode
 **"./DID-03 SOR Hebb Stephan.tex"
 ("DID-03 SOR Hebb Stephan.tex"
@@ -268,42 +268,42 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 Part 1.
 [3
 
-]
+] [4]
 Part 2.
-[4
+[5
 
 ]
 Part 3.
-[5
+[6
 
-] [6]
+] [7] [8]
 Part 4.
-[7
+[9
 
-]
+] [10]
 Part 5.
-[8
+[11
 
-] [9
+] [12
 
 ] ("DID-03 SOR Hebb Stephan.aux") ) 
 Here is how much of TeX's memory you used:
  2622 strings out of 492973
  37708 string characters out of 3135927
- 119990 words of memory out of 3000000
+ 120990 words of memory out of 3000000
  6463 multiletter control sequences out of 15000+200000
  7271 words of font info for 26 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,10n,43p,455b,230s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,10n,43p,486b,230s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/pub
 lic/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
 cmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.p
 fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb>
-Output written on "DID-03 SOR Hebb Stephan.pdf" (10 pages, 187062 bytes).
+Output written on "DID-03 SOR Hebb Stephan.pdf" (13 pages, 195445 bytes).
 PDF statistics:
- 60 PDF objects out of 1000 (max. 8388607)
+ 70 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
