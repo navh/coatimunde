@@ -17,46 +17,173 @@
 \endgroup
 
 \datalist[entry]{none/global//global/global}
-  \entry{gregory2011}{article}{}
-    \name{author}{1}{}{%
-      {{hash=GD}{%
-         family={Gregory},
-         familyi={G\bibinitperiod},
-         given={Derek},
-         giveni={D\bibinitperiod},
+  \entry{RPAS}{misc}{}
+    \name{author}{2}{}{%
+      {{hash=DN}{%
+         family={Defence},
+         familyi={D\bibinitperiod},
+         given={National},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=FRCA}{%
+         family={Force},
+         familyi={F\bibinitperiod},
+         given={Royal Canadian\bibnamedelima Air},
+         giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim
+  A\bibinitperiod},
       }}%
     }
     \list{publisher}{1}{%
-      {Sage Publications Sage UK: London, England}%
+      {CAF}%
     }
-    \strng{namehash}{GD1}
-    \strng{fullhash}{GD1}
+    \strng{namehash}{DNFRCA1}
+    \strng{fullhash}{DNFRCA1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{number}{7-8}
-    \field{pages}{188\bibrangedash 215}
-    \field{title}{From a view to a kill: Drones and late modern war}
-    \field{volume}{28}
-    \field{journaltitle}{Theory, Culture \& Society}
-    \field{year}{2011}
+    \field{title}{Royal Canadian Air Force | News Article | Update and new name
+  for the Joint Unmanned Surveillance Target Acquisition System (JUSTAS)
+  project}
+    \verb{url}
+    \verb http://www.rcaf-arc.forces.gc.ca/en/article-template-standard.page?do
+    \verb c=update-and-new-name-for-the-joint-unmanned-surveillance-target-acqu
+    \verb isition-system-justas-project/j9u7rzyf
+    \endverb
+    \field{journaltitle}{On Windswept Heights II | RCAF | Historical | Royal
+  Canadian Air Force}
+    \field{year}{2018}
+    \warn{\item Invalid format of field 'month'}
   \endentry
 
-  \entry{ExampleForKara}{article}{}
-    \name{author}{1}{}{%
-      {{hash=BN}{%
-         family={Bell},
+  \entry{barry2018high}{article}{}
+    \name{author}{3}{}{%
+      {{hash=BAJ}{%
+         family={Barry},
          familyi={B\bibinitperiod},
-         given={Nick},
-         giveni={N\bibinitperiod},
+         given={Andrew\bibnamedelima J},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=FPR}{%
+         family={Florence},
+         familyi={F\bibinitperiod},
+         given={Peter\bibnamedelima R},
+         giveni={P\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=TR}{%
+         family={Tedrake},
+         familyi={T\bibinitperiod},
+         given={Russ},
+         giveni={R\bibinitperiod},
       }}%
     }
-    \strng{namehash}{BN1}
-    \strng{fullhash}{BN1}
+    \list{publisher}{1}{%
+      {Wiley Online Library}%
+    }
+    \strng{namehash}{BAJFPRTR1}
+    \strng{fullhash}{BAJFPRTR1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{title}{How to be navy AF}
-    \field{journaltitle}{Official Journal of officialness}
-    \field{year}{2017}
+    \field{number}{1}
+    \field{pages}{52\bibrangedash 68}
+    \field{title}{High-speed autonomous obstacle avoidance with pushbroom
+  stereo}
+    \field{volume}{35}
+    \field{journaltitle}{Journal of Field Robotics}
+    \field{year}{2018}
+  \endentry
+
+  \entry{barry2015pushbroom}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=BAJ}{%
+         family={Barry},
+         familyi={B\bibinitperiod},
+         given={Andrew\bibnamedelima J},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=TR}{%
+         family={Tedrake},
+         familyi={T\bibinitperiod},
+         given={Russ},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{BAJTR1}
+    \strng{fullhash}{BAJTR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Robotics and automation (icra), 2015 ieee international
+  conference on}
+    \field{pages}{3046\bibrangedash 3052}
+    \field{title}{Pushbroom stereo for high-speed navigation in cluttered
+  environments}
+    \field{year}{2015}
+  \endentry
+
+  \entry{2018nanomap}{article}{}
+    \name{author}{4}{}{%
+      {{hash=FPR}{%
+         family={Florence},
+         familyi={F\bibinitperiod},
+         given={Peter\bibnamedelima R},
+         giveni={P\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=CJ}{%
+         family={Carter},
+         familyi={C\bibinitperiod},
+         given={John},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=WJ}{%
+         family={Ware},
+         familyi={W\bibinitperiod},
+         given={Jake},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=TR}{%
+         family={Tedrake},
+         familyi={T\bibinitperiod},
+         given={Russ},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FPRCJWJ+1}
+    \strng{fullhash}{FPRCJWJTR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Nanomap: Fast, uncertainty-aware proximity queries with lazy
+  search over local 3d data}
+    \field{journaltitle}{arXiv preprint arXiv:1802.09076}
+    \field{year}{2018}
+  \endentry
+
+  \entry{woods2015dynamic}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=WAC}{%
+         family={Woods},
+         familyi={W\bibinitperiod},
+         given={Alexander\bibnamedelima C},
+         giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=LHM}{%
+         family={La},
+         familyi={L\bibinitperiod},
+         given={Hung\bibnamedelima M},
+         giveni={H\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{WACLHM1}
+    \strng{fullhash}{WACLHM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{International Symposium on Visual Computing}
+    \field{pages}{857\bibrangedash 866}
+    \field{title}{Dynamic target tracking and obstacle avoidance using a drone}
+    \field{year}{2015}
   \endentry
 \enddatalist
 \endinput
