@@ -109,7 +109,7 @@ The proposed use case of this project would be an environment with obstacles tha
 
 
 \section{Scope}
-The scope of the project is limited due to only testing indoors. This limits the range at which we can set up targets from the robot for identification, and it constraints certain characteristics of the obstacles. To fit everything inside for testing we will be using smaller obstacles. 
+The scope of the project is limited due to only being able to testing indoors. The range for target set up from the robot for identification is limited due this, and it constraints certain characteristics of the obstacles. To fit everything inside for testing we will be using smaller obstacles. 
 (I don't know what else he wants, it says clearly state what you will do but isn't that the aim??).
 A possible end goal of this project is...  
  
@@ -118,14 +118,8 @@ A possible end goal of this project is...
 
 \section{Information}
 
-\subsection{Meetings with Dr. Givigi}
-
-\section{How References Were Used}
-
-\subsection{First Reference}
-Don't forget most references will be used in the background part. 
-
-\subsection{Another Reference}
+To better define our requirements for this project we researched the CAF RPAS project requirements, to attempt to familiarize ourselves with the type of system outlined in the project. 
+Discussions with our project supervisor Dr. Givigi revealed that it was possible to build a monocular detection system that can identify targets and multiple obstacles at once. This then can be implemented on an air robot which can take proper action to avoid these obstacles and move towards the indified target. Those discussions inspired the project requirements detailed in the following section.
 
 
 \chapter{Product Requirements}
@@ -189,11 +183,13 @@ The final product will be an air robot, but for simulation we will be using Gaze
 
 \section{Implementation Requirements (ImpR)}
 
-\subsection{ImpR-01: Turtlebot Robot Operating System}
+\subsection{ImpR-01: Gazebo Simulation}
+
+Prior to testing on the Turtlebot, the program shall be implemented on the gazebo simulation.
+
+\subsection{ImpR-02: Turtlebot Robot Operating System}
 
 The simplest obstacle avoidance algorithm must be implemented on a Turtlebot using the Robot Operating System.
-
-\subsection{ImpR-02: }
 
 
 \section{Schedule Restrictions (SR)}
