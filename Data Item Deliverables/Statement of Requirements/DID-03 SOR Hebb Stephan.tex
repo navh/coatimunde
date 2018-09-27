@@ -85,6 +85,7 @@ Such a system can have varying levels of automation, something as simple as a mo
 
 Flying a UAS requires a secure link to the operator off-board. Maintaining this link, particularly while flying close to the ground where more opportunities for interference are introduced, and in environments where potentially hostile actors may be attempting to jam communications, necessitate a level of automation on-board capable of maintaining flight while denied navigation information.
 
+There are many different types of approaches for this problem with UAVs, one for example is the pushbroom algorithm. This has proven successful on a flying robot traveling at high speeds /cite{barry2018high}, /cite{barry2015pushbroom}. This system allows for the use of monocular vision to detect obstacles in realtime /cite{barry2018high}. Another solution to obstacle avoidance on flying robots was the creation of NanoMap /cite{2018nanomap}. This allows for 3D data to be processed at a much faster rate allowing for higher speeds of the robot /cite{2018nano}.
 \section{Definitions}
 
 Many words used during this project have many synonyms, and similarly there are many different ways to word many of the things in this project and often no conventions. For this purpose we will define terms which we intend to have more specific meanings than in normal English, or will clarify what we mean by the often vague descriptions used for many of the components of this project.
@@ -119,8 +120,8 @@ The scope of the project is limited due to only being able to testing indoors. T
 
 \section{Information}
 
-To better define the requirements for this project the CAF RPAS project requirements were researched, to attempt to familiarize ourselves with the type of system outlined in the project /cite{RPAS}. Previously created obstacle avoidance systems implemented on UAVs were also researched to gain more background information for our knowledge.
-Discussions with our project supervisor Dr. Givigi revealed that it was possible to build a monocular detection system that can identify targets and multiple obstacles at once. This then can be implemented on an air robot which can take proper action to avoid these obstacles and move towards the identified target. Those discussions inspired the project requirements detailed in the following section.
+To better define the requirements for this project the CAF RPAS project requirements were researched, to attempt to familiarize ourselves with the type of system outlined in the project /cite{RPAS}. Previously created obstacle avoidance systems implemented on similar UAVs were also researched to gain more background information for our knowledge. An article that was identified to be beneficial is about both target tracking and obstacle avoidance on a drone /cite{woods2015dynamic}. This outlined some specific problems that this project will likely face as well, and a possible solution to these problems. 
+The Discussions with our project supervisor Dr. Givigi revealed that it was possible to build a monocular detection system that can identify targets and multiple obstacles at once. This then can be implemented on an air robot which can take proper action to avoid these obstacles and move towards the identified target. Those discussions inspired the project requirements detailed in the following section.
 
 
 \chapter{Product Requirements}
