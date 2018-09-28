@@ -158,6 +158,18 @@
     \field{year}{2018}
   \endentry
 
+  \entry{opencv}{misc}{}
+    \list{publisher}{1}{%
+      {OpenCV Team}%
+    }
+    \field{labeltitlesource}{title}
+    \field{title}{About - OpenCV library}
+    \verb{url}
+    \verb https://opencv.org/about.html
+    \endverb
+    \field{journaltitle}{OpenCV}
+  \endentry
+
   \entry{woods2015dynamic}{inproceedings}{}
     \name{author}{2}{}{%
       {{hash=WAC}{%

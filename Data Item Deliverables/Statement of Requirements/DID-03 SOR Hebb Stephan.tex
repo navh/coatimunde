@@ -73,6 +73,7 @@
 		\subsubsection{Obstacle Avoidance}
 		
 		Both in the consumer and professional sectors the use of autonomous aerial vehicles is growing quickly. 
+		
 		Obstacle avoidance is the task of satisfying a control objective, in this case moving toward a visual target, while subject to non-intersection or non-collision position constraints. Those later constraints are, in this case, to be dynamically created while moving in a reactive manner, instead of being pre-computed.
 		
 		\subsubsection{Uncrewed Aerial Vehicles}
@@ -86,6 +87,24 @@
 		Flying a UAS requires a secure link to the operator off-board. Maintaining this link, particularly while flying close to the ground where more opportunities for interference are introduced, and in environments where potentially hostile actors may be attempting to jam communications, necessitate a level of automation on-board capable of maintaining flight while denied navigation information.
 		
 		There are many different types of approaches for this problem with UAVs, one for example is the pushbroom algorithm. This has proven successful on a flying robot traveling at high speeds \cite{barry2018high}, \cite{barry2015pushbroom}. This system successfully combined trajectory libraries and a state machine to avoid obstacles using very little computational power even at very high speeds \cite{barry2018high}. Another solution to obstacle avoidance on flying robots was the creation of NanoMap \cite{2018nanomap}. This allows for 3D data to be processed at a much faster rate allowing for higher speeds of the robot \cite{2018nanomap}.
+		
+		\subsubsection{Computer Vision}
+		
+		Currently there are many different was that computers can make high-level decisions based on digital image information. There are many methods to acquire, process, and analyze data from the real world using a camera. While this is a very broad field, we intend to focus especially on the aspects around motion estimation and object recognition.
+		
+		Both will be working with a video stream taken from a camera. 
+		
+		Motion estimation can be accomplished using 'direct' methods which compare whole fields of pixels to each other over successive frames, or indirect methods which look for specific features. The information resulting from motion estimation streams can be used to both compensate for motion while analyzing other aspects of an image, and update a state machine.
+		
+		Object recognition in our project will be accomplishing two tasks. Identifying a marker or target which will require more involved object recognition calculations, and very simple techniques, such as edge detection, to identify obstacles that exist in the path of the robot.
+		
+		\subsubsection{OpenCV}
+		
+		The Open Source Computer Vision Library (OpenCV) of programming functions is a cross-platform and free for use collection of functions primarily aimed at real-time computer vision\cite{opencv}. Most well documented techniques to accomplish all of the computer vision goals of our project have already been created and refined in OpenCV. For this reason we will be leaning heavily on OpenCV functions.
+		
+		
+		
+		
 		
 	\subsection{Definitions}
 	
