@@ -6,8 +6,6 @@
 \usepackage[english]{babel}
 \usepackage{csquotes}
 
-\usepackage{multicol}
-
 \usepackage[backend=biber,style=ieee]{biblatex}
 \addbibresource{bibliographyDID03.bib}
 
@@ -60,7 +58,7 @@
 
 \tableofcontents
 \newpage
-%\begin{multicols}{2}
+
 \section{Introduction}
 
 	\subsection{Document Purpose}
@@ -232,7 +230,6 @@
 		
 		A simple interface, perhaps command line, will allow a user to select a marker as a target to start the robot toward this target. The robot should receive this signal over a wireless transmission.
 		
-		
 	\subsection{Simulation Requirements (SimR)}
 	
 		\subsubsection{SimR-01: Gazebo with Turtlebot}
@@ -343,15 +340,6 @@
 		\subsubsection{Process Solution}
 		
 		Using smaller number of obstacles and moving at a slow enough speed should ensure that the robot never needs to execute extreme moves. These more extreme moves are where inaccuracies in control models will exposes themselves the most. 
-	
-	%\subsection{RISK NAME} 
-	%risk description text 					ctrl - U for uncomment
-	%\subsubsection{Likelihood}
-	%likelihood text
-	%\subsubsection{Impact}
-	%impact text
-	%\subsubsection{Process Solution}
-	%plan b text
 
 \section{Conclusion}
 
