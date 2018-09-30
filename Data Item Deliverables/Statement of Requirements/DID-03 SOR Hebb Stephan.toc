@@ -9,11 +9,15 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {1.2.1}Obstacle Avoidance}{4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.2.2}Uncrewed Aerial Vehicles}{4}
+\contentsline {subsubsection}{\numberline {1.2.2}Uncrewed Aircraft Systems}{4}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {1.2.3}Computer Vision}{4}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {1.2.4}OpenCV}{5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {1.2.5}TurtleBot}{5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {1.2.6}AscTec Pelican}{5}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.3}Definitions}{5}
 \defcounter {refsection}{0}\relax 
@@ -23,11 +27,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.4}Aim}{5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.4.1}Targets of Interest}{5}
+\contentsline {subsubsection}{\numberline {1.4.1}Targets of Interest}{6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.4.2}Complex Environment}{5}
+\contentsline {subsubsection}{\numberline {1.4.2}Complex Environment}{6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.4.3}Benefits}{5}
+\contentsline {subsubsection}{\numberline {1.4.3}Benefits}{6}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.5}Scope}{6}
 \defcounter {refsection}{0}\relax 
@@ -35,15 +39,15 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.1}Information}{6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Product Requirements}{6}
+\contentsline {section}{\numberline {3}Product Requirements}{7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Functional Requirements (FR)}{6}
+\contentsline {subsection}{\numberline {3.1}Functional Requirements (FR)}{7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.1.1}FR-01: State Machine}{6}
+\contentsline {subsubsection}{\numberline {3.1.1}FR-01: State Machine}{7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.1.2}FR-02: Movement Toward Target}{6}
+\contentsline {subsubsection}{\numberline {3.1.2}FR-02: Movement Toward Target}{7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.1.3}FR-03: Trajectory Library}{6}
+\contentsline {subsubsection}{\numberline {3.1.3}FR-03: Trajectory Library}{7}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {3.1.4}FR-04: Trajectory Library Updating State Machine}{7}
 \defcounter {refsection}{0}\relax 
@@ -55,21 +59,21 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {3.1.8}FR-08: Multiple Obstacles}{7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}Performance Requirements (PR)}{7}
+\contentsline {subsection}{\numberline {3.2}Performance Requirements (PR)}{8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.2.1}PR-01: Target Identification}{7}
+\contentsline {subsubsection}{\numberline {3.2.1}PR-01: Target Identification}{8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.2.2}PR-02: State Machine Corrections}{7}
+\contentsline {subsubsection}{\numberline {3.2.2}PR-02: State Machine Corrections}{8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.2.3}PR-03: Interpretation of Visual Data}{7}
+\contentsline {subsubsection}{\numberline {3.2.3}PR-03: Interpretation of Visual Data}{8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.2.4}PR-04: Multiple Obstacles}{7}
+\contentsline {subsubsection}{\numberline {3.2.4}PR-04: Multiple Obstacles}{8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3}Interface Requirements (IR)}{7}
+\contentsline {subsection}{\numberline {3.3}Interface Requirements (IR)}{8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.3.1}IR-01: Turtlebot Communication through ROS}{7}
+\contentsline {subsubsection}{\numberline {3.3.1}IR-01: Turtlebot Communication through ROS}{8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.3.2}IR-02: Air Robot Communication}{7}
+\contentsline {subsubsection}{\numberline {3.3.2}IR-02: Air Robot Communication}{8}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {3.3.3}IR-03: Air Robot Radio Denied}{8}
 \defcounter {refsection}{0}\relax 
@@ -81,52 +85,56 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {3.4.2}SimR-02: Flying Robot}{8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5}Implementation Requirements (ImpR)}{8}
+\contentsline {subsection}{\numberline {3.5}Implementation Requirements (ImpR)}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.5.1}ImpR-01: Gazebo Simulation}{8}
+\contentsline {subsubsection}{\numberline {3.5.1}ImpR-01: Gazebo Simulation}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.5.2}ImpR-02: Turtlebot Robot Operating System}{8}
+\contentsline {subsubsection}{\numberline {3.5.2}ImpR-02: Turtlebot Robot Operating System}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.5.3}ImpR-03: Turtlebot in Lab}{8}
+\contentsline {subsubsection}{\numberline {3.5.3}ImpR-03: Turtlebot in Lab}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.5.4}ImpR-04: Flying Robot in Lab}{8}
+\contentsline {subsubsection}{\numberline {3.5.4}ImpR-04: Flying Robot in Lab}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6}Schedule Restrictions (SchR)}{8}
+\contentsline {subsection}{\numberline {3.6}Schedule Restrictions (SchR)}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.6.1}SchR-01: Simulation}{8}
+\contentsline {subsubsection}{\numberline {3.6.1}SchR-01: Simulation}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.6.2}SchR-02: TurtleBot Prototype}{8}
+\contentsline {subsubsection}{\numberline {3.6.2}SchR-02: TurtleBot Prototype}{9}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {3.6.3}SchR-03: Flying Prototype}{9}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.7}Miscellaneous Requirements (MiscR)}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.7.1}MiscR-01: }{9}
+\contentsline {subsubsection}{\numberline {3.7.1}MiscR-01: Familiarization with TurtleBot}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Risk Assessment}{9}
+\contentsline {subsubsection}{\numberline {3.7.2}MiscR-02: Familiarization with Flying Robot}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Identifying Markers}{9}
+\contentsline {subsubsection}{\numberline {3.7.3}MiscR-03: Motion Tracking Equipment Use}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.1}Likelihood}{9}
+\contentsline {section}{\numberline {4}Risk Assessment}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.2}Impact}{9}
+\contentsline {subsection}{\numberline {4.1}Identifying Markers}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.3}Process Solution}{9}
+\contentsline {subsubsection}{\numberline {4.1.1}Likelihood}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}Computer Hardware Limitations}{9}
+\contentsline {subsubsection}{\numberline {4.1.2}Impact}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.1}Likelihood}{9}
+\contentsline {subsubsection}{\numberline {4.1.3}Process Solution}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.2}Impact}{9}
+\contentsline {subsection}{\numberline {4.2}Computer Hardware Limitations}{10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.2.1}Likelihood}{10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.2.2}Impact}{10}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {4.2.3}Process Solution}{10}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.3}Flight Control System Inaccuracy}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.3.1}Likelihood}{10}
+\contentsline {subsubsection}{\numberline {4.3.1}Likelihood}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.3.2}Impact}{10}
+\contentsline {subsubsection}{\numberline {4.3.2}Impact}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.3.3}Process Solution}{10}
+\contentsline {subsubsection}{\numberline {4.3.3}Process Solution}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Conclusion}{10}
+\contentsline {section}{\numberline {5}Conclusion}{11}

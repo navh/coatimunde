@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.3.25)  29 SEP 2018 13:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.3.25)  29 SEP 2018 21:02
 entering extended mode
 **"./DID-03 SOR Hebb Stephan.tex"
 ("DID-03 SOR Hebb Stephan.tex"
@@ -339,34 +339,6 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
-Package: babel 2018/02/14 3.18 The Babel package
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\switch.def"
-File: switch.def 2018/02/14 3.18 Babel switching mechanism
-)
-*************************************
-* Local config file bblopts.cfg used
-*
-(C:\Users\navar\AppData\Roaming\MiKTeX\2.9\tex\latex\arabi\bblopts.cfg
-File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
- babel
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\babel-english\english.ldf"
-Language: english 2017/06/06 v3.3r English support from the babel system
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
-File: babel.def 2018/02/14 3.18 Babel common definitions
-\babel@savecnt=\count87
-\U@D=\dimen103
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\txtbabel.def")
-\bbl@dirlevel=\count88
-)
-\l@canadian = a dialect from \language\l@american 
-\l@australian = a dialect from \language\l@british 
-\l@newzealand = a dialect from \language\l@british 
-))
 (C:\Users\navar\AppData\Roaming\MiKTeX\2.9\tex\latex\fancyhdr\fancyhdr.sty
 Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
 s
@@ -397,33 +369,85 @@ Package ifvtex Info: VTeX not detected.
 ("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count89
-\Gm@cntv=\count90
-\c@Gm@tempcnt=\count91
-\Gm@bindingoffset=\dimen104
-\Gm@wd@mp=\dimen105
-\Gm@odd@mp=\dimen106
-\Gm@even@mp=\dimen107
-\Gm@layoutwidth=\dimen108
-\Gm@layoutheight=\dimen109
-\Gm@layouthoffset=\dimen110
-\Gm@layoutvoffset=\dimen111
+\Gm@cnth=\count87
+\Gm@cntv=\count88
+\c@Gm@tempcnt=\count89
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
 \Gm@dimlist=\toks17
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
 (C:\Users\navar\AppData\Roaming\MiKTeX\2.9\tex\generic\genmisc\nth.sty
 Package: nth 2002/02/27
 )
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2018/02/14 3.18 The Babel package
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\switch.def"
+File: switch.def 2018/02/14 3.18 Babel switching mechanism
+)
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\navar\AppData\Roaming\MiKTeX\2.9\tex\latex\arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\babel-english\english.ldf"
+Language: english 2017/06/06 v3.3r English support from the babel system
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2018/02/14 3.18 Babel common definitions
+\babel@savecnt=\count90
+\U@D=\dimen111
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\txtbabel.def")
+\bbl@dirlevel=\count91
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+(C:\Users\navar\AppData\Roaming\MiKTeX\2.9\tex\latex\csquotes\csquotes.sty
+Package: csquotes 2018/02/11 v5.2c context-sensitive quotations (JAW)
+
+(C:\Users\navar\AppData\Roaming\MiKTeX\2.9\tex\latex\etoolbox\etoolbox.sty
+Package: etoolbox 2018/02/11 v2.5e e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count92
+)
+\csq@reset=\count93
+\csq@gtype=\count94
+\csq@glevel=\count95
+\csq@qlevel=\count96
+\csq@maxlvl=\count97
+\csq@tshold=\count98
+\csq@ltx@everypar=\toks18
+
+(C:\Users\navar\AppData\Roaming\MiKTeX\2.9\tex\latex\csquotes\csquotes.def
+File: csquotes.def 2018/02/11 v5.2c csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+
+(C:\Users\navar\AppData\Roaming\MiKTeX\2.9\tex\latex\csquotes\csquotes.cfg
+File: csquotes.cfg 
+))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\multicol.sty"
 Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
-\c@tracingmulticols=\count92
+\c@tracingmulticols=\count99
 \mult@box=\box26
 \multicol@leftmargin=\dimen112
-\c@unbalance=\count93
-\c@collectmore=\count94
-\doublecol@number=\count95
-\multicoltolerance=\count96
-\multicolpretolerance=\count97
+\c@unbalance=\count100
+\c@collectmore=\count101
+\doublecol@number=\count102
+\multicoltolerance=\count103
+\multicolpretolerance=\count104
 \full@width=\dimen113
 \page@free=\dimen114
 \premulticols=\dimen115
@@ -454,14 +478,14 @@ Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
 \@tempa=\box47
 \@tempa=\box48
 \@tempa=\box49
-\c@columnbadness=\count98
-\c@finalcolumnbadness=\count99
+\c@columnbadness=\count105
+\c@finalcolumnbadness=\count106
 \last@try=\dimen118
 \multicolovershoot=\dimen119
 \multicolundershoot=\dimen120
 \mult@nat@firstbox=\box50
 \colbreak@box=\box51
-\mc@col@check@num=\count100
+\mc@col@check@num=\count107
 )
 (C:\Users\navar\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\biblatex.sty
 Package: biblatex 2018/03/04 v3.11 programmable bibliographies (PK/MW)
@@ -485,10 +509,6 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(C:\Users\navar\AppData\Roaming\MiKTeX\2.9\tex\latex\etoolbox\etoolbox.sty
-Package: etoolbox 2018/02/11 v2.5e e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count101
-)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
@@ -504,7 +524,7 @@ Package etexcmds Info: Could not find \expanded.
 )))
 (C:\Users\navar\AppData\Roaming\MiKTeX\2.9\tex\latex\logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count102
+\lrq@indent=\count108
 
 (C:\Users\navar\AppData\Roaming\MiKTeX\2.9\tex\latex\logreq\logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
@@ -519,49 +539,49 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 (C:\Users\navar\AppData\Roaming\MiKTeX\2.9\tex\latex\xstring\xstring.sty
 (C:\Users\navar\AppData\Roaming\MiKTeX\2.9\tex\generic\xstring\xstring.tex
 \@xs@message=\write3
-\integerpart=\count103
-\decimalpart=\count104
+\integerpart=\count109
+\decimalpart=\count110
 )
 Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 )
-\c@tabx@nest=\count105
-\c@listtotal=\count106
-\c@listcount=\count107
-\c@liststart=\count108
-\c@liststop=\count109
-\c@citecount=\count110
-\c@citetotal=\count111
-\c@multicitecount=\count112
-\c@multicitetotal=\count113
-\c@instcount=\count114
-\c@maxnames=\count115
-\c@minnames=\count116
-\c@maxitems=\count117
-\c@minitems=\count118
-\c@citecounter=\count119
-\c@savedcitecounter=\count120
-\c@uniquelist=\count121
-\c@uniquename=\count122
-\c@refsection=\count123
-\c@refsegment=\count124
-\c@maxextratitle=\count125
-\c@maxextratitleyear=\count126
-\c@maxextradate=\count127
-\c@maxextraalpha=\count128
-\c@abbrvpenalty=\count129
-\c@highnamepenalty=\count130
-\c@lownamepenalty=\count131
-\c@maxparens=\count132
-\c@parenlevel=\count133
-\blx@tempcnta=\count134
-\blx@tempcntb=\count135
-\blx@tempcntc=\count136
-\blx@maxsection=\count137
-\blx@maxsegment@0=\count138
-\blx@notetype=\count139
-\blx@parenlevel@text=\count140
-\blx@parenlevel@foot=\count141
-\blx@sectionciteorder@0=\count142
+\c@tabx@nest=\count111
+\c@listtotal=\count112
+\c@listcount=\count113
+\c@liststart=\count114
+\c@liststop=\count115
+\c@citecount=\count116
+\c@citetotal=\count117
+\c@multicitecount=\count118
+\c@multicitetotal=\count119
+\c@instcount=\count120
+\c@maxnames=\count121
+\c@minnames=\count122
+\c@maxitems=\count123
+\c@minitems=\count124
+\c@citecounter=\count125
+\c@savedcitecounter=\count126
+\c@uniquelist=\count127
+\c@uniquename=\count128
+\c@refsection=\count129
+\c@refsegment=\count130
+\c@maxextratitle=\count131
+\c@maxextratitleyear=\count132
+\c@maxextradate=\count133
+\c@maxextraalpha=\count134
+\c@abbrvpenalty=\count135
+\c@highnamepenalty=\count136
+\c@lownamepenalty=\count137
+\c@maxparens=\count138
+\c@parenlevel=\count139
+\blx@tempcnta=\count140
+\blx@tempcntb=\count141
+\blx@tempcntc=\count142
+\blx@maxsection=\count143
+\blx@maxsegment@0=\count144
+\blx@notetype=\count145
+\blx@parenlevel@text=\count146
+\blx@parenlevel@foot=\count147
+\blx@sectionciteorder@0=\count148
 \labelnumberwidth=\skip54
 \labelalphawidth=\skip55
 \biblabelsep=\skip56
@@ -572,9 +592,9 @@ Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 \bibhang=\skip61
 \blx@bcfin=\read1
 \blx@bcfout=\write4
-\c@mincomprange=\count143
-\c@maxcomprange=\count144
-\c@mincompwidth=\count145
+\c@mincomprange=\count149
+\c@maxcomprange=\count150
+\c@mincompwidth=\count151
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -585,74 +605,74 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'ieee.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count146
-\c@savedafterword=\count147
-\c@annotator=\count148
-\c@savedannotator=\count149
-\c@author=\count150
-\c@savedauthor=\count151
-\c@bookauthor=\count152
-\c@savedbookauthor=\count153
-\c@commentator=\count154
-\c@savedcommentator=\count155
-\c@editor=\count156
-\c@savededitor=\count157
-\c@editora=\count158
-\c@savededitora=\count159
-\c@editorb=\count160
-\c@savededitorb=\count161
-\c@editorc=\count162
-\c@savededitorc=\count163
-\c@foreword=\count164
-\c@savedforeword=\count165
-\c@holder=\count166
-\c@savedholder=\count167
-\c@introduction=\count168
-\c@savedintroduction=\count169
-\c@namea=\count170
-\c@savednamea=\count171
-\c@nameb=\count172
-\c@savednameb=\count173
-\c@namec=\count174
-\c@savednamec=\count175
-\c@translator=\count176
-\c@savedtranslator=\count177
-\c@shortauthor=\count178
-\c@savedshortauthor=\count179
-\c@shorteditor=\count180
-\c@savedshorteditor=\count181
-\c@labelname=\count182
-\c@savedlabelname=\count183
-\c@institution=\count184
-\c@savedinstitution=\count185
-\c@lista=\count186
-\c@savedlista=\count187
-\c@listb=\count188
-\c@savedlistb=\count189
-\c@listc=\count190
-\c@savedlistc=\count191
-\c@listd=\count192
-\c@savedlistd=\count193
-\c@liste=\count194
-\c@savedliste=\count195
-\c@listf=\count196
-\c@savedlistf=\count197
-\c@location=\count198
-\c@savedlocation=\count199
-\c@organization=\count266
-\c@savedorganization=\count267
-\c@origlocation=\count268
-\c@savedoriglocation=\count269
-\c@origpublisher=\count270
-\c@savedorigpublisher=\count271
-\c@publisher=\count272
-\c@savedpublisher=\count273
-\c@language=\count274
-\c@savedlanguage=\count275
-\c@origlanguage=\count276
-\c@savedoriglanguage=\count277
-\c@pageref=\count278
-\c@savedpageref=\count279
+\c@afterword=\count152
+\c@savedafterword=\count153
+\c@annotator=\count154
+\c@savedannotator=\count155
+\c@author=\count156
+\c@savedauthor=\count157
+\c@bookauthor=\count158
+\c@savedbookauthor=\count159
+\c@commentator=\count160
+\c@savedcommentator=\count161
+\c@editor=\count162
+\c@savededitor=\count163
+\c@editora=\count164
+\c@savededitora=\count165
+\c@editorb=\count166
+\c@savededitorb=\count167
+\c@editorc=\count168
+\c@savededitorc=\count169
+\c@foreword=\count170
+\c@savedforeword=\count171
+\c@holder=\count172
+\c@savedholder=\count173
+\c@introduction=\count174
+\c@savedintroduction=\count175
+\c@namea=\count176
+\c@savednamea=\count177
+\c@nameb=\count178
+\c@savednameb=\count179
+\c@namec=\count180
+\c@savednamec=\count181
+\c@translator=\count182
+\c@savedtranslator=\count183
+\c@shortauthor=\count184
+\c@savedshortauthor=\count185
+\c@shorteditor=\count186
+\c@savedshorteditor=\count187
+\c@labelname=\count188
+\c@savedlabelname=\count189
+\c@institution=\count190
+\c@savedinstitution=\count191
+\c@lista=\count192
+\c@savedlista=\count193
+\c@listb=\count194
+\c@savedlistb=\count195
+\c@listc=\count196
+\c@savedlistc=\count197
+\c@listd=\count198
+\c@savedlistd=\count199
+\c@liste=\count266
+\c@savedliste=\count267
+\c@listf=\count268
+\c@savedlistf=\count269
+\c@location=\count270
+\c@savedlocation=\count271
+\c@organization=\count272
+\c@savedorganization=\count273
+\c@origlocation=\count274
+\c@savedoriglocation=\count275
+\c@origpublisher=\count276
+\c@savedorigpublisher=\count277
+\c@publisher=\count278
+\c@savedpublisher=\count279
+\c@language=\count280
+\c@savedlanguage=\count281
+\c@origlanguage=\count282
+\c@savedoriglanguage=\count283
+\c@pageref=\count284
+\c@savedpageref=\count285
 \shorthandwidth=\skip62
 \shortjournalwidth=\skip63
 \shortserieswidth=\skip64
@@ -673,28 +693,18 @@ Package biblatex Info: ... file 'blx-compat.def' found.
 (C:\Users\navar\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\blx-compat.def
 File: blx-compat.def 2018/03/04 v3.11 biblatex compatibility (PK/MW)
 )
-Package biblatex Info: Trying to load BibTeX backend compatibility...
-Package biblatex Info: ... file 'blx-bibtex.def' found.
-
-(C:\Users\navar\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\blx-bibtex.def
-File: blx-bibtex.def 2018/03/04 v3.11 biblatex compatibility (PK/MW)
-
-
-Package biblatex Warning: Using fall-back BibTeX(8) backend:
-(biblatex)                functionality may be reduced/unavailable.
-
-)
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
- (C:\Users\navar\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\biblatex.def
+
+(C:\Users\navar\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\biblatex.def
 File: biblatex.def 2018/03/04 v3.11 biblatex compatibility (PK/MW)
-\c@textcitecount=\count280
-\c@textcitetotal=\count281
-\c@textcitemaxnames=\count282
-\c@biburlnumpenalty=\count283
-\c@biburlucpenalty=\count284
-\c@biburllcpenalty=\count285
-\c@smartand=\count286
+\c@textcitecount=\count286
+\c@textcitetotal=\count287
+\c@textcitemaxnames=\count288
+\c@biburlnumpenalty=\count289
+\c@biburlucpenalty=\count290
+\c@biburllcpenalty=\count291
+\c@smartand=\count292
 )
 Package biblatex Info: Trying to load bibliography style 'ieee'...
 Package biblatex Info: ... file 'ieee.bbx' found.
@@ -717,8 +727,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (C:\Users\navar\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\bbx\standard.bbx
 File: standard.bbx 2018/03/04 v3.11 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count287
-\c@bbx:relatedtotal=\count288
+\c@bbx:relatedcount=\count293
+\c@bbx:relatedtotal=\count294
 ))))
 Package biblatex Info: Trying to load citation style 'ieee'...
 Package biblatex Info: ... file 'ieee.cbx' found.
@@ -730,8 +740,8 @@ Package biblatex Info: ... file 'numeric-comp.cbx' found.
 (C:\Users\navar\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\cbx\numeric-comp.
 cbx
 File: numeric-comp.cbx 2018/03/04 v3.11 biblatex citation style (PK/MW)
-\c@cbx@tempcnta=\count289
-\c@cbx@tempcntb=\count290
+\c@cbx@tempcnta=\count295
+\c@cbx@tempcntb=\count296
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -773,6 +783,11 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 \Gin@req@height=\dimen121
 \Gin@req@width=\dimen122
 )
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+Package csquotes Info: Adjusting default style.
+Package csquotes Info: Redefining alias 'default' -> 'english'.
+
 
 Package biblatex Warning: File 'english-ieee.lbx' not found!
 (biblatex)                Ignoring mapping 'english' -> 'english-ieee'.
@@ -782,27 +797,21 @@ Package biblatex Info: ... file 'english.lbx' found.
 (C:\Users\navar\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\lbx\english.lbx
 File: english.lbx 2018/03/04 v3.11 biblatex localization (PK/MW)
 )
-
-Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
-(biblatex)                Loading 'csquotes' recommended.
-
-\@quotelevel=\count291
-\@quotereset=\count292
 ("DID-03 SOR Hebb Stephan.aux")
 \openout1 = `"DID-03 SOR Hebb Stephan.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -841,35 +850,27 @@ LaTeX Font Info:    ... okay on input line 25.
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-Package biblatex Info: Input encoding 'utf8' specified.
-Package biblatex Info: Data encoding 'utf8' specified.
-(biblatex)             No need to reencode data.
-\openout4 = `DID-03_SOR_Hebb_Stephan-blx.bib'.
+\openout4 = `"DID-03 SOR Hebb Stephan.bcf"'.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file '"DID-03 SOR Hebb Stephan".bbl' found.
-("DID-03 SOR Hebb Stephan.bbl"
+("DID-03 SOR Hebb Stephan.bbl")
+Package biblatex Info: Reference section=0 on input line 26.
+Package biblatex Info: Reference segment=0 on input line 26.
 
-Package biblatex Warning: BibTeX reported the following issues
-(biblatex)                with 'RPAS':
-(biblatex)                - Invalid format of field 'month'.
-
-)
-Package biblatex Info: Reference section=0 on input line 25.
-Package biblatex Info: Reference segment=0 on input line 25.
- (C:\Users\navar\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+(C:\Users\navar\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count293
+\scratchcounter=\count297
 \scratchdimen=\dimen123
 \scratchbox=\box52
-\nofMPsegments=\count294
-\nofMParguments=\count295
-\everyMPshowfont=\toks18
-\MPscratchCnt=\count296
+\nofMPsegments=\count298
+\nofMParguments=\count299
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count300
 \MPscratchDim=\dimen124
-\MPnumerator=\count297
-\makeMPintoPDFobject=\count298
-\everyMPtoPDFconversion=\toks19
+\MPnumerator=\count301
+\makeMPintoPDFobject=\count302
+\everyMPtoPDFconversion=\toks20
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -889,7 +890,7 @@ G,.JBIG2,.JB2,.eps]
 <rmcLogo.png, id=1, 191.9672pt x 368.87813pt>
 File: rmcLogo.png Graphic file (type png)
 <use rmcLogo.png>
-Package pdftex.def Info: rmcLogo.png  used on input line 39.
+Package pdftex.def Info: rmcLogo.png  used on input line 40.
 (pdftex.def)             Requested size: 133.07489pt x 255.72507pt.
 
 [1
@@ -904,29 +905,29 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write5
 \openout5 = `"DID-03 SOR Hebb Stephan.toc"'.
 
- [3] [4]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 135.
+ [3] [4] [5]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 145.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 135.
- [5] [6] [7] [8]
-[9] [10] ("DID-03 SOR Hebb Stephan.aux")
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 145.
+ [6] [7] [8] [9]
+[10] [11] ("DID-03 SOR Hebb Stephan.aux")
 Package logreq Info: Writing requests to '"DID-03 SOR Hebb Stephan".run.xml'.
 \openout1 = `"DID-03 SOR Hebb Stephan.run.xml"'.
 
  ) 
 Here is how much of TeX's memory you used:
- 9811 strings out of 493305
- 168424 string characters out of 3138874
- 441048 words of memory out of 3000000
- 13236 multiletter control sequences out of 15000+200000
+ 10290 strings out of 493305
+ 176428 string characters out of 3138874
+ 612195 words of memory out of 3000000
+ 13711 multiletter control sequences out of 15000+200000
  6573 words of font info for 24 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,11n,45p,909b,3342s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,11n,45p,913b,3357s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiK
@@ -936,9 +937,9 @@ onts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 msfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
 cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt1
 0.pfb>
-Output written on "DID-03 SOR Hebb Stephan.pdf" (10 pages, 244846 bytes).
+Output written on "DID-03 SOR Hebb Stephan.pdf" (11 pages, 249068 bytes).
 PDF statistics:
- 72 PDF objects out of 1000 (max. 8388607)
+ 75 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

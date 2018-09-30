@@ -3,8 +3,8 @@
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
-% This file may safely be deleted. It will be recreated as
-% required.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
 %
 \begingroup
 \makeatletter
@@ -16,186 +16,235 @@
   {}
 \endgroup
 
-\datalist[entry]{none/global//global/global}
-  \entry{RPAS}{misc}{}
-    \name{author}{2}{}{%
-      {{hash=DN}{%
-         family={Defence},
-         familyi={D\bibinitperiod},
-         given={National},
-         giveni={N\bibinitperiod},
-      }}%
-      {{hash=FRCA}{%
-         family={Force},
-         familyi={F\bibinitperiod},
-         given={Royal Canadian\bibnamedelima Air},
-         giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim
-  A\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {CAF}%
-    }
-    \strng{namehash}{DNFRCA1}
-    \strng{fullhash}{DNFRCA1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{title}{Royal Canadian Air Force | News Article | Update and new name
-  for the Joint Unmanned Surveillance Target Acquisition System (JUSTAS)
-  project}
-    \verb{url}
-    \verb http://www.rcaf-arc.forces.gc.ca/en/article-template-standard.page?do
-    \verb c=update-and-new-name-for-the-joint-unmanned-surveillance-target-acqu
-    \verb isition-system-justas-project/j9u7rzyf
-    \endverb
-    \field{journaltitle}{On Windswept Heights II | RCAF | Historical | Royal
-  Canadian Air Force}
-    \field{year}{2018}
-    \warn{\item Invalid format of field 'month'}
-  \endentry
 
-  \entry{barry2018high}{article}{}
-    \name{author}{3}{}{%
-      {{hash=BAJ}{%
-         family={Barry},
-         familyi={B\bibinitperiod},
-         given={Andrew\bibnamedelima J},
-         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
-      }}%
-      {{hash=FPR}{%
-         family={Florence},
-         familyi={F\bibinitperiod},
-         given={Peter\bibnamedelima R},
-         giveni={P\bibinitperiod\bibinitdelim R\bibinitperiod},
-      }}%
-      {{hash=TR}{%
-         family={Tedrake},
-         familyi={T\bibinitperiod},
-         given={Russ},
-         giveni={R\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Wiley Online Library}%
-    }
-    \strng{namehash}{BAJFPRTR1}
-    \strng{fullhash}{BAJFPRTR1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{number}{1}
-    \field{pages}{52\bibrangedash 68}
-    \field{title}{High-speed autonomous obstacle avoidance with pushbroom
-  stereo}
-    \field{volume}{35}
-    \field{journaltitle}{Journal of Field Robotics}
-    \field{year}{2018}
-  \endentry
-
-  \entry{barry2015pushbroom}{inproceedings}{}
-    \name{author}{2}{}{%
-      {{hash=BAJ}{%
-         family={Barry},
-         familyi={B\bibinitperiod},
-         given={Andrew\bibnamedelima J},
-         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
-      }}%
-      {{hash=TR}{%
-         family={Tedrake},
-         familyi={T\bibinitperiod},
-         given={Russ},
-         giveni={R\bibinitperiod},
-      }}%
-    }
-    \list{organization}{1}{%
-      {IEEE}%
-    }
-    \strng{namehash}{BAJTR1}
-    \strng{fullhash}{BAJTR1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{booktitle}{Robotics and automation (icra), 2015 ieee international
-  conference on}
-    \field{pages}{3046\bibrangedash 3052}
-    \field{title}{Pushbroom stereo for high-speed navigation in cluttered
-  environments}
-    \field{year}{2015}
-  \endentry
-
-  \entry{2018nanomap}{article}{}
-    \name{author}{4}{}{%
-      {{hash=FPR}{%
-         family={Florence},
-         familyi={F\bibinitperiod},
-         given={Peter\bibnamedelima R},
-         giveni={P\bibinitperiod\bibinitdelim R\bibinitperiod},
-      }}%
-      {{hash=CJ}{%
-         family={Carter},
-         familyi={C\bibinitperiod},
-         given={John},
-         giveni={J\bibinitperiod},
-      }}%
-      {{hash=WJ}{%
-         family={Ware},
-         familyi={W\bibinitperiod},
-         given={Jake},
-         giveni={J\bibinitperiod},
-      }}%
-      {{hash=TR}{%
-         family={Tedrake},
-         familyi={T\bibinitperiod},
-         given={Russ},
-         giveni={R\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{FPRCJWJ+1}
-    \strng{fullhash}{FPRCJWJTR1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{title}{Nanomap: Fast, uncertainty-aware proximity queries with lazy
-  search over local 3d data}
-    \field{journaltitle}{arXiv preprint arXiv:1802.09076}
-    \field{year}{2018}
-  \endentry
-
-  \entry{opencv}{misc}{}
-    \list{publisher}{1}{%
-      {OpenCV Team}%
-    }
-    \field{labeltitlesource}{title}
-    \field{title}{About - OpenCV library}
-    \verb{url}
-    \verb https://opencv.org/about.html
-    \endverb
-    \field{journaltitle}{OpenCV}
-  \endentry
-
-  \entry{woods2015dynamic}{inproceedings}{}
-    \name{author}{2}{}{%
-      {{hash=WAC}{%
-         family={Woods},
-         familyi={W\bibinitperiod},
-         given={Alexander\bibnamedelima C},
-         giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod},
-      }}%
-      {{hash=LHM}{%
-         family={La},
-         familyi={L\bibinitperiod},
-         given={Hung\bibnamedelima M},
-         giveni={H\bibinitperiod\bibinitdelim M\bibinitperiod},
-      }}%
-    }
-    \list{organization}{1}{%
-      {Springer}%
-    }
-    \strng{namehash}{WACLHM1}
-    \strng{fullhash}{WACLHM1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{booktitle}{International Symposium on Visual Computing}
-    \field{pages}{857\bibrangedash 866}
-    \field{title}{Dynamic target tracking and obstacle avoidance using a drone}
-    \field{year}{2015}
-  \endentry
-\enddatalist
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{RPAS}{misc}{}
+      \list{publisher}{2}{%
+        {National Defence}%
+        {Royal Canadian Air Force}%
+      }
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{On Windswept Heights II | RCAF | Historical | Royal Canadian Air Force}
+      \field{month}{7}
+      \field{title}{Royal Canadian Air Force | News Article | Update and new name for the Joint Unmanned Surveillance Target Acquisition System (JUSTAS) project}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb http://www.rcaf-arc.forces.gc.ca/en/article-template-standard.page?doc=update-and-new-name-for-the-joint-unmanned-surveillance-target-acquisition-system-justas-project/j9u7rzyf
+      \endverb
+      \verb{url}
+      \verb http://www.rcaf-arc.forces.gc.ca/en/article-template-standard.page?doc=update-and-new-name-for-the-joint-unmanned-surveillance-target-acquisition-system-justas-project/j9u7rzyf
+      \endverb
+    \endentry
+    \entry{barry2015pushbroom}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=2250e5a54a8889ec9375d450b1a17da1}{%
+           family={Barry},
+           familyi={B\bibinitperiod},
+           given={Andrew\bibnamedelima J},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=480d067fbc7c00be4a01a0e4902c984e}{%
+           family={Tedrake},
+           familyi={T\bibinitperiod},
+           given={Russ},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{cc519899890f0a67ca6297fd7f938b1a}
+      \strng{fullhash}{cc519899890f0a67ca6297fd7f938b1a}
+      \strng{bibnamehash}{cc519899890f0a67ca6297fd7f938b1a}
+      \strng{authorbibnamehash}{cc519899890f0a67ca6297fd7f938b1a}
+      \strng{authornamehash}{cc519899890f0a67ca6297fd7f938b1a}
+      \strng{authorfullhash}{cc519899890f0a67ca6297fd7f938b1a}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Robotics and automation (icra), 2015 ieee international conference on}
+      \field{title}{Pushbroom stereo for high-speed navigation in cluttered environments}
+      \field{year}{2015}
+      \field{pages}{3046\bibrangedash 3052}
+      \range{pages}{7}
+    \endentry
+    \entry{barry2018high}{article}{}
+      \name{author}{3}{}{%
+        {{hash=2250e5a54a8889ec9375d450b1a17da1}{%
+           family={Barry},
+           familyi={B\bibinitperiod},
+           given={Andrew\bibnamedelima J},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=020692730c149a079cb8cf434f8cd7a8}{%
+           family={Florence},
+           familyi={F\bibinitperiod},
+           given={Peter\bibnamedelima R},
+           giveni={P\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=480d067fbc7c00be4a01a0e4902c984e}{%
+           family={Tedrake},
+           familyi={T\bibinitperiod},
+           given={Russ},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
+      }
+      \strng{namehash}{5207f46a01db5f699e1be8a4b5f1e350}
+      \strng{fullhash}{5207f46a01db5f699e1be8a4b5f1e350}
+      \strng{bibnamehash}{5207f46a01db5f699e1be8a4b5f1e350}
+      \strng{authorbibnamehash}{5207f46a01db5f699e1be8a4b5f1e350}
+      \strng{authornamehash}{5207f46a01db5f699e1be8a4b5f1e350}
+      \strng{authorfullhash}{5207f46a01db5f699e1be8a4b5f1e350}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Field Robotics}
+      \field{number}{1}
+      \field{title}{High-speed autonomous obstacle avoidance with pushbroom stereo}
+      \field{volume}{35}
+      \field{year}{2018}
+      \field{pages}{52\bibrangedash 68}
+      \range{pages}{17}
+    \endentry
+    \entry{2018nanomap}{article}{}
+      \name{author}{4}{}{%
+        {{hash=020692730c149a079cb8cf434f8cd7a8}{%
+           family={Florence},
+           familyi={F\bibinitperiod},
+           given={Peter\bibnamedelima R},
+           giveni={P\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=abdd9ad1eb92af4ac27eda8caad32697}{%
+           family={Carter},
+           familyi={C\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=6fea7020361589b9e17db5def6df9b66}{%
+           family={Ware},
+           familyi={W\bibinitperiod},
+           given={Jake},
+           giveni={J\bibinitperiod}}}%
+        {{hash=480d067fbc7c00be4a01a0e4902c984e}{%
+           family={Tedrake},
+           familyi={T\bibinitperiod},
+           given={Russ},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{d71e33a587a6771f1797558b9cec0eae}
+      \strng{fullhash}{3970802295558d6fe4a4c0efdb8907fd}
+      \strng{bibnamehash}{3970802295558d6fe4a4c0efdb8907fd}
+      \strng{authorbibnamehash}{3970802295558d6fe4a4c0efdb8907fd}
+      \strng{authornamehash}{d71e33a587a6771f1797558b9cec0eae}
+      \strng{authorfullhash}{3970802295558d6fe4a4c0efdb8907fd}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1802.09076}
+      \field{title}{Nanomap: Fast, uncertainty-aware proximity queries with lazy search over local 3d data}
+      \field{year}{2018}
+    \endentry
+    \entry{opencv}{misc}{}
+      \list{publisher}{1}{%
+        {OpenCV Team}%
+      }
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{OpenCV}
+      \field{title}{About - OpenCV library}
+      \verb{urlraw}
+      \verb https://opencv.org/about.html
+      \endverb
+      \verb{url}
+      \verb https://opencv.org/about.html
+      \endverb
+    \endentry
+    \entry{wise_foote_2011}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=546b22335fa014ca159c07b3db0a7f6f}{%
+           family={Wise},
+           familyi={W\bibinitperiod},
+           given={Melonee},
+           giveni={M\bibinitperiod}}}%
+        {{hash=0d11ace6e44e4742ea1692d7ddf4819e}{%
+           family={Foote},
+           familyi={F\bibinitperiod},
+           given={Tully},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Robot Operating System}%
+      }
+      \strng{namehash}{2740f898bfc1ef5fe7dd3586c715ccd5}
+      \strng{fullhash}{2740f898bfc1ef5fe7dd3586c715ccd5}
+      \strng{bibnamehash}{2740f898bfc1ef5fe7dd3586c715ccd5}
+      \strng{authorbibnamehash}{2740f898bfc1ef5fe7dd3586c715ccd5}
+      \strng{authornamehash}{2740f898bfc1ef5fe7dd3586c715ccd5}
+      \strng{authorfullhash}{2740f898bfc1ef5fe7dd3586c715ccd5}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ROS.org}
+      \field{month}{12}
+      \field{title}{REP: 119 - Specification for TurtleBot Compatible Platforms}
+      \field{year}{2011}
+      \verb{urlraw}
+      \verb http://www.ros.org/reps/rep-0119.html
+      \endverb
+      \verb{url}
+      \verb http://www.ros.org/reps/rep-0119.html
+      \endverb
+    \endentry
+    \entry{asctec}{misc}{}
+      \field{sortinit}{8}
+      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ascending Technologies}
+      \field{title}{AscTec Pelican - UAS for Computer Vision and SLAM}
+      \verb{urlraw}
+      \verb http://www.asctec.de/en/uav-uas-drones-rpas-roav/asctec-pelican/
+      \endverb
+      \verb{url}
+      \verb http://www.asctec.de/en/uav-uas-drones-rpas-roav/asctec-pelican/
+      \endverb
+    \endentry
+    \entry{woods2015dynamic}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=c3e0de525f549d167016a4ca3db78dc6}{%
+           family={Woods},
+           familyi={W\bibinitperiod},
+           given={Alexander\bibnamedelima C},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=a5a9bf1d9bce717c66eb1acc1b45edab}{%
+           family={La},
+           familyi={L\bibinitperiod},
+           given={Hung\bibnamedelima M},
+           giveni={H\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{b18180a0f2b381d66f5b5f2b719da127}
+      \strng{fullhash}{b18180a0f2b381d66f5b5f2b719da127}
+      \strng{bibnamehash}{b18180a0f2b381d66f5b5f2b719da127}
+      \strng{authorbibnamehash}{b18180a0f2b381d66f5b5f2b719da127}
+      \strng{authornamehash}{b18180a0f2b381d66f5b5f2b719da127}
+      \strng{authorfullhash}{b18180a0f2b381d66f5b5f2b719da127}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{International Symposium on Visual Computing}
+      \field{title}{Dynamic target tracking and obstacle avoidance using a drone}
+      \field{year}{2015}
+      \field{pages}{857\bibrangedash 866}
+      \range{pages}{10}
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
+
