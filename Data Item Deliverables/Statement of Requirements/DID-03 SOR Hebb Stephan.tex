@@ -1,26 +1,24 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
 \usepackage{fancyhdr}
 \usepackage[margin=3cm,twoside]{geometry}
 \usepackage[super]{nth}
+\usepackage[english]{babel}
+\usepackage{csquotes}
 
-\usepackage{multicol}
-
-
-\usepackage[backend=bibtex,style=ieee]{biblatex}
-\addbibresource{bibliographyDID03}
-
+\usepackage{hyperref}
+\usepackage[backend=biber,style=ieee]{biblatex}
+\addbibresource{bibliographyDID03.bib}
 
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[LE,RO]{DID - 03 SOR (Hebb \& Stephan)}
-\fancyfoot[C]{\leftmark}
+\fancyhead[LO,RE]{\leftmark}
 \fancyfoot[LE,RO]{\thepage}
 
 % Title Page
 \title{Statement of Requirements}
-\author{Officer Cadet 27714 Amos Navarre Hebb \\ and \\ Officer Cadet 27555 Kara Stephan}
+\author{Officer Cadet 27714 Amos Navarre Hebb\\and\\Officer Cadet 27555 Kara Stephan}
 
 \usepackage{graphicx}
 
@@ -61,35 +59,60 @@
 
 \tableofcontents
 \newpage
-%\begin{multicols}{2}
+
 \section{Introduction}
 
 	\subsection{Document Purpose}
 	
-	The purpose of this document is to outline the project requirements. That is, what the project is to accomplish once all of the requirements outlined in this document have been completed and to what standard they shall be considered done. The benefits of meeting these requirements and solving this problem will be. This document will then identify the constraints that these requirements impose on this project will be.
+	The purpose of this document is to outline the project requirements. That is, what the project is to accomplish once all of the requirements outlined in this document have been completed and to what standard they shall be considered done. The benefits of meeting these requirements and solving this problem will be outlined and some possible use cases stated. This document will then identify the constraints that these requirements impose on this project.
 	
 	\subsection{Background}
 	
 		\subsubsection{Obstacle Avoidance}
 		
 		Both in the consumer and professional sectors the use of autonomous aerial vehicles is growing quickly. 
+		
 		Obstacle avoidance is the task of satisfying a control objective, in this case moving toward a visual target, while subject to non-intersection or non-collision position constraints. Those later constraints are, in this case, to be dynamically created while moving in a reactive manner, instead of being pre-computed.
 		
-		\subsubsection{Uncrewed Aerial Vehicles}
+		\subsubsection{Uncrewed Aircraft Systems}
 		
-		Very generally any powered vehicle that uses aerodynamic forces to provide lift that does not carry a human operator can be considered an uncrewed aerial vehicle. Currently most of these vehicles make up a single component of a larger Uncrewed aircraft system. 
+		Very generally any powered vehicle that uses aerodynamic forces to provide lift that does not carry a human operator can be considered an uncrewed aerial vehicle. Currently most of these vehicles make up a single component of a larger uncrewed aircraft system. 
 		
 		An Uncrewed aircraft system (UAS), or Remotely piloted aircraft system (RPAS), is an aircraft without a human pilot on-board, instead controlled from an operator on the ground. 
 		
-		Such a system can have varying levels of automation, something as simple as a model aircraft has limited capability. An UAS capable of detecting, recognizing, identifying, and tracking targets of interest in complex environments and integrate with the systems required to process and fuse the collected information into actionable intelligence while operating in a low-to-medium threat environment is the current goal of the RPAS project by the RCAF \cite{RPAS}. 
+		Such a system can have varying levels of automation, something as simple as a model aircraft could be considered a UAS without any automation capabilities. A UAS capable of detecting, recognizing, identifying, and tracking targets of interest in complex environments and integrate with the systems required to process and fuse the collected information into actionable intelligence while operating in a low-to-medium threat environment is the current goal of the RPAS project by the RCAF \cite{RPAS}. 
 		
 		Flying a UAS requires a secure link to the operator off-board. Maintaining this link, particularly while flying close to the ground where more opportunities for interference are introduced, and in environments where potentially hostile actors may be attempting to jam communications, necessitate a level of automation on-board capable of maintaining flight while denied navigation information.
 		
-		There are many different types of approaches for this problem with UAVs, one for example is the pushbroom algorithm. This has proven successful on a flying robot traveling at high speeds \cite{barry2018high}, \cite{barry2015pushbroom}. This system successfully combined trajectory libraries and a state machine to avoid obstacles using very little computational power even at very high speeds \cite{barry2018high}. Another solution to obstacle avoidance on flying robots was the creation of NanoMap \cite{2018nanomap}. This allows for 3D data to be processed at a much faster rate allowing for higher speeds of the robot \cite{2018nanomap}.
+		There are many different types of approaches for this problem, but most involve some form of identifying targets in real time and reacting as they become visible to the aircraft. This has proven successful on a flying robot traveling at high speeds \cite{barry2015pushbroom}. This system successfully combined trajectory libraries and a state machine to avoid obstacles using very little computational power even at very high speeds \cite{barry2018high}. Another solution to obstacle avoidance on flying robots was the creation of NanoMap \cite{2018nanomap}. This allows for 3D data to be processed at a much faster rate allowing for higher speeds of the robot \cite{2018nanomap}.
+		
+		\subsubsection{Computer Vision}
+		
+		Currently there are many different ways that computers can make high-level decisions based on digital image information. There are many methods to acquire, process, and analyze data from the real world using a camera. While this is a very broad field, we intend to focus especially on the aspects around motion estimation and object recognition.
+		
+		Both will be working with a video stream taken from a camera. 
+		
+		Motion estimation can be accomplished using 'direct' methods which compare whole fields of pixels to each other over successive frames, or indirect methods which look for specific features. The information resulting from motion estimation streams can be used to both compensate for motion while analyzing other aspects of an image, and update a state machine.
+		
+		Object recognition in our project will be accomplishing two tasks. Identifying a marker or target which will require more involved object recognition calculations, and very simple techniques, such as edge detection, to identify obstacles that exist in the path of the robot.
+		
+		\subsubsection{OpenCV}
+		
+		The Open Source Computer Vision Library (OpenCV) of programming functions is a cross-platform and free for use collection of functions primarily aimed at real-time computer vision\cite{opencv}. Most well documented techniques to accomplish all of the computer vision goals of our project have already been created and refined in OpenCV. For this reason we will be leaning heavily on OpenCV functions.
+		
+		\subsubsection{TurtleBot}
+		
+		The TurtleBot is a robot kit with open-source design and software. A TurtleBot is a robot built to the specification for TurtleBot Compatible Platforms\cite{wise_foote_2011}. In our case this is a Kobuki Base, an Acer Netbook running Ubuntu with ROS packages added, an X-Box Kinect, and some mounting plates. 
+		
+		The resulting robot looks like a disk supporting some circular shelves with a small laptop and a camera on the shelves. The base disk is 35.4cm in diameter, the topmost shelf is 42cm from the ground. The robot has a maximum speed of 0.65m/s. 
+		
+		\subsubsection{AscTec Pelican}
+		
+		The Ascending Technologies Pelican is a 65.1cm by 65.1cm quad-rotor  designed for research purposes\cite{asctec}. It includes a camera, a high level and low level processor set up for computer vision and SLAM research. It is also capable of interfacing easily with other controllers and can carry up to a kilogram of additional gear.
 		
 	\subsection{Definitions}
 	
-	Many words used during this project have many synonyms, and similarly there are many different ways to word many of the things in this project and often no conventions. For this purpose we will define terms which we intend to have more specific meanings than in normal English, or will clarify what we mean by the often vague descriptions used for many of the components of this project.
+	Many terms used during this project have synonyms, and similarly there are many different ways to word many of the things in this project and often no conventions. For this purpose we will define terms which we intend to have more specific meanings than in normal English, or will clarify what we mean by the often vague descriptions used for many of the components of this project.
 	
 		\subsubsection{Flying Robot}
 		
@@ -103,32 +126,53 @@
 	
 	The aim of this project is to build an air robot that is able to identify a target and move to the target, avoiding any obstacles that are in the way. 
 	
-	Tracking targets of interest in complex environments with an uncrewed aerial vehicle is the ultimate goal of this project. 
+	Tracking targets of interest in complex environments with a flying robot is the ultimate goal of this project. 
 	
 		\subsubsection{Targets of Interest}
 		
-		This target will be an object in the environment that has already been identified visually by an operator before navigation information is denied, or pre-programmed into the UAV before operation.
+		This target will be an object in the environment that has already been identified visually by an operator before navigation information is denied, or pre-programmed into the flying robot before operation.
 		
 		\subsubsection{Complex Environment}
 		
-		The proposed use case of this project would be an environment with obstacles that the UAV could potentially collide with. Flying at sufficiently low altitude that trees or buildings could come between the UAV and the target of interest is the core of the project.
+		The proposed use case of this project would be an environment with obstacles that the flying robot could potentially collide with. Flying at sufficiently low altitude that trees or buildings could come between the flying robot and the target of interest is the core of the project.
+		
+		\subsubsection{Benefits}
+		
+		Having a flying robot capable of accomplishing these tasks while totally autonomous will allow for the use of flying robots in environments closer to the ground, and will assist pilots in complex environments. These general requirements can be used in many situations.
+		
+		\begin{itemize}
+			\item \textbf{Surveillance:} The robot could follow an interesting object, especially in an urban environment, without colliding with obstacles.
+			\item \textbf{Search and Rescue:} Robots could move toward visual way-points set by pilots while avoiding obstacles in complex environments assisting in search efforts.
+			\item \textbf{Inspections:} Objects in hard to reach environments and complex environments like rooftops or bridges.
+			\item \textbf{Disaster Relief:} Checking inside buildings that may have compromised structural integrity, rubble on ground, \textit{\&c}.
+			\item \textbf{Agriculture:} Inspection of tree-fruit and assets in remote locations such as irrigation equipment which can not be done from overhead.
+		\end{itemize}
 		
 	\subsection{Scope}
-	The scope of the project is limited due to only being able to testing indoors. The range for target set up from the robot for identification is limited due this, and it constraints certain characteristics of the obstacles. To fit everything inside for testing we will be using smaller obstacles. A possible end goal of this project would be to be able to identify a target and avoid obstacles in realtime in a non-simulation environment. 
+	
+	The scope of the project is limited due to only being able to test indoors.
+	
+	Ideally the drone would be operating at a high speed and identifying an arbitrary target in an unpredictable environment. In our case though the testing must be completed within the confines of a relatively small robotics laboratory. 
+	
+	For this reason markers will be used as targets, this will make it easier to ensure the drone is accurately identifying the targets as it will be possible to encode messages into the markers and have the robot provide feedback about exactly what it is able to see and when.
+	
+	Obstacles such as buildings or trees will be difficult to put inside the lab as well, so initially something simpler like a panel or box will be used. Smaller obstacles will be used indoors simply due to space constraints.
+	
+	Lower speeds will be used as well, again due to the lack of space. Hopefully combining simulations at higher speeds with proof of concept in the real world at lower speed will be sufficient to show that this robot is able to identify targets and avoid obstacles at useful speeds.
 
 \section{Requirement Definition Activities}
 
 	\subsection{Information}
 	
 	To better define the requirements for this project the CAF RPAS project requirements were researched, to attempt to familiarize ourselves with the type of system outlined in the project \cite{RPAS}. Previously created obstacle avoidance systems implemented on similar UAVs were also researched to gain more background information for our knowledge. An article that was identified to be beneficial is about both target tracking and obstacle avoidance on a drone \cite{woods2015dynamic}. This outlined some specific problems that this project will likely face as well, and a possible solution to these problems. 
-	The Discussions with our project supervisor Dr. Givigi revealed that it was possible to build a monocular detection system that can identify targets and multiple obstacles at once. This then can be implemented on an air robot which can take proper action to avoid these obstacles and move towards the identified target. Those discussions inspired the project requirements detailed in the following section.
+	The discussions with our project supervisor Dr. Givigi revealed that it was possible to build a monocular detection system that can identify targets and multiple obstacles at once. This then can be implemented on an air robot which can take proper action to avoid these obstacles and move towards the identified target. Those discussions inspired the project requirements detailed in the following section.
 
 \section{Product Requirements}
 
 	\subsection{Functional Requirements (FR)}
 	
 		\subsubsection{FR-01: State Machine}
-		Create a state machine for both land and air robots that allows for a movement decision to be made based on an input from the robot. 
+		Create a state machine for both turtlebot and air robots that allows for a movement decision to be made based on an input from the robot. 
 		
 		\subsubsection{FR-02: Movement Toward Target}
 		The air and land robots will be able to move toward a target under control.
@@ -154,10 +198,20 @@
 	\subsection{Performance Requirements (PR)}
 	
 		\subsubsection{PR-01: Target Identification}
+		
 		The robot will be able to identify and locate OpenCV's ArCuo shapes within a 15m radius. See FR-05.
 		
 		\subsubsection{PR-02: State Machine Corrections}
-		The state machine will be able to correct for movements made and put the robot back on its original path without deviating more than 15cm (we need to pick a acceptable deviation). See FR-04.
+		
+		The state machine will be able to correct for movements made and put the robot back on its original path without deviating more than 30cm. See FR-04. This can be verified using the motion capture equipment installed in the lab to record the path taken by the robot.
+		
+		\subsubsection{PR-03: Interpretation of Visual Data}
+		
+		The flying robot should be able to process an image and plot obstacles at a rate of 10 Hz. See FR-07.
+		
+		\subsubsection{PR-04: Multiple Obstacles}
+		
+		The flying robot shall be able to navigate an environment with two obstacles. See FR-08.
 		
 	\subsection{Interface Requirements (IR)}
 	
@@ -171,12 +225,24 @@
 		
 		\subsubsection{IR-03: Air Robot Radio Denied}
 		
-		The air robot shall be able to identify a pre-determined marker and fly toward it while avoiding obstacles.
+		The air robot shall be able to identify a pre-determined marker and fly toward it while avoiding obstacles. 
+		
+		\subsubsection{IR-04: Off-board User Interface}
+		
+		A simple interface, perhaps command line, will allow a user to select a marker as a target to start the robot toward this target. The robot should receive this signal over a wireless transmission.
 		
 	\subsection{Simulation Requirements (SimR)}
 	
-		\subsubsection{SimR-01: Air Robot}
-		The final product will be an air robot, but for simulation we will be using Gazebo to create and test our systems. 
+		\subsubsection{SimR-01: Gazebo with Turtlebot}
+		
+		Initially a simulation environment built for the TurtleBot will be created and most logic will be tested in this environment before using the robot in the physical world.
+		
+		The first simulation should be in an environment which contains both obstacles and markers for the robot to navigate around and toward.
+		
+		\subsubsection{SimR-02: Flying Robot}
+		
+		A mechanism to simulate a flying robot will be created to test any logic added for navigation in 3D space.
+		
 	
 	\subsection{Implementation Requirements (ImpR)}
 	
@@ -188,7 +254,15 @@
 		
 		The simplest obstacle avoidance algorithm must be implemented on a Turtlebot using the Robot Operating System.
 		
-	\subsection{Schedule Restrictions (SR)}
+		\subsubsection{ImpR-03: Turtlebot in Lab}
+		
+		The Turtlebot will operate in the real world, identifying targets and avoiding obstacles. 
+		
+		\subsubsection{ImpR-04: Flying Robot in Lab}
+		
+		The Flying Robot will operate in the lab, identifying targets and avoiding obstacles.
+		
+	\subsection{Schedule Restrictions (SchR)}
 	
 		\subsubsection{SchR-01: Simulation}
 		
@@ -201,6 +275,20 @@
 		\subsubsection{SchR-03: Flying Prototype}
 		
 		The first functional flying prototype shall be capable of identifying a marker, moving toward the marker, and avoiding an obstacle placed into its environment no later than February  \nth{18}.
+		
+	\subsection{Miscellaneous Requirements (MiscR)}
+	
+		\subsubsection{MiscR-01: Familiarization with TurtleBot}
+		
+		Before executing code on a physical TurtleBot it will be necessary to learn how this machine starts, is charged, and can have software loaded into it for use.
+		
+		\subsubsection{MiscR-02: Familiarization with Flying Robot}
+		
+		Before executing code on a physical Flying Robot it will be necessary to learn how to start, install batteries, and execute instructions on a flying robot in a lab environment.
+		
+		\subsubsection{MiscR-03: Motion Tracking Equipment Use}
+		
+		To verify that instructions are being executed accurately it may be necessary to use the existing motion tracking suite in the robotics lab. Basic use of this system will be necessary before executing instructions to see if the robot correctly follows routes.
 
 \section{Risk Assessment}
 
@@ -222,7 +310,7 @@
 		
 		Alternatives to the ArUco markers can be tested, or if these prove truly unreliable then coloured areas or illuminated targets could be incorporated. These are less desirable as ideally the robot would be able to fly toward an arbitrary target.
 		
-	\subsection{Hardware Limitations}
+	\subsection{Computer Hardware Limitations}
 	
 	Image processing, especially quickly and with multiple goals, is computationally expensive. While this should not be an issue on a ground vehicle moving at slower speeds, it may become more of an issue on a flying robot if it operates at higher speeds and is incapable of carrying as much on-board computational capability.
 	
@@ -238,14 +326,21 @@
 		
 		Testing many algorithms and working to streamline the algorithm used, especially for the flying robot, as well as selecting hardware that is complimentary to the kind of loads created by running such an algorithm can mitigate these risks. 
 	
-	%\subsection{RISK NAME} 
-	%risk description text 					ctrl - U for uncomment
-	%\subsubsection{Likelihood}
-	%likelihood text
-	%\subsubsection{Impact}
-	%impact text
-	%\subsubsection{Process Solution}
-	%plan b text
+	\subsection{Flight Control System Inaccuracy}
+	
+	Many drones are not able to execute arbitrary movements with high accuracy. Verifying that the drone is actually executing instructions may be difficult. 
+	
+		\subsubsection{Likelihood}
+		
+		Medium likelihood, depending on how well developed the libraries for our particular drone these issues may have all been sufficiently worked out for the purposes of this project.
+		
+		\subsubsection{Impact}
+		
+		Low impact, we could still observe the flying robot making decisions even if it is unable to execute the instructions given properly.
+		
+		\subsubsection{Process Solution}
+		
+		Using smaller number of obstacles and moving at a slow enough speed should ensure that the robot never needs to execute extreme moves. These more extreme moves are where inaccuracies in control models will exposes themselves the most. 
 
 \section{Conclusion}
 

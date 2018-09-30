@@ -44,8 +44,7 @@
   <internal package="biblatex" priority="9" active="0">
     <generic>latex</generic>
     <provides type="dynamic">
-      <file>"DID-03 SOR Hebb Stephan".aux</file>
-      <file>DID-03_SOR_Hebb_Stephan-blx.bib</file>
+      <file>"DID-03 SOR Hebb Stephan".bcf</file>
     </provides>
     <requires type="dynamic">
       <file>"DID-03 SOR Hebb Stephan".bbl</file>
@@ -53,7 +52,6 @@
     <requires type="static">
       <file>blx-dm.def</file>
       <file>blx-compat.def</file>
-      <file>blx-bibtex.def</file>
       <file>biblatex.def</file>
       <file>standard.bbx</file>
       <file>numeric.bbx</file>
@@ -66,14 +64,13 @@
     </requires>
   </internal>
   <external package="biblatex" priority="5" active="0">
-    <generic>bibtex</generic>
+    <generic>biber</generic>
     <cmdline>
-      <binary>bibtex</binary>
-      <option>-min-crossrefs 2</option>
+      <binary>biber</binary>
       <infile>"DID-03 SOR Hebb Stephan"</infile>
     </cmdline>
     <input>
-      <file>"DID-03 SOR Hebb Stephan".aux</file>
+      <file>"DID-03 SOR Hebb Stephan".bcf</file>
     </input>
     <output>
       <file>"DID-03 SOR Hebb Stephan".bbl</file>
@@ -82,14 +79,10 @@
       <file>"DID-03 SOR Hebb Stephan".bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>"DID-03 SOR Hebb Stephan".aux</file>
-      <file>DID-03_SOR_Hebb_Stephan-blx.bib</file>
+      <file>"DID-03 SOR Hebb Stephan".bcf</file>
     </requires>
     <requires type="editable">
-      <file>bibliographyDID03</file>
-    </requires>
-    <requires type="static">
-      <file>biblatex.bst</file>
+      <file>bibliographyDID03.bib</file>
     </requires>
   </external>
 </requests>
