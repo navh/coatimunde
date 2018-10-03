@@ -64,23 +64,24 @@
 
 	\subsection{Document Purpose}
 	
-	The purpose of this document is to outline the project requirements. That is, what the project is to accomplish once all of the requirements outlined in this document have been completed and to what standard they shall be considered done. The benefits of meeting these requirements and solving this problem will be outlined and some possible use cases stated. This document will then identify the constraints that these requirements impose on this project.
+	Using Computer Optics for Analyzing Trajectories in Mostly Unknown, Navigation Denied, Environments (\textsc{coatimunde}) is the goal of this project. The purpose of this document is to outline the requirements for \textsc{coatimunde}. That is, what the project is to accomplish once all of the requirements outlined in this document have been completed and to what standard they shall be considered done. The benefits of meeting these requirements and solving this problem will be outlined and some possible use cases stated. This document will then identify the constraints that these requirements impose on this project.
 	
 	\subsection{Background}
 	
+	Both in the consumer and professional sectors the use of autonomous aerial vehicles is growing quickly. Currently these vehicles rely on skilled pilots to accomplish a very limited set of tasks. Adding obstacle avoidance capabilities to these vehicles and simplifying the task of following targets could allow for these systems to be used in many more situations. This section will give a quick background on obstacle avoidance, unmanned aircraft systems, computer vision, and the platforms we intend to use in this project.
+	
 		\subsubsection{Obstacle Avoidance}
 		
-		Both in the consumer and professional sectors the use of autonomous aerial vehicles is growing quickly. 
 		
 		Obstacle avoidance is the task of satisfying a control objective, in this case moving toward a visual target, while subject to non-intersection or non-collision position constraints. Those later constraints are, in this case, to be dynamically created while moving in a reactive manner, instead of being pre-computed.
 		
-		\subsubsection{Uncrewed Aircraft Systems}
+		\subsubsection{Unmanned Aircraft Systems}
 		
-		Very generally any powered vehicle that uses aerodynamic forces to provide lift that does not carry a human operator can be considered an uncrewed aerial vehicle. Currently most of these vehicles make up a single component of a larger uncrewed aircraft system. 
+		Very generally any powered vehicle that uses aerodynamic forces to provide lift that does not carry a human operator can be considered an unmanned aerial vehicle. Currently most of these vehicles make up a single component of a larger unmanned aircraft system. 
 		
-		An Uncrewed aircraft system (UAS), or Remotely piloted aircraft system (RPAS), is an aircraft without a human pilot on-board, instead controlled from an operator on the ground. 
+		An Unmanned aircraft system (UAS), or Remotely piloted aircraft system (RPAS), is an aircraft without a human pilot on-board, instead controlled from an operator on the ground. 
 		
-		Such a system can have varying levels of automation, something as simple as a model aircraft could be considered a UAS without any automation capabilities. A UAS capable of detecting, recognizing, identifying, and tracking targets of interest in complex environments and integrate with the systems required to process and fuse the collected information into actionable intelligence while operating in a low-to-medium threat environment is the current goal of the RPAS project by the RCAF \cite{RPAS}. 
+		Such a system can have varying levels of autonomy, something as simple as a model aircraft could be considered a UAS without any automation capabilities. A UAS capable of detecting, recognizing, identifying, and tracking targets of interest in complex environments and integrate with the systems required to process and fuse the collected information into actionable intelligence while operating in a low-to-medium threat environment is the current goal of the RPAS project by the RCAF \cite{RPAS}. 
 		
 		Flying a UAS requires a secure link to the operator off-board. Maintaining this link, particularly while flying close to the ground where more opportunities for interference are introduced, and in environments where potentially hostile actors may be attempting to jam communications, necessitate a level of automation on-board capable of maintaining flight while denied navigation information.
 		
@@ -88,11 +89,9 @@
 		
 		\subsubsection{Computer Vision}
 		
-		Currently there are many different ways that computers can make high-level decisions based on digital image information. There are many methods to acquire, process, and analyze data from the real world using a camera. While this is a very broad field, we intend to focus especially on the aspects around motion estimation and object recognition.
+		Currently there are many different ways that computers can make high-level decisions based on digital image information. There are many methods to acquire, process, and analyze data from the real world using a camera. While this is a very broad field, we intend to focus especially on the aspects around motion estimation and object recognition. Both will be working with a video stream taken from a camera. 
 		
-		Both will be working with a video stream taken from a camera. 
-		
-		Motion estimation can be accomplished using 'direct' methods which compare whole fields of pixels to each other over successive frames, or indirect methods which look for specific features. The information resulting from motion estimation streams can be used to both compensate for motion while analyzing other aspects of an image, and update a state machine.
+		Motion estimation can be accomplished using \textit{direct} methods which compare whole fields of pixels to each other over successive frames, or indirect methods which look for specific features. The information resulting from motion estimation streams can be used to both compensate for motion while analyzing other aspects of an image, and update a state machine.
 		
 		Object recognition in our project will be accomplishing two tasks. Identifying a marker or target which will require more involved object recognition calculations, and very simple techniques, such as edge detection, to identify obstacles that exist in the path of the robot.
 		
@@ -124,7 +123,7 @@
 		
 	\subsection{Aim}
 	
-	The aim of this project is to build an air robot that is able to identify a target and move to the target, avoiding any obstacles that are in the way. 
+	The aim of this project is to build an air robot that is able to identify a target and move toward it, avoiding any obstacles that are in the way. 
 	
 	Tracking targets of interest in complex environments with a flying robot is the ultimate goal of this project. 
 	
@@ -142,13 +141,17 @@
 		
 		\begin{itemize}
 			\item \textbf{Surveillance:} The robot could follow an interesting object, especially in an urban environment, without colliding with obstacles.
-			\item \textbf{Search and Rescue:} Robots could move toward visual way-points set by pilots while avoiding obstacles in complex environments assisting in search efforts.
-			\item \textbf{Inspections:} Objects in hard to reach environments and complex environments like rooftops or bridges.
-			\item \textbf{Disaster Relief:} Checking inside buildings that may have compromised structural integrity, rubble on ground, \textit{\&c}.
-			\item \textbf{Agriculture:} Inspection of tree-fruit and assets in remote locations such as irrigation equipment which can not be done from overhead.
+			\item \textbf{Search and Rescue:} The robot could move toward visual way-points set by pilots while avoiding obstacles in complex environments assisting in search efforts.
+			\item \textbf{Inspections:} The robot could inspect objects in hard to reach environments and complex environments like rooftops or bridges.
+			\item \textbf{Disaster Relief:} The robot could check inside buildings that may have compromised structural integrity, rubble on ground, \textit{\&c}.
+			\item \textbf{Agriculture:} The robot could inspect tree-fruit or crops that can not be observed from overhead or check assets in remote locations such as irrigation equipment.
 		\end{itemize}
 		
 	\subsection{Scope}
+	
+	%%%Givigi: I am not sure if this explains the scope of the project. Do you have an example given by the PMO?
+	
+	%%%I believe we need to basically just re-write this whole section by hand. We should also discuss our rough plan here mwhere we discuss implementing the robot on the ground first and then in the air after this has been proven.
 	
 	The scope of the project is limited due to only being able to test indoors.
 	
