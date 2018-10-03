@@ -1,15 +1,15 @@
 [0] Config.pm:302> INFO - This is Biber 2.11
 [0] Config.pm:305> INFO - Logfile is 'DID-03 SOR Hebb Stephan.blg'
-[36] biber-MSWIN64:313> INFO - === 
-[70] Biber.pm:371> INFO - Reading 'DID-03 SOR Hebb Stephan.bcf'
+[33] biber-MSWIN64:313> INFO - === 
+[65] Biber.pm:371> INFO - Reading 'DID-03 SOR Hebb Stephan.bcf'
 [169] Biber.pm:857> INFO - Found 8 citekeys in bib section 0
-[188] Biber.pm:3976> INFO - Processing section 0
-[205] Biber.pm:4136> INFO - Looking for bibtex format file 'bibliographyDID03.bib' for section 0
-[208] bibtex.pm:1500> INFO - LaTeX decoding ...
-[223] bibtex.pm:1316> INFO - Found BibTeX data source 'bibliographyDID03.bib'
-[279] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[279] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[279] Biber.pm:3804> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[279] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
-[293] bbl.pm:617> INFO - Writing 'DID-03 SOR Hebb Stephan.bbl' with encoding 'UTF-8'
-[296] bbl.pm:720> INFO - Output to DID-03 SOR Hebb Stephan.bbl
+[182] Biber.pm:3976> INFO - Processing section 0
+[195] Biber.pm:4136> INFO - Looking for bibtex format file 'bibliographyDID03.bib' for section 0
+[198] bibtex.pm:1500> INFO - LaTeX decoding ...
+[211] bibtex.pm:1316> INFO - Found BibTeX data source 'bibliographyDID03.bib'
+[268] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[268] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[268] Biber.pm:3804> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[268] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
+[287] bbl.pm:617> INFO - Writing 'DID-03 SOR Hebb Stephan.bbl' with encoding 'UTF-8'
+[291] bbl.pm:720> INFO - Output to DID-03 SOR Hebb Stephan.bbl

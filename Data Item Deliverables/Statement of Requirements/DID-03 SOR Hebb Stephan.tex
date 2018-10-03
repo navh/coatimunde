@@ -99,6 +99,14 @@
 		
 		The Open Source Computer Vision Library (OpenCV) of programming functions is a cross-platform and free for use collection of functions primarily aimed at real-time computer vision\cite{opencv}. Most well documented techniques to accomplish all of the computer vision goals of our project have already been created and refined in OpenCV. For this reason we will be leaning heavily on OpenCV functions.
 		
+		\subsubsection{Gazebo}
+		
+		Gazebo is a robot simulator that allows for creation of a realistic environment which includes both obstacles and makers similar to those being used in the lab. It will then be used to rapidly test algorithms.
+		
+		\subsubsection{Robot Operating System}
+		
+		The Robot Operating System (ROS) is a distributed message system that allows for various sensors and processors to work together to control a robot. It is open source and has been integrated already with OpenCV and Gazebo. There are many additional tools for detecting obstacles, mapping the environment, planning paths, and much more. It is also a robust messaging system that has been proven to be capable of real-time processes.
+		
 		\subsubsection{TurtleBot}
 		
 		The TurtleBot is a robot kit with open-source design and software. A TurtleBot is a robot built to the specification for TurtleBot Compatible Platforms\cite{wise_foote_2011}. In our case this is a Kobuki Base, an Acer Netbook running Ubuntu with ROS packages added, an X-Box Kinect, and some mounting plates. 
@@ -196,11 +204,11 @@
 	\subsection{Interface Requirements (IR)}
 
 		\subsubsection{IT-01: Gazebo Simulator}
-		The Gazebo simulator shall...
+		The Gazebo simulator shall be run on a laptop. Robots within the simulation will be interfaced through Robot Operating System.
 	
 		\subsubsection{IR-02: Turtlebot Communication through ROS}
 		
-		Communication to the Turtlebot will be done through Robot Operating System through USB.
+		Communication to the Turtlebot will be done through Robot Operating System over USB.
 		
 		\subsubsection{IR-03: Air Robot Communication}
 		
@@ -212,34 +220,46 @@
 		
 	\subsection{Simulation Requirements (SimR)}
 	
-		\subsubsection{SimR-01: Gazebo with Turtlebot}
+		\subsubsection{SimR-01: Empty Lab TurtleBot in Gazebo}
 		
-		Initially a simulation environment built for the TurtleBot will be created and most logic will be tested in this environment before using the robot in the physical world.
+		A Gazebo simulation environment which roughly approximates a lab environment with markers placed around will be created. A model of the TurtleBot will be able to navigate toward markers in this environment.
 		
-		The first simulation should be in an environment which contains both obstacles and markers for the robot to navigate around and toward.
-
-		Gazebo shall be used to simulate the project prior to implementing on the turtlebot.
+		\subsubsection{SimR-02: Lab with Obstacles TurtleBot in Gazebo}
 		
-		\subsubsection{SimR-02: Flying Robot}
+		Stationary obstacles will be added to the Lab simulation environment and a TurtleBot shall navigate toward markers in the lab while avoiding these obstacles.
 		
-		A mechanism to simulate a flying robot will be created to test any logic added for navigation in 3D space.
+		\subsubsection{SimR-03: Lab with Obstacles Flying Robot}
+		
+		An environment with obstacles will be created and a Flying Robot shall navigate toward markers in the simulation while avoiding obstacles.
 		
 	
 	\subsection{Implementation Requirements (ImpR)}
 	
-		\subsubsection{ImpR-01: Gazebo Simulation}
+		\subsubsection{ImpR-01: Computer Vision}
 		
-		Prior to testing on the Turtlebot, the program shall be implemented on the gazebo simulation.
+		OpenCV programs shall be created that can use a single video stream and identify both markers and obstacles.
+	
+		\subsubsection{ImpR-02: Gazebo Simulation}
 		
-		\subsubsection{ImpR-02: Turtlebot Robot Operating System}
+		Prior to testing on the Turtlebot, the program shall be implemented on the gazebo simulation. This simulation environment will be able to create a realistic video stream that can be used for testing.
+		
+		\subsubsection{ImpR-03: Robot Operating System}
+		
+		Using the robot in the simulation environment the appropriate components, tools, and libraries to interpret an OpenCV stream, make decisions based on the environment, and execute instructions will be developed.
+		
+		\subsubsection{ImpR-04: Turtlebot in Simulation}
 		
 		The simplest obstacle avoidance algorithm must be implemented on a Turtlebot using the Robot Operating System.
 		
-		\subsubsection{ImpR-03: Turtlebot in Lab}
+		\subsubsection{ImpR-05: Turtlebot in Lab}
 		
 		The Turtlebot will operate in the real world, identifying targets and avoiding obstacles. 
 		
-		\subsubsection{ImpR-04: Flying Robot in Lab}
+		\subsubsection{ImpR-06: Flying Robot in Simulation}
+		
+		The obstacle avoidance algorithm used for a flying robot will be implemented in a simulation avoiding obstacles and identifying targets.
+		
+		\subsubsection{ImpR-07: Flying Robot in Lab}
 		
 		The Flying Robot will operate in the lab, identifying targets and avoiding obstacles.
 		
@@ -247,7 +267,7 @@
 	
 		\subsubsection{SchR-01: Simulation}
 		
-		The first simulation shall be able to operate in a Gazebo simulation environment no later than November \nth{5}. It shall be able to identify a marker, move toward the marker, and avoid an obstacle placed into the simulation environment.
+		The first TurtleBot simulation shall be able to operate in a Gazebo simulation environment no later than November \nth{5}. It shall be able to identify an ArUco shape as a marker, move toward the marker, and avoid a stationary obstacle placed into the simulation environment.
 		
 		\subsubsection{SchR-02: TurtleBot Prototype}
 		
