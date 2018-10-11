@@ -40,13 +40,13 @@
 		
 		\vspace{1.5cm}
 		
-		\LARGE{DID-03 - Statement of Requirements}\normalsize
+		\LARGE{DID-03 - Statement of Requirements TITLE}\normalsize
 		
 		\vfill
 		
 		\textbf{Presented by:}\\Amos Navarre \textsc{Hebb} \& Kara \textsc{Stephan}\\
 		\vspace{0.8cm}
-		\textbf{Presented to:}\\Dr. Sidney \textsc{Givigi}
+		\textbf{Presented to:}\\Dr. Sidney \& Rachid \textsc{Beguenane}\textsc{Givigi}
 		\vspace{0.8cm}
 		
 		\today
@@ -79,7 +79,7 @@
 		
 		Very generally any powered vehicle that uses aerodynamic forces to provide lift without a human operator being carried can be considered an unmanned aerial vehicle. Currently most of these vehicles make up a single component of a larger unmanned aircraft system. 
 		
-		An Unmanned aircraft system (UAS), or remotely piloted aircraft system (RPAS), is an aircraft without a human pilot on-board, instead controlled from an operator on the ground. Such a system can have varying levels of autonomy, something as simple as a model aircraft could be considered a UAS without any automation capabilities. Detecting, recognizing, identifying, and tracking targets of interest in complex environments and integrate with the systems required to process and fuse the collected information into actionable intelligence while operating in a low-to-medium threat environment is the current goal of the RPAS project by the RCAF \cite{RPAS}. 
+		An Unmanned aircraft system (UAS), or remotely piloted aircraft system (RPAS), is an aircraft without a human pilot on-board, instead controlled from an operator on the ground. Such a system can have varying levels of autonomy, something as simple as a model aircraft could be considered a UAS without any automation capabilities. Detecting, recognizing, identifying, and tracking targets of interest in complex environments and integrate with the systems required to process and fuse the collected information into actionable intelligence while operating in a low-to-medium threat environment is the current goal of the RPAS project by the Royal Canadian Air Force (RCAF) \cite{RPAS}. 
 		
 		Flying a UAS requires a secure link to the operator off-board. Maintaining this link, particularly while flying close to the ground where more opportunities for interference are introduced is difficult. This difficulty is compounded in environments where potentially hostile actors may be attempting to jam communications. This necessitates a level of automation on-board capable of maintaining flight while denied navigation information.
 		
@@ -155,13 +155,13 @@
 	
 	The project shall start by using a ground robot then progressing to a flying robot. The project will use computer vision to find targets and for avoiding multiple obstacles. Both robots shall be highly autonomous, requiring only user input to commence. 
 
-	The scope of the project is limited due to only being able to test indoors. Ideally the drone would be operating at a high speed and identifying an arbitrary target in an unpredictable environment. In our case though the testing must be completed within the confines of a relatively small robotics laboratory. Smaller obstacles will be used indoors simply due to space constraints. Lower speeds will be used as well, again due to the lack of space. 
+	The scope of the project is limited due to only being able to test indoors. Ideally the UAV would be operating at a high speed and identifying an arbitrary target in an unpredictable environment. In our case though the testing must be completed within the confines of a relatively small robotics laboratory. Smaller obstacles will be used indoors simply due to space constraints. Lower speeds will be used as well, again due to the lack of space. 
 
 \section{Requirement Definition Activities}
 
 	\subsection{Information}
 	
-	To better define the requirements for this project the CAF RPAS project requirements were researched, to attempt to familiarize ourselves with the type of system outlined in the project \cite{RPAS}. Previously created obstacle avoidance systems implemented on similar UAVs were also researched to gain more background information for our knowledge. An article that was identified to be beneficial is about both target tracking and obstacle avoidance on a drone \cite{woods2015dynamic}. This outlined some specific problems that this project will likely face as well, and a possible solution to these problems. 
+	To better define the requirements for this project the RCAF RPAS project requirements were researched, to attempt to familiarize ourselves with the type of system outlined in the project \cite{RPAS}. Previously created obstacle avoidance systems implemented on similar UAVs were also researched to gain more background information for our knowledge. An article that was identified to be beneficial is about both target tracking and obstacle avoidance on a drone \cite{woods2015dynamic}. This outlined some specific problems that this project will likely face as well, and a possible solution to these problems. 
 	The discussions with our project supervisor Dr. Givigi revealed that it was possible to build a monocular detection system that can identify targets and multiple obstacles at once. This then can be implemented on an air robot which can take proper action to avoid these obstacles and move towards the identified target. Those discussions inspired the project requirements detailed in the following section.
 
 \section{Product Requirements}
@@ -307,11 +307,11 @@
 		
 		\subsubsection{Process Solution}
 		
-		Testing many algorithms and working to streamline the algorithm used, especially for the Flying Robot, as well as selecting hardware that is complimentary to the kind of loads created by running such an algorithm can mitigate these risks. 
+		Testing many algorithms and working to streamline the algorithm used, especially for the Flying Robot, as well as selecting hardware that is complimentary to the kind of loads created by running such an algorithm can mitigate these risks. Using FPGA can help with the solution!!!
 	
 	\subsection{Flight Control System Inaccuracy}
 	
-	Many drones are not able to execute arbitrary movements with high accuracy. Verifying that the drone is actually executing instructions may be difficult. 
+	Many UAV's are not able to execute arbitrary movements with high accuracy. Verifying that the drone is actually executing instructions may be difficult. 
 	
 		\subsubsection{Likelihood}
 		
