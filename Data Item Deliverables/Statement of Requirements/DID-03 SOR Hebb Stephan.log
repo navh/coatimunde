@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.6)  4 OCT 2018 19:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.6)  13 OCT 2018 22:09
 entering extended mode
 **"./DID-03 SOR Hebb Stephan.tex"
 ("DID-03 SOR Hebb Stephan.tex"
@@ -617,7 +617,7 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-<rmcLogo.png, id=271, 191.9672pt x 368.87813pt>
+<rmcLogo.png, id=275, 191.9672pt x 368.87813pt>
 File: rmcLogo.png Graphic file (type png)
 <use rmcLogo.png>
 Package pdftex.def Info: rmcLogo.png  used on input line 39.
@@ -636,34 +636,34 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout6 = `"DID-03 SOR Hebb Stephan.toc"'.
 
  [3] [4] [5]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 147.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 155.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 147.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 155.
  [6] [7] [8] [9]
-[10]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 336.
- [11]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 336.
+[10] [11]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 348.
+ [12]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 348.
  ("DID-03 SOR Hebb Stephan.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 336.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 336.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 348.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 348.
 Package rerunfilecheck Info: File `"DID-03 SOR Hebb Stephan".out' has not chang
 ed.
-(rerunfilecheck)             Checksum: B139E9724464AD523F940DAFB4C9BE8D;5252.
+(rerunfilecheck)             Checksum: 56C68D72A030C4627EE0F843BE99C57B;5334.
 Package logreq Info: Writing requests to '"DID-03 SOR Hebb Stephan".run.xml'.
 \openout1 = `"DID-03 SOR Hebb Stephan.run.xml"'.
 
  ) 
 Here is how much of TeX's memory you used:
- 13560 strings out of 492973
- 229235 string characters out of 3135927
+ 13563 strings out of 492973
+ 229272 string characters out of 3135927
  691310 words of memory out of 3000000
- 17214 multiletter control sequences out of 15000+200000
+ 17215 multiletter control sequences out of 15000+200000
  6573 words of font info for 24 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,11n,45p,913b,3430s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -676,9 +676,9 @@ onts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 msfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
 cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt1
 0.pfb>
-Output written on "DID-03 SOR Hebb Stephan.pdf" (11 pages, 294418 bytes).
+Output written on "DID-03 SOR Hebb Stephan.pdf" (12 pages, 297316 bytes).
 PDF statistics:
- 472 PDF objects out of 1000 (max. 8388607)
- 89 named destinations out of 1000 (max. 500000)
- 542 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 482 PDF objects out of 1000 (max. 8388607)
+ 91 named destinations out of 1000 (max. 500000)
+ 550 words of extra memory for PDF output out of 10000 (max. 10000000)
 
