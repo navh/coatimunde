@@ -7,4 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export PWD="/home/navarre/catkin_ws/build"
+export CMAKE_PREFIX_PATH="/home/t/coatimunde/catkin_ws/devel:$CMAKE_PREFIX_PATH"
+export PWD="/home/t/coatimunde/catkin_ws/build"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/t/coatimunde/catkin_ws/devel/share/common-lisp"
+export ROS_PACKAGE_PATH="/home/t/coatimunde/catkin_ws/src:$ROS_PACKAGE_PATH"

@@ -1,10 +1,10 @@
-file(REMOVE_RECURSE
+FILE(REMOVE_RECURSE
   "CMakeFiles/beginner_tutorials_generate_messages_cpp"
-  "/home/navarre/catkin_ws/devel/include/beginner_tutorials/Num.h"
-  "/home/navarre/catkin_ws/devel/include/beginner_tutorials/AddTwoInts.h"
+  "/home/t/coatimunde/catkin_ws/devel/include/beginner_tutorials/Num.h"
+  "/home/t/coatimunde/catkin_ws/devel/include/beginner_tutorials/AddTwoInts.h"
 )
 
 # Per-language clean rules from dependency scanning.
-foreach(lang )
-  include(CMakeFiles/beginner_tutorials_generate_messages_cpp.dir/cmake_clean_${lang}.cmake OPTIONAL)
-endforeach()
+FOREACH(lang)
+  INCLUDE(CMakeFiles/beginner_tutorials_generate_messages_cpp.dir/cmake_clean_${lang}.cmake OPTIONAL)
+ENDFOREACH(lang)

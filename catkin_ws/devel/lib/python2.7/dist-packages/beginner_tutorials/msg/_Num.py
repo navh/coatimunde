@@ -49,7 +49,7 @@ class Num(genpy.Message):
     :param buff: buffer, ``StringIO``
     """
     try:
-      buff.write(_get_struct_q().pack(self.num))
+      buff.write(_struct_q.pack(self.num))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -62,7 +62,7 @@ class Num(genpy.Message):
       end = 0
       start = end
       end += 8
-      (self.num,) = _get_struct_q().unpack(str[start:end])
+      (self.num,) = _struct_q.unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -75,7 +75,7 @@ class Num(genpy.Message):
     :param numpy: numpy python module
     """
     try:
-      buff.write(_get_struct_q().pack(self.num))
+      buff.write(_struct_q.pack(self.num))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -89,18 +89,10 @@ class Num(genpy.Message):
       end = 0
       start = end
       end += 8
-      (self.num,) = _get_struct_q().unpack(str[start:end])
+      (self.num,) = _struct_q.unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = genpy.struct_I
-def _get_struct_I():
-    global _struct_I
-    return _struct_I
-_struct_q = None
-def _get_struct_q():
-    global _struct_q
-    if _struct_q is None:
-        _struct_q = struct.Struct("<q")
-    return _struct_q
+_struct_q = struct.Struct("<q")
