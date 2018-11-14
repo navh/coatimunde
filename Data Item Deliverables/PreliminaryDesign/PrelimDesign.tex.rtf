@@ -77,11 +77,11 @@
 \
 \\section\{Introduction\}\
 \
-	\\subsection\{Document Purpose\}\
+	\\subsection\{Document Purpose READ OVER THIS \}\
 	\
-	Using Computer Optics for Analyzing Trajectories in Mostly Unknown, Navigation Denied, Environments (\\textsc\{coatimunde\}) is the goal of this project. The purpose of this document is to outline the requirements for \\textsc\{coatimunde\}. That is, what the project is to accomplish once all of the requirements outlined in this document have been completed and to what standard they shall be considered done. The benefits of meeting these requirements and solving this problem will be outlined and some possible use cases stated. This document will then identify the constraints that these requirements impose on this project.\
+	Using Computer Optics for Analyzing Trajectories in Mostly Unknown, Navigation Denied, Environments (\\textsc\{coatimunde\}) is the goal of this project. The purpose of this document is to outline the preliminary design for \\textsc\{coatimunde\}. That is, what the project is to accomplish based on the requirements presented and how the project will complete these requirements. The design oft he project thus far will be shown and discussed. This document will then identify the constraints, risks, difficulties that have been faced so far in the project.\
 	\
-	\\subsection\{Background\}\
+	\\subsection\{Background ADD MORE FLUFF\}\
 	\
 	Both in the consumer and professional sectors the use of autonomous aerial vehicles is growing quickly. Currently these vehicles rely on skilled pilots to accomplish a very limited set of tasks. Adding obstacle avoidance capabilities to these vehicles and simplifying the task of following targets could allow for these systems to be used in many more situations. This section will give a quick background on obstacle avoidance, unmanned aircraft systems, computer vision, and the platforms we intend to use in this project.\
 	\
@@ -128,4 +128,118 @@
 		\
 		\\subsubsection\{AscTec Pelican\}\
 		\
-		The Ascending Technologies Pelican is a 65.1cm by 65.1cm quad-rotor  designed for research purposes\\cite\{asctec\}. It includes a camera, a high level and low level processor set up for computer vision and SLAM research. It is also capable of interfacing easily with other controllers and can carry up to a kilogram of additional gear.}
+		The Ascending Technologies Pelican is a 65.1cm by 65.1cm quad-rotor  designed for research purposes\\cite\{asctec\}. It includes a camera, a high level and low level processor set up for computer vision and SLAM research. It is also capable of interfacing easily with other controllers and can carry up to a kilogram of additional gear.\
+\
+\\subsection\{Definitions STILL WANT THIS?\}\
+	\
+	Many terms used during this project have synonyms, and similarly there are many different ways to word many of the things in this project and often no conventions. For this purpose we will define terms which we intend to have more specific meanings than in normal English, or will clarify what we mean by the often vague descriptions used for many of the components of this project.\
+	\
+		\\subsubsection\{Flying Robot\}\
+		\
+		A Flying Robot refers to any vehicle that is able to execute instructions while in the air under its own power.\
+		\
+		\\subsubsection\{Marker\}\
+		\
+		A marker will be specifically a high contrast shape, such as one output by ArUco or a QR Code generator, that is optimized for identification by a camera.\
+		\
+	\\subsection\{Aim DO WE NEED THIS?\}\
+	\
+	The aim of this project is to build an air robot that is able to identify a target and move toward it, avoiding any obstacles that are in the way. Tracking targets of interest in complex environments with a flying robot is the ultimate goal of this project. \
+	\
+		\\subsubsection\{Targets of Interest\}\
+		\
+		This target will be an object in the environment that has already been identified visually by an operator before navigation information is denied, or pre-programmed into the flying robot before operation.\
+		\
+		\\subsubsection\{Complex Environment\}\
+		\
+		The proposed use case of this project would be an environment with obstacles that the flying robot could potentially collide with. Flying at sufficiently low altitude that trees or buildings could come between the flying robot and the target of interest is the core of the project.\
+		\
+		\\subsubsection\{Benefits\}\
+		\
+		Having a flying robot capable of accomplishing these tasks while totally autonomous will allow for the use of flying robots in environments closer to the ground, and will assist pilots in complex environments. These general requirements can be used in many situations.\
+		\
+		\\begin\{itemize\}\
+			\\item \\textbf\{Surveillance:\} The robot could follow an interesting object, especially in an urban environment, without colliding with obstacles.\
+			\\item \\textbf\{Search and Rescue:\} The robot could move toward visual way-points set by pilots while avoiding obstacles in complex environments assisting in search efforts.\
+			\\item \\textbf\{Inspections:\} The robot could inspect objects in hard to reach environments and complex environments like rooftops or bridges.\
+			\\item \\textbf\{Disaster Relief:\} The robot could check inside buildings that may have compromised structural integrity, rubble on ground, \\textit\{\\&c\}.\
+			\\item \\textbf\{Agriculture:\} The robot could inspect tree-fruit or crops that can not be observed from overhead or check assets in remote locations such as irrigation equipment.\
+		\\end\{itemize\}\
+\
+\\section\{Design Section\}\
+\
+	\\subsection\{Block Diagram\}\
+\
+	\\subsection\{Node Diagram\}\
+\
+	\\subsection\{Interfacing\}\
+\
+	\\subsection\{Verification and Validation\}\
+\
+\
+\\section\{Equipment\}\
+\
+	\\subsection\{Equipment Table\}\
+	%Do you have this table?\
+\
+\
+\\section\{Schedule\}\
+%I don\'92t know how to add a picture of the schedule to tex document\'85\
+\
+\
+\\section\{Unresolved Issues and Risks ADD MORE RISKS (we don\'92t seem dangerous enough, lame)\}\
+\\subsection\{Identifying Markers\}\
+	\
+	The markers we intend to use, at least initially, are intended for use in Augmented Reality purposes. Tests of these shapes show that they are capable of being identified at many angles, but the reliability with which they can be identified decreases quickly as the viewing angle changes. \
+	\
+	There is potential that markers which are reliably identified at low speeds and in simulation may not be detectable on a flying vehicle moving faster.\
+	\
+		\\subsubsection\{Likelihood\}\
+ \
+		Both the TurtleBot and Flying Robot shall be traveling at lower speeds, therefore the likelihood of this risk is low.\
+		\
+		\\subsubsection\{Impact\}\
+		\
+		High impact, the primary task that our robot must accomplish is moving toward a visual target. If the robot is not able to reliably identify a marker then there will be no way to verify its capability.\
+		\
+		\\subsubsection\{Process Solution\}\
+		\
+		Alternatives to the ArUco markers can be tested, or if these prove truly unreliable then coloured areas or illuminated targets could be incorporated. These are less desirable as ideally the robot would be able to fly toward an arbitrary target.\
+		\
+	\\subsection\{Computer Hardware Limitations\}\
+	\
+	Image processing, especially quickly and with multiple goals, is computationally expensive. While this should not be an issue on a ground vehicle moving at slower speeds, it may become more of an issue on a Flying Robot if it operates at higher speeds and is incapable of carrying as much on-board computational capability.\
+	\
+		\\subsubsection\{Likelihood\}\
+\
+		High likelihood due to the amount of computational power required to do image processing. \
+		\
+		\\subsubsection\{Impact\}\
+		\
+		Medium impact, presumably we would still be able to prove our systems on the ground robot which is capable of carrying as much processing power as needed. It may also only be a limitation at higher speeds or may impose limits on what the Flying Robot is capable of identifying and tracking. \
+		\
+		\\subsubsection\{Process Solution\}\
+		\
+		Testing many algorithms and working to streamline the algorithm used, especially for the Flying Robot, as well as selecting hardware that is complimentary to the kind of loads created by running such an algorithm can mitigate these risks. Using an FPGA could aid with this problem.\
+	\
+	\\subsection\{Flight Control System Inaccuracy\}\
+	\
+	Many UAV's are not able to execute arbitrary movements with high accuracy. Verifying that the drone is actually executing instructions may be difficult. \
+	\
+		\\subsubsection\{Likelihood\}\
+		\
+		Medium likelihood, depending on how well developed the libraries for our particular drone these issues may have all been sufficiently worked out for the purposes of this project.\
+		\
+		\\subsubsection\{Impact\}\
+		\
+		Low impact, we could still observe the Flying Robot making decisions even if it is unable to execute the instructions given properly.\
+		\
+		\\subsubsection\{Process Solution\}\
+		\
+		Using smaller number of obstacles and moving at a slow enough speed should ensure that the robot never needs to execute extreme moves. These more extreme moves are where inaccuracies in control models will exposes themselves the most. \
+\
+\
+\\section\{Conclusion\}\
+The preliminary design has bee shown for the Flying Robot obstacle avoidance system. \
+\
+}
