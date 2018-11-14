@@ -1,0 +1,9 @@
+[0] Config.pm:302> INFO - This is Biber 2.11
+[0] Config.pm:305> INFO - Logfile is 'PrelimDesign.blg'
+[37] biber-MSWIN64:313> INFO - === 
+[71] Biber.pm:371> INFO - Reading 'PrelimDesign.bcf'
+[172] Biber.pm:857> INFO - Found 7 citekeys in bib section 0
+[191] Biber.pm:3976> INFO - Processing section 0
+[210] Biber.pm:4136> INFO - Looking for bibtex format file 'bibliographyDID03.bib' for section 0
+[479] Utils.pm:209> ERROR - Cannot find 'bibliographyDID03.bib'!
+[480] Biber.pm:114> INFO - ERRORS: 1

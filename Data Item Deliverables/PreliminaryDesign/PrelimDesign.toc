@@ -1,0 +1,82 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.1}Document Purpose READ OVER THIS }{3}{subsection.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2}Background ADD MORE FLUFF}{3}{subsection.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {1.2.1}Obstacle Avoidance}{3}{subsubsection.1.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {1.2.2}Unmanned Aircraft Systems}{3}{subsubsection.1.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {1.2.3}Computer Vision}{4}{subsubsection.1.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {1.2.4}OpenCV}{4}{subsubsection.1.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {1.2.5}Gazebo}{4}{subsubsection.1.2.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {1.2.6}Robot Operating System}{4}{subsubsection.1.2.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {1.2.7}TurtleBot}{4}{subsubsection.1.2.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {1.2.8}AscTec Pelican}{4}{subsubsection.1.2.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3}Definitions STILL WANT THIS?}{5}{subsection.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {1.3.1}Flying Robot}{5}{subsubsection.1.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {1.3.2}Marker}{5}{subsubsection.1.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.4}Aim DO WE NEED THIS?}{5}{subsection.1.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {1.4.1}Targets of Interest}{5}{subsubsection.1.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {1.4.2}Complex Environment}{5}{subsubsection.1.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {1.4.3}Benefits}{5}{subsubsection.1.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Design Section}{6}{section.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1}Block Diagram}{6}{subsection.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2}Node Diagram}{6}{subsection.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3}Interfacing}{6}{subsection.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4}Verification and Validation}{6}{subsection.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}Equipment}{6}{section.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1}Equipment Table}{6}{subsection.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}Schedule}{6}{section.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Unresolved Issues and Risks ADD MORE RISKS (we don’t seem dangerous enough, lame)}{6}{section.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1}Identifying Markers}{6}{subsection.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.1.1}Likelihood}{6}{subsubsection.5.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.1.2}Impact}{6}{subsubsection.5.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.1.3}Process Solution}{6}{subsubsection.5.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2}Computer Hardware Limitations}{6}{subsection.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.2.1}Likelihood}{7}{subsubsection.5.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.2.2}Impact}{7}{subsubsection.5.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.2.3}Process Solution}{7}{subsubsection.5.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3}Flight Control System Inaccuracy}{7}{subsection.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.3.1}Likelihood}{7}{subsubsection.5.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.3.2}Impact}{7}{subsubsection.5.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.3.3}Process Solution}{7}{subsubsection.5.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6}Conclusion}{7}{section.6}
