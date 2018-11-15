@@ -132,19 +132,19 @@
 
 	\begin{figure}
 		\centering
-		\includegraphics[width=0.8\linewidth]{BlockDiagram}
+		\includegraphics[width=0.9\linewidth]{BlockDiagram}
 		\caption{Project Schedule Diagram}
 		\label{fig:blockdiagram}
 	\end{figure}
 
 	\subsection{Node Diagram}
 
-\begin{figure}
-	\centering
-	\includegraphics[width=\linewidth]{NodeDiagram}
-	\caption{Project Node Diagram}
-	\label{fig:nodediagram}
-\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.9\linewidth]{NodeDiagram}
+		\caption{Project Node Diagram}
+		\label{fig:nodediagram}
+	\end{figure}
 
 Through Figure {fig:nodediagram} it can been shown what nodes will be created for this project. All nodes in the project will be written in python and then built in ROS to be implemented on the robot. The diagram displays what node will subscribe to the other nodes, such as the simple target finder node will subscribe to the video processor node to get messages about the target's potential location. Both the TurtleBot and the Flying Robot have two movement nodes, this is to first build a simple movement node on the platform for testing purposes. Then the proper and final movement node will be made and implemented on the respective robot. 
 	
