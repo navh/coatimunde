@@ -1983,6 +1983,9 @@
     <bcf:citekey order="6">opencv</bcf:citekey>
     <bcf:citekey order="7">wise_foote_2011</bcf:citekey>
     <bcf:citekey order="8">asctec</bcf:citekey>
+    <bcf:citekey order="9">hwang1992potential</bcf:citekey>
+    <bcf:citekey order="10">bortoff2000path</bcf:citekey>
+    <bcf:citekey order="11">williams2010combining</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

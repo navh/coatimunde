@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6800 64-bit) (preloaded format=xelatex 2018.9.7)  15 NOV 2018 17:26
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6800 64-bit) (preloaded format=xelatex 2018.9.7)  15 NOV 2018 17:29
 entering extended mode
 **./PrelimDesign.tex
 (PrelimDesign.tex
@@ -634,38 +634,38 @@ File: BlockDiagram.pdf Graphic file (type pdf)
 <use BlockDiagram.pdf>
 File: NodeDiagram.pdf Graphic file (type pdf)
 <use NodeDiagram.pdf>
- [5] [6]
+ [5] [6] [7]
 
-LaTeX Warning: Reference `fig:scedulediagram' on page 7 undefined on input line
- 177.
+LaTeX Warning: Reference `fig:scedulediagram' on page 8 undefined on input line
+ 183.
 
-[7]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 201.
-
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 203.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 203.
-
-LaTeX Warning: Float too large for page by 34.33554pt on input line 267.
-
+[8]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 274.
+               Default added (so using `tbp') on input line 207.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 209.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 209.
+
+LaTeX Warning: Float too large for page by 34.33554pt on input line 273.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 278.
 
 File: ScheduleDiagram.png Graphic file (type bmp)
 <ScheduleDiagram.png>
-[8] [9] [10] [11] [12]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 390.
+[9] [10] [11] [12]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 394.
  [13]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 390.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 394.
  (PrelimDesign.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 390.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 390.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 394.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 394.
 Package rerunfilecheck Info: File `PrelimDesign.out' has not changed.
-(rerunfilecheck)             Checksum: 7DCF813CFDA968ECDC4770EF4A50E855.
+(rerunfilecheck)             Checksum: FB1E2A37C6EDA578B6166936796BA627.
 
 
 LaTeX Warning: There were undefined references.
@@ -675,12 +675,12 @@ Package logreq Info: Writing requests to 'PrelimDesign.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 16484 strings out of 427798
- 260748 string characters out of 3151798
- 769832 words of memory out of 3000000
- 20348 multiletter control sequences out of 15000+200000
+ 16490 strings out of 427798
+ 261054 string characters out of 3151798
+ 767006 words of memory out of 3000000
+ 20354 multiletter control sequences out of 15000+200000
  5927 words of font info for 34 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
- 44i,10n,45p,938b,6198s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,10n,45p,1452b,6218s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on PrelimDesign.pdf (13 pages).

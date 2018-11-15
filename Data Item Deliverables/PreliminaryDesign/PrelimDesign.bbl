@@ -212,6 +212,101 @@
       \verb http://www.asctec.de/en/uav-uas-drones-rpas-roav/asctec-pelican/
       \endverb
     \endentry
+    \entry{hwang1992potential}{article}{}
+      \name{author}{2}{}{%
+        {{hash=7320daa7ddc93afce7b8c8b7115ff5bd}{%
+           family={Hwang},
+           familyi={H\bibinitperiod},
+           given={Yong\bibnamedelima K},
+           giveni={Y\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=9b6bb9aa3e5ebab01f9edc88ec431d1a}{%
+           family={Ahuja},
+           familyi={A\bibinitperiod},
+           given={Narendra},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{11c80fdb97c9e570ace6acf9758ff6f0}
+      \strng{fullhash}{11c80fdb97c9e570ace6acf9758ff6f0}
+      \strng{bibnamehash}{11c80fdb97c9e570ace6acf9758ff6f0}
+      \strng{authorbibnamehash}{11c80fdb97c9e570ace6acf9758ff6f0}
+      \strng{authornamehash}{11c80fdb97c9e570ace6acf9758ff6f0}
+      \strng{authorfullhash}{11c80fdb97c9e570ace6acf9758ff6f0}
+      \field{sortinit}{9}
+      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Robotics and Automation}
+      \field{number}{1}
+      \field{title}{A potential field approach to path planning}
+      \field{volume}{8}
+      \field{year}{1992}
+      \field{pages}{23\bibrangedash 32}
+      \range{pages}{10}
+    \endentry
+    \entry{bortoff2000path}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=09569a76e31e019ab337bad224cd32bd}{%
+           family={Bortoff},
+           familyi={B\bibinitperiod},
+           given={Scott\bibnamedelima A},
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{09569a76e31e019ab337bad224cd32bd}
+      \strng{fullhash}{09569a76e31e019ab337bad224cd32bd}
+      \strng{bibnamehash}{09569a76e31e019ab337bad224cd32bd}
+      \strng{authorbibnamehash}{09569a76e31e019ab337bad224cd32bd}
+      \strng{authornamehash}{09569a76e31e019ab337bad224cd32bd}
+      \strng{authorfullhash}{09569a76e31e019ab337bad224cd32bd}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{American Control Conference, 2000. Proceedings of the 2000}
+      \field{number}{6}
+      \field{title}{Path planning for UAVs}
+      \field{volume}{1}
+      \field{year}{2000}
+      \field{pages}{364\bibrangedash 368}
+      \range{pages}{5}
+    \endentry
+    \entry{williams2010combining}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=297608d5e43851d6d7da85cac54dc44e}{%
+           family={Williams},
+           familyi={W\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
+        {{hash=8d82839be6afd59c432fc7cf084f4326}{%
+           family={Reid},
+           familyi={R\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{e66461a45149a93e25ab21ed1d0f09ce}
+      \strng{fullhash}{e66461a45149a93e25ab21ed1d0f09ce}
+      \strng{bibnamehash}{e66461a45149a93e25ab21ed1d0f09ce}
+      \strng{authorbibnamehash}{e66461a45149a93e25ab21ed1d0f09ce}
+      \strng{authornamehash}{e66461a45149a93e25ab21ed1d0f09ce}
+      \strng{authorfullhash}{e66461a45149a93e25ab21ed1d0f09ce}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Robotics and Automation (ICRA), 2010 IEEE International Conference on}
+      \field{title}{On combining visual SLAM and visual odometry}
+      \field{year}{2010}
+      \field{pages}{3494\bibrangedash 3500}
+      \range{pages}{7}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
