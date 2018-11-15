@@ -126,9 +126,18 @@
 \section{Design Section}
 
 	\subsection{Block Diagram}
-The block diagram that is shown in Figure {??} contains the outline of the system for the \textsc{coatimunde} project. 
+The block diagram that is shown in Figure {??} contains the outline of the system for the \textsc{coatimunde} project. This block diagram can be broken into two main section, the laptop and the robot, but both will be using ROS to build the required nodes. The laptop contains the initialization, target selection, and RViz. The laptop also takes the user input when necessary and processes it appropriately.  The robot will do all the target identification, obstacle avoidance, and movement decisions autonomously. This means it will take input from the camera into a video processing node and then create a corresponding ROS message to be sent to the other systems on the robot. These messages are created and used throughout the different systems on the robot. The model of the robot's environment will be found subscribing to messages from the obstacle finder node, target finder node, and the state estimate node. This model then creates a message to pass to the route planning node which tells the movement node how to update its position and speed. 
 
 	\subsection{Node Diagram}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{NodeDiagram}
+	\caption{Project Node Diagram}
+	\label{fig:nodediagram}
+\end{figure}
+
+Through Figure {fig:nodediagram} it can been shown what nodes will be created for this project. All nodes in the project will be written in python and then built in ROS to be implemented on the robot. The diagram displays what node will subscribe to the other nodes, such as the simple target finder node will subscribe to the video processor node to get messages about the target's potential location. Both the TurtleBot and the Flying Robot have two movement nodes, this is to first build a simple movement node on the platform for testing purposes. Then the proper and final movement node will be made and implemented on the respective robot. 
 	
 	\subsection{Mathematical Modeling}
 	
@@ -148,7 +157,12 @@ The block diagram that is shown in Figure {??} contains the outline of the syste
 	
 	The interfacing of almost all sensors with the on-board computer will be done over USB. Between different nodes on the same computer, and any computers off-board the robot, will be done exclusively with ROS messages sent over either internal loops or Wi-Fi.
 
-	\subsection{Verification and Validation}
+	\subsection{Verification and Validation TODO}
+-Gazebo
+-Camera tests
+-Actually using the robot
+
+Verification and validation of the project's nodes will be done prior to implementation in the Gazebo simulation environment. Gazebo scheduled timelines can be seen in Figure {fig:scedulediagram}. 
 
 
 \section{Equipment}
@@ -159,13 +173,6 @@ The block diagram that is shown in Figure {??} contains the outline of the syste
 
 
 \section{Schedule}
-
-\begin{figure}
-	\centering
-	\includegraphics[width=\linewidth]{ScheduleDiagram}
-	\caption{Project Schedule Diagram}
-	\label{fig:schedulediagram}
-\end{figure}
 
 \begin{table}[]
 	\begin{tabular}{|l|r|l|l|}
@@ -189,9 +196,21 @@ The block diagram that is shown in Figure {??} contains the outline of the syste
 	\label{table:projectscheduletable}
 \end{table}
 
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{ScheduleDiagram}
+	\caption{Project Schedule Diagram}
+	\label{fig:schedulediagram}
+\end{figure}
+
+The created schedule for the project is shown above. This outlines the major milestones for the project, such as Data Item Deliverables and ...
 
 \section{Unresolved Issues and Risks ADD MORE RISKS (we don’t seem dangerous enough, lame)}
-\subsection{Identifying Markers}
+
+	\subsection{Limited Space}
+	The scope of the project is limited due to only being able to test indoors. Ideally the UAV would be operating at a high speed and identifying an arbitrary target in an unpredictable environment. In our case though the testing must be completed within the confines of a relatively small robotics laboratory. Smaller obstacles will be used indoors simply due to space constraints. Lower speeds will be used as well, again due to the lack of space. 
+
+	\subsection{Identifying Markers}
 	
 	The markers we intend to use, at least initially, are intended for use in Augmented Reality purposes. Tests of these shapes show that they are capable of being identified at many angles, but the reliability with which they can be identified decreases quickly as the viewing angle changes. 
 	
@@ -240,6 +259,7 @@ The block diagram that is shown in Figure {??} contains the outline of the syste
 		\subsubsection{Process Solution}
 		
 		Using smaller number of obstacles and moving at a slow enough speed should ensure that the robot never needs to execute extreme moves. These more extreme moves are where inaccuracies in control models will exposes themselves the most. 
+
 
 
 \section{Conclusion}
