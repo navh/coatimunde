@@ -127,6 +127,8 @@
 
 	\subsection{Block Diagram}
 	The block diagram that is shown in Figure \ref{fig:blockdiagram} contains the outline of the \textsc{coatimunde} project. It is a very high level overview and does not contain references to most of the hardware in use for two reasons. The first reason is that the actual robot and laptop being used are relatively arbitrary as long as the software included is present on both. ROS being used also includes many nodes which are not included, only the ones that are most important to our project, will have to be specifically added to ROS, or will have to be custom created are included on our system block diagram.
+	
+	The laptop contains the initialization, target selection, and RViz. The laptop also takes the user input when necessary and processes it appropriately.  The robot will do all the target identification, obstacle avoidance, and movement decisions autonomously. This means it will take input from the camera into a video processing node and then create a corresponding ROS message to be sent to the other systems on the robot. These messages are created and used throughout the different systems on the robot. The model of the robot's environment will be found subscribing to messages from the obstacle finder node, target finder node, and the state estimate node. This model then creates a message to pass to the route planning node which tells the movement node how to update its position and speed. 
 
 	\begin{figure}
 		\centering
@@ -136,6 +138,15 @@
 	\end{figure}
 
 	\subsection{Node Diagram}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{NodeDiagram}
+	\caption{Project Node Diagram}
+	\label{fig:nodediagram}
+\end{figure}
+
+Through Figure {fig:nodediagram} it can been shown what nodes will be created for this project. All nodes in the project will be written in python and then built in ROS to be implemented on the robot. The diagram displays what node will subscribe to the other nodes, such as the simple target finder node will subscribe to the video processor node to get messages about the target's potential location. Both the TurtleBot and the Flying Robot have two movement nodes, this is to first build a simple movement node on the platform for testing purposes. Then the proper and final movement node will be made and implemented on the respective robot. 
 	
 	\subsection{Mathematical Modeling}
 	
@@ -155,7 +166,12 @@
 	
 	The interfacing of almost all sensors with the on-board computer will be done over USB. Between different nodes on the same computer, and any computers off-board the robot, will be done exclusively with ROS messages sent over either internal loops or Wi-Fi.
 
-	\subsection{Verification and Validation}
+	\subsection{Verification and Validation TODO}
+-Gazebo
+-Camera tests
+-Actually using the robot
+
+Verification and validation of the project's nodes will be done prior to implementation in the Gazebo simulation environment. Gazebo scheduled timelines can be seen in Figure {fig:scedulediagram}. 
 
 
 \section{Equipment}
@@ -167,6 +183,35 @@
 
 \section{Schedule}
 
+\begin{table}[]
+	\begin{tabular}{|l|r|l|l|}
+		\hline
+		\multicolumn{1}{|c|}{\textbf{Task Name}}            & \multicolumn{1}{c|}{\textbf{Duration}} & \multicolumn{1}{c|}{\textbf{Start}} & \multicolumn{1}{c|}{\textbf{Finish}} \\ \hline
+		\textbf{Coatimunde}              		    & \textbf{144 days} & \textbf{Tue 09/10/18} & \textbf{Sun 28/04/19} \\ \hline
+		\textbf{- Turtlebot}                                & \textbf{97 days}  & \textbf{Tue 09/10/18} & \textbf{Wed 20/02/19} \\ \hline
+		-- Create a Basic Movement Node                     & 12 days           & Tue 09/10/18          & Wed 24/10/18          \\ \hline
+		-- Subscribe to the Camera                          & 8 days            & Wed 24/10/18          & Fri 02/11/18          \\ \hline
+		\textbf{-- Camera and Video}                        & \textbf{19 days}  & \textbf{Tue 30/10/18} & \textbf{Fri 23/11/18} \\ \hline
+		--- OpenCV able to process Video Stream 	    & 9 days            & Tue 30/10/18          & Fri 09/11/18          \\ \hline
+		--- Able to detect a Target                         & 12 days           & Tue 08/11/18          & Fri 23/11/18          \\ \hline
+		\textbf{-- Movement}                                & \textbf{67 days}  & \textbf{Tue 20/11/18} & \textbf{Wed 20/02/19} \\ \hline
+		--- Move towards Target                             & 9 days            & Tue 20/11/18          & Fri 30/11/18          \\ \hline
+		--- Avoid Obstacles and Move Towards Target         & 31 days           & Thu 29/11/18          & Thu 10/01/19          \\ \hline
+		--- Avoid Obstacles with Memory 		    & 32 days           & Tue 08/01/19          & Wed 20/02/19          \\ \hline
+		\textbf{- UAV}                                      & \textbf{53 days}  & \textbf{Wed 13/02/19} & \textbf{Sun 28/04/19} \\ \hline
+		-- Port to UAV                                      & 53 days           & Wed 13/02/19          & Sun 28/04/19          \\ \hline
+		\textbf{-Data Item Deliverables (DID)}		    & \textbf{148 days} & \textbf{Thu 01/11/18} & \textbf{Thu 28/03/19} \\ \hline
+		-- DID-4 Preliminary Design Specification	    & 22 days		& Thu 01/11/18		& Thu 22/11/18		\\ \hline
+		-- DID-5 Preliminary Design Review		    & 15 days		& Thu 15/11/18		& Thu 29/11/18		\\ \hline
+		-- DID-6 Schedule Update			    & 56 days		& Fri 30/11/18		& Thu 17/01/19		\\ \hline
+		-- DID-7 Detailed Design Document		    & 63 days		& Fri 18/01/19		& Thu 21/03/19		\\ \hline
+		-- DID-8 Final Project Presentation		    & 148 days		& Thu 01/11/18		& Thu 28/03/19		\\ \hline
+
+	\end{tabular}
+	\caption{Project Schedule Table}
+	\label{table:projectscheduletable}
+\end{table}
+
 \begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{ScheduleDiagram}
@@ -174,31 +219,14 @@
 	\label{fig:schedulediagram}
 \end{figure}
 
-\begin{table}[]
-	\begin{tabular}{|l|r|l|l|}
-		\hline
-		\multicolumn{1}{|c|}{\textbf{Task Name}}            & \multicolumn{1}{c|}{\textbf{Duration}} & \multicolumn{1}{c|}{\textbf{Start}} & \multicolumn{1}{c|}{\textbf{Finish}} \\ \hline
-		\textbf{Coatimunde}              				    & \textbf{144 days} & \textbf{Tue 09/10/18} & \textbf{Sun 28/04/19} \\ \hline
-		\textbf{- Turtlebot}                                & \textbf{97 days}  & \textbf{Tue 09/10/18} & \textbf{Wed 20/02/19} \\ \hline
-		-- Create a Basic Movement Node                     & 12 days           & Tue 09/10/18          & Wed 24/10/18          \\ \hline
-		-- Subscribe to the Camera                          & 8 days            & Wed 24/10/18          & Fri 02/11/18          \\ \hline
-		\textbf{-- Camera and Video}                        & \textbf{19 days}  & \textbf{Tue 30/10/18} & \textbf{Fri 23/11/18} \\ \hline
-		--- OpenCV able to process Video Stream 		    & 9 days            & Tue 30/10/18          & Fri 09/11/18          \\ \hline
-		--- Able to detect a Target                         & 12 days           & Tue 08/11/18          & Fri 23/11/18          \\ \hline
-		\textbf{-- Movement}                                & \textbf{67 days}  & \textbf{Tue 20/11/18} & \textbf{Wed 20/02/19} \\ \hline
-		--- Move towards Target                             & 9 days            & Tue 20/11/18          & Fri 30/11/18          \\ \hline
-		--- Avoid Obstacles and Move Towards Target         & 31 days           & Thu 29/11/18          & Thu 10/01/19          \\ \hline
-		--- Avoid Obstacles with Memory 				    & 32 days           & Tue 08/01/19          & Wed 20/02/19          \\ \hline
-		\textbf{-- UAV}                                     & \textbf{53 days}  & \textbf{Wed 13/02/19} & \textbf{Sun 28/04/19} \\ \hline
-		--- Port to UAV                                     & 53 days           & Wed 13/02/19          & Sun 28/04/19          \\ \hline
-	\end{tabular}
-	\caption{Project Schedule Table}
-	\label{table:projectscheduletable}
-\end{table}
-
+The created schedule for the project is shown above. This outlines the major milestones for the project, such as Data Item Deliverables and ...
 
 \section{Unresolved Issues and Risks ADD MORE RISKS (we don’t seem dangerous enough, lame)}
-\subsection{Identifying Markers}
+
+	\subsection{Limited Space}
+	The scope of the project is limited due to only being able to test indoors. Ideally the UAV would be operating at a high speed and identifying an arbitrary target in an unpredictable environment. In our case though the testing must be completed within the confines of a relatively small robotics laboratory. Smaller obstacles will be used indoors simply due to space constraints. Lower speeds will be used as well, again due to the lack of space. 
+
+	\subsection{Identifying Markers}
 	
 	The markers we intend to use, at least initially, are intended for use in Augmented Reality purposes. Tests of these shapes show that they are capable of being identified at many angles, but the reliability with which they can be identified decreases quickly as the viewing angle changes. 
 	
@@ -247,6 +275,7 @@
 		\subsubsection{Process Solution}
 		
 		Using smaller number of obstacles and moving at a slow enough speed should ensure that the robot never needs to execute extreme moves. These more extreme moves are where inaccuracies in control models will exposes themselves the most. 
+
 
 
 \section{Conclusion}
