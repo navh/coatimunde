@@ -8,7 +8,7 @@
 
 \usepackage{hyperref}
 \usepackage[backend=biber,style=ieee]{biblatex}
-\addbibresource{bibliographyDID03.bib}
+\addbibresource{bibliography.bib}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -126,7 +126,14 @@
 \section{Design Section}
 
 	\subsection{Block Diagram}
-The block diagram that is shown in Figure {??} contains the outline of the system for the \textsc{coatimunde} project. 
+	The block diagram that is shown in Figure \ref{fig:blockdiagram} contains the outline of the \textsc{coatimunde} project. It is a very high level overview and does not contain references to most of the hardware in use for two reasons. The first reason is that the actual robot and laptop being used are relatively arbitrary as long as the software included is present on both. ROS being used also includes many nodes which are not included, only the ones that are most important to our project, will have to be specifically added to ROS, or will have to be custom created are included on our system block diagram.
+
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.8\linewidth]{BlockDiagram}
+		\caption{Project Schedule Diagram}
+		\label{fig:blockdiagram}
+	\end{figure}
 
 	\subsection{Node Diagram}
 	
