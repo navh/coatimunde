@@ -74,7 +74,7 @@
 	
 	Using Computer Optics for Analyzing Trajectories in Mostly Unknown, Navigation Denied, Environments (\textsc{coatimunde}) is the goal of this project. The purpose of this document is to outline the preliminary design for \textsc{coatimunde}. That is, what the design of the project is, how it will be built, and how this meets the requirements for the project. These requirements have been outlined in the Statement of Requirements. The design of the project thus far will be shown and discussed within the Design Section. This document will then identify the constraints, risks, difficulties that have been faced so far in the project.
 	
-	\subsection{Background ADD MORE FLUFF}
+	\subsection{Background}
 	
 	Both in the consumer and professional sectors the use of autonomous aerial vehicles is growing quickly. Currently these vehicles rely on skilled pilots to accomplish a very limited set of tasks. Adding obstacle avoidance capabilities to these vehicles and simplifying the task of following targets could allow for these systems to be used in many more situations. This section will give a quick background on obstacle avoidance, unmanned aircraft systems, computer vision, and the platforms we intend to use in this project.
 	
@@ -125,6 +125,12 @@
 		
 \section{Design Section}
 
+	Computer Optics Analyzing Trajectories In Mostly Unknown, Navigation Denied, Environments or coatimunde is the name of this project. 
+Computer optics is used as the robot will be using a camera to identify any important surroundings such as, a target or an obstacle. 
+Analyzing trajectories is a term that refers to the robot completing movements to go towards the target. To do path planning the project will implement potential fields. Potential fields work through having vectors that point to object and assigning as positive or negative. The positive vectors attracts the robot towards the target and the negative makes obstacles repulsive to the robot \cite{hwang1992potential}. This algorithm was selected to do path planning as the robot won't have to build a map of the environment to create path to the target \cite{bortoff2000path}. Potential fields allows for the robot to change its path along the way if it discovers new obstacles. The project will also implement a state machine to update the position of the vectors when the robot is moving. This ensures that the robot always knows where the target and identified obstacles are when its own position changes. Navigation denied means that the robot will not have access to a GPS to locate itself, it must search its unknown environment to identify targets and obstacles. An unknown environment can be defined as an environment in which the robot has no prior knowledge to its surroundings and must identify objects in this environment itself through computer vision. This once again is the reason that the project will be using potential fields to plan the path to the target. 
+	The aim of this project is to build an air robot that is able to identify a target and move toward it, avoiding any obstacles that are in the way. Tracking targets of interest in complex environments with a flying robot is the ultimate goal of this project. To accomplish this goal we will be using a TurtleBot and then a UAV with only one camera to identify targets and obstacles. 
+
+
 	\subsection{Block Diagram}
 	The block diagram that is shown in Figure \ref{fig:blockdiagram} contains the outline of the \textsc{coatimunde} project. It is a very high level overview and does not contain references to most of the hardware in use for two reasons. The first reason is that the actual robot and laptop being used are relatively arbitrary as long as the software included is present on both. ROS being used also includes many nodes which are not included, only the ones that are most important to our project, will have to be specifically added to ROS, or will have to be custom created are included on our system block diagram.
 	
@@ -150,15 +156,15 @@ Through Figure {fig:nodediagram} it can been shown what nodes will be created fo
 	
 	\subsection{Mathematical Modeling}
 	
-	\subsubsection{Flying Robot}
+		\subsubsection{Flying Robot}
 	
 	Given that a quad-copter has six degrees of freedom, modeling them is a very difficult task. The AscTec Pelican already has many existing models indented for use with ROS. There is also a large collection of hardware agnostic tools for operating a quad-copters.
 	
-	\subsubsection{Robot in 3D Space}
+		\subsubsection{Robot in 3D Space}
 	
-	The robot itself will need to remember where it is located in its environment. Remembering where targets are located relative to the robot is necessary, and presumably remembering the locations of obstacles will be used as well. Using quaternion vectors relative to the robot will allow for simple transformations on these vectors while using very little computational power. ROS contains methods and messages to easily communicate, convert, and apply transformations to quaternions.
+	The robot itself will need to remember where it is located in its environment. Remembering where targets are located relative to the robot is necessary, and presumably remembering the locations of obstacles will be used as well. Using quaternion vectors relative to the robot will allow for simple transformations on these vectors while using very little computational power \cite{williams2010combining}. ROS contains methods and messages to easily communicate, convert, and apply transformations to quaternions.
 	
-	\subsubsection{Pose Estimation}
+		\subsubsection{Pose Estimation}
 	
 	Initially feedback from inertial sensors will be used for pose estimation, but ideally a version of Optical Flow would be used to estimate the position of the robot in 3D space. There are some libraries in OpenCV that have addressed generalized pose estimation in 6 degrees of freedom, but it requires a significant amount of computational power, a higher frame rate than our goal of 10Hz to be used for real time performance, and hundreds of visual odometry measurements must be made in every frame requiring a visually busy background.
 
@@ -290,7 +296,7 @@ Through Figure {fig:nodediagram} it can been shown what nodes will be created fo
 		-- Port to UAV                                      & 53 days           & Wed 13/02/19          & Sun 28/04/19          \\ \hline
 		\textbf{-Data Item Deliverables (DID)}		    & \textbf{148 days} & \textbf{Thu 01/11/18} & \textbf{Thu 28/03/19} \\ \hline
 		-- DID-4 Preliminary Design Specification	    & 22 days		& Thu 01/11/18		& Thu 22/11/18		\\ \hline
-		-- DID-5 Preliminary Design Review		    & 15 days		& Thu 15/11/18		& Thu 29/11/18		\\ \hline
+		-- DID-5 Design Review Presentation		    & 15 days		& Thu 15/11/18		& Thu 29/11/18		\\ \hline
 		-- DID-6 Schedule Update			    & 56 days		& Fri 30/11/18		& Thu 17/01/19		\\ \hline
 		-- DID-7 Detailed Design Document		    & 63 days		& Fri 18/01/19		& Thu 21/03/19		\\ \hline
 		-- DID-8 Final Project Presentation		    & 148 days		& Thu 01/11/18		& Thu 28/03/19		\\ \hline
@@ -307,7 +313,7 @@ Through Figure {fig:nodediagram} it can been shown what nodes will be created fo
 	\label{fig:schedulediagram}
 \end{figure}
 
-The created schedule for the project is shown above. This outlines the major milestones for the project, such as Data Item Deliverables and ...
+The created schedule for the project is shown above. This outlines the major milestones for the project, such as Data Item Deliverables and deadlines for completing different functionalities for the project. Porting to the UAV is listed as one task as we aren't sure what problems will arise until we attempt to port the project.  
 
 \section{Unresolved Issues and Risks}
 
