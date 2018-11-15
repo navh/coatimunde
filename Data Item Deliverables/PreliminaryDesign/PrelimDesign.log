@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6800 64-bit) (preloaded format=xelatex 2018.9.7)  14 NOV 2018 11:21
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6800 64-bit) (preloaded format=xelatex 2018.9.7)  14 NOV 2018 19:39
 entering extended mode
 **./PrelimDesign.tex
 (PrelimDesign.tex
@@ -663,25 +663,33 @@ Overfull \hbox (13.72066pt too wide) in paragraph at lines 124--125
 tor designed for research purposes[].
  []
 
-[4] [5]
+[4]
+File: ScheduleDiagram.png Graphic file (type bmp)
+<ScheduleDiagram.png>
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 170.
+
+[5] [6]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 23.10004pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[6]
-
-LaTeX Warning: Empty bibliography on input line 241.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 244.
 [7]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 244.
+
+LaTeX Warning: Empty bibliography on input line 250.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 253.
+[8]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 253.
  (PrelimDesign.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 244.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 244.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 253.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 253.
 Package rerunfilecheck Info: File `PrelimDesign.out' has not changed.
-(rerunfilecheck)             Checksum: EA7EDAA538B57952138A0D1896E7BD5E.
+(rerunfilecheck)             Checksum: 769ED17AF57304723FE19B3D0D2D2598.
 
 
 LaTeX Warning: There were undefined references.
@@ -696,12 +704,12 @@ Package logreq Info: Writing requests to 'PrelimDesign.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 16402 strings out of 427798
- 258881 string characters out of 3151798
- 739060 words of memory out of 3000000
- 20284 multiletter control sequences out of 15000+200000
- 4080 words of font info for 25 fonts, out of 3000000 for 9000
+ 16408 strings out of 427798
+ 258938 string characters out of 3151798
+ 741863 words of memory out of 3000000
+ 20288 multiletter control sequences out of 15000+200000
+ 4072 words of font info for 24 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
- 37i,10n,45p,900b,3916s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 37i,10n,45p,900b,3920s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on PrelimDesign.pdf (7 pages).
+Output written on PrelimDesign.pdf (8 pages).

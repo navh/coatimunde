@@ -70,9 +70,9 @@
 
 \section{Introduction}
 
-	\subsection{Document Purpose READ OVER THIS }
+	\subsection{Document Purpose}
 	
-	Using Computer Optics for Analyzing Trajectories in Mostly Unknown, Navigation Denied, Environments (\textsc{coatimunde}) is the goal of this project. The purpose of this document is to outline the preliminary design for \textsc{coatimunde}. That is, what the design of the project is, how it will be build, and how this meets the requirements for the project. These requirements have been outlined in the Statement of Requirements. The design of the project thus far will be shown and discussed within the Design Section. This document will then identify the constraints, risks, difficulties that have been faced so far in the project.
+	Using Computer Optics for Analyzing Trajectories in Mostly Unknown, Navigation Denied, Environments (\textsc{coatimunde}) is the goal of this project. The purpose of this document is to outline the preliminary design for \textsc{coatimunde}. That is, what the design of the project is, how it will be built, and how this meets the requirements for the project. These requirements have been outlined in the Statement of Requirements. The design of the project thus far will be shown and discussed within the Design Section. This document will then identify the constraints, risks, difficulties that have been faced so far in the project.
 	
 	\subsection{Background ADD MORE FLUFF}
 	
@@ -122,51 +122,31 @@
 		\subsubsection{AscTec Pelican}
 		
 		The Ascending Technologies Pelican is a 65.1cm by 65.1cm quad-rotor  designed for research purposes\cite{asctec}. It includes a camera, a high level and low level processor set up for computer vision and SLAM research. It is also capable of interfacing easily with other controllers and can carry up to a kilogram of additional gear.
-
-	\subsection{Definitions STILL WANT THIS?}
-	
-	Many terms used during this project have synonyms, and similarly there are many different ways to word many of the things in this project and often no conventions. For this purpose we will define terms which we intend to have more specific meanings than in normal English, or will clarify what we mean by the often vague descriptions used for many of the components of this project.
-	
-		\subsubsection{Flying Robot}
 		
-		A Flying Robot refers to any vehicle that is able to execute instructions while in the air under its own power.
-		
-		\subsubsection{Marker}
-		
-		A marker will be specifically a high contrast shape, such as one output by ArUco or a QR Code generator, that is optimized for identification by a camera.
-		
-	\subsection{Aim DO WE NEED THIS?}
-	
-	The aim of this project is to build an air robot that is able to identify a target and move toward it, avoiding any obstacles that are in the way. Tracking targets of interest in complex environments with a flying robot is the ultimate goal of this project. 
-	
-		\subsubsection{Targets of Interest}
-		
-		This target will be an object in the environment that has already been identified visually by an operator before navigation information is denied, or pre-programmed into the flying robot before operation.
-		
-		\subsubsection{Complex Environment}
-		
-		The proposed use case of this project would be an environment with obstacles that the flying robot could potentially collide with. Flying at sufficiently low altitude that trees or buildings could come between the flying robot and the target of interest is the core of the project.
-		
-		\subsubsection{Benefits}
-		
-		Having a flying robot capable of accomplishing these tasks while totally autonomous will allow for the use of flying robots in environments closer to the ground, and will assist pilots in complex environments. These general requirements can be used in many situations.
-		
-		\begin{itemize}
-			\item \textbf{Surveillance:} The robot could follow an interesting object, especially in an urban environment, without colliding with obstacles.
-			\item \textbf{Search and Rescue:} The robot could move toward visual way-points set by pilots while avoiding obstacles in complex environments assisting in search efforts.
-			\item \textbf{Inspections:} The robot could inspect objects in hard to reach environments and complex environments like rooftops or bridges.
-			\item \textbf{Disaster Relief:} The robot could check inside buildings that may have compromised structural integrity, rubble on ground, \textit{\&c}.
-			\item \textbf{Agriculture:} The robot could inspect tree-fruit or crops that can not be observed from overhead or check assets in remote locations such as irrigation equipment.
-		\end{itemize}
-
 \section{Design Section}
 
 	\subsection{Block Diagram}
 The block diagram that is shown in Figure {??} contains the outline of the system for the \textsc{coatimunde} project. 
 
 	\subsection{Node Diagram}
+	
+	\subsection{Mathematical Modeling}
+	
+	\subsubsection{Flying Robot}
+	
+	Given that a quad-copter has six degrees of freedom, modeling them is a very difficult task. The AscTec Pelican already has many existing models indented for use with ROS. There is also a large collection of hardware agnostic tools for operating a quad-copters.
+	
+	\subsubsection{Robot in 3D Space}
+	
+	The robot itself will need to remember where it is located in its environment. Remembering where targets are located relative to the robot is necessary, and presumably remembering the locations of obstacles will be used as well. Using quaternion vectors relative to the robot will allow for simple transformations on these vectors while using very little computational power. ROS contains methods and messages to easily communicate, convert, and apply transformations to quaternions.
+	
+	\subsubsection{Pose Estimation}
+	
+	Initially feedback from inertial sensors will be used for pose estimation, but ideally a version of Optical Flow would be used to estimate the position of the robot in 3D space. There are some libraries in OpenCV that have addressed generalized pose estimation in 6 degrees of freedom, but it requires a significant amount of computational power, a higher frame rate than our goal of 10Hz to be used for real time performance, and hundreds of visual odometry measurements must be made in every frame requiring a visually busy background.
 
 	\subsection{Interfacing}
+	
+	The interfacing of almost all sensors with the on-board computer will be done over USB. Between different nodes on the same computer, and any computers off-board the robot, will be done exclusively with ROS messages sent over either internal loops or Wi-Fi.
 
 	\subsection{Verification and Validation}
 
@@ -174,11 +154,40 @@ The block diagram that is shown in Figure {??} contains the outline of the syste
 \section{Equipment}
 
 	\subsection{Equipment Table}
-	%Do you have this table?
+	
+	%But in a big array here
 
 
 \section{Schedule}
-%I don’t know how to add a picture of the schedule to tex document…
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{ScheduleDiagram}
+	\caption{Project Schedule Diagram}
+	\label{fig:schedulediagram}
+\end{figure}
+
+\begin{table}[]
+	\begin{tabular}{|l|r|l|l|}
+		\hline
+		\multicolumn{1}{|c|}{\textbf{Task Name}}            & \multicolumn{1}{c|}{\textbf{Duration}} & \multicolumn{1}{c|}{\textbf{Start}} & \multicolumn{1}{c|}{\textbf{Finish}} \\ \hline
+		\textbf{Coatimunde}              				    & \textbf{144 days} & \textbf{Tue 09/10/18} & \textbf{Sun 28/04/19} \\ \hline
+		\textbf{- Turtlebot}                                & \textbf{97 days}  & \textbf{Tue 09/10/18} & \textbf{Wed 20/02/19} \\ \hline
+		-- Create a Basic Movement Node                     & 12 days           & Tue 09/10/18          & Wed 24/10/18          \\ \hline
+		-- Subscribe to the Camera                          & 8 days            & Wed 24/10/18          & Fri 02/11/18          \\ \hline
+		\textbf{-- Camera and Video}                        & \textbf{19 days}  & \textbf{Tue 30/10/18} & \textbf{Fri 23/11/18} \\ \hline
+		--- OpenCV able to process Video Stream 		    & 9 days            & Tue 30/10/18          & Fri 09/11/18          \\ \hline
+		--- Able to detect a Target                         & 12 days           & Tue 08/11/18          & Fri 23/11/18          \\ \hline
+		\textbf{-- Movement}                                & \textbf{67 days}  & \textbf{Tue 20/11/18} & \textbf{Wed 20/02/19} \\ \hline
+		--- Move towards Target                             & 9 days            & Tue 20/11/18          & Fri 30/11/18          \\ \hline
+		--- Avoid Obstacles and Move Towards Target         & 31 days           & Thu 29/11/18          & Thu 10/01/19          \\ \hline
+		--- Avoid Obstacles with Memory 				    & 32 days           & Tue 08/01/19          & Wed 20/02/19          \\ \hline
+		\textbf{-- UAV}                                     & \textbf{53 days}  & \textbf{Wed 13/02/19} & \textbf{Sun 28/04/19} \\ \hline
+		--- Port to UAV                                     & 53 days           & Wed 13/02/19          & Sun 28/04/19          \\ \hline
+	\end{tabular}
+	\caption{Project Schedule Table}
+	\label{table:projectscheduletable}
+\end{table}
 
 
 \section{Unresolved Issues and Risks ADD MORE RISKS (we don’t seem dangerous enough, lame)}
