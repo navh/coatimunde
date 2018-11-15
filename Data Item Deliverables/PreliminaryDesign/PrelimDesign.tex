@@ -193,7 +193,80 @@ Through Figure {fig:nodediagram} it can been shown what nodes will be created fo
 
 	\subsection{Equipment Table}
 	
-	%But in a big array here
+	Given the large number of items being used in this project, but most are somewhat arbitrary or may be swapped out in future iterations. Half way through our project we intend to re-implement the entire solution onto a totally different platform. A naming convention has been developed for all of our components using a three character code. The first letter, ascending from A for hardware and descending from Z for software, represents the subsystem or general classification the equipment falls under. The second character represents a more specific name, and the third is for a particular example that we are using for our project. Any part with the same two first letters should be able to be substituted freely, an example may be two cameras. One may be used on the ground because it is already installed, but another may be selected for the flying robot because it is lighter, but both accomplish the same task.
+	
+	
+	
+	
+	\begin{table}[]
+		\small
+		\begin{tabular}{|rl|rl|rl|}
+			\hline
+			\multicolumn{2}{|c|}{\textbf{Purpose}} & \multicolumn{2}{c|}{\textbf{Description}} & \multicolumn{2}{c|}{\textbf{Equipment}} \\ \hline
+			A & Ground Based Robot     & A & Robot              & A   & Clearpath Robotics Turtlebot 2    \\
+			A & Ground Based Robot     & B & Robot Controller   & A   & Acer Aspire E-11                  \\
+			A & Ground Based Robot     & C & Robot Base         & A   & Kobuki Robot Base                 \\
+			A & Ground Based Robot     & D & Sensors            & A   & Stepper Motor Feedback            \\
+			A & Ground Based Robot     & D & Sensors            & B   & Orbbec Astra Pro Sensors          \\
+			A & Ground Based Robot     & D & Sensors            & C   & Gyroscope                         \\ \hline
+			B & Flying Robot           & A & Robot              & A   & AscTec Pelican Quadcopter         \\
+			B & Flying Robot           & B & Robot Controller   & A   & AscTec Low Level Processor        \\
+			B & Flying Robot           & B & Robot Controller   & B   & AscTec High Level Processor       \\
+			B & Flying Robot           & B & Robot Controller   & C   & ODROID-XU4                        \\
+			B & Flying Robot           & C & Robot Base         & A   & AscTec Pelican Frame              \\ \hline
+			C & Camera                 & A & USB Camera         & A   & Orbbec Astra Pro Camera           \\
+			C & Camera                 & A & USB Camera         & B   & oCam-1MGN-U Plus                  \\
+			C & Camera                 & B & Digital Camera     & A   & AscTec Option 4                   \\ \hline
+			D & Offboard Computer      & A & Computer           & A   & Lenovo T520                       \\
+			D & Offboard Computer      & A & Computer           & B   & Mathworks VM - ROS Gazebo v3      \\ \hline
+			E & Testing Hardware       & A & ArUco Symbol       & 0-9 & Printed Single Digit ArUco Symbol \\
+			E & Testing Hardware       & B & Physical Obstacle  & A   & Human                             \\
+			E & Testing Hardware       & B & Physical Obstacle  & B   & Box                               \\
+			E & Testing Hardware       & B & Physical Obstacle  & C   & Sheet                             \\
+			E & Testing Hardware       & C & Motion Tracking    & A   & Reflective Dot                    \\
+			E & Testing Hardware       & C & Motion Tracking    & B   & Motion Tracking Cameras           \\
+			E & Testing Hardware       & D & Camera Calibration & A   & Printed 7cm Checker Pattern       \\ \hline
+			F & Interfacing            & A & Wireless Router    & A   & D-Link Router                     \\ \hline
+			S & Linux Operating System & A & Operating System   & B   & Ubuntu 14.04 Bionic               \\
+			S & Linux Operating System & A & Operating System   & K   & Kubuntu (Mathworks) 14.04         \\
+			S & Linux Operating System & A & Operating System   & T   & Ubuntu 14.04 Trusty               \\
+			S & Linux Operating System & B & Bundled Program    & A   & Generic Loopback Device           \\
+			S & Linux Operating System & C & Version Control    & A   & git                               \\ \hline
+			T & ROS Service - Custom   & A & Action Services    & A   & Set Goal                          \\ \hline
+			U & ROS Service - Standard & A & Action Services    & A   & Trigger                           \\ \hline
+			V & ROS Message - Custom   & A & Action Messages    & A   & Goal                              \\
+			V & ROS Message - Custom   & A & Action Messages    & B   & Obstacle                          \\ \hline
+			W & ROS Message - Standard & A & Sensor Messages    & A   & Image                             \\
+			W & ROS Message - Standard & A & Sensor Messages    & B   & PointCloud                        \\
+			W & ROS Message - Standard & B & Geometry Messages  & A   & Twist                             \\
+			W & ROS Message - Standard & B & Geometry Messages  & B   & Quaternion                        \\
+			W & ROS Message - Standard & B & Geometry Messages  & C   & Transform                         \\ \hline
+			X & ROS Node - Custom      & A & Vision             & A   & opencv\_preprocessing             \\
+			X & ROS Node - Custom      & B & Movement           & A   & basic\_movement                   \\
+			X & ROS Node - Custom      & B & Movement           & B   & avoidance\_movement               \\
+			X & ROS Node - Custom      & B & Movement           & C   & basic\_flying\_movement           \\
+			X & ROS Node - Custom      & B & Movement           & D   & avoidance\_flying\_movement       \\ \hline
+			Y & ROS Node - Standard    & A & Vision             & A   & vision\_opencv                    \\
+			Y & ROS Node - Standard    & A & Vision             & B   & image\_pipeline                   \\
+			Y & ROS Node - Standard    & B & Coordinates        & A   & tf                                \\
+			Y & ROS Node - Standard    & C & Vision             & B   & image\_pipeline                   \\ \hline
+			Z & Robot Operating System & A & Operating System   & A   & ROS Indigo Igloo                  \\
+			Z & Robot Operating System & A & Operating System   & B   & ROS Melodic Morenia               \\
+			Z & Robot Operating System & B & Bundled Program    & A   & Gazebo2                           \\
+			Z & Robot Operating System & B & Bundled Program    & B   & Gazebo7                           \\
+			Z & Robot Operating System & B & Bundled Program    & C   & catkin                            \\
+			Z & Robot Operating System & B & Bundled Program    & D   & RViz                              \\
+			Z & Robot Operating System & B & Bundled Program    & E   & rosbag                            \\
+			Z & Robot Operating System & B & Bundled Program    & F   & rqt                               \\
+			Z & Robot Operating System & C & Client             & A   & roscpp                            \\
+			Z & Robot Operating System & C & Client             & B   & rospy                             \\ \hline
+		\end{tabular}
+		\normalsize
+		\caption{Equipment Table}
+		\label{table:equipment}
+	\end{table}
+	
+	
 
 
 \section{Schedule}
