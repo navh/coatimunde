@@ -166,12 +166,27 @@ Through Figure {fig:nodediagram} it can been shown what nodes will be created fo
 	
 	The interfacing of almost all sensors with the on-board computer will be done over USB. Between different nodes on the same computer, and any computers off-board the robot, will be done exclusively with ROS messages sent over either internal loops or Wi-Fi.
 
-	\subsection{Verification and Validation TODO}
--Gazebo
--Camera tests
--Actually using the robot
-
-Verification and validation of the project's nodes will be done prior to implementation in the Gazebo simulation environment. Gazebo scheduled timelines can be seen in Figure {fig:scedulediagram}. 
+	\subsection{Verification and Validation}
+	
+	\subsubsection{Unit Tests}
+	
+	When using ROS it is typical to create individual nodes that all execute independent of one another. Using this modular design, it is easy to write an entire node and verify it individually before executing it with the entire system.	Verification and validation of the project's nodes will be done prior to implementation in the Gazebo simulation environment.
+	
+	\subsubsection{Gazebo}
+	
+	Gazebo is a simulation environment that runs nodes that give similar input and output to if the nodes were being executed on a real robot moving around in a real environment. This includes camera feeds, and allows for the insertion of obstacles and ArUco shapes. Gazebo scheduled deadlines can be seen in Figure \ref{fig:scedulediagram}. Testing of custom written nodes will be done in Gazebo congruently with unit-tests to ensure that nodes which rely on subscribing to other nodes are behaving as expected before executing code on an actual robot.
+	
+	\subsubsection{Camera Tests}
+	
+	Given that most of our custom nodes revolve around transforming camera data to extract information, the ArUco shapes for targets, parallax shift for obstacles, and optical flow for odometry, tests performed with only the camera and OpenCV outside of a node can be created and and executed without being contained within a ROS node. This will be useful as we can use OpenCV's feature highlighting capabilities to ensure that targets and obstacles are being identified while moving a camera through an environment. 
+	
+	\subsubsection{Ground Based Robot}
+	
+	Testing the code on a ground based robot will be necessary to ensure that the logic in the movement nodes is sound. Initially simply having the robot follow moving targets or turn to face targets that are not head on will be sufficient. As obstacle avoidance gets developed ensuring that the robot does avoid the obstacles will be enough. If the project is sufficiently developed that it is possible to fine tune the parameters of the potential fields being used by the robot to avoid obstacles and move toward an obstacle it may be necessary to use motion tracking to verify that the robot is executing instructions as it believes that it is using motion capture equipment already in the lab.
+	
+	\subsubsection{Flying Robot}
+	
+	Similar to the ground based robot, verifying that the flying robot simply looks like it is doing what is expected will make up the majority of tests executed. If more complex moves are attempted it may become necessary to test this platform using the motion capture equipment that exists in the lab.
 
 
 \section{Equipment}
