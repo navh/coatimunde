@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6800 64-bit) (preloaded format=xelatex 2018.9.7)  15 NOV 2018 17:29
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6800 64-bit) (preloaded format=xelatex 2018.9.7)  15 NOV 2018 22:34
 entering extended mode
 **./PrelimDesign.tex
 (PrelimDesign.tex
@@ -493,6 +493,14 @@ Package biblatex Info: ... file 'biblatex.cfg' found.
 (C:\Users\Navarre\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\biblatex.cfg
 File: biblatex.cfg 
 ))
+("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count301
+\float@exts=\toks19
+\float@box=\box27
+\@float@everytoks=\toks20
+\@floatcapt=\box28
+)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -530,24 +538,24 @@ File: english.lbx 2018/03/04 v3.11 biblatex localization (PK/MW)
 ) (PrelimDesign.aux)
 \openout1 = `PrelimDesign.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
 
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -556,15 +564,15 @@ LaTeX Font Info:    ... okay on input line 25.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: twoside 
-* h-part:(L,W,R)=(82.51282pt, 449.26936pt, 82.51282pt)
-* v-part:(T,H,B)=(82.51282pt, 629.94435pt, 82.51282pt)
+* h-part:(L,W,R)=(79.6678pt, 454.9594pt, 79.6678pt)
+* v-part:(T,H,B)=(79.6678pt, 635.63438pt, 79.6678pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=449.26936pt
-* \textheight=629.94435pt
-* \oddsidemargin=10.24283pt
-* \evensidemargin=10.24283pt
-* \topmargin=-26.75717pt
+* \textwidth=454.9594pt
+* \textheight=635.63438pt
+* \oddsidemargin=7.39781pt
+* \evensidemargin=7.39781pt
+* \topmargin=-29.60219pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=10.0pt
@@ -582,19 +590,19 @@ LaTeX Font Info:    ... okay on input line 25.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box27
-Package hyperref Info: Link coloring OFF on input line 25.
+\AtBeginShipoutBox=\box29
+Package hyperref Info: Link coloring OFF on input line 27.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count301
+\c@section@level=\count302
 )
-LaTeX Info: Redefining \ref on input line 25.
-LaTeX Info: Redefining \pageref on input line 25.
-LaTeX Info: Redefining \nameref on input line 25.
+LaTeX Info: Redefining \ref on input line 27.
+LaTeX Info: Redefining \pageref on input line 27.
+LaTeX Info: Redefining \nameref on input line 27.
 
 (PrelimDesign.out) (PrelimDesign.out)
 \@outlinefile=\write5
@@ -609,8 +617,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'PrelimDesign.bbl' found.
  (PrelimDesign.bbl)
-Package biblatex Info: Reference section=0 on input line 25.
-Package biblatex Info: Reference segment=0 on input line 25.
+Package biblatex Info: Reference section=0 on input line 27.
+Package biblatex Info: Reference segment=0 on input line 27.
 File: rmcLogo.png Graphic file (type bmp)
 <rmcLogo.png>
 
@@ -625,47 +633,40 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 6.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 6.
-)
+ [2])
 \tf@toc=\write6
 \openout6 = `PrelimDesign.toc'.
 
- [2] [3] [4]
+ [3] [4] [5] [6]
 File: BlockDiagram.pdf Graphic file (type pdf)
 <use BlockDiagram.pdf>
 File: NodeDiagram.pdf Graphic file (type pdf)
 <use NodeDiagram.pdf>
- [5] [6] [7]
+ [7] [8]
 
-LaTeX Warning: Reference `fig:scedulediagram' on page 8 undefined on input line
- 183.
+LaTeX Warning: Reference `fig:scedulediagram' on page 9 undefined on input line
+ 211.
 
-[8]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 207.
-
+[9]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 209.
+(Font)              <9> on input line 236.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 209.
-
-LaTeX Warning: Float too large for page by 34.33554pt on input line 273.
+(Font)              <6> on input line 236.
 
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 278.
+LaTeX Warning: Float too large for page by 28.64551pt on input line 300.
 
 File: ScheduleDiagram.png Graphic file (type bmp)
 <ScheduleDiagram.png>
-[9] [10] [11] [12]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 394.
- [13]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 394.
+[10] [11] [12] [13]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 419.
+ [14]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 419.
  (PrelimDesign.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 394.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 394.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 419.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 419.
 Package rerunfilecheck Info: File `PrelimDesign.out' has not changed.
-(rerunfilecheck)             Checksum: FB1E2A37C6EDA578B6166936796BA627.
+(rerunfilecheck)             Checksum: 50B557659609705C8D040F6B689317B7.
 
 
 LaTeX Warning: There were undefined references.
@@ -675,12 +676,12 @@ Package logreq Info: Writing requests to 'PrelimDesign.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 16490 strings out of 427798
- 261054 string characters out of 3151798
- 767006 words of memory out of 3000000
- 20354 multiletter control sequences out of 15000+200000
+ 16549 strings out of 427798
+ 261743 string characters out of 3151798
+ 767947 words of memory out of 3000000
+ 20410 multiletter control sequences out of 15000+200000
  5927 words of font info for 34 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
- 44i,10n,45p,1452b,6218s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,11n,45p,895b,5545s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on PrelimDesign.pdf (13 pages).
+Output written on PrelimDesign.pdf (14 pages).

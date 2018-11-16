@@ -1,7 +1,7 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage{fancyhdr}
-\usepackage[margin=2.9cm,twoside]{geometry}
+\usepackage[margin=2.8cm,twoside]{geometry}
 \usepackage[super]{nth}
 \usepackage[english]{babel}
 \usepackage{csquotes}
@@ -10,9 +10,11 @@
 \usepackage[backend=biber,style=ieee]{biblatex}
 \addbibresource{bibliography.bib}
 
+\usepackage{float}
+
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[LE,RO]{DID - 03 SOR (Hebb \& Stephan)}
+\fancyhead[LE,RO]{DID - 04 Preliminary Design (Hebb \& Stephan)}
 \fancyhead[LO,RE]{\leftmark}
 \fancyfoot[LE,RO]{\thepage}
 
@@ -40,7 +42,7 @@
 		
 		\vspace{1.5cm}
 		
-		\LARGE{Designing Coatimunde\\}
+		\LARGE{Designing Coatimunde \\}
 		
 		\vspace{0.2cm}
 		
@@ -125,18 +127,44 @@
 		
 \section{Design Section}
 
-	Computer Optics Analyzing Trajectories In Mostly Unknown, Navigation Denied, Environments or coatimunde is the name of this project. 
-Computer optics is used as the robot will be using a camera to identify any important surroundings such as, a target or an obstacle. 
-Analyzing trajectories is a term that refers to the robot completing movements to go towards the target. To do path planning the project will implement potential fields. Potential fields work through having vectors that point to object and assigning as positive or negative. The positive vectors attracts the robot towards the target and the negative makes obstacles repulsive to the robot \cite{hwang1992potential}. This algorithm was selected to do path planning as the robot won't have to build a map of the environment to create path to the target \cite{bortoff2000path}. Potential fields allows for the robot to change its path along the way if it discovers new obstacles. The project will also implement a state machine to update the position of the vectors when the robot is moving. This ensures that the robot always knows where the target and identified obstacles are when its own position changes. Navigation denied means that the robot will not have access to a GPS to locate itself, it must search its unknown environment to identify targets and obstacles. An unknown environment can be defined as an environment in which the robot has no prior knowledge to its surroundings and must identify objects in this environment itself through computer vision. This once again is the reason that the project will be using potential fields to plan the path to the target. 
+	Computer Optics Analyzing Trajectories In Mostly Unknown, Navigation Denied, Environments or  \textsc{coatimunde} is the name of this project. 
+	
+	\subsection{Computer Vision}
+	
+	Computer optics is used as the robot will be using a camera to identify any important surroundings such as, a target or an obstacle. There are three unique manners that computer vision may be used as an input source for this project. If all three are implemented completely it should be possible to create a navigation kit that uses exclusively a camera as input resulting in a very transferable and lightweight package for flying robots.
+	
+		\subsubsection{Target Finding}
+		
+		While finding arbitrary targets would be preferred, this project is going to be limited to finding ArUco markers. There are existing libraries in OpenCV that are useful for spotting ArUco shapes even in very busy environments with very little overhead. 
+		
+		\subsubsection{Obstacle Finding}
+		
+		Identifying Obstacles will be a considerable aspect of this project. Using various algorithms that take advantage of the robot's motion through the environment and compare frames in a video stream for different patterns that indicate the presence of something in the environment. Parallax shift is the tenancy for items that are closer to a camera to appear to move more or change in size more than a background that is further away and can be used to indicate where items are and how close they are. Occlusion is where one item moves in front of another item and covers it up, this indicates that the item still in view is closer to the camera than the item that has been hidden. OpenCV contains libraries for both of these tasks, as well as others that may end up being employed to identify obstacles in the environment.
+		
+		\subsubsection{Optical Flow}
+		
+		Optical Flow is a possible source of motion information for the robot. As a camera is moved through an environment the entire image will appear to scale larger as the camera moves forward, rotate left and right as a robot rolls, and shift left, right, up, and down as the robot pitches and yaws. OpenCV contains libraries to try to parse this information, but it requires a considerable amount of effort to combine this information with a model of a robot to get useful position estimation.
+	
+	\subsection{Analyzing Trajectories}
+	
+	Analyzing trajectories is a term that refers to the robot completing movements to go towards the target. To do path planning the project will implement potential fields. Potential fields work through having vectors that point to object and assigning as positive or negative. The positive vectors attracts the robot towards the target and the negative makes obstacles repulsive to the robot \cite{hwang1992potential}. This algorithm was selected to do path planning as the robot won't have to build a map of the environment to create path to the target \cite{bortoff2000path}. Potential fields allows for the robot to change its path along the way if it discovers new obstacles. The project will also implement a state machine to update the position of the vectors when the robot is moving. 
+
+	\subsection{Unknown and Navigation Denied Environments}
+
+	This ensures that the robot always knows where the target and identified obstacles are when its own position changes. Navigation denied means that the robot will not have access to a GPS to locate itself, it must search its unknown environment to identify targets and obstacles. An unknown environment can be defined as an environment in which the robot has no prior knowledge to its surroundings and must identify objects in this environment itself through computer vision. This once again is the reason that the project will be using potential fields to plan the path to the target. 
+
+	\subsection{Aim}
+	
 	The aim of this project is to build an air robot that is able to identify a target and move toward it, avoiding any obstacles that are in the way. Tracking targets of interest in complex environments with a flying robot is the ultimate goal of this project. To accomplish this goal we will be using a TurtleBot and then a UAV with only one camera to identify targets and obstacles. 
 
 
 	\subsection{Block Diagram}
+	
 	The block diagram that is shown in Figure \ref{fig:blockdiagram} contains the outline of the \textsc{coatimunde} project. It is a very high level overview and does not contain references to most of the hardware in use for two reasons. The first reason is that the actual robot and laptop being used are relatively arbitrary as long as the software included is present on both. ROS being used also includes many nodes which are not included, only the ones that are most important to our project, will have to be specifically added to ROS, or will have to be custom created are included on our system block diagram.
 	
 	The laptop contains the initialization, target selection, and RViz. The laptop also takes the user input when necessary and processes it appropriately.  The robot will do all the target identification, obstacle avoidance, and movement decisions autonomously. This means it will take input from the camera into a video processing node and then create a corresponding ROS message to be sent to the other systems on the robot. These messages are created and used throughout the different systems on the robot. The model of the robot's environment will be found subscribing to messages from the obstacle finder node, target finder node, and the state estimate node. This model then creates a message to pass to the route planning node which tells the movement node how to update its position and speed. 
 
-	\begin{figure}
+	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.9\linewidth]{BlockDiagram}
 		\caption{Project Schedule Diagram}
@@ -145,28 +173,28 @@ Analyzing trajectories is a term that refers to the robot completing movements t
 
 	\subsection{Node Diagram}
 
-	\begin{figure}
+	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.9\linewidth]{NodeDiagram}
 		\caption{Project Node Diagram}
 		\label{fig:nodediagram}
 	\end{figure}
 
-Through Figure {fig:nodediagram} it can been shown what nodes will be created for this project. All nodes in the project will be written in python and then built in ROS to be implemented on the robot. The diagram displays what node will subscribe to the other nodes, such as the simple target finder node will subscribe to the video processor node to get messages about the target's potential location. Both the TurtleBot and the Flying Robot have two movement nodes, this is to first build a simple movement node on the platform for testing purposes. Then the proper and final movement node will be made and implemented on the respective robot. 
+	Through Figure \ref{fig:nodediagram} it can been shown what nodes will be created for this project. All nodes in the project will be written in python and then built in ROS to be implemented on the robot. The diagram displays what node will subscribe to the other nodes, such as the simple target finder node will subscribe to the video processor node to get messages about the target's potential location. Both the TurtleBot and the Flying Robot have two movement nodes, this is to first build a simple movement node on the platform for testing purposes. Then the proper and final movement node will be made and implemented on the respective robot. 
 	
 	\subsection{Mathematical Modeling}
 	
 		\subsubsection{Flying Robot}
 	
-	Given that a quad-copter has six degrees of freedom, modeling them is a very difficult task. The AscTec Pelican already has many existing models indented for use with ROS. There is also a large collection of hardware agnostic tools for operating a quad-copters.
+		Given that a quad-copter has six degrees of freedom, modeling them is a very difficult task. The AscTec Pelican already has many existing models indented for use with ROS. There is also a large collection of hardware agnostic tools for operating a quad-copters.
 	
 		\subsubsection{Robot in 3D Space}
-	
-	The robot itself will need to remember where it is located in its environment. Remembering where targets are located relative to the robot is necessary, and presumably remembering the locations of obstacles will be used as well. Using quaternion vectors relative to the robot will allow for simple transformations on these vectors while using very little computational power \cite{williams2010combining}. ROS contains methods and messages to easily communicate, convert, and apply transformations to quaternions.
+		
+		The robot itself will need to remember where it is located in its environment. Remembering where targets are located relative to the robot is necessary, and presumably remembering the locations of obstacles will be used as well. Using quaternion vectors relative to the robot will allow for simple transformations on these vectors while using very little computational power \cite{williams2010combining}. ROS contains methods and messages to easily communicate, convert, and apply transformations to quaternions.
 	
 		\subsubsection{Pose Estimation}
 	
-	Initially feedback from inertial sensors will be used for pose estimation, but ideally a version of Optical Flow would be used to estimate the position of the robot in 3D space. There are some libraries in OpenCV that have addressed generalized pose estimation in 6 degrees of freedom, but it requires a significant amount of computational power, a higher frame rate than our goal of 10Hz to be used for real time performance, and hundreds of visual odometry measurements must be made in every frame requiring a visually busy background.
+		Initially feedback from inertial sensors will be used for pose estimation, but ideally a version of Optical Flow would be used to estimate the position of the robot in 3D space. There are some libraries in OpenCV that have addressed generalized pose estimation in 6 degrees of freedom, but it requires a significant amount of computational power, a higher frame rate than our goal of 10Hz to be used for real time performance, and hundreds of visual odometry measurements must be made in every frame requiring a visually busy background.
 
 	\subsection{Interfacing}
 	
@@ -199,12 +227,11 @@ Through Figure {fig:nodediagram} it can been shown what nodes will be created fo
 
 	\subsection{Equipment Table}
 	
-	Given the large number of items being used in this project, but most are somewhat arbitrary or may be swapped out in future iterations. Half way through our project we intend to re-implement the entire solution onto a totally different platform. A naming convention has been developed for all of our components using a three character code. The first letter, ascending from A for hardware and descending from Z for software, represents the subsystem or general classification the equipment falls under. The second character represents a more specific name, and the third is for a particular example that we are using for our project. Any part with the same two first letters should be able to be substituted freely, an example may be two cameras. One may be used on the ground because it is already installed, but another may be selected for the flying robot because it is lighter, but both accomplish the same task.
+	Given the large number of items being used in this project, but most are somewhat arbitrary or may be swapped out in future iterations. Half way through our project we intend to re-implement the entire solution onto a totally different platform. A naming convention has been developed for all of our components using a three character code.
 	
+	The first letter, ascending from A for hardware and descending from Z for software, represents the subsystem or general classification the equipment falls under. The second character represents a generic piece of equipment, and the third is for a particular example that we are using for our project. Any part with the same two first letters should be able to be substituted freely, an example may be two cameras. One camera (CAA) may be used on the Turtlebot as it is built in to the Turtlebot frame, while another (CAB) may be used on the flying robot as it is much lighter. The generic camera (CA-) can refer to any camera which provides the same information to the same nodes.
 	
-	
-	
-	\begin{table}[]
+	\begin{table}
 		\small
 		\begin{tabular}{|rl|rl|rl|}
 			\hline
@@ -268,14 +295,14 @@ Through Figure {fig:nodediagram} it can been shown what nodes will be created fo
 			Z & Robot Operating System & C & Client             & B   & rospy                             \\ \hline
 		\end{tabular}
 		\normalsize
-		\caption{Equipment Table}
+		\caption{Equipment}
 		\label{table:equipment}
 	\end{table}
 	
 	
 \section{Schedule}
 
-\begin{table}[]
+\begin{table}[H]
 	\begin{tabular}{|l|r|l|l|}
 		\hline
 		\multicolumn{1}{|c|}{\textbf{Task Name}}            & \multicolumn{1}{c|}{\textbf{Duration}} & \multicolumn{1}{c|}{\textbf{Start}} & \multicolumn{1}{c|}{\textbf{Finish}} \\ \hline
@@ -300,18 +327,18 @@ Through Figure {fig:nodediagram} it can been shown what nodes will be created fo
 		-- DID-8 Final Project Presentation		    & 148 days		& Thu 01/11/18		& Thu 28/03/19		\\ \hline
 
 	\end{tabular}
-	\caption{Project Schedule Table}
+	\caption{Project Schedule}
 	\label{table:projectscheduletable}
 \end{table}
 
-\begin{figure}
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{ScheduleDiagram}
 	\caption{Project Schedule Diagram}
 	\label{fig:schedulediagram}
 \end{figure}
 
-The created schedule for the project is shown above. This outlines the major milestones for the project, such as Data Item Deliverables and deadlines for completing different functionalities for the project. Porting to the UAV is listed as one task as we aren't sure what problems will arise until we attempt to port the project.  
+The created schedule for the project shown in Fig \ref{fig:blockdiagram} outlines the major milestones for the project, such as Data Item Deliverables and deadlines for completing different functionalities for the project. Porting to the UAV is listed as one task as we aren't sure what problems will arise until we attempt to port the project.  
 
 \section{Unresolved Issues and Risks}
 
@@ -382,10 +409,8 @@ The created schedule for the project is shown above. This outlines the major mil
 		Using smaller number of obstacles and moving at a slow enough speed should ensure that the robot never needs to execute extreme moves. These more extreme moves are where inaccuracies in control models will exposes themselves the most. 
 
 
-
 \section{Conclusion}
 The preliminary design has been shown for the Flying Robot obstacle avoidance system. Background and requirement defining activities have been given to lay the groundwork and a basic understand of the current research in this domain. This document will be used and referenced for the rest of the design and building processes for the project. The design laid out in this document will also be used in the the Preliminary Design Review and Detailed Design Document. 
-
 
 
 \printbibliography
