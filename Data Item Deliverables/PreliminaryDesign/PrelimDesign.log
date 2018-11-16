@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6800 64-bit) (preloaded format=xelatex 2018.9.7)  15 NOV 2018 22:58
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6800 64-bit) (preloaded format=xelatex 2018.9.7)  16 NOV 2018 14:27
 entering extended mode
 **./PrelimDesign.tex
 (PrelimDesign.tex
@@ -538,24 +538,24 @@ File: english.lbx 2018/03/04 v3.11 biblatex localization (PK/MW)
 ) (PrelimDesign.aux)
 \openout1 = `PrelimDesign.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
 
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -591,7 +591,7 @@ LaTeX Font Info:    ... okay on input line 27.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box29
-Package hyperref Info: Link coloring OFF on input line 27.
+Package hyperref Info: Link coloring OFF on input line 23.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -600,9 +600,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count302
 )
-LaTeX Info: Redefining \ref on input line 27.
-LaTeX Info: Redefining \pageref on input line 27.
-LaTeX Info: Redefining \nameref on input line 27.
+LaTeX Info: Redefining \ref on input line 23.
+LaTeX Info: Redefining \pageref on input line 23.
+LaTeX Info: Redefining \nameref on input line 23.
 
 (PrelimDesign.out) (PrelimDesign.out)
 \@outlinefile=\write5
@@ -617,8 +617,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'PrelimDesign.bbl' found.
  (PrelimDesign.bbl)
-Package biblatex Info: Reference section=0 on input line 27.
-Package biblatex Info: Reference segment=0 on input line 27.
+Package biblatex Info: Reference section=0 on input line 23.
+Package biblatex Info: Reference segment=0 on input line 23.
 File: rmcLogo.png Graphic file (type bmp)
 <rmcLogo.png>
 
@@ -642,35 +642,44 @@ File: BlockDiagram.pdf Graphic file (type pdf)
 <use BlockDiagram.pdf>
 File: NodeDiagram.pdf Graphic file (type pdf)
 <use NodeDiagram.pdf>
- [7] [8] [9]
+ [7] [8]
+
+LaTeX Warning: Reference `fig:scedulediagram' on page 9 undefined on input line
+ 207.
+
+[9]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 237.
+(Font)              <9> on input line 232.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 237.
+(Font)              <6> on input line 232.
 
 
-LaTeX Warning: Float too large for page by 28.64551pt on input line 301.
+LaTeX Warning: Float too large for page by 28.64551pt on input line 296.
 
 File: ScheduleDiagram.png Graphic file (type bmp)
 <ScheduleDiagram.png>
 [10] [11] [12] [13]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 417.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 412.
  [14]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 417.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 412.
  (PrelimDesign.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 417.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 417.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 412.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 412.
 Package rerunfilecheck Info: File `PrelimDesign.out' has not changed.
 (rerunfilecheck)             Checksum: 50B557659609705C8D040F6B689317B7.
+
+
+LaTeX Warning: There were undefined references.
+
 Package logreq Info: Writing requests to 'PrelimDesign.run.xml'.
 \openout1 = `PrelimDesign.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 16548 strings out of 427798
- 261723 string characters out of 3151798
- 767944 words of memory out of 3000000
- 20409 multiletter control sequences out of 15000+200000
+ 16549 strings out of 427798
+ 261743 string characters out of 3151798
+ 767872 words of memory out of 3000000
+ 20410 multiletter control sequences out of 15000+200000
  5927 words of font info for 34 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  44i,11n,45p,895b,5545s stack positions out of 5000i,500n,10000p,200000b,50000s

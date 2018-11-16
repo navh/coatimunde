@@ -18,10 +18,6 @@
 \fancyhead[LO,RE]{\leftmark}
 \fancyfoot[LE,RO]{\thepage}
 
-% Title Page
-\title{Statement of Requirements}
-\author{Officer Cadet 27714 Amos Navarre Hebb\\and\\Officer Cadet 27555 Kara Stephan}
-
 \usepackage{graphicx}
 
 \begin{document}
@@ -74,7 +70,7 @@
 
 	\subsection{Document Purpose}
 	
-	Using Computer Optics for Analyzing Trajectories in Mostly Unknown, Navigation Denied, Environments (\textsc{coatimunde}) is the goal of this project. The purpose of this document is to outline the preliminary design for \textsc{coatimunde}. That is, what the design of the project is, how it will be built, and how this meets the requirements for the project. These requirements have been outlined in the Statement of Requirements. The design of the project thus far will be shown and discussed within the Design Section. This document will then identify the constraints, risks, difficulties that have been faced so far in the project.
+	Using Computer Optics for Analyzing Trajectories in Mostly Unknown, Navigation Denied, Environments (\textsc{coatimunde}) is the goal of this project. The purpose of this document is to outline the preliminary design for \textsc{coatimunde}. That is, what the design of the project is, how it will be built, and how this meets the requirements for the project. These requirements have been outlined in the Statement of Requirements. The design of the project thus far will be shown and discussed within the Design Section. This document will then identify the constraints, risks, and difficulties that have been faced so far in the project.
 	
 	\subsection{Background}
 	
@@ -87,7 +83,7 @@
 		
 		\subsubsection{Unmanned Aircraft Systems}
 		
-		Very generally any powered vehicle that uses aerodynamic forces to provide lift without a human operator being carried can be considered an unmanned aerial vehicle. Currently most of these vehicles make up a single component of a larger unmanned aircraft system. 
+		Very generally any powered vehicle that uses aerodynamic forces to provide lift, without a human operator being carried, can be considered an unmanned aerial vehicle. Currently most of these vehicles make up a single component of a larger unmanned aircraft system. 
 		
 		An Unmanned aircraft system (UAS), or remotely piloted aircraft system (RPAS), is an aircraft without a human pilot on-board, instead controlled from an operator on the ground. Such a system can have varying levels of autonomy, something as simple as a model aircraft could be considered a UAS without any automation capabilities. Detecting, recognizing, identifying, and tracking targets of interest in complex environments and integrate with the systems required to process and fuse the collected information into actionable intelligence while operating in a low-to-medium threat environment is the current goal of the RPAS project by the Royal Canadian Air Force (RCAF) \cite{RPAS}. 
 		
@@ -101,7 +97,7 @@
 		
 		Motion estimation can be accomplished using direct methods which compare whole fields of pixels to each other over successive frames, compared to indirect methods which look for specific features. The information resulting from motion estimation streams can be used to both compensate for motion while analyzing other aspects of an image, and update a state machine.
 		
-		Object recognition in our project will be accomplishing two tasks. Identifying a marker or target which will require more involved object recognition calculations, and very simple techniques, such as edge detection, to identify obstacles that exist in the path of the robot.
+		Object recognition in our project will be accomplishing two tasks: identifying a marker or target which will require more involved object recognition calculations, and very simple techniques, such as edge detection, to identify obstacles that exist in the path of the robot.
 		
 		\subsubsection{OpenCV}
 		
@@ -109,7 +105,7 @@
 		
 		\subsubsection{Gazebo}
 		
-		Gazebo is a robot simulator that allows for creation of a realistic environment which includes both obstacles and markers similar to those being used in the lab. It will then be used to rapidly test algorithms.
+		Gazebo is a robot simulator that allows for creation of a realistic environment which includes both obstacles and markers similar to those being used in the lab. It will be used to rapidly test algorithms.
 		
 		\subsubsection{Robot Operating System}
 		
@@ -123,7 +119,7 @@
 		
 		\subsubsection{AscTec Pelican}
 		
-		The Ascending Technologies Pelican is a 65.1cm by 65.1cm quad-rotor  designed for research purposes\cite{asctec}. It includes a camera, a high level and low level processor set up for computer vision and SLAM research. It is also capable of interfacing easily with other controllers and can carry up to a kilogram of additional gear.
+		The Ascending Technologies Pelican is a 65.1cm by 65.1cm quad-copter designed for research purposes\cite{asctec}. It includes a camera, a high level and low level processor set up for computer vision, and simultaneous localization and mapping (SLAM) research. It is also capable of interfacing easily with other controllers and can carry up to a kilogram of additional gear.
 		
 \section{Design Section}
 
@@ -131,15 +127,15 @@
 	
 	\subsection{Computer Vision}
 	
-	Computer optics is used as the robot will be using a camera to identify any important surroundings such as, a target or an obstacle. There are three unique manners that computer vision may be used as an input source for this project. If all three are implemented completely it should be possible to create a navigation kit that uses exclusively a camera as input resulting in a very transferable and lightweight package for flying robots.
+	Computer optics is used as the robot will employ a camera to identify any important surroundings such as a target or an obstacle. There are three unique manners that computer vision may be used as an input source for this project. These are defined as target finding, obstacle finding, and optical flow. If all three are implemented completely it should be possible to create a navigation kit that uses exclusively a camera as input resulting in a very transferable and lightweight package for flying robots.
 	
 		\subsubsection{Target Finding}
 		
-		While finding arbitrary targets would be preferred, this project is going to be limited to finding ArUco markers. There are existing libraries in OpenCV that are useful for spotting ArUco shapes even in very busy environments with very little overhead. 
+		While finding arbitrary targets would be preferred, this project is going to be limited to finding special targets designed to be easily identified in a busy environment called ArUco shapes. There are existing libraries in OpenCV that are useful for identifying ArUco shapes with very little overhead. 
 		
 		\subsubsection{Obstacle Finding}
 		
-		Identifying Obstacles will be a considerable aspect of this project. Using various algorithms that take advantage of the robot's motion through the environment and compare frames in a video stream for different patterns that indicate the presence of something in the environment. Parallax shift is the tenancy for items that are closer to a camera to appear to move more or change in size more than a background that is further away and can be used to indicate where items are and how close they are. Occlusion is where one item moves in front of another item and covers it up, this indicates that the item still in view is closer to the camera than the item that has been hidden. OpenCV contains libraries for both of these tasks, as well as others that may end up being employed to identify obstacles in the environment.
+		Identifying obstacles will be a considerable aspect of this project. This will be accomplished by using various algorithms that take advantage of the robot's motion through the environment and comparing frames in a video stream for different patterns that will indicate the presence of something in the environment. Parallax shift is the tendency for items that are closer to a camera to appear to move more or change in size more than a background that is further away and can be used to indicate where items are and how close they are. Occlusion is where one item moves in front of another item and covers it up, this indicates that the item still in view is closer to the camera than the item that has been hidden. OpenCV contains libraries for both of these tasks, as well as others that may end up being employed to identify obstacles in the environment.
 		
 		\subsubsection{Optical Flow}
 		
@@ -147,20 +143,20 @@
 	
 	\subsection{Analyzing Trajectories}
 	
-	Analyzing trajectories is a term that refers to the robot completing movements to go towards the target. To do path planning the project will implement potential fields. Potential fields work through having vectors that point to object and assigning as positive or negative. The positive vectors attracts the robot towards the target and the negative makes obstacles repulsive to the robot \cite{hwang1992potential}. This algorithm was selected to do path planning as the robot won't have to build a map of the environment to create path to the target \cite{bortoff2000path}. Potential fields allows for the robot to change its path along the way if it discovers new obstacles. The project will also implement a state machine to update the position of the vectors when the robot is moving. 
+	Analyzing trajectories is a term that refers to the robot completing movements to go towards the target. To do path planning the project will implement potential fields. Potential fields work through having vectors that point to object and assigning as positive or negative. The positive vectors attracts the robot towards the target and the negative makes obstacles repulsive to the robot \cite{hwang1992potential}. This algorithm was selected to do path planning as the robot will not have to build a map of the environment to create path to the target \cite{bortoff2000path}. Potential fields allows for the robot to change its path along the way if it discovers new obstacles. The project will also implement a state machine to update the position of the vectors when the robot is moving. 
 
 	\subsection{Unknown and Navigation Denied Environments}
 
-	This ensures that the robot always knows where the target and identified obstacles are when its own position changes. Navigation denied means that the robot will not have access to a GPS to locate itself, it must search its unknown environment to identify targets and obstacles. An unknown environment can be defined as an environment in which the robot has no prior knowledge to its surroundings and must identify objects in this environment itself through computer vision. This once again is the reason that the project will be using potential fields to plan the path to the target. 
+	The robot must always know where the target and identified obstacles are when its own position changes. Navigation denied means that the robot will not have access to a GPS to locate itself, so it must search its unknown environment to identify targets and obstacles. An unknown environment can be defined as an environment in which the robot has no prior knowledge of its surroundings and must identify objects in this environment itself through computer vision. This once again is the reason that the project will be using potential fields to plan the path to the target. 
 
 	\subsection{Aim}
 	
-	The aim of this project is to build an air robot that is able to identify a target and move toward it, avoiding any obstacles that are in the way. Tracking targets of interest in complex environments with a flying robot is the ultimate goal of this project. To accomplish this goal we will be using a TurtleBot and then a UAV with only one camera to identify targets and obstacles. 
+	The aim of this project is to build an air robot that is able to identify a target and move toward it, avoiding any obstacles that are in the way. Tracking targets of interest in complex environments with a flying robot is the ultimate goal of this project. To accomplish this goal we will be using a TurtleBot and then a flying robot with only one camera to identify targets and obstacles. 
 
 
 	\subsection{Block Diagram}
 	
-	The block diagram that is shown in Figure \ref{fig:blockdiagram} contains the outline of the \textsc{coatimunde} project. It is a very high level overview and does not contain references to most of the hardware in use for two reasons. The first reason is that the actual robot and laptop being used are relatively arbitrary as long as the software included is present on both. ROS being used also includes many nodes which are not included, only the ones that are most important to our project, will have to be specifically added to ROS, or will have to be custom created are included on our system block diagram.
+	The block diagram that is shown in Figure \ref{fig:blockdiagram} contains the outline of the \textsc{coatimunde} project. It is a very high level overview and does not contain references to most of the hardware in use for two reasons: the actual robot and laptop being used are relatively arbitrary as long as the software included is present on both and ROS being used also includes many nodes which are not included. Only the nodes that are most important to our project, will have to be specifically added to ROS, or will have to be custom created are included on our system block diagram.
 	
 	The laptop contains the initialization, target selection, and RViz. The laptop also takes the user input when necessary and processes it appropriately.  The robot will do all the target identification, obstacle avoidance, and movement decisions autonomously. This means it will take input from the camera into a video processing node and then create a corresponding ROS message to be sent to the other systems on the robot. These messages are created and used throughout the different systems on the robot. The model of the robot's environment will be found subscribing to messages from the obstacle finder node, target finder node, and the state estimate node. This model then creates a message to pass to the route planning node which tells the movement node how to update its position and speed. 
 
@@ -180,13 +176,13 @@
 		\label{fig:nodediagram}
 	\end{figure}
 
-	Through Figure \ref{fig:nodediagram} it can been shown what nodes will be created for this project. All nodes in the project will be written in python and then built in ROS to be implemented on the robot. The diagram displays what node will subscribe to the other nodes, such as the simple target finder node will subscribe to the video processor node to get messages about the target's potential location. Both the TurtleBot and the Flying Robot have two movement nodes, this is to first build a simple movement node on the platform for testing purposes. Then the proper and final movement node will be made and implemented on the respective robot. 
+	Through Figure \ref{fig:nodediagram} it can been shown what nodes will be created for this project. All nodes in the project will be written in Python and then built in ROS to be implemented on the robot. The diagram displays what node will subscribe to the other nodes, such as the simple target finder node will subscribe to the video processor node to get messages about the target's potential location. Both the TurtleBot and the Flying Robot have two movement nodes, this is to first build a simple movement node on the platform for testing purposes, then the proper and final movement node will be made and implemented on the respective robot. 
 	
 	\subsection{Mathematical Modeling}
 	
 		\subsubsection{Flying Robot}
 	
-		Given that a quad-copter has six degrees of freedom, modeling them is a very difficult task. The AscTec Pelican already has many existing models indented for use with ROS. There is also a large collection of hardware agnostic tools for operating a quad-copters.
+		Given that a quad-copter has six degrees of freedom, modeling them is a very difficult task. The AscTec Pelican already has many existing models indented for use with ROS. There is also a large collection of hardware agnostic tools for operating a quad-copter.
 	
 		\subsubsection{Robot in 3D Space}
 		
@@ -198,7 +194,7 @@
 
 	\subsection{Interfacing}
 	
-	The interfacing of almost all sensors with the on-board computer will be done over USB. Between different nodes on the same computer, and any computers off-board the robot, will be done exclusively with ROS messages sent over either internal loops or Wi-Fi.
+	The interfacing of almost all sensors with the on-board computer will be done over USB. Communication between different nodes on the same computer, and any computers off-board the robot, will be done exclusively with ROS messages sent over either internal loops or Wi-Fi.
 
 	\subsection{Verification and Validation}
 	
@@ -208,8 +204,7 @@
 	
 	\subsubsection{Gazebo}
 	
-	Gazebo is a simulation environment that runs nodes that give similar input and output to if the nodes were being executed on a real robot moving around in a real environment. This includes camera feeds, and allows for the insertion of obstacles and ArUco shapes. Testing of custom written nodes will be done in Gazebo congruently with unit-tests to ensure that nodes which rely on subscribing to other nodes are behaving as expected before executing code on an actual robot.
-	%Gazebo scheduled deadlines can be seen in Figure \ref{fig:scedulediagram}.
+	Gazebo is a simulation environment that runs nodes that give similar input and output to nodes being executed on a real robot moving around in a real environment. This includes camera feeds, and allows for the insertion of obstacles and ArUco shapes. Testing of custom written nodes will be done in Gazebo congruently with unit-tests to ensure that nodes which rely on subscribing to other nodes are behaving as expected before executing code on an actual robot. Gazebo scheduled deadlines can be seen in Figure \ref{fig:scedulediagram}.
 	
 	\subsubsection{Camera Tests}
 	
@@ -217,7 +212,7 @@
 	
 	\subsubsection{Ground Based Robot}
 	
-	Testing the code on a ground based robot will be necessary to ensure that the logic in the movement nodes is sound. Initially simply having the robot follow moving targets or turn to face targets that are not head on will be sufficient. As obstacle avoidance gets developed ensuring that the robot does avoid the obstacles will be enough. If the project is sufficiently developed that it is possible to fine tune the parameters of the potential fields being used by the robot to avoid obstacles and move toward an obstacle it may be necessary to use motion tracking to verify that the robot is executing instructions as it believes that it is using motion capture equipment already in the lab.
+	Testing the code on a ground based robot will be necessary to ensure that the logic in the movement nodes is sound. Initially simply having the robot follow moving targets or turn to face targets that are not head on will be sufficient. As obstacle avoidance gets developed ensuring that the robot does avoid the obstacles will be enough. If the project is sufficiently developed that it is possible to fine tune the parameters of the potential fields being used by the robot to avoid obstacles and move toward an obstacle it may be necessary to use motion tracking equipment already in the lab to verify that the robot is accurately executing instructions.
 	
 	\subsubsection{Flying Robot}
 	
@@ -228,7 +223,7 @@
 
 	\subsection{Equipment Table}
 	
-	Given the large number of items being used in this project, but most are somewhat arbitrary or may be swapped out in future iterations. Half way through our project we intend to re-implement the entire solution onto a totally different platform. A naming convention has been developed for all of our components using a three character code.
+	A large number of items are being used in this project, but most are somewhat arbitrary or may be swapped out in future iterations. Half way through our project we intend to re-implement the entire solution onto a totally different platform. A naming convention has been developed for all of our components using a three character code.
 	
 	The first letter, ascending from A for hardware and descending from Z for software, represents the subsystem or general classification the equipment falls under. The second character represents a generic piece of equipment, and the third is for a particular example that we are using for our project. Any part with the same two first letters should be able to be substituted freely, an example may be two cameras. One camera (CAA) may be used on the Turtlebot as it is built in to the Turtlebot frame, while another (CAB) may be used on the flying robot as it is much lighter. The generic camera (CA-) can refer to any camera which provides the same information to the same nodes.
 	
@@ -393,11 +388,11 @@
 	
 	\subsection{Flight Control System Inaccuracy}
 	
-	Many UAV's are not able to execute arbitrary movements with high accuracy. Verifying that the drone is actually executing instructions may be difficult. 
+	Many UAV's are not able to execute arbitrary movements with high accuracy. Verifying that the flying robot is actually executing instructions may be difficult. 
 	
 		\subsubsection{Likelihood}
 		
-		Medium likelihood, depending on how well developed the libraries for our particular drone these issues may have all been sufficiently worked out for the purposes of this project.
+		Medium likelihood, depending on how well developed the libraries for our particular flying robot these issues may have all been sufficiently worked out for the purposes of this project.
 		
 		\subsubsection{Impact}
 		
