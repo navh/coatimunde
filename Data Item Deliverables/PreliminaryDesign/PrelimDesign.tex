@@ -157,6 +157,8 @@
 	The block diagram that is shown in Figure \ref{fig:blockdiagram} contains the outline of the \textsc{coatimunde} project. It is a very high level overview and does not contain references to most of the hardware in use for two reasons: the actual robot and laptop being used are relatively arbitrary as long as the software included is present on both and ROS being used also includes many nodes which are not included. Only the nodes that are most important to our project, will have to be specifically added to ROS, or will have to be custom created are included on our system block diagram.
 	
 	The laptop contains the initialization, target selection, and RViz. The laptop also takes the user input when necessary and processes it appropriately.  The robot will do all the target identification, obstacle avoidance, and movement decisions autonomously. This means it will take input from the camera into a video processing node and then create a corresponding ROS message to be sent to the other systems on the robot. These messages are created and used throughout the different systems on the robot. The model of the robot's environment will be found subscribing to messages from the obstacle finder node, target finder node, and the state estimate node. This model then creates a message to pass to the route planning node which tells the movement node how to update its position and speed. 
+	
+	Most of the nodes used in this project are either being used stock, or are very minimally modified from provided libraries. The four nodes, highlighted in grey, which are being custom built for this project are the State Estimate, Target Finder, and Obstacle Finder. 
 
 	\begin{figure}[H]
 		\centering
@@ -164,6 +166,72 @@
 		\caption{Project Block Diagram}
 		\label{fig:blockdiagram}
 	\end{figure}
+
+	\subsection{Custom Nodes}
+	
+	 All of the nodes being written for this project will be written in Python and then built in ROS to be implemented on the robot. Python is being used for this project because C++ and Python are the most supported languages for both ROS Nodes and OpenCV. While C++ could possibly be faster in execution, we believe that most of our bottlenecks will be in the actual processing of images. The library calls to OpenCV will still be executing in the lower level C that OpenCV is written in, so there would be minimal gains to be had writing in C++.
+	 
+	 The Camera node is referenced in many locations. It is a built in node that provides image data in various formats to processes that subscribe to it, in general raw image information will be used. Common transformations that must be applied to all functions these will be done in the common camera node to avoid unnecessary calculations.
+	
+	\subsubsection{Target Finding}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.9\linewidth]{Camera-Target-Route}
+		\caption{Target Finding Node}
+		\label{fig:target}
+	\end{figure}
+
+	Camera data, after being processed by the camera node, goes into the target finder node. The target finder is mostly implementing the ArUco symbol finding libraries in OpenCV. ArUco symbols are intended for augmented reality purposes and provide very accurate position, orientation, and distance information. These values will be translated into a vector value that the other systems on the robot can understand and be published at least 10 times per second.
+	
+	Given the limited field of view of the robot it may not always be able to see the target, in which case it will continue to scan for targets.
+	
+	ArUco markers normally encode simple ID information. Vectors will carry the same identifiers allowing the route planning parts of the robot to know when a target has been re-spotted and over-write it or allow for finding and remembering the positions of multiple targets. 
+	
+	\subsubsection{Obstacle Finding}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.9\linewidth]{Camera-Obstacle}
+		\caption{Obstacle Finding Node}
+		\label{fig:obstacle}
+	\end{figure}
+
+	Finding obstacles with depth information will be difficult using monocular vision. The current plan is to try to combine parallax shift with edge detection to try to parse information about nearby objects. These vectors will be published as a large ROS message at least 10 times per second. 
+	
+	Getting depth information from a single camera is difficuly. The TurtleBot also has a suite of depth sensors built in with the camera so these may be used initially instead of trying to use parallax information from a camera to allow for testing other aspects of the system.
+	
+	\subsubsection{State Estimator}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.9\linewidth]{Camera-State-Route}
+		\caption{State Estimating Node}
+		\label{fig:state}
+	\end{figure}
+
+	State estimating from camera information is very difficult and computationally expensive. The TurtleBot has stepper motors that can measure distances fairly reliably, and the Quadcopter should have accelerometers that provide changes in position more reliably than image information could. 
+	
+	Initially these simpler forms of measuring the robot moving through the environment will be used and transformations will be passed off to the route planning node which will adjust the vectors to nearby obstacles and targets according to how much the robot has moved. 
+	
+	New position estimates should be provided at least 10 times every second in the form of a transformation from the last position that the robot was in passed over a ROS message.
+
+	\subsubsection{Route Planning}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.9\linewidth]{Route-Planning-Robot}
+		\caption{Route Planning Node}
+		\label{fig:routeplanning}
+	\end{figure}
+
+	Route planning takes input from the other three custom nodes and determines a route that should carry it toward the target. The proposed solution is currently to create a potential field where positive vectors that repel the robot are attached to all obstacles while a large negative vector is attached to the target location.
+	
+	As the route node receives more information about the robot moving through the environment in should apply transformations to all of the contained vectors to keep them up to date with where they would be as the robot changes position in the environment. 
+	
+	This will also require having a method to remove un-necessary or repetitive vectors. This will be easy to implement with the target vector as the targets will have identification values meaning that the current target can be verified. With obstacles this will be more difficult, and initially vectors will probably simply expire after a certain amount of time. 
+	
+	The route planning software should provide a direction vector to the robot controlling node 10 times every second. There is no need for the route to be the optimal route given that the environment is unknown as we are discovering it.
 
 	\subsection{Node Diagram}
 
@@ -174,7 +242,7 @@
 		\label{fig:nodediagram}
 	\end{figure}
 
-	Through Figure \ref{fig:nodediagram} it can been shown what nodes will be created for this project. All nodes in the project will be written in Python and then built in ROS to be implemented on the robot. The diagram displays what node will subscribe to the other nodes, such as the simple target finder node will subscribe to the video processor node to get messages about the target's potential location. Both the TurtleBot and the Flying Robot have two movement nodes, this is to first build a simple movement node on the platform for testing purposes, then the proper and final movement node will be made and implemented on the respective robot. 
+	Through Figure \ref{fig:nodediagram} it can been shown what nodes will be created for this project. The diagram displays what node will subscribe to the other nodes, such as the simple target finder node will subscribe to the video processor node to get messages about the target's potential location. Both the TurtleBot and the Flying Robot have two movement nodes, this is to first build a simple movement node on the platform for testing purposes, then the proper and final movement node will be made and implemented on the respective robot. 
 	
 	\subsection{Mathematical Modeling}
 	
