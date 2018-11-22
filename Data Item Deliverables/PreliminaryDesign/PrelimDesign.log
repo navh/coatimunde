@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6800 64-bit) (preloaded format=xelatex 2018.9.7)  22 NOV 2018 14:42
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6800 64-bit) (preloaded format=xelatex 2018.9.7)  22 NOV 2018 14:50
 entering extended mode
 **./PrelimDesign.tex
 (PrelimDesign.tex
@@ -656,26 +656,26 @@ File: NodeDiagram.pdf Graphic file (type pdf)
  [10] [11]
 
 LaTeX Warning: Reference `fig:scedulediagram' on page 12 undefined on input lin
-e 275.
+e 277.
 
 [12]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 300.
+(Font)              <9> on input line 302.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 300.
+(Font)              <6> on input line 302.
 
 
-LaTeX Warning: Float too large for page by 28.64551pt on input line 364.
+LaTeX Warning: Float too large for page by 28.64551pt on input line 366.
 
 File: ScheduleUpdated.png Graphic file (type bmp)
 <ScheduleUpdated.png>
 [13] [14] [15] [16]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 480.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 482.
  [17]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 480.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 482.
  (PrelimDesign.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 480.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 480.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 482.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 482.
 Package rerunfilecheck Info: File `PrelimDesign.out' has not changed.
 (rerunfilecheck)             Checksum: 7E5251CA276365BB9C00021B49E6EB00.
 
