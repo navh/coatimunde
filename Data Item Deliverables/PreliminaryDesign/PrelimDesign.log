@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6800 64-bit) (preloaded format=xelatex 2018.9.7)  22 NOV 2018 14:32
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6800 64-bit) (preloaded format=xelatex 2018.9.7)  22 NOV 2018 14:36
 entering extended mode
 **./PrelimDesign.tex
 (PrelimDesign.tex
@@ -643,21 +643,22 @@ File: BlockDiagram.pdf Graphic file (type pdf)
  [7]
 File: Camera-Target-Route.pdf Graphic file (type pdf)
 <use Camera-Target-Route.pdf>
+ [8]
 File: Camera-Obstacle.pdf Graphic file (type pdf)
 <use Camera-Obstacle.pdf>
- [8]
 File: Camera-State-Route.pdf Graphic file (type pdf)
 <use Camera-State-Route.pdf>
+ [9]
 File: Route-Planning-Robot.pdf Graphic file (type pdf)
 <use Route-Planning-Robot.pdf>
 File: NodeDiagram.pdf Graphic file (type pdf)
 <use NodeDiagram.pdf>
- [9] [10]
+ [10] [11]
 
-LaTeX Warning: Reference `fig:scedulediagram' on page 11 undefined on input lin
+LaTeX Warning: Reference `fig:scedulediagram' on page 12 undefined on input lin
 e 273.
 
-[11]
+[12]
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <9> on input line 298.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -668,9 +669,9 @@ LaTeX Warning: Float too large for page by 28.64551pt on input line 362.
 
 File: ScheduleUpdated.png Graphic file (type bmp)
 <ScheduleUpdated.png>
-[12] [13] [14] [15]
+[13] [14] [15] [16]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 478.
- [16]
+ [17]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 478.
  (PrelimDesign.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 478.
@@ -688,10 +689,10 @@ Package logreq Info: Writing requests to 'PrelimDesign.run.xml'.
 Here is how much of TeX's memory you used:
  16570 strings out of 427798
  262284 string characters out of 3151798
- 768451 words of memory out of 3000000
+ 768453 words of memory out of 3000000
  20427 multiletter control sequences out of 15000+200000
  5927 words of font info for 34 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
- 44i,11n,45p,940b,5547s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,11n,45p,939b,5547s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on PrelimDesign.pdf (16 pages).
+Output written on PrelimDesign.pdf (17 pages).
