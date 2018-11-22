@@ -93,7 +93,7 @@
 		
 		\subsubsection{Computer Vision}
 		
-		Currently there are many different ways that computers can make high-level decisions based on digital image information. There are many methods to acquire, process, and analyze data from the real world using a camera. While this is a very broad field, we intend to focus especially on the aspects around motion estimation and object recognition. Both will be working with a video stream taken from a camera. 
+		Currently there are many different ways that computers can make high-level decisions based on digital image information. There are many methods to acquire, process, and analyze data from the real world using a camera. While this is a very broad field, we intend to focus on motion estimation and object recognition. Both will be working with a video stream taken from a camera. 
 		
 		Motion estimation can be accomplished using direct methods which compare whole fields of pixels to each other over successive frames, compared to indirect methods which look for specific features. The information resulting from motion estimation streams can be used to both compensate for motion while analyzing other aspects of an image, and update a state machine.
 		
@@ -121,13 +121,11 @@
 		
 		The Ascending Technologies Pelican is a 65.1cm by 65.1cm quad-copter designed for research purposes\cite{asctec}. It includes a camera, a high level and low level processor set up for computer vision, and simultaneous localization and mapping (SLAM) research. It is also capable of interfacing easily with other controllers and can carry up to a kilogram of additional gear.
 		
-\section{Design Section}
-
-	Computer Optics Analyzing Trajectories In Mostly Unknown, Navigation Denied, Environments or  \textsc{coatimunde} is the name of this project. 
+\section{Design}
 	
 	\subsection{Computer Vision}
 	
-	Computer optics is used as the robot will employ a camera to identify any important surroundings such as a target or an obstacle. There are three unique manners that computer vision may be used as an input source for this project. These are defined as target finding, obstacle finding, and optical flow. If all three are implemented completely it should be possible to create a navigation kit that uses exclusively a camera as input resulting in a very transferable and lightweight package for flying robots.
+	Computer optics is used as the robot will employ a camera to identify objects in the surrounding environment, specifically targets and obstacles. There are three unique manners that computer vision may be used as an input source for this project; these are target finding, obstacle finding, and optical flow. These are defined as target finding, obstacle finding, and optical flow. If all three are implemented completely it should be possible to create a navigation kit that uses exclusively a camera as input resulting in a very transferable and lightweight package for flying robots.
 	
 		\subsubsection{Target Finding}
 		
@@ -135,7 +133,7 @@
 		
 		\subsubsection{Obstacle Finding}
 		
-		Identifying obstacles will be a considerable aspect of this project. This will be accomplished by using various algorithms that take advantage of the robot's motion through the environment and comparing frames in a video stream for different patterns that will indicate the presence of something in the environment. Parallax shift is the tendency for items that are closer to a camera to appear to move more or change in size more than a background that is further away and can be used to indicate where items are and how close they are. Occlusion is where one item moves in front of another item and covers it up, this indicates that the item still in view is closer to the camera than the item that has been hidden. OpenCV contains libraries for both of these tasks, as well as others that may end up being employed to identify obstacles in the environment.
+		Finding obstacles will be a considerable aspect of this project. There are various algorithms which leverage the robot's motion through the environment to extract key features of the environment, indicating the potential presence of obstacles. Parallax shift is the tendency for items that are closer to a camera to appear to move more or change in size more than a background that is further away and can be used to indicate where items are and how close they are. Occlusion is where one item moves in front of another item and covers it up, this indicates that the item still in view is closer to the camera than the item that has been hidden. OpenCV contains libraries for both of these tasks, as well as others that may end up being employed to identify obstacles in the environment.
 		
 		\subsubsection{Optical Flow}
 		
@@ -143,7 +141,7 @@
 	
 	\subsection{Analyzing Trajectories}
 	
-	Analyzing trajectories is a term that refers to the robot completing movements to go towards the target. To do path planning the project will implement potential fields. Potential fields work through having vectors that point to object and assigning as positive or negative. The positive vectors attracts the robot towards the target and the negative makes obstacles repulsive to the robot \cite{hwang1992potential}. This algorithm was selected to do path planning as the robot will not have to build a map of the environment to create path to the target \cite{bortoff2000path}. Potential fields allows for the robot to change its path along the way if it discovers new obstacles. The project will also implement a state machine to update the position of the vectors when the robot is moving. 
+	Analyzing trajectories is a term that refers to the robot completing movements to go towards the target. To do path planning the project will implement potential fields. Potential fields function through creating vectors pointing to objects in the environment and assigning them positive or negative. The positive vectors attracts the robot towards the target and the negative makes obstacles repulsive to the robot \cite{hwang1992potential}. This algorithm was selected to do path planning as the robot will not have to build a map of the environment to create path to the target \cite{bortoff2000path}. Potential fields allows for the robot to change its path along the way if it discovers new obstacles. As the robot is moving the potential fields must be updated to account for how much the robot moved. This will be solved through creating a state machine. 
 
 	\subsection{Unknown and Navigation Denied Environments}
 
@@ -151,7 +149,7 @@
 
 	\subsection{Aim}
 	
-	The aim of this project is to build an air robot that is able to identify a target and move toward it, avoiding any obstacles that are in the way. Tracking targets of interest in complex environments with a flying robot is the ultimate goal of this project. To accomplish this goal we will be using a TurtleBot and then a flying robot with only one camera to identify targets and obstacles. 
+	The aim of this project is to design a high level control system that will allow an air robot to identify a target and move toward it, avoiding any obstacles that are in the way. Tracking targets of interest in complex environments with a flying robot is the ultimate goal of this project. To accomplish this goal we will be using a TurtleBot and then a flying robot with only one camera to identify targets and obstacles. 
 
 
 	\subsection{Block Diagram}
