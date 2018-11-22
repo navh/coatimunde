@@ -145,7 +145,7 @@
 
 	\subsection{Unknown and Navigation Denied Environments}
 
-	The robot must always remember where identified target and obstacles are in relation to itself even when its own position changes. Navigation denied means that the robot will not have access to a GPS to locate itself, so it must search its unknown environment to identify targets and obstacles. An unknown environment can be defined as an environment in which the robot has no prior knowledge of its surroundings and must identify objects in this environment itself through computer vision. Potential fields will be used to track the location of the target and obstacles through updating each objects vector. These vectors will be used in the state machine to properly create a path to the target as they are either positive for the target or negative for obstacles. This once again is the reason that the project will be using potential fields to plan the path to the target. 
+	The robot must always remember where identified target and obstacles are in relation to itself even when its own position changes. Navigation denied means that the robot will not have access to a GPS to locate itself, so it must search its unknown environment to identify targets and obstacles. An unknown environment can be defined as an environment in which the robot has no prior knowledge of its surroundings and must identify objects in this environment itself through computer vision. Potential fields will be used to track the location of the target and obstacles through updating each objects vector. These vectors will be used in the state machine to properly create a path to the target, as they are either positive for the target or negative for obstacles. This once again is the reason that the project will be using potential fields to plan the path to the target. 
 
 	\subsection{Aim}
 	
@@ -242,7 +242,12 @@
 		\label{fig:nodediagram}
 	\end{figure}
 
+<<<<<<< HEAD
 	Through Figure \ref{fig:nodediagram} it can been shown what nodes will be created or used for this project.  The diagram displays what node will subscribe to the other nodes, such as the simple target finder node will subscribe to the video processor node to get messages about the target's potential location. Both the TurtleBot and the Flying Robot have two movement nodes, this is to first build a simple movement node on the platform for testing purposes, then the proper and final movement node will be made and implemented on the respective robot. 
+=======
+	Through Figure \ref{fig:nodediagram} it can been shown what nodes will be created or used for this project. The diagram displays what node will subscribe to the other nodes, such as the simple target finder node will subscribe to the video processor node to get messages about the target's potential location. Both the TurtleBot and the Flying Robot have two movement nodes, this is to first build a simple movement node on the platform for testing purposes, then the proper and final movement node will be made and implemented on the respective robot. 
+
+>>>>>>> 27d7a9e668851513d2da8798425b427a5fa36935
 	
 	\subsection{Mathematical Modeling}
 	
@@ -289,7 +294,7 @@
 
 	\subsection{Equipment Table}
 	
-	A large number of items are being used in this project, most are arbitrary and may be changed in future iterations. Part way through our project we intend to re-implement the entire solution onto a 	different platform. A naming convention has been developed for all of our components using a three character code.
+	A large number of items are being used in this project, most are arbitrary and may be changed in future iterations. Part way through our project we intend to re-implement the entire solution onto a different platform. A naming convention has been developed for all of our components using a three character code.
 	
 	The first letter, ascending from A for hardware and descending from Z for software, represents the subsystem or general classification the equipment falls under. The second character represents a generic piece of equipment, and the third is for a particular example that we are using for our project. Any part with the same two first letters should be able to be substituted freely, an example may be two cameras. One camera (CAA) may be used on the Turtlebot as it is built in to the Turtlebot frame, while another (CAB) may be used on the flying robot as it is much lighter. The generic camera (CA-) can refer to any camera which provides the same information to the same nodes.
 	
