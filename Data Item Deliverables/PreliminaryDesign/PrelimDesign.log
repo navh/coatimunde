@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6800 64-bit) (preloaded format=xelatex 2018.9.7)  16 NOV 2018 14:27
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6800 64-bit) (preloaded format=xelatex 2018.9.7)  22 NOV 2018 13:09
 entering extended mode
 **./PrelimDesign.tex
 (PrelimDesign.tex
@@ -645,28 +645,28 @@ File: NodeDiagram.pdf Graphic file (type pdf)
  [7] [8]
 
 LaTeX Warning: Reference `fig:scedulediagram' on page 9 undefined on input line
- 207.
+ 205.
 
 [9]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 232.
+(Font)              <9> on input line 230.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 232.
+(Font)              <6> on input line 230.
 
 
-LaTeX Warning: Float too large for page by 28.64551pt on input line 296.
+LaTeX Warning: Float too large for page by 28.64551pt on input line 294.
 
-File: ScheduleDiagram.png Graphic file (type bmp)
-<ScheduleDiagram.png>
+File: ScheduleUpdated.png Graphic file (type bmp)
+<ScheduleUpdated.png>
 [10] [11] [12] [13]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 412.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 410.
  [14]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 412.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 410.
  (PrelimDesign.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 412.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 412.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 410.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 410.
 Package rerunfilecheck Info: File `PrelimDesign.out' has not changed.
-(rerunfilecheck)             Checksum: 50B557659609705C8D040F6B689317B7.
+(rerunfilecheck)             Checksum: BF3CCF4D66F29CA01830384EE9AA28F2.
 
 
 LaTeX Warning: There were undefined references.
@@ -678,10 +678,10 @@ Package logreq Info: Writing requests to 'PrelimDesign.run.xml'.
 Here is how much of TeX's memory you used:
  16549 strings out of 427798
  261743 string characters out of 3151798
- 767872 words of memory out of 3000000
+ 767861 words of memory out of 3000000
  20410 multiletter control sequences out of 15000+200000
  5927 words of font info for 34 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
- 44i,11n,45p,895b,5545s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,11n,45p,940b,5545s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on PrelimDesign.pdf (14 pages).
