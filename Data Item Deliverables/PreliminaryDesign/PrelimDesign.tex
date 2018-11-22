@@ -38,7 +38,7 @@
 		
 		\vspace{1.5cm}
 		
-		\LARGE{Designing Coatimunde \\}
+		\LARGE{Designing (\textsc{coatimunde}) \\}
 		
 		\vspace{0.2cm}
 		
@@ -141,11 +141,11 @@
 	
 	\subsection{Analyzing Trajectories}
 	
-	Analyzing trajectories is a term that refers to the robot completing movements to go towards the target. To do path planning the project will implement potential fields. Potential fields function through creating vectors pointing to objects in the environment and assigning them positive or negative. The positive vectors attracts the robot towards the target and the negative makes obstacles repulsive to the robot \cite{hwang1992potential}. This algorithm was selected to do path planning as the robot will not have to build a map of the environment to create path to the target \cite{bortoff2000path}. Potential fields allows for the robot to change its path along the way if it discovers new obstacles. As the robot is moving the potential fields must be updated to account for how much the robot moved. This will be solved through creating a state machine. 
+	Analyzing trajectories is a term that refers to the robot completing movements to go towards the target. To do path planning the project will implement potential fields. Potential fields function through creating vectors pointing to objects in the environment and assigning them positive or negative. The positive vectors attracts the robot towards the target and the negative makes obstacles repulsive to the robot \cite{hwang1992potential}. This algorithm was selected to do path planning as the robot will not have to build a map of the environment to create path to the target \cite{bortoff2000path}. Potential fields allow for the robot to change its path along the way if it discovers new obstacles. As the robot is moving the potential fields must be updated to account for how much the robot moved. This will be solved through creating a state machine. 
 
 	\subsection{Unknown and Navigation Denied Environments}
 
-	The robot must always know where the target and identified obstacles are when its own position changes. Navigation denied means that the robot will not have access to a GPS to locate itself, so it must search its unknown environment to identify targets and obstacles. An unknown environment can be defined as an environment in which the robot has no prior knowledge of its surroundings and must identify objects in this environment itself through computer vision. This once again is the reason that the project will be using potential fields to plan the path to the target. 
+	The robot must always remember where identified target and obstacles are in relation to itself even when its own position changes. Navigation denied means that the robot will not have access to a GPS to locate itself, so it must search its unknown environment to identify targets and obstacles. An unknown environment can be defined as an environment in which the robot has no prior knowledge of its surroundings and must identify objects in this environment itself through computer vision. Potential fields will be used to track the location of the target and obstacles through updating each objects vector. These vectors will be used in the state machine to properly create a path to the target as they are either positive for the target or negative for obstacles. This once again is the reason that the project will be using potential fields to plan the path to the target. 
 
 	\subsection{Aim}
 	
@@ -154,7 +154,7 @@
 
 	\subsection{Block Diagram}
 	
-	The block diagram that is shown in Figure \ref{fig:blockdiagram} contains the outline of the \textsc{coatimunde} project. It is a very high level overview and does not contain references to most of the hardware in use for two reasons: the actual robot and laptop being used are relatively arbitrary as long as the software included is present on both and ROS being used also includes many nodes which are not included. Only the nodes that are most important to our project, will have to be specifically added to ROS, or will have to be custom created are included on our system block diagram.
+	The block diagram that is shown in Figure \ref{fig:blockdiagram} contains the outline of the \textsc{coatimunde} project. It is a very high level overview and does not contain references to most of the hardware in use for two reasons: the actual robot and laptop being used are relatively arbitrary as long as the software included is present on both and ROS being used also includes many nodes which are not included. Only the nodes that are most important to our project, will have to be specifically added to ROS, or will have to be custom created are included on our system block diagram shown below.
 	
 	The laptop contains the initialization, target selection, and RViz. The laptop also takes the user input when necessary and processes it appropriately.  The robot will do all the target identification, obstacle avoidance, and movement decisions autonomously. This means it will take input from the camera into a video processing node and then create a corresponding ROS message to be sent to the other systems on the robot. These messages are created and used throughout the different systems on the robot. The model of the robot's environment will be found subscribing to messages from the obstacle finder node, target finder node, and the state estimate node. This model then creates a message to pass to the route planning node which tells the movement node how to update its position and speed. 
 
@@ -174,7 +174,7 @@
 		\label{fig:nodediagram}
 	\end{figure}
 
-	Through Figure \ref{fig:nodediagram} it can been shown what nodes will be created for this project. All nodes in the project will be written in Python and then built in ROS to be implemented on the robot. The diagram displays what node will subscribe to the other nodes, such as the simple target finder node will subscribe to the video processor node to get messages about the target's potential location. Both the TurtleBot and the Flying Robot have two movement nodes, this is to first build a simple movement node on the platform for testing purposes, then the proper and final movement node will be made and implemented on the respective robot. 
+	Through Figure \ref{fig:nodediagram} it can been shown what nodes will be created or used for this project. All nodes in the project will be written in Python and then built in ROS to be implemented on the robot. The diagram displays what node will subscribe to the other nodes, such as the simple target finder node will subscribe to the video processor node to get messages about the target's potential location. Both the TurtleBot and the Flying Robot have two movement nodes, this is to first build a simple movement node on the platform for testing purposes, then the proper and final movement node will be made and implemented on the respective robot. 
 	
 	\subsection{Mathematical Modeling}
 	
@@ -221,7 +221,7 @@
 
 	\subsection{Equipment Table}
 	
-	A large number of items are being used in this project, but most are somewhat arbitrary or may be swapped out in future iterations. Half way through our project we intend to re-implement the entire solution onto a totally different platform. A naming convention has been developed for all of our components using a three character code.
+	A large number of items are being used in this project, most are arbitrary and may be changed in future iterations. Part way through our project we intend to re-implement the entire solution onto a 	different platform. A naming convention has been developed for all of our components using a three character code.
 	
 	The first letter, ascending from A for hardware and descending from Z for software, represents the subsystem or general classification the equipment falls under. The second character represents a generic piece of equipment, and the third is for a particular example that we are using for our project. Any part with the same two first letters should be able to be substituted freely, an example may be two cameras. One camera (CAA) may be used on the Turtlebot as it is built in to the Turtlebot frame, while another (CAB) may be used on the flying robot as it is much lighter. The generic camera (CA-) can refer to any camera which provides the same information to the same nodes.
 	
@@ -299,7 +299,7 @@
 	\begin{tabular}{|l|r|l|l|}
 		\hline
 		\multicolumn{1}{|c|}{\textbf{Task Name}}            & \multicolumn{1}{c|}{\textbf{Duration}} & \multicolumn{1}{c|}{\textbf{Start}} & \multicolumn{1}{c|}{\textbf{Finish}} \\ \hline
-		\textbf{Coatimunde}              		    & \textbf{144 days} & \textbf{Tue 09/10/18} & \textbf{Sun 28/04/19} \\ \hline
+		\textsc{coatimunde}	            		    & \textbf{144 days} & \textbf{Tue 09/10/18} & \textbf{Sun 28/04/19} \\ \hline
 		\textbf{- Turtlebot}                                & \textbf{97 days}  & \textbf{Tue 09/10/18} & \textbf{Wed 20/02/19} \\ \hline
 		-- Create a Basic Movement Node                     & 12 days           & Tue 09/10/18          & Wed 24/10/18          \\ \hline
 		-- Subscribe to the Camera                          & 8 days            & Wed 24/10/18          & Fri 02/11/18          \\ \hline
@@ -336,7 +336,7 @@
 \section{Unresolved Issues and Risks}
 
 	\subsection{Limited Space}
-	The scope of the project is limited due to only being able to test indoors. Ideally the UAV would be operating at a high speed and identifying an arbitrary target in an unpredictable environment. In our case though the testing must be completed within the confines of a relatively small robotics laboratory. Smaller obstacles will be used indoors simply due to space constraints. Lower speeds will be used as well, again due to the lack of space. 
+	The scope of the project is limited due to only being able to test indoors. Ideally the UAV would be operating at a high speed and identifying an arbitrary target in an unpredictable environment. In our case though the testing must be completed within the confines of a relatively small robotics laboratory. Smaller obstacles and low speeds will be used indoors due to space constraints. 
 
 	\subsubsection{Likelihood}
 	
@@ -344,7 +344,7 @@
 	
 	\subsubsection{Impact}
 	
-	High impact, especially if using a flying robot, as the space required simply to start and stop moving must be considered meaning not very much space for obstacles is available.
+	High impact, especially if using a flying robot, as the space required simply to start and stop moving must be considered meaning limited space for obstacles.
 	
 	\subsubsection{Process Solution}
 	
