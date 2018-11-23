@@ -127,7 +127,7 @@
 	
 	\subsection{Computer Vision}
 	
-	Computer optics is used as the robot will employ a camera to identify objects in the surrounding environment, specifically targets and obstacles. There are three unique manners that computer vision may be used as an input source for this project; these are target finding, obstacle finding, and optical flow. These are defined as target finding, obstacle finding, and optical flow. If all three are implemented completely it should be possible to create a navigation kit that uses exclusively a camera as input resulting in a very transferable and lightweight package for flying robots.
+	Computer optics is used as the robot will employ a camera to identify objects in the surrounding environment, specifically targets and obstacles. There are three unique manners that computer vision may be used as an input source for this project; these are target finding, obstacle finding, and optical flow. If all three are implemented completely it should be possible to create a navigation kit that uses exclusively a camera as input resulting in a very transferable and lightweight package for flying robots.
 	
 		\subsubsection{Target Finding}
 		
@@ -139,7 +139,7 @@
 		
 		\subsubsection{Optical Flow}
 		
-		Optical Flow is a possible source of motion information for the robot. As a camera is moved through an environment the entire image will appear to scale larger as the camera moves forward, rotate left and right as a robot rolls, and shift left, right, up, and down as the robot pitches and yaws. OpenCV contains libraries to try to parse this information, but it requires a considerable amount of effort to combine this information with a model of a robot to get useful position estimation.
+		Optical Flow is a possible source of motion information for the robot. As a camera is moved through an environment the entire image will appear to scale larger as the camera moves forward, rotate left and right as a robot rolls, and shift left, right, up, and down as the robot pitches and yaws. Calculating shifts from one frame to another for global shifts caused by movement of the camera is a mathematically intensive process beyond the scope of this project. OpenCV contains libraries to try to parse this information, but it requires a considerable amount of effort to combine this information with a model of a robot to get useful position estimation.
 	
 	\subsection{Analyzing Trajectories}
 	
@@ -147,7 +147,7 @@
 
 	\subsection{Unknown and Navigation Denied Environments}
 
-	The robot must always remember where identified target and obstacles are in relation to itself even when its own position changes. Navigation denied means that the robot will not have access to a GPS to locate itself, so it must search its unknown environment to identify targets and obstacles. An unknown environment can be defined as an environment in which the robot has no prior knowledge of its surroundings and must identify objects in this environment itself through computer vision. Potential fields will be used to track the location of the target and obstacles through updating each objects vector. These vectors will be used in the state machine to properly create a path to the target, as they are either positive for the target or negative for obstacles. This once again is the reason that the project will be using potential fields to plan the path to the target. 
+	The robot must always remember where identified target and obstacles are in relation to itself even when its own position changes. Navigation denied means that the robot will not have access to a GPS to locate itself, so it must search its unknown environment to identify targets and obstacles. An unknown environment can be defined as an environment in which the robot has no prior knowledge of its surroundings and must identify objects in this environment itself through computer vision. Potential fields will be used to track the location of the target and obstacles through updating each objects vector. These vectors will be used in the state machine to properly create a path to the target, as they are either negative for the target or positive for obstacles. This once again is the reason that the project will be using potential fields to plan the path to the target. 
 
 	\subsection{Aim}
 	
@@ -156,7 +156,7 @@
 
 	\subsection{Block Diagram}
 	
-	The block diagram that is shown in Figure \ref{fig:blockdiagram} contains the outline of the \textsc{coatimunde} project. It is a very high level overview and does not contain references to most of the hardware in use for two reasons: the actual robot and laptop being used are relatively arbitrary as long as the software included is present on both and ROS being used also includes many nodes which are not included. Only the nodes that are most important to our project, will have to be specifically added to ROS, or will have to be custom created are included on our system block diagram shown below.
+	The block diagram that is shown in Figure \ref{fig:blockdiagram} contains the outline of the \textsc{coatimunde} project. It is a very high level overview and does not contain references to most of the hardware in use for two reasons: the actual robot and laptop being used are relatively arbitrary as long as the software included is present on both. ROS also includes many nodes which are not represented on the block diagram. Only the nodes that are most important to our project, will have to be specifically added to ROS, or will have to be custom created are included on our system block diagram shown below.
 	
 	The laptop contains the initialization, target selection, and RViz. The laptop also takes the user input when necessary and processes it appropriately.  The robot will do all the target identification, obstacle avoidance, and movement decisions autonomously. This means it will take input from the camera into a video processing node and then create a corresponding ROS message to be sent to the other systems on the robot. These messages are created and used throughout the different systems on the robot. The model of the robot's environment will be found subscribing to messages from the obstacle finder node, target finder node, and the state estimate node. This model then creates a message to pass to the route planning node which tells the movement node how to update its position and speed. 
 	
@@ -173,7 +173,7 @@
 	
 	 All of the nodes being written for this project will be written in Python and then built in ROS to be implemented on the robot. Python is being used for this project because C++ and Python are the most supported languages for both ROS Nodes and OpenCV. While C++ could possibly be faster in execution, we believe that most of our bottlenecks will be in the actual processing of images. The library calls to OpenCV will still be executing in the lower level C that OpenCV is written in, so there would be minimal gains to be had writing in C++.
 	 
-	 The Camera node is referenced in many locations. It is a built in node that provides image data in various formats to processes that subscribe to it, in general raw image information will be used. Common transformations that must be applied to all functions these will be done in the common camera node to avoid unnecessary calculations.
+	 The Camera node is referenced in many locations. The camera node is built in to ROS and provides image data in various formats. Processes can to subscribe to different image formats. In general the raw image information will be used by the other nodes. Common transformations that must be applied to all functions these will be done in the common camera node to avoid unnecessary calculations.
 	
 	\subsubsection{Target Finding}
 	
@@ -201,7 +201,7 @@
 
 	Finding obstacles with depth information will be difficult using monocular vision. The current plan is to try to combine parallax shift with edge detection to try to parse information about nearby objects. These vectors will be published as a large ROS message at least 10 times per second. 
 	
-	Getting depth information from a single camera is difficuly. The TurtleBot also has a suite of depth sensors built in with the camera so these may be used initially instead of trying to use parallax information from a camera to allow for testing other aspects of the system.
+	Getting depth information from a single camera is difficult. The TurtleBot also has a suite of depth sensors built in with the camera so these may be used initially instead of trying to use parallax information from a camera to allow for testing other aspects of the system.
 	
 	\subsubsection{State Estimator}
 	
@@ -227,13 +227,13 @@
 		\label{fig:routeplanning}
 	\end{figure}
 
-	Route planning takes input from the other three custom nodes and determines a route that should carry it toward the target. The proposed solution is currently to create a potential field where positive vectors that repel the robot are attached to all obstacles while a large negative vector is attached to the target location.
+	Route planning takes input from the other three custom nodes and determines a route that should carry it toward the target. The current proposed solution is currently to create a potential field where positive vectors that repel the robot are attached to all obstacles while a large negative vector is attached to the target location.
 	
-	As the route node receives more information about the robot moving through the environment in should apply transformations to all of the contained vectors to keep them up to date with where they would be as the robot changes position in the environment. 
+	As the route node receives more information about the robot moving through the environment should apply transformations to all of the contained vectors to keep them up to date with where they would be as the robot changes position in the environment. 
 	
 	This will also require having a method to remove un-necessary or repetitive vectors. This will be easy to implement with the target vector as the targets will have identification values meaning that the current target can be verified. With obstacles this will be more difficult, and initially vectors will probably simply expire after a certain amount of time. 
 	
-	The route planning software should provide a direction vector to the robot controlling node 10 times every second. There is no need for the route to be the optimal route given that the environment is unknown as we are discovering it.
+	The route planning software should provide a direction vector to the robot controlling node 10 times every second. There is no need for the route to be the optimal route given that the environment is unknown.
 
 	\subsection{Node Diagram}
 
@@ -252,7 +252,7 @@
 	
 		\subsubsection{Flying Robot}
 	
-		Given that a quad-copter has six degrees of freedom, modeling them is a very difficult task. The AscTec Pelican already has many existing models indented for use with ROS. There is also a large collection of hardware agnostic tools for operating a quad-copter.
+		Given that a quad-copter has six degrees of freedom, modeling them is a very difficult task. The AscTec Pelican already has many existing models intended for use with ROS. There is also a large collection of hardware agnostic tools for operating a quad-copter.
 	
 		\subsubsection{Robot in 3D Space}
 		
@@ -274,7 +274,7 @@
 	
 	\subsubsection{Gazebo}
 	
-	Gazebo is a simulation environment that runs nodes that give similar input and output to nodes being executed on a real robot moving around in a real environment. This includes camera feeds, and allows for the insertion of obstacles and ArUco shapes. Testing of custom written nodes will be done in Gazebo congruently with unit-tests to ensure that nodes which rely on subscribing to other nodes are behaving as expected before executing code on an actual robot. Gazebo scheduled deadlines can be seen in Figure \ref{fig:scedulediagram}.
+	Gazebo is a simulation environment that runs nodes that give similar input and output to nodes being executed on a real robot moving around in a real environment. This includes camera feeds, and allows for the insertion of obstacles and ArUco shapes. Testing of custom written nodes will be done in Gazebo congruently with unit-tests to ensure that nodes which rely on subscribing to other nodes are behaving as expected before executing code on an actual robot. Gazebo scheduled deadlines can be seen in Figure \ref{fig:schedulediagram}.
 	
 	\subsubsection{Camera Tests}
 	
@@ -403,7 +403,7 @@
 	\label{fig:schedulediagram}
 \end{figure}
 
-	The created schedule for the project shown in Fig \ref{fig:blockdiagram} outlines the major milestones for the project, such as Data Item Deliverables and deadlines for completing different functionalities for the project. Porting to the UAV is listed as one task as we aren't sure what problems will arise until we attempt to port the project.  
+	The created schedule for the project shown in Fig \ref{fig:blockdiagram} outlines the major milestones for the project, such as Data Item Deliverables and deadlines for completing different functionalities for the project. Porting to the UAV is listed as one task as we are not sure what problems will arise until we attempt to port the project.  
 
 \section{Unresolved Issues and Risks}
 
@@ -454,7 +454,7 @@
 		
 		\subsubsection{Process Solution}
 		
-		Testing many algorithms and working to streamline the algorithm used, especially for the Flying Robot, as well as selecting hardware that is complimentary to the kind of loads created by running such an algorithm can mitigate these risks. Using an FPGA could aid with this problem.
+		Testing many algorithms and working to streamline the algorithm used, especially for the Flying Robot, as well as selecting hardware that is complimentary to the kind of loads created by running such an algorithm can mitigate these risks. Using a Field Programmable Gate Array (FPGA) could aid with this problem.
 	
 	\subsection{Flight Control System Inaccuracy}
 	
@@ -474,7 +474,7 @@
 
 
 \section{Conclusion}
-The preliminary design has been shown for the Flying Robot obstacle avoidance system. Background and requirement defining activities have been given to lay the groundwork and a basic understand of the current research in this domain. This document will be used and referenced for the rest of the design and building processes for the project. The design laid out in this document will also be used in the the Preliminary Design Review and Detailed Design Document. 
+The preliminary design has been shown for the Flying Robot obstacle avoidance system. The background and requirement defining activities have been given to lay the groundwork and a basic understanding of the current research in this domain. This document will be used and referenced for the rest of the design and building processes for the project. The design laid out in this document will also be used in the the Preliminary Design Review and Detailed Design Document. 
 
 \printbibliography
 
