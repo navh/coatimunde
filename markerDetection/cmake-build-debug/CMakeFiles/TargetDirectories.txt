@@ -1,0 +1,3 @@
+C:/Users/Navarre/Documents/thesis/coatimunde/markerDetection/cmake-build-debug/CMakeFiles/markerDetection.dir
+C:/Users/Navarre/Documents/thesis/coatimunde/markerDetection/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Navarre/Documents/thesis/coatimunde/markerDetection/cmake-build-debug/CMakeFiles/rebuild_cache.dir
