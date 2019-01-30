@@ -252,6 +252,12 @@ _CATKIN_GTEST_INCLUDE:FILEPATH=/usr/include/gtest/gtest.h
 _CATKIN_GTEST_SRC:FILEPATH=/usr/src/gtest/src/gtest.cc
 
 //Value Computed by CMake
+aruco_tracker_BINARY_DIR:STATIC=/home/t/coatimunde/catkin_ws/build/aruco_tracker
+
+//Value Computed by CMake
+aruco_tracker_SOURCE_DIR:STATIC=/home/t/coatimunde/catkin_ws/src/aruco_tracker
+
+//Value Computed by CMake
 beginner_tutorials_BINARY_DIR:STATIC=/home/t/coatimunde/catkin_ws/build/beginner_tutorials
 
 //Value Computed by CMake
