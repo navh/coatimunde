@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0400044a-af98-4e4b-b0ac-5ebd669ca573" name="Default Changelist" comment="" />
+    <list default="true" id="0400044a-af98-4e4b-b0ac-5ebd669ca573" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coatimunde/coatimunde.launch" beforeDir="false" afterPath="$PROJECT_DIR$/coatimunde/coatimunde.launch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coatimunde/src/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/coatimunde/src/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coatimunde/src/coati_odometry.py" beforeDir="false" afterPath="$PROJECT_DIR$/coatimunde/src/coati_odometry.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coatimunde/src/coati_pfinder.py" beforeDir="false" afterPath="$PROJECT_DIR$/coatimunde/src/coati_pfinder.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
