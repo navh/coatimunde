@@ -252,10 +252,10 @@ _CATKIN_GTEST_INCLUDE:FILEPATH=/usr/include/gtest/gtest.h
 _CATKIN_GTEST_SRC:FILEPATH=/usr/src/gtest/src/gtest.cc
 
 //Value Computed by CMake
-aruco_tracker_BINARY_DIR:STATIC=/home/t/coatimunde/catkin_ws/build/aruco_tracker
+aruco_tracker_BINARY_DIR:STATIC=/home/t/coatimunde/catkin_ws/build/coatimunde
 
 //Value Computed by CMake
-aruco_tracker_SOURCE_DIR:STATIC=/home/t/coatimunde/catkin_ws/src/aruco_tracker
+aruco_tracker_SOURCE_DIR:STATIC=/home/t/coatimunde/catkin_ws/src/coatimunde
 
 //Value Computed by CMake
 beginner_tutorials_BINARY_DIR:STATIC=/home/t/coatimunde/catkin_ws/build/beginner_tutorials
@@ -265,6 +265,12 @@ beginner_tutorials_SOURCE_DIR:STATIC=/home/t/coatimunde/catkin_ws/src/beginner_t
 
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/indigo/share/catkin/cmake
+
+//Value Computed by CMake
+coatimunde_BINARY_DIR:STATIC=/home/t/coatimunde/catkin_ws/build/coatimunde
+
+//Value Computed by CMake
+coatimunde_SOURCE_DIR:STATIC=/home/t/coatimunde/catkin_ws/src/coatimunde
 
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/indigo/share/cpp_common/cmake

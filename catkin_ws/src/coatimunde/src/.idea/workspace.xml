@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="012addc5-3db5-4d70-89dc-5dfcab3adee4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/src.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../aruco_tracker/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../aruco_tracker/package.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../build/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/CMakeFiles/CMakeRuleHashes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../build/CMakeFiles/CMakeRuleHashes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../../build/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../../../build/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../build/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../../../build/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/CTestTestfile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../../build/CTestTestfile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../../../build/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/roscpp_generate_messages_cpp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/roscpp_generate_messages_cpp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/roscpp_generate_messages_cpp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/roscpp_generate_messages_lisp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/roscpp_generate_messages_lisp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/roscpp_generate_messages_lisp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/roscpp_generate_messages_py.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/roscpp_generate_messages_py.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/roscpp_generate_messages_py.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/roscpp_generate_messages_py.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/std_msgs_generate_messages_cpp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/std_msgs_generate_messages_cpp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/std_msgs_generate_messages_cpp.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/std_msgs_generate_messages_cpp.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/std_msgs_generate_messages_cpp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/std_msgs_generate_messages_lisp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/std_msgs_generate_messages_lisp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/std_msgs_generate_messages_lisp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/std_msgs_generate_messages_py.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/std_msgs_generate_messages_py.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/std_msgs_generate_messages_py.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/std_msgs_generate_messages_py.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/std_msgs_generate_messages_py.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CMakeFiles/std_msgs_generate_messages_py.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/CTestTestfile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/catkin_generated/installspace/aruco_tracker.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/catkin_generated/installspace/aruco_trackerConfig-version.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/catkin_generated/installspace/aruco_trackerConfig.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/catkin_generated/ordered_paths.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/catkin_generated/package.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/catkin_generated/pkg.develspace.context.pc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/catkin_generated/pkg.installspace.context.pc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/catkin_generated/stamps/aruco_tracker/package.xml.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/catkin_generated/stamps/aruco_tracker/pkg.pc.em.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/aruco_tracker/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_AddTwoInts.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_AddTwoInts.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_AddTwoInts.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_AddTwoInts.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_AddTwoInts.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_AddTwoInts.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_Num.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_Num.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_Num.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_Num.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_Num.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_Num.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/beginner_tutorials_gencpp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/beginner_tutorials_gencpp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/beginner_tutorials_gencpp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/beginner_tutorials_gencpp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_cpp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_cpp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_cpp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_cpp.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_cpp.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_cpp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_lisp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_lisp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_lisp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_lisp.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_lisp.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_lisp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/beginner_tutorials_genlisp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/beginner_tutorials_genlisp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/beginner_tutorials_genlisp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/beginner_tutorials_genlisp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/beginner_tutorials_genpy.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/beginner_tutorials_genpy.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/beginner_tutorials_genpy.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/beginner_tutorials_genpy.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/roscpp_generate_messages_cpp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/roscpp_generate_messages_cpp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/roscpp_generate_messages_cpp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/roscpp_generate_messages_lisp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/roscpp_generate_messages_lisp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/roscpp_generate_messages_lisp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/roscpp_generate_messages_py.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/roscpp_generate_messages_py.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/roscpp_generate_messages_py.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/roscpp_generate_messages_py.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/std_msgs_generate_messages_cpp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/std_msgs_generate_messages_cpp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/std_msgs_generate_messages_cpp.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/std_msgs_generate_messages_cpp.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/std_msgs_generate_messages_cpp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/std_msgs_generate_messages_lisp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/std_msgs_generate_messages_lisp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/std_msgs_generate_messages_lisp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/std_msgs_generate_messages_py.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/std_msgs_generate_messages_py.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/std_msgs_generate_messages_py.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/std_msgs_generate_messages_py.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/std_msgs_generate_messages_py.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CMakeFiles/std_msgs_generate_messages_py.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/CTestTestfile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/catkin_generated/beginner_tutorials-msg-extras.cmake.develspace.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/catkin_generated/beginner_tutorials-msg-extras.cmake.installspace.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/catkin_generated/installspace/beginner_tutorials-msg-extras.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/catkin_generated/installspace/beginner_tutorials-msg-paths.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/catkin_generated/installspace/beginner_tutorials.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/catkin_generated/installspace/beginner_tutorialsConfig-version.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/catkin_generated/installspace/beginner_tutorialsConfig.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/catkin_generated/ordered_paths.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/catkin_generated/package.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/catkin_generated/pkg.develspace.context.pc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/catkin_generated/pkg.installspace.context.pc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/catkin_generated/stamps/beginner_tutorials/package.xml.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/catkin_generated/stamps/beginner_tutorials/pkg-genmsg.cmake.em.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/catkin_generated/stamps/beginner_tutorials/pkg.pc.em.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/cmake/beginner_tutorials-genmsg-context.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/cmake/beginner_tutorials-genmsg.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/beginner_tutorials/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/catkin_generated/generate_cached_setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../build/catkin_generated/generate_cached_setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/catkin_generated/installspace/_setup_util.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../build/catkin_generated/installspace/_setup_util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/catkin_generated/order_packages.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../../build/catkin_generated/order_packages.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/catkin_generated/order_packages.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../build/catkin_generated/order_packages.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/catkin_generated/setup_cached.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../../build/catkin_generated/setup_cached.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/catkin_generated/stamps/Project/_setup_util.py.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../build/catkin_generated/stamps/Project/_setup_util.py.stamp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/catkin_make.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../../build/catkin_make.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../../build/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/gtest/CMakeFiles/gtest.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../../build/gtest/CMakeFiles/gtest.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../build/gtest/CMakeFiles/gtest_main.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../../build/gtest/CMakeFiles/gtest_main.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../devel/_setup_util.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../devel/_setup_util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../devel/include/beginner_tutorials/AddTwoInts.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../devel/include/beginner_tutorials/AddTwoIntsRequest.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../devel/include/beginner_tutorials/AddTwoIntsResponse.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../devel/include/beginner_tutorials/Num.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../devel/share/aruco_tracker/cmake/aruco_trackerConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../../devel/share/aruco_tracker/cmake/aruco_trackerConfig.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../devel/share/beginner_tutorials/cmake/beginner_tutorials-msg-extras.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../devel/share/beginner_tutorials/cmake/beginner_tutorials-msg-paths.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../devel/share/beginner_tutorials/cmake/beginner_tutorialsConfig-version.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../devel/share/beginner_tutorials/cmake/beginner_tutorialsConfig.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../devel/share/common-lisp/ros/beginner_tutorials/msg/Num.lisp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../devel/share/common-lisp/ros/beginner_tutorials/msg/_package.lisp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../devel/share/common-lisp/ros/beginner_tutorials/msg/_package_Num.lisp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../devel/share/common-lisp/ros/beginner_tutorials/msg/beginner_tutorials-msg.asd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../devel/share/common-lisp/ros/beginner_tutorials/srv/AddTwoInts.lisp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../devel/share/common-lisp/ros/beginner_tutorials/srv/_package.lisp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../devel/share/common-lisp/ros/beginner_tutorials/srv/_package_AddTwoInts.lisp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../devel/share/common-lisp/ros/beginner_tutorials/srv/beginner_tutorials-srv.asd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../aruco_tracker/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../aruco_tracker/package.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../aruco_tracker/src/aruco_tracker.py" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-432817708">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="py" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Python" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="1974" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Python" value="1974" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/coati_depth.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="74" column="74" lean-forward="true" selection-start-line="74" selection-start-column="74" selection-end-line="74" selection-end-column="74" />
+              <folding>
+                <element signature="e#37#53#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/coati_target.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="12" lean-forward="true" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+              <folding>
+                <element signature="e#37#53#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/coati_odometry.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/coati_pfinder.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/coati_target.py" />
+        <option value="$PROJECT_DIR$/coati_depth.py" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="143" />
+    <option name="y" value="183" />
+    <option name="width" value="1277" />
+    <option name="height" value="692" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="012addc5-3db5-4d70-89dc-5dfcab3adee4" name="Default Changelist" comment="" />
+      <created>1550695411070</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1550695411070</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24940239" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Python Console" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="SciView" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/coati_pfinder.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/calibrationpics.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/camera_calibration.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coati_odometry.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coati_target.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="12" lean-forward="true" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+          <folding>
+            <element signature="e#37#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coati_depth.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="74" column="74" lean-forward="true" selection-start-line="74" selection-start-column="74" selection-end-line="74" selection-end-column="74" />
+          <folding>
+            <element signature="e#37#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

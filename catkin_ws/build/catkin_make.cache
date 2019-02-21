@@ -1,2 +1,2 @@
-aruco_tracker
+coatimunde
 -DCATKIN_DEVEL_PREFIX=/home/t/coatimunde/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/t/coatimunde/catkin_ws/install -G Unix Makefiles

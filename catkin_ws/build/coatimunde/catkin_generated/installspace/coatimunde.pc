@@ -1,0 +1,8 @@
+prefix=/home/t/coatimunde/catkin_ws/install
+
+Name: coatimunde
+Description: Description of coatimunde
+Version: 0.1.0
+Cflags: -I/home/t/coatimunde/catkin_ws/install/include
+Libs: -L/home/t/coatimunde/catkin_ws/install/lib 
+Requires: roscpp rospy message_runtime

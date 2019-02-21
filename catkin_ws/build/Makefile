@@ -241,6 +241,123 @@ gtest_main/fast:
 .PHONY : gtest_main/fast
 
 #=============================================================================
+# Target rules for targets named _coatimunde_generate_messages_check_deps_MarkerCoords
+
+# Build rule for target.
+_coatimunde_generate_messages_check_deps_MarkerCoords: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _coatimunde_generate_messages_check_deps_MarkerCoords
+.PHONY : _coatimunde_generate_messages_check_deps_MarkerCoords
+
+# fast build rule for target.
+_coatimunde_generate_messages_check_deps_MarkerCoords/fast:
+	$(MAKE) -f coatimunde/CMakeFiles/_coatimunde_generate_messages_check_deps_MarkerCoords.dir/build.make coatimunde/CMakeFiles/_coatimunde_generate_messages_check_deps_MarkerCoords.dir/build
+.PHONY : _coatimunde_generate_messages_check_deps_MarkerCoords/fast
+
+#=============================================================================
+# Target rules for targets named _coatimunde_generate_messages_check_deps_PointCoords
+
+# Build rule for target.
+_coatimunde_generate_messages_check_deps_PointCoords: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _coatimunde_generate_messages_check_deps_PointCoords
+.PHONY : _coatimunde_generate_messages_check_deps_PointCoords
+
+# fast build rule for target.
+_coatimunde_generate_messages_check_deps_PointCoords/fast:
+	$(MAKE) -f coatimunde/CMakeFiles/_coatimunde_generate_messages_check_deps_PointCoords.dir/build.make coatimunde/CMakeFiles/_coatimunde_generate_messages_check_deps_PointCoords.dir/build
+.PHONY : _coatimunde_generate_messages_check_deps_PointCoords/fast
+
+#=============================================================================
+# Target rules for targets named coatimunde_gencpp
+
+# Build rule for target.
+coatimunde_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 coatimunde_gencpp
+.PHONY : coatimunde_gencpp
+
+# fast build rule for target.
+coatimunde_gencpp/fast:
+	$(MAKE) -f coatimunde/CMakeFiles/coatimunde_gencpp.dir/build.make coatimunde/CMakeFiles/coatimunde_gencpp.dir/build
+.PHONY : coatimunde_gencpp/fast
+
+#=============================================================================
+# Target rules for targets named coatimunde_generate_messages
+
+# Build rule for target.
+coatimunde_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 coatimunde_generate_messages
+.PHONY : coatimunde_generate_messages
+
+# fast build rule for target.
+coatimunde_generate_messages/fast:
+	$(MAKE) -f coatimunde/CMakeFiles/coatimunde_generate_messages.dir/build.make coatimunde/CMakeFiles/coatimunde_generate_messages.dir/build
+.PHONY : coatimunde_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named coatimunde_generate_messages_cpp
+
+# Build rule for target.
+coatimunde_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 coatimunde_generate_messages_cpp
+.PHONY : coatimunde_generate_messages_cpp
+
+# fast build rule for target.
+coatimunde_generate_messages_cpp/fast:
+	$(MAKE) -f coatimunde/CMakeFiles/coatimunde_generate_messages_cpp.dir/build.make coatimunde/CMakeFiles/coatimunde_generate_messages_cpp.dir/build
+.PHONY : coatimunde_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named coatimunde_generate_messages_lisp
+
+# Build rule for target.
+coatimunde_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 coatimunde_generate_messages_lisp
+.PHONY : coatimunde_generate_messages_lisp
+
+# fast build rule for target.
+coatimunde_generate_messages_lisp/fast:
+	$(MAKE) -f coatimunde/CMakeFiles/coatimunde_generate_messages_lisp.dir/build.make coatimunde/CMakeFiles/coatimunde_generate_messages_lisp.dir/build
+.PHONY : coatimunde_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named coatimunde_generate_messages_py
+
+# Build rule for target.
+coatimunde_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 coatimunde_generate_messages_py
+.PHONY : coatimunde_generate_messages_py
+
+# fast build rule for target.
+coatimunde_generate_messages_py/fast:
+	$(MAKE) -f coatimunde/CMakeFiles/coatimunde_generate_messages_py.dir/build.make coatimunde/CMakeFiles/coatimunde_generate_messages_py.dir/build
+.PHONY : coatimunde_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named coatimunde_genlisp
+
+# Build rule for target.
+coatimunde_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 coatimunde_genlisp
+.PHONY : coatimunde_genlisp
+
+# fast build rule for target.
+coatimunde_genlisp/fast:
+	$(MAKE) -f coatimunde/CMakeFiles/coatimunde_genlisp.dir/build.make coatimunde/CMakeFiles/coatimunde_genlisp.dir/build
+.PHONY : coatimunde_genlisp/fast
+
+#=============================================================================
+# Target rules for targets named coatimunde_genpy
+
+# Build rule for target.
+coatimunde_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 coatimunde_genpy
+.PHONY : coatimunde_genpy
+
+# fast build rule for target.
+coatimunde_genpy/fast:
+	$(MAKE) -f coatimunde/CMakeFiles/coatimunde_genpy.dir/build.make coatimunde/CMakeFiles/coatimunde_genpy.dir/build
+.PHONY : coatimunde_genpy/fast
+
+#=============================================================================
 # Target rules for targets named roscpp_generate_messages_cpp
 
 # Build rule for target.
@@ -250,7 +367,7 @@ roscpp_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_cpp/fast:
-	$(MAKE) -f aruco_tracker/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make aruco_tracker/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+	$(MAKE) -f coatimunde/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make coatimunde/CMakeFiles/roscpp_generate_messages_cpp.dir/build
 .PHONY : roscpp_generate_messages_cpp/fast
 
 #=============================================================================
@@ -263,7 +380,7 @@ roscpp_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_lisp/fast:
-	$(MAKE) -f aruco_tracker/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make aruco_tracker/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+	$(MAKE) -f coatimunde/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make coatimunde/CMakeFiles/roscpp_generate_messages_lisp.dir/build
 .PHONY : roscpp_generate_messages_lisp/fast
 
 #=============================================================================
@@ -276,7 +393,7 @@ roscpp_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_py/fast:
-	$(MAKE) -f aruco_tracker/CMakeFiles/roscpp_generate_messages_py.dir/build.make aruco_tracker/CMakeFiles/roscpp_generate_messages_py.dir/build
+	$(MAKE) -f coatimunde/CMakeFiles/roscpp_generate_messages_py.dir/build.make coatimunde/CMakeFiles/roscpp_generate_messages_py.dir/build
 .PHONY : roscpp_generate_messages_py/fast
 
 #=============================================================================
@@ -289,7 +406,7 @@ rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f aruco_tracker/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make aruco_tracker/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f coatimunde/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make coatimunde/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
 #=============================================================================
@@ -302,7 +419,7 @@ rosgraph_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f aruco_tracker/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make aruco_tracker/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f coatimunde/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make coatimunde/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_lisp/fast
 
 #=============================================================================
@@ -315,7 +432,7 @@ rosgraph_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_py/fast:
-	$(MAKE) -f aruco_tracker/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make aruco_tracker/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+	$(MAKE) -f coatimunde/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make coatimunde/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
 #=============================================================================
@@ -328,7 +445,7 @@ std_msgs_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f aruco_tracker/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make aruco_tracker/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f coatimunde/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make coatimunde/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
 .PHONY : std_msgs_generate_messages_cpp/fast
 
 #=============================================================================
@@ -341,7 +458,7 @@ std_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f aruco_tracker/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make aruco_tracker/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f coatimunde/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make coatimunde/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
 .PHONY : std_msgs_generate_messages_lisp/fast
 
 #=============================================================================
@@ -354,7 +471,7 @@ std_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_py/fast:
-	$(MAKE) -f aruco_tracker/CMakeFiles/std_msgs_generate_messages_py.dir/build.make aruco_tracker/CMakeFiles/std_msgs_generate_messages_py.dir/build
+	$(MAKE) -f coatimunde/CMakeFiles/std_msgs_generate_messages_py.dir/build.make coatimunde/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
 
 # Help Target
@@ -377,6 +494,15 @@ help:
 	@echo "... tests"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... _coatimunde_generate_messages_check_deps_MarkerCoords"
+	@echo "... _coatimunde_generate_messages_check_deps_PointCoords"
+	@echo "... coatimunde_gencpp"
+	@echo "... coatimunde_generate_messages"
+	@echo "... coatimunde_generate_messages_cpp"
+	@echo "... coatimunde_generate_messages_lisp"
+	@echo "... coatimunde_generate_messages_py"
+	@echo "... coatimunde_genlisp"
+	@echo "... coatimunde_genpy"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_py"
