@@ -1,0 +1,8 @@
+<launch>
+
+	<node name=“coati_depth” pkg=“coatimunde” type=“coati_depth.py” />
+	<node name=“coati_target” pkg=“coatimunde” type=“coati_target.py” />
+	<node name=“coati_odometry” pkg=“coatimundie type=“coati_odometry.py” />
+	<node name=“coati_pfinder” pkg=“coatimunde” type=“coati_pfinder.py” />
+
+</launch>
