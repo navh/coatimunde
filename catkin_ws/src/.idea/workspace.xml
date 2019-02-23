@@ -5,8 +5,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coatimunde/coatimunde.launch" beforeDir="false" afterPath="$PROJECT_DIR$/coatimunde/coatimunde.launch" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coatimunde/src/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/coatimunde/src/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coatimunde/src/camera_calibration.py" beforeDir="false" afterPath="$PROJECT_DIR$/coatimunde/src/camera_calibration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coatimunde/src/coati_depth.py" beforeDir="false" afterPath="$PROJECT_DIR$/coatimunde/src/coati_depth.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coatimunde/src/coati_odometry.py" beforeDir="false" afterPath="$PROJECT_DIR$/coatimunde/src/coati_odometry.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coatimunde/src/coati_pfinder.py" beforeDir="false" afterPath="$PROJECT_DIR$/coatimunde/src/coati_pfinder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coatimunde/src/coati_target.py" beforeDir="false" afterPath="$PROJECT_DIR$/coatimunde/src/coati_target.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

@@ -1,0 +1,2 @@
+
+	<node name="coati_pfinder" pkg="coatimunde" type="coati_pfinder.py" />

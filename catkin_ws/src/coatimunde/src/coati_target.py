@@ -1,6 +1,7 @@
 #! /usr/bin/env python
 
 #python libs
+from __future__ import division 
 import sys, time
 
 #numpy and scipy
@@ -26,30 +27,20 @@ from coatimunde.msg import PointCoords
 #some nasty globals
 font = cv2.FONT_HERSHEY_SIMPLEX
 VERBOSE=True
-VERSION_TEXT= 'v0.1-'
+VERSION_TEXT= 'v0.2-'
 PUBLISH_IMAGE = True
-MOVEMENT_ENABLED=True
-LeftTurn = 0.05
-RightTurn = 0.05
-RobotSpeed = 0.05
-NoMarkerTurn = 0.4
 aruco_dict = aruco.Dictionary_get(aruco.DICT_ARUCO_ORIGINAL)
 parameters = aruco.DetectorParameters_create()
 
 
-class aruco_tracker:
+class coati_target:
 
     def __init__(self):
-
-        #This is for how we steeerererererer
-        self.xVelocity = 0
-        self.zRotation = 0
 
         #this is where we publish the output
         if PUBLISH_IMAGE:
             self.image_pub = rospy.Publisher("/output/image_raw/compressed", CompressedImage, queue_size = 1)
-        self.velo_pub = rospy.Publisher('cmd_vel_mux/input/navi', Twist, queue_size = 10)
-        self.marker_pub = rospy.Publisher('coati_target/output', MarkerCoords, queue_size = 5)
+        self.marker_pub = rospy.Publisher('coati/target/output', MarkerCoords, queue_size = 5)
 
         #this is where we read from the robot
         self.subscriber = rospy.Subscriber('/camera/rgb/image_raw/compressed',CompressedImage, self.callback, queue_size=5)
@@ -75,18 +66,19 @@ class aruco_tracker:
                 aruco.drawDetectedMarkers(image_np,corners)
 
             for i in range(0, ids.size):
-                outputText += str(ids[i][0]) + ', '
+                if int(ids[i][0]) != 0:
+                    outputText += str(ids[i][0]) + ', '
 
-                # Find the center of the marker
-                cX = int((corners[i][0][0][0] + corners[i][0][1][0]) / 2)
-                cY = int((corners[i][0][0][1] + corners[i][0][2][1]) / 2)
+                    # Find the center of the marker
+                    cX = int((corners[i][0][0][0] + corners[i][0][1][0]) / 2)
+                    cY = int((corners[i][0][0][1] + corners[i][0][2][1]) / 2)
 
-                # ids[i][0] <- this is the id name that I want to use for the dict
-                msg = MarkerCoords()
-                msg.x = cX
-                msg.y = cY
-                msg.id = int(ids[i][0])
-                self.marker_pub.publish(msg)
+                    # ids[i][0] <- this is the id name that I want to use for the dict
+                    msg = MarkerCoords()
+                    msg.x = cX
+                    msg.y = cY
+                    msg.id = int(ids[i][0])
+                    self.marker_pub.publish(msg)
 
         else:
             if PUBLISH_IMAGE:
@@ -104,15 +96,9 @@ class aruco_tracker:
             #publish that image
             self.image_pub.publish(msg)
 
-        #create a movement message
-        move_cmd = Twist()
-        move_cmd.linear.x = 0
-        move_cmd.angular.z = -0.3
-        self.velo_pub.publish(move_cmd)
-
 def main(args):
-    ac = aruco_tracker()
     rospy.init_node('coati_target', anonymous=True)
+    ct = coati_target()
     try:
         rospy.spin()
     except KeyboardInterrupt:
