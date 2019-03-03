@@ -167,7 +167,7 @@ The original design has mostly remained the same for the large part but small de
 	
 	\subsection{Computer Vision}
 	
-	Computer optics is used as the robot will employ a camera to identify objects in the surrounding environment, specifically targets and obstacles. There are three unique manners that computer vision may be used as an input source for this project; these are target finding, obstacle finding, and optical flow. If all three are implemented completely it should be possible to create a navigation kit that uses exclusively a camera as input resulting in a very transferable and lightweight package for flying robots.
+	Computer optics was used as the robot employed a camera to identify objects in the surrounding environment, specifically targets and obstacles. There are three unique manners that computer vision was used as an input source for this project; these are target finding, obstacle finding, and optical flow. The implementation of all three created a navigation kit that uses exclusively a camera as input resulting in a very transferable and lightweight package for flying robots.
 	
 		\subsubsection{Target Finding}
 		
@@ -388,25 +388,36 @@ The original design has mostly remained the same for the large part but small de
 	
 \section{Verification and Validation}
 	
-	\subsection{Unit Tests}
+	\subsection{Experimental Setup}
+	-describe experimental methodology, how tests linked to requirements, how we simulated the real enviro if need be, what assumptions, constraints and limitations?
 	
-	When using ROS it is typical to create individual nodes that all execute independent of one another. Using this modular design, it is easy to write an entire node and verify it individually before executing it with the entire system.	Verification and validation of the project's nodes will be done prior to implementation in the Gazebo simulation environment.
+		\subsubsection{Unit Tests}
 	
-	\subsection{Gazebo}
+	When using ROS it is typical to create individual nodes that all execute independent of one another. Using this modular design, it is easy to write an entire node and verify it individually before executing it with the entire system. Verification and validation of the project's nodes will be done prior to implementation in the Gazebo simulation environment. 
 	
-	Gazebo is a simulation environment that runs nodes that give similar input and output to nodes being executed on a real robot moving around in a real environment. This includes camera feeds, and allows for the insertion of obstacles and ArUco shapes. Testing of custom written nodes will be done in Gazebo congruently with unit-tests to ensure that nodes which rely on subscribing to other nodes are behaving as expected before executing code on an actual robot. Gazebo scheduled deadlines can be seen in Figure \ref{fig:schedulediagram}.
+		\subsubsection{Gazebo}
 	
-	\ubsection{Camera Tests}
+	Gazebo is a simulation environment that runs nodes that give similar input and output to nodes being executed on a real robot moving around in a real environment. This includes camera feeds, and allows for the insertion of obstacles and ArUco shapes. Testing of custom written nodes were done in Gazebo congruently with unit-tests to ensure that nodes which rely on subscribing to other nodes are behaving as expected before executing code on an actual robot.
 	
-	Given that most of our custom nodes revolve around transforming camera data to extract information, the ArUco shapes for targets, parallax shift for obstacles, and optical flow for odometry, tests performed with only the camera and OpenCV outside of a node can be created and and executed without being contained within a ROS node. This will be useful as we can use OpenCV's feature highlighting capabilities to ensure that targets and obstacles are being identified while moving a camera through an environment. 
+		\subsubsection{Camera Tests}
 	
-	\subsection{Ground Based Robot}
+	Given that most of the project's custom nodes revolve around transforming camera data to extract information, the ArUco shapes for targets, parallax shift for obstacles, and optical flow for odometry, tests performed with only the camera and OpenCV outside of a node can be created and and executed without being contained within a ROS node. This was useful as one can use OpenCV's feature highlighting capabilities to ensure that the targets and obstacles were being identified while moving a camera through an environment. 
 	
-	Testing the code on a ground based robot will be necessary to ensure that the logic in the movement nodes is sound. Initially simply having the robot follow moving targets or turn to face targets that are not head on will be sufficient. As obstacle avoidance gets developed ensuring that the robot does avoid the obstacles will be enough. If the project is sufficiently developed that it is possible to fine tune the parameters of the potential fields being used by the robot to avoid obstacles and move toward an obstacle it may be necessary to use motion tracking equipment already in the lab to verify that the robot is accurately executing instructions.
+		\subsubsection{Ground Based Robot}
 	
-	\subsection{Flying Robot}
+	Testing the code on a ground based robot was necessary to ensure that the logic in the movement nodes is sound. Initial testing was done through simply having the robot follow moving targets or turn to face targets that are not head on. As obstacle avoidance was getting developed ensuring that the robot does avoid the obstacles was enough. When the project was sufficiently developed the testing was having the robot avoid obstacles and move towards a target. As the project moved closer to porting to the flying robot, the ground robot was tested to ensure it met the requirement outlined in the SOR. REFFFFF
+
+		\subsubsection{Flying Robot}
 	
-	Similar to the ground based robot, verifying the flying robot will primarily involve evaluating its behaviour. The behaviour we will expect is the all the functionality that was implemented on the ground based robot previously. If more complex moves are attempted it may become necessary to test this platform using the motion capture equipment that exists in the lab.\section{Unresolved Issues and Risks}
+	Similar to the ground based robot, verifying the flying robot primarily involved evaluating its behaviour. The behaviour we expected is the all the functionality that was implemented on the ground based robot previously. 
+- Once again it is necessary to ensure all requirements are met... 
+- limitations of space, ref scope? Real enviro is only indoors.. I'll grab some issues section for this?
+If more complex moves are attempted it may become necessary to test this platform using the motion capture equipment that exists in the lab.
+
+	
+\section{Results}
+	-presentation of results
+	-prove we met the requirements
 
 
 
@@ -414,7 +425,15 @@ The original design has mostly remained the same for the large part but small de
 
 
 \section{Conclusion}
-The preliminary design has been shown for the Flying Robot obstacle avoidance system. The background and requirement defining activities have been given to lay the groundwork and a basic understanding of the current research in this domain. This document will be used and referenced for the rest of the design and building processes for the project. The design laid out in this document will also be used in the the Preliminary Design Review and Detailed Design Document. 
+The detailed design has been shown for Computer Optics for Analyzing Trajectories in Mostly Unknown, Navigation Denied, Environments (\textsc{coatimunde}). 
+
+The background outlined how the project has progressed over the year and the motivation behind it. It gave a summary of the previous Data Item Deliverables, such as the Statement of Requirements and the Preliminary Design Document. 
+
+The design section laid out the final design of the project and how it was implemented. The verification and validation section explained how different aspects of the project were tested throughout the year. The results section showed the final results and how they proved we met the requirements previously outlined. 
+
+The background and requirement defining activities have been given to lay the groundwork and a basic understanding of the current research in this domain. This document will be used and referenced for the rest of the design and building processes for the project. 
+
+The design laid out in this document will also be used in the the Final Project Presentation and the Final Project Demonstration. 
 
 \printbibliography
 
