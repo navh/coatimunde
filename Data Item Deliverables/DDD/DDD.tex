@@ -357,11 +357,10 @@ The original design has mostly remained the same for the large part but small de
 			W & ROS Message - Standard & B & Geometry Messages  & A   & Twist                             \\
 			W & ROS Message - Standard & B & Geometry Messages  & B   & Quaternion                        \\
 			W & ROS Message - Standard & B & Geometry Messages  & C   & Transform                         \\ \hline
-			X & ROS Node - Custom      & A & Vision             & A   & opencv\_preprocessing             \\
-			X & ROS Node - Custom      & B & Movement           & A   & basic\_movement                   \\
-			X & ROS Node - Custom      & B & Movement           & B   & avoidance\_movement               \\
-			X & ROS Node - Custom      & B & Movement           & C   & basic\_flying\_movement           \\
-			X & ROS Node - Custom      & B & Movement           & D   & avoidance\_flying\_movement       \\ \hline
+			X & ROS Node - Custom      & A & Depth              & A   & coati_depth	                 \\
+			X & ROS Node - Custom      & B & Path Finder        & A   & coati_pfinder                     \\
+			X & ROS Node - Custom      & B & Odometry           & B   & coati_odom	                 \\
+			X & ROS Node - Custom      & B & Vision             & D   & coati_target		          \\ \hline
 			Y & ROS Node - Standard    & A & Vision             & A   & vision\_opencv                    \\
 			Y & ROS Node - Standard    & A & Vision             & B   & image\_pipeline                   \\
 			Y & ROS Node - Standard    & B & Coordinates        & A   & tf                                \\
@@ -388,26 +387,23 @@ The original design has mostly remained the same for the large part but small de
 	
 \section{Verification and Validation} --wasn't an actual section before but I think it should be? Or it could go under results for how we obtained the results???
 	
-	\subsection{Experimental Setup}
-	-describe experimental methodology, how tests linked to requirements, how we simulated the real enviro if need be, what assumptions, constraints and limitations?
-	
-		\subsubsection{Unit Tests}
+		\subsection{Unit Tests}
 	
 	When using ROS it is typical to create individual nodes that all execute independent of one another. Using this modular design, it is easy to write an entire node and verify it individually before executing it with the entire system. Verification and validation of the project's nodes will be done prior to implementation in the Gazebo simulation environment. 
 	
-		\subsubsection{Gazebo}
+		\subsection{Gazebo}
 	
 	Gazebo is a simulation environment that runs nodes that give similar input and output to nodes being executed on a real robot moving around in a real environment. This includes camera feeds, and allows for the insertion of obstacles and ArUco shapes. Testing of custom written nodes were done in Gazebo congruently with unit-tests to ensure that nodes which rely on subscribing to other nodes are behaving as expected before executing code on an actual robot.
 	
-		\subsubsection{Camera Tests}
+		\subsection{Camera Tests}
 	
 	Given that most of the project's custom nodes revolve around transforming camera data to extract information, the ArUco shapes for targets, parallax shift for obstacles, and optical flow for odometry, tests performed with only the camera and OpenCV outside of a node can be created and and executed without being contained within a ROS node. This was useful as one can use OpenCV's feature highlighting capabilities to ensure that the targets and obstacles were being identified while moving a camera through an environment. 
 	
-		\subsubsection{Ground Based Robot}
+		\subsection{Ground Based Robot}
 	
 	Testing the code on a ground based robot was necessary to ensure that the logic in the movement nodes is sound. Initial testing was done through simply having the robot follow moving targets or turn to face targets that are not head on. As obstacle avoidance was getting developed ensuring that the robot does avoid the obstacles was enough. When the project was sufficiently developed the testing was having the robot avoid obstacles and move towards a target. As the project moved closer to porting to the flying robot, the ground robot was tested to ensure it met the requirement outlined in the SOR. REFFFFF
 
-		\subsubsection{Flying Robot}
+		\subsection{Flying Robot}
 	
 	Similar to the ground based robot, verifying the flying robot primarily involved evaluating its behaviour. The behaviour we expected is the all the functionality that was implemented on the ground based robot previously. 
 - Once again it is necessary to ensure all requirements are met... 
@@ -416,24 +412,22 @@ If more complex moves are attempted it may become necessary to test this platfor
 
 	
 \section{Results}
-	-presentation of results
-	-prove we met the requirements
+	- presentation of results
+	- prove we met the requirements
 
 
 
+\secton{Discussion}
+	- detailed analysis of how our design did in relation to the requirements
+	- build a table with some of the requirements and add the field if we ratified them or not (can add an extra comment section for little notes on if we partially met them or something)
+	- talk about why some requirements could not be met or only partially met
+	- talk about major issues throughout the project
+	- recommendations if anyone expands on this project in the future -- recommendation do something more exciting
 
 
 
 \section{Conclusion}
-The detailed design has been shown for Computer Optics for Analyzing Trajectories in Mostly Unknown, Navigation Denied, Environments (\textsc{coatimunde}). 
-
-The background outlined how the project has progressed over the year and the motivation behind it. It gave a summary of the previous Data Item Deliverables, such as the Statement of Requirements and the Preliminary Design Document. 
-
-The design section laid out the final design of the project and how it was implemented. The verification and validation section explained how different aspects of the project were tested throughout the year. The results section showed the final results and how they proved we met the requirements previously outlined. 
-
-The background and requirement defining activities have been given to lay the groundwork and a basic understanding of the current research in this domain. This document will be used and referenced for the rest of the design and building processes for the project. 
-
-The design laid out in this document will also be used in the the Final Project Presentation and the Final Project Demonstration. 
+The detailed design has been shown for Computer Optics for Analyzing Trajectories in Mostly Unknown, Navigation Denied, Environments (\textsc{coatimunde}). The background outlined how the project has progressed over the year and the motivation behind it. It gave a summary of the previous Data Item Deliverables, such as the Statement of Requirements and the Preliminary Design Document. The design section laid out the final design of the project and how it was implemented. The verification and validation section explained how different aspects of the project were tested throughout the year. The results section showed the final results and how they proved we met the requirements previously outlined. A discussion section gave a detailed analysis of the design in comparison with the requirements and gave recommendations for future expansions of the project.  The final design laid out in this document will also be used in the the Final Project Presentation and the Final Project Demonstration. 
 
 \printbibliography
 
