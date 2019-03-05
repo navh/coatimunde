@@ -94,7 +94,7 @@
 			\item \textbf{Agriculture:} The robot could inspect tree-fruit or crops that can not be observed from overhead or check assets in remote locations such as irrigation equipment.
 		\end{itemize}
 
-		\subsection{Scope}
+		\subsubsection{Scope}
 	
 	The project started through the use of a ground robot then progressing to a flying robot. The project used computer vision to find targets and for avoiding multiple obstacles. Both robots are be highly autonomous, requiring only user input to commence. 
 
@@ -415,14 +415,97 @@ If more complex moves are attempted it may become necessary to test this platfor
 	- presentation of results
 	- prove we met the requirements
 
+	- we need to get some data points to prove the target and obstacles are found
+	- depth readings
+	- able to move towards the target? 
+
 
 
 \secton{Discussion}
+\renewcommand{\arraystretch}{2}
 	- detailed analysis of how our design did in relation to the requirements
-	- build a table with some of the requirements and add the field if we ratified them or not (can add an extra comment section for little notes on if we partially met them or something)
+	- I made some tables so we just have discuss why we met some requirements and how we didn't met others, it says every requirement must be touched on so I just made a table for each type of requirement...
 	- talk about why some requirements could not be met or only partially met
 	- talk about major issues throughout the project
 	- recommendations if anyone expands on this project in the future -- recommendation do something more exciting
+
+	\begin{table}
+	    \small
+		\begin{tabular}{p{2cm} p{8cm} p{2cm} p{3cm}} 
+			\hline
+			{\textbf{Index}} & {\textbf{Description of Requirement}} & {\textbf{Result}} & {\textbf{Comment}} \\ \hline
+FR-01 & The Turtlebot shall move towards a target under control & Met \\
+FR-02 & The Turtlebot shall recognize optically an OpenCV's ArUco shape and be able to give information on the location of the target relative to the robot & Met \\
+FR-03 & The Turtlebot shall recognize obstacles in its environment and identify where they are relative to itself & Met? \\
+FR-04 & The Turtlebot shall be able to make a deviation from its current movement pattern to avoid an obstacle in its path and then return to its pattern & Not Met & Comment on why or saying we comment below \\
+FR-05 & The Turtlebot shall be able to identify multiple obstacles and avoid them accordingly & Partially Met & Able to identify multiple obstacles, not avoid them \\
+PR-01 & The Turtlebot shall be able to identify and locate OpenCV's ArUco shapes within a 15m radius & Met \\ \hline
+        \end{tabular}
+        \caption{Summary of Results for the Turtlebot}
+        \label{table:turtlbotresults}
+    \end{table}
+
+		\begin{table}
+	    \small
+		\begin{tabular}{p{2cm} p{8cm} p{2cm} p{3cm}}
+			\hline
+			{\textbf{Index}} & {\textbf{Description of Requirement}} & {\textbf{Result}} & {\textbf{Comment}} \\ \hline
+FR-01 & The Flying Robot shall move towards a target under control & Not Met \\
+FR-02 & The Flying Robot shall recognize optically an OpenCV's ArUco shape and be able to give information on the location of the target relative to the robot & Met \\
+FR-03 & The Flying Robot shall recognize obstacles in its environment and identify where they are relative to itself & Not Met \\
+FR-04 & The Flying Robot shall be able to make a deviation from its current movement pattern to avoid an obstacle in its path and then return to its pattern & Not Met  \\
+FR-05 & The Flying Robot shall be able to identify multiple obstacles and avoid them accordingly & Not Met \\
+PR-01 & The Flying Robot shall be able to identify and locate OpenCV's ArUco shapes within a 15m radius & Not Met \\
+PR-02 & The Flying Robot should be able to process an image and plot obstacles at a rate of 10 Hz & Not Met \\
+PR-03 & The Flying Robot shall be able to navigate an environment and detect up to two obstacles simultaneously & Not Met \\ \hline
+		\end{tabular}
+		\caption{Summary of Results for the Flying Robot}
+		\label{table:uavresults}
+\end{table}
+
+
+	\begin{table}
+	    \small
+		\begin{tabular}{p{2cm} p{8cm} p{2cm} p{3cm}}
+			\hline
+			{\textbf{Index}} & {\textbf{Description of Requirement}} & {\textbf{Result}} & {\textbf{Comment}} \\ \hline
+IT-01 & The Gazebo simulator shall be run on a laptop and robots within the simulation will be interfaced through ROS & Met \\
+IT-02 & Communication to the Turtlebot will be done through ROS over USB & Met \\
+IT-03 & The Flying Robot will be communicating through ROS over WiFi wireless network & Not Met \\
+IT-04 & A simple interface, perhaps command line, will allow a user to select a marker as a target to start the robot's movement towards the target and this signal should be received over wireless transmission & Not Met \\ \hline
+		\end{tabular}
+		\caption{Summary of Results for the Interface Requirements}
+		\label{table:interresults}
+\end{table}
+
+	\begin{table}
+	    \small
+		\begin{tabular}{p{2cm} p{8cm} p{2cm} p{3cm}}
+			\hline
+			{\textbf{Index}} & {\textbf{Description of Requirement}} & {\textbf{Result}} & {\textbf{Comment}} \\ \hline
+SimR-01 & A Gazebo simulation environment which roughly approximates a lab environment with marker placed around will be created & Met- we kinda did this last semester no? \\
+SimR-02 & Stationary obstacles will be added to the lab simulation environment and a Turtlebot shall navigate toward markers in the lab while avoiding obstacles & Not Met \\
+SimR-03 & An environment with obstacles will be created a Flying Robot shall navigate toward markers in the simulation while avoiding obstacles & Not Met\\ \hline
+		\end{tabular}
+		\caption{Summary of Results for the Simulation Requirements}
+		\label{table:simresults}
+\end{table}
+
+	\begin{table}
+	    \small
+		\begin{tabular}{p{2cm} p{8cm} p{2cm} p{3cm}}
+			\hline
+			{\textbf{Index}} & {\textbf{Description of Requirement}} & {\textbf{Result}} & {\textbf{Comment}} \\ \hline 
+ImpR-01 & OpenCV programs shall be created that can use a single video stream and identify both markers and obstacles & Met \\ 
+ImpR-02 & Prior to testing on the Turtlebot, the program shall be implemented on the gazebo simulation & Met??? \\
+ImpR-03 & Usin the robot in the simulation environment the appropriate components, tools, and libraries to interpret and OpenCV stream, make decisions based on the environment, and execute instructions will be developed & Partially Met & Kinda used Gazebo \\
+ImpR-04 & The simplest obstacle avoidance algorithm must be implemented on a Turtlebot using ROS & Met \\
+ImpR-05 & The obstacle avoidance algorithm used for a Flying Robot will be implemented in a simulation & Not Met \\ \hline
+		\end{tabular}
+		\caption{Summary of Results for the Implementation Requirements}
+		\label{table:impresults}
+\end{table}
+
 
 
 
