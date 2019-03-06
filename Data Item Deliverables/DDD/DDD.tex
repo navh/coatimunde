@@ -102,16 +102,16 @@
 
 
 		\subsubsection{Requirements}
-	The requirements for the project are described in the Statement of Requirements (DID-03) REF. The main functional requirements for this project were identification and movement towards a target within 15m radius, and identification and avoidance of multiple obstacles. CAN ADD MORE
+	The requirements for the project are described in the Statement of Requirements (DID-03) \cite{sor}. The main functional requirements for this project were identification and movement towards a target within 15m radius, and identification and avoidance of multiple obstacles. CAN ADD MORE
 
 		\subsubsection{Preliminary Design}
-	The preliminary design document outlines out the initial design for the project. REFFFF 
+	The preliminary design document outlines out the initial design for the project \cite{pdd}. 
 The original design has mostly remained the same for the large part but small details throughout the different aspects have changed to allow for functionality. ??? how to word?
 	- what did the PD lay out and what remained the same from it? Overview
 
 		\subsubsection{Changes to Schedule}
 
-	- delay of getting the robot to identify targets and move towards them (REF schedule update)
+	- delay of getting the robot to identify targets and move towards them (REF schedule update) \cite{schupd}
 	- change of the layout of custom nodes (can send them to design section for custom nodes?)
 	- delay of porting to UAV
 
@@ -215,7 +215,7 @@ The original design has mostly remained the same for the large part but small de
 	
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.9\linewidth]{Camera-Target-Route}
+		\includegraphics[width=0.9\linewidth]{TargetDiagram.png}
 		\caption{Target Finding Node}
 		\label{fig:target}
 	\end{figure}
@@ -230,7 +230,7 @@ The original design has mostly remained the same for the large part but small de
 	
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.9\linewidth]{Camera-Obstacle}
+		\includegraphics[width=0.9\linewidth]{DepthDiagram.png}
 		\caption{Obstacle Finding Node}
 		\label{fig:obstacle}
 	\end{figure}
@@ -243,7 +243,7 @@ The original design has mostly remained the same for the large part but small de
 	
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.9\linewidth]{Camera-State-Route}
+		\includegraphics[width=0.9\linewidth]{OdometryDigram.png}
 		\caption{State Estimating Node}
 		\label{fig:state}
 	\end{figure}
@@ -258,7 +258,7 @@ The original design has mostly remained the same for the large part but small de
 	
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.9\linewidth]{Route-Planning-Robot}
+		\includegraphics[width=0.6\linewidth]{PathFinderDiagram.png}
 		\caption{Route Planning Node}
 		\label{fig:routeplanning}
 	\end{figure}
@@ -275,7 +275,7 @@ The original design has mostly remained the same for the large part but small de
 
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.9\linewidth]{NodeDiagram}
+		\includegraphics[width=0.8\linewidth]{NodeDiagram}
 		\caption{Project Node Diagram}
 		\label{fig:nodediagram}
 	\end{figure}
@@ -312,7 +312,7 @@ The original design has mostly remained the same for the large part but small de
 	
 	A large number of items are being used in this project, most are arbitrary and may be changed in future iterations. Part way through our project we intend to re-implement the entire solution onto a different platform. A naming convention has been developed for all of our components using a three character code.
 	
-	The first letter, ascending from A for hardware and descending from Z for software, represents the subsystem or general classification the equipment falls under. The second character represents a generic piece of equipment, and the third is for a particular example that we are using for our project. Any part with the same two first letters should be able to be substituted freely, an example may be two cameras. One camera (CAA) may be used on the Turtlebot as it is built in to the Turtlebot frame, while another (CAB) may be used on the flying robot as it is much lighter. The generic camera (CA-) can refer to any camera which provides the same information to the same nodes.
+	The first letter, ascending from A for hardware and descending from Z for software, represents the subsystem or general classification the equipment falls under. The second character represents a generic piece of equipment, and the third is for a particular example that we are using for our project. Any part with the same two first letters should be able to be substituted freely, an example may be two cameras. One camera (CAA) may be used on the Turtlebot as it is built in to the Turtlebot frame, while another (CAB) may be used on the flying robot as it is much lighter. The generic camera (CA-) can refer to any camera which provides the same information to the same nodes. The equipment table is shown in Table \ref{table:equipment}.
 	
 	\begin{table}
 		\small
@@ -418,11 +418,12 @@ If more complex moves are attempted it may become necessary to test this platfor
 	- we need to get some data points to prove the target and obstacles are found
 	- depth readings
 	- able to move towards the target? 
+	- talk about what happened with the obstacle avoidance and why it doesn't work
 
 
-
-\secton{Discussion}
 \renewcommand{\arraystretch}{2}
+\section{Discussion}
+
 	- detailed analysis of how our design did in relation to the requirements
 	- I made some tables so we just have discuss why we met some requirements and how we didn't met others, it says every requirement must be touched on so I just made a table for each type of requirement...
 	- talk about why some requirements could not be met or only partially met
@@ -445,7 +446,10 @@ PR-01 & The Turtlebot shall be able to identify and locate OpenCV's ArUco shapes
         \label{table:turtlbotresults}
     \end{table}
 
-		\begin{table}
+    The requirements for the Turtlebot can be seen in \ref{table:turtlbotresults}. The reason FR-04 was not satisfied on the Turtlebot is the same reason that was discussed in the results section. FR-05 also was not fully satisfied, the Turtlebot was able to recognize multiple obstacles at once and register each as a potential obstacle. It is the same reason, the obstacle avoidance system, why the requirement was not met. 
+    The obstacle avoidance system did not met the requirements on either platform.  
+
+	\begin{table}
 	    \small
 		\begin{tabular}{p{2cm} p{8cm} p{2cm} p{3cm}}
 			\hline
@@ -461,7 +465,7 @@ PR-03 & The Flying Robot shall be able to navigate an environment and detect up 
 		\end{tabular}
 		\caption{Summary of Results for the Flying Robot}
 		\label{table:uavresults}
-\end{table}
+    \end{table}
 
 
 	\begin{table}
@@ -476,7 +480,7 @@ IT-04 & A simple interface, perhaps command line, will allow a user to select a 
 		\end{tabular}
 		\caption{Summary of Results for the Interface Requirements}
 		\label{table:interresults}
-\end{table}
+    \end{table}
 
 	\begin{table}
 	    \small
@@ -489,7 +493,7 @@ SimR-03 & An environment with obstacles will be created a Flying Robot shall nav
 		\end{tabular}
 		\caption{Summary of Results for the Simulation Requirements}
 		\label{table:simresults}
-\end{table}
+    \end{table}
 
 	\begin{table}
 	    \small
@@ -504,7 +508,22 @@ ImpR-05 & The obstacle avoidance algorithm used for a Flying Robot will be imple
 		\end{tabular}
 		\caption{Summary of Results for the Implementation Requirements}
 		\label{table:impresults}
-\end{table}
+    \end{table}
+
+	\begin{table}
+	    \small
+		\begin{tabular}{p{2cm} p{8cm} p{2cm} p{3cm}}
+			\hline
+			{\textbf{Index}} & {\textbf{Description of Requirement}} & {\textbf{Result}} & {\textbf{Comment}} \\ \hline 
+SchR-01 & The first Turtlebot simulation shall be able to operate in a Gazebo environment no later than November \nth{5} & Not Met \\
+SchR-02 & The first functional prototype shall be a Turtlebot robot capable of positively identifying a marker, moving towards the marker, and avoiding an obstacle placed in its environment no later than December \nth{18} & Not Met \\
+SchR-03 & The first functional prototype shall be capable of identifying a marker, moving towards the marker, and avoiding an obstacle placed in its environment no later than February \nth{18} & Not Met \\
+SchR-04 & Data Item Descriptions (DID) to be presented are DID-04: Preliminary Design Specification due November \nth{22}, DID-05: Preliminary Design Review Presentations due November \nth{29}, and the DID-06: Schedule Update is due January \nth{17}. The DID-07: Final Detailed Design Document is due March \nth{21}, the Final Project Presentation, DID-08, is March \nth{28} and the Final Project Demonstration, DID-09, is on April \nth{9} & Met \\
+\\ \hline
+		\end{tabular}
+		\caption{Summary of Results for the Schedule Requirements}
+		\label{table:schresults}
+    \end{table}
 
 
 
@@ -512,8 +531,7 @@ ImpR-05 & The obstacle avoidance algorithm used for a Flying Robot will be imple
 \section{Conclusion}
 The detailed design has been shown for Computer Optics for Analyzing Trajectories in Mostly Unknown, Navigation Denied, Environments (\textsc{coatimunde}). The background outlined how the project has progressed over the year and the motivation behind it. It gave a summary of the previous Data Item Deliverables, such as the Statement of Requirements and the Preliminary Design Document. The design section laid out the final design of the project and how it was implemented. The verification and validation section explained how different aspects of the project were tested throughout the year. The results section showed the final results and how they proved we met the requirements previously outlined. A discussion section gave a detailed analysis of the design in comparison with the requirements and gave recommendations for future expansions of the project.  The final design laid out in this document will also be used in the the Final Project Presentation and the Final Project Demonstration. 
 
+\newpage
 \printbibliography
 
-%\end{multicols}
 \end{document}    
-
