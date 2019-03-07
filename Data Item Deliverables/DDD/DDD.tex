@@ -52,7 +52,7 @@
 		
 		\textbf{Presented by:}\\Amos Navarre \textsc{Hebb} \& Kara \textsc{Stephan}\\
 		\vspace{0.8cm}
-		\textbf{Presented to:}\\Dr. Sidney \textsc{Givigi??} \& Anthony \textsc{Marasco} \& Dr. ?????? \textsc{??????} 
+		\textbf{Presented to:}\\Dr. Sidney \textsc{Givigi??} \& Dr. Anthony \textsc{Marasco} \& Dr. ?????? \textsc{??????} 
 		\vspace{0.8cm}
 		
 		\today
@@ -101,15 +101,15 @@
 	The scope of the project was limited due to only being able to test indoors. Ideally the UAV would be operating at a high speed and identifying an arbitrary target in an unpredictable environment. In this case though the testing was completed within the confines of a relatively small robotics laboratory. Smaller obstacles were used indoors simply due to space constraints. Lower speeds were used as well, again due to the lack of space. 
 
 
-		\subsubsection{Requirements}
+		\subsubsection{Requirements - NOT DONE}
 	The requirements for the project are described in the Statement of Requirements (DID-03) \cite{sor}. The main functional requirements for this project were identification and movement towards a target within 15m radius, and identification and avoidance of multiple obstacles. CAN ADD MORE
 
-		\subsubsection{Preliminary Design}
+		\subsubsection{Preliminary Design - NOT DONE}
 	The preliminary design document outlines out the initial design for the project \cite{pdd}. 
 The original design has mostly remained the same for the large part but small details throughout the different aspects have changed to allow for functionality. ??? how to word?
 	- what did the PD lay out and what remained the same from it? Overview
 
-		\subsubsection{Changes to Schedule}
+		\subsubsection{Changes to Schedule - NOT DONE}
 
 	- delay of getting the robot to identify targets and move towards them (REF schedule update) \cite{schupd}
 	- change of the layout of custom nodes (can send them to design section for custom nodes?)
@@ -119,7 +119,6 @@ The original design has mostly remained the same for the large part but small de
 	- add more def if you want
 	
 		\subsubsection{Obstacle Avoidance}
-		
 		
 		Obstacle avoidance is the task of satisfying a control objective, in this case moving toward a visual target, while subject to non-intersection or non-collision position constraints. The latter constraints are, in this case, to be dynamically created while moving in a reactive manner, instead of being pre-computed.
 		
@@ -165,7 +164,7 @@ The original design has mostly remained the same for the large part but small de
 		
 \section{Design}
 	
-	\subsection{Computer Vision}
+	\subsection{Computer Vision - NOT TOUCHED}
 	
 	Computer optics was used as the robot employed a camera to identify objects in the surrounding environment, specifically targets and obstacles. There are three unique manners that computer vision was used as an input source for this project; these are target finding, obstacle finding, and optical flow. The implementation of all three created a navigation kit that uses exclusively a camera as input resulting in a very transferable and lightweight package for flying robots.
 	
@@ -181,22 +180,22 @@ The original design has mostly remained the same for the large part but small de
 		
 		Optical Flow is a possible source of motion information for the robot. As a camera is moved through an environment the entire image will appear to scale larger as the camera moves forward, rotate left and right as a robot rolls, and shift left, right, up, and down as the robot pitches and yaws. Calculating shifts from one frame to another for global shifts caused by movement of the camera is a mathematically intensive process beyond the scope of this project. OpenCV contains libraries to try to parse this information, but it requires a considerable amount of effort to combine this information with a model of a robot to get useful position estimation.
 	
-	\subsection{Analyzing Trajectories}
+	\subsection{Analyzing Trajectories - NOT TOUCHED}
 	
 	Analyzing trajectories is a term that refers to the robot completing movements to go towards the target. To do path planning the project will implement potential fields. Potential fields function through creating vectors pointing to objects in the environment and assigning them positive or negative. The positive vectors attracts the robot towards the target and the negative makes obstacles repulsive to the robot \cite{hwang1992potential}. This algorithm was selected to do path planning as the robot will not have to build a map of the environment to create path to the target \cite{bortoff2000path}. Potential fields allow for the robot to change its path along the way if it discovers new obstacles. As the robot is moving the potential fields must be updated to account for how much the robot moved. This will be solved through creating a state machine. 
 
-	\subsection{Unknown and Navigation Denied Environments}
+	\subsection{Unknown and Navigation Denied Environments - NOT TOUCHED}
 
 	The robot must always remember where identified target and obstacles are in relation to itself even when its own position changes. Navigation denied means that the robot will not have access to a GPS to locate itself, so it must search its unknown environment to identify targets and obstacles. An unknown environment can be defined as an environment in which the robot has no prior knowledge of its surroundings and must identify objects in this environment itself through computer vision. Potential fields will be used to track the location of the target and obstacles through updating each objects vector. These vectors will be used in the state machine to properly create a path to the target, as they are either negative for the target or positive for obstacles. This once again is the reason that the project will be using potential fields to plan the path to the target. 
 
 
 	\subsection{Block Diagram}
 	
-	The block diagram that is shown in Figure \ref{fig:blockdiagram} contains the outline of the \textsc{coatimunde} project. It is a very high level overview and does not contain references to most of the hardware in use for two reasons: the actual robot and laptop being used are relatively arbitrary as long as the software included is present on both. ROS also includes many nodes which are not represented on the block diagram. Only the nodes that are most important to our project, will have to be specifically added to ROS, or will have to be custom created are included on our system block diagram shown below.
+	The block diagram that is shown in Figure \ref{fig:blockdiagram} contains the outline of the \textsc{coatimunde} project. It is a very high level overview and does not contain references to most of the hardware in use for two reasons: the actual robot and laptop being used are relatively arbitrary as long as the software included is present on both. ROS also includes many nodes which are not represented on the block diagram. Only the nodes that are most important to our project, have been specifically added to ROS, or have been custom created are included on our system block diagram shown below.
 	
-	The laptop contains the initialization, target selection, and RViz. The laptop also takes the user input when necessary and processes it appropriately.  The robot will do all the target identification, obstacle avoidance, and movement decisions autonomously. This means it will take input from the camera into a video processing node and then create a corresponding ROS message to be sent to the other systems on the robot. These messages are created and used throughout the different systems on the robot. The model of the robot's environment will be found subscribing to messages from the obstacle finder node, target finder node, and the state estimate node. This model then creates a message to pass to the route planning node which tells the movement node how to update its position and speed. 
+	The laptop contains the initialization, target selection, and RViz. The laptop also takes the user input when necessary and processes it appropriately.  The robot does all the target identification, obstacle avoidance, and movement decisions autonomously. This means it takes the input from the camera into a video processing node and then create a corresponding ROS message to be sent to the other systems on the robot. These messages are created and used throughout the different systems on the robot. The model of the robot's environment is found through subscribing to messages from the obstacle finder node, target finder node, and the state estimate node. This model then creates a message to pass to the route planning node which tells the movement node how to update its position and speed. 
 	
-	Most of the nodes used in this project are either being used stock, or are very minimally modified from provided libraries. The four nodes, highlighted in grey, which are being custom built for this project are the State Estimate, Target Finder, and Obstacle Finder. 
+	Most of the nodes used in this project are either being used stock, or are very minimally modified from provided libraries. The four nodes, highlighted in grey, which have been custom built for this project are the State Estimate, Target Finder, and Obstacle Finder. Along with each of these functional names assigned, the actual nodal name for each of the project's custom nodes are listed.
 
 	\begin{figure}[H]
 		\centering
@@ -207,9 +206,9 @@ The original design has mostly remained the same for the large part but small de
 
 	\subsection{Custom Nodes}
 	
-	 All of the nodes being written for this project will be written in Python and then built in ROS to be implemented on the robot. Python is being used for this project because C++ and Python are the most supported languages for both ROS Nodes and OpenCV. While C++ could possibly be faster in execution, we believe that most of our bottlenecks will be in the actual processing of images. The library calls to OpenCV will still be executing in the lower level C that OpenCV is written in, so there would be minimal gains to be had writing in C++.
+	 All of the nodes that were written for this project were written in Python and then built in ROS to be implemented on the robot. Python was used for this project because C++ and Python are the most supported languages for both ROS Nodes and OpenCV. While C++ could possibly be faster in execution, we believe that most of our bottlenecks occur from the actual processing of images. The library calls to OpenCV were still executing in the lower level C that OpenCV was written in, so there would be minimal gains had we written it in C++.
 	 
-	 The Camera node is referenced in many locations. The camera node is built in to ROS and provides image data in various formats. Processes can to subscribe to different image formats. In general the raw image information will be used by the other nodes. Common transformations that must be applied to all functions these will be done in the common camera node to avoid unnecessary calculations.
+	 The Camera node has been referenced in many locations. The camera node is built into ROS and provides image data in various formats. Processes can subscribe to these different image formats. In general the raw image information was used by some of the custom nodes and many other built in ones. Common transformations that must be applied to all functions these were done in the common camera node to avoid unnecessary calculations. DOES THIS SENT MAKE SENSE
 	
 	\subsubsection{Target Finding}
 	
@@ -220,13 +219,11 @@ The original design has mostly remained the same for the large part but small de
 		\label{fig:target}
 	\end{figure}
 
-	Camera data, after being processed by the camera node, goes into the target finder node. The target finder is mostly implementing the ArUco symbol finding libraries in OpenCV. ArUco symbols are intended for augmented reality purposes and provide very accurate position, orientation, and distance information. These values will be translated into a vector value that the other systems on the robot can understand and be published at least 10 times per second.
+	Camera data, after being processed by the camera node, goes into the target finder node. The target finder is mostly implementing the ArUco symbol finding libraries in OpenCV. ArUco symbols are intended for augmented reality purposes and provide very accurate position, orientation, and distance information. These values are inserted into a marker coordinate message that the other systems on the robot can understand and be published at least 10 times per second.
 	
-	Given the limited field of view of the robot it may not always be able to see the target, in which case it will continue to scan for targets.
+	Given the limited field of view of the robot, it cannot always be able to see the target, in which case it continued to scan for targets.
 	
-	ArUco markers normally encode simple ID information. Vectors will carry the same identifiers allowing the route planning parts of the robot to know when a target has been re-spotted and over-write it or allow for finding and remembering the positions of multiple targets. 
-	
-	\subsubsection{Obstacle Finding}
+	\subsubsection{Obstacle Finding - NOT DONE}
 	
 	\begin{figure}[H]
 		\centering
@@ -235,9 +232,11 @@ The original design has mostly remained the same for the large part but small de
 		\label{fig:obstacle}
 	\end{figure}
 
-	Finding obstacles with depth information will be difficult using monocular vision. The current plan is to try to combine parallax shift with edge detection to try to parse information about nearby objects. These vectors will be published as a large ROS message at least 10 times per second. 
+	Finding obstacles with depth information is difficult using monocular vision. The current plan is to try to combine parallax shift with edge detection to try to parse information about nearby objects. These vectors will be published as a large ROS message at least 10 times per second. 
 	
 	Getting depth information from a single camera is difficult. The TurtleBot also has a suite of depth sensors built in with the camera so these may be used initially instead of trying to use parallax information from a camera to allow for testing other aspects of the system.
+    
+    The depth node subscribes to the target node to get the target locations. The node then uses the given location to find the depth value for the target. This target depth value is transformed in a quaternion and passed off to the path finder node. 
 	
 	\subsubsection{State Estimator}
 	
@@ -248,13 +247,13 @@ The original design has mostly remained the same for the large part but small de
 		\label{fig:state}
 	\end{figure}
 
-	State estimating from camera information is very difficult and computationally expensive. The TurtleBot has stepper motors that can measure distances fairly reliably, and the Quadcopter should have accelerometers that provide changes in position more reliably than image information could. 
+	State estimating from camera information is very difficult and computationally expensive. The TurtleBot has stepper motors that can measure distances fairly reliably, and the Quadcopter has accelerometers that provide changes in position more reliably than image information could. 
 	
-	Initially these simpler forms of measuring the robot moving through the environment will be used and transformations will be passed off to the route planning node which will adjust the vectors to nearby obstacles and targets according to how much the robot has moved. 
+	These simpler forms of measuring the robot moving through the environment were used and the odometry node subscribed to the robot's odometry updates. This node turns all state updates into quaternions and publishes them for the route planner. The route planning node then adjusts the vectors to nearby obstacles and targets according to how much the robot has moved. 
 	
-	New position estimates should be provided at least 10 times every second in the form of a transformation from the last position that the robot was in passed over a ROS message.
+	New position estimates should be provided at least 10 times every second in the form of a quaternion from the last position that the robot was in passed over a ROS message.
 
-	\subsubsection{Route Planning}
+	\subsubsection{Route Planning - NOT DONE}
 	
 	\begin{figure}[H]
 		\centering
@@ -263,13 +262,17 @@ The original design has mostly remained the same for the large part but small de
 		\label{fig:routeplanning}
 	\end{figure}
 
-	Route planning takes input from the other three custom nodes and determines a route that should carry it toward the target. The current proposed solution is currently to create a potential field where positive vectors that repel the robot are attached to all obstacles while a large negative vector is attached to the target location.
+	Route planning takes input from the other three custom nodes and determines a route that should carry it toward the target. The implemented solution was to create a potential field where positive vectors that repel the robot are attached to all obstacles while a large negative vector is attached to the target location.
 	
-	As the route node receives more information about the robot moving through the environment should apply transformations to all of the contained vectors to keep them up to date with where they would be as the robot changes position in the environment. 
+	As the route node receives more information about the robot moving through the environment it applies transformations to all of the contained vectors to keep them up to date with where they are as the robot changes position in the environment. 
+    Target locations are all stored in a separate array to remember the location of every target the robot finds. Differentiating targets is simple as each ArUco marker has an associated identification value. These values allow the node to know when a target has been re-spotted and over-write it or allow for finding and remembering the positions of multiple targets. If it discovers a new target it simply adds it to the array with its positional information.
+   
 	
-	This will also require having a method to remove un-necessary or repetitive vectors. This will be easy to implement with the target vector as the targets will have identification values meaning that the current target can be verified. With obstacles this will be more difficult, and initially vectors will probably simply expire after a certain amount of time. 
-	
-	The route planning software should provide a direction vector to the robot controlling node 10 times every second. There is no need for the route to be the optimal route given that the environment is unknown.
+-talk about how obstacles are path planned around ?    
+
+The method to remove unnecessary or repetitive vectors for obstacles is to have these vectors simply expire after a certain amount of time. 
+
+	The route planning software provides a direction vector to the robot controlling node 10 times every second. There is no need for the route to be the optimal route given that the environment is unknown.
 
 	\subsection{Node Diagram}
 
@@ -281,10 +284,11 @@ The original design has mostly remained the same for the large part but small de
 	\end{figure}
 
 
-	Through Figure \ref{fig:nodediagram} it can been shown what nodes will be created or used for this project. The diagram displays what node will subscribe to the other nodes, such as the simple target finder node will subscribe to the video processor node to get messages about the target's potential location. Both the TurtleBot and the Flying Robot have two movement nodes, this is to first build a simple movement node on the platform for testing purposes, then the proper and final movement node will be made and implemented on the respective robot. 
+	Through Figure \ref{fig:nodediagram} it can been shown what nodes were created or used for this project. The diagram displays what node subscribed to the other nodes, such as the target finder node subscribed to the camera node to get messages about the target's potential location. 
+    It is important to recognize that the directions indicated in Figure \ref{fig:nodediagram} are the flow of messages, not the direction of the subscriptions. 
 
 	
-	\subsection{Mathematical Modeling}
+	\subsection{Mathematical Modeling - NOT TOUCHED}
 	
 		\subsubsection{Flying Robot}
 	
@@ -357,10 +361,10 @@ The original design has mostly remained the same for the large part but small de
 			W & ROS Message - Standard & B & Geometry Messages  & A   & Twist                             \\
 			W & ROS Message - Standard & B & Geometry Messages  & B   & Quaternion                        \\
 			W & ROS Message - Standard & B & Geometry Messages  & C   & Transform                         \\ \hline
-			X & ROS Node - Custom      & A & Depth              & A   & coati\_depth	                 \\
-			X & ROS Node - Custom      & B & Path Finder        & A   & coati\_pfinder                     \\
-			X & ROS Node - Custom      & B & Odometry           & B   & coati\_odom	                 \\
-			X & ROS Node - Custom      & B & Vision             & D   & coati\_target		          \\ \hline
+			X & ROS Node - Custom      & A & Depth              & A   & coati_depth	                 \\
+			X & ROS Node - Custom      & B & Path Finder        & A   & coati_pfinder                     \\
+			X & ROS Node - Custom      & B & Odometry           & B   & coati_odom	                 \\
+			X & ROS Node - Custom      & B & Vision             & D   & coati_target		          \\ \hline
 			Y & ROS Node - Standard    & A & Vision             & A   & vision\_opencv                    \\
 			Y & ROS Node - Standard    & A & Vision             & B   & image\_pipeline                   \\
 			Y & ROS Node - Standard    & B & Coordinates        & A   & tf                                \\
@@ -401,17 +405,19 @@ The original design has mostly remained the same for the large part but small de
 	
 		\subsection{Ground Based Robot}
 	
-	Testing the code on a ground based robot was necessary to ensure that the logic in the movement nodes is sound. Initial testing was done through simply having the robot follow moving targets or turn to face targets that are not head on. As obstacle avoidance was getting developed ensuring that the robot does avoid the obstacles was enough. When the project was sufficiently developed the testing was having the robot avoid obstacles and move towards a target. As the project moved closer to porting to the flying robot, the ground robot was tested to ensure it met the requirement outlined in the SOR. REFFFFF
+	Testing the code on a ground based robot was necessary to ensure that the logic in the movement nodes is sound. Initial testing was done through simply having the robot follow moving targets or turn to face targets that are not head on. As obstacle avoidance was getting developed ensuring that the robot does avoid the obstacles was enough. When the project was sufficiently developed the testing was having the robot avoid obstacles and move towards a target. As the project moved closer to porting to the flying robot, the ground robot was tested to ensure it met the requirement outlined in the SOR \cite{sor}. 
 
-		\subsection{Flying Robot}
+		\subsection{Flying Robot - NOT DONE}
 	
 	Similar to the ground based robot, verifying the flying robot primarily involved evaluating its behaviour. The behaviour we expected is the all the functionality that was implemented on the ground based robot previously. 
+
 - Once again it is necessary to ensure all requirements are met... 
 - limitations of space, ref scope? Real enviro is only indoors.. I'll grab some issues section for this?
+
 If more complex moves are attempted it may become necessary to test this platform using the motion capture equipment that exists in the lab.
 
 	
-\section{Results}
+\section{Results - NOT DONE}
 	- presentation of results
 	- prove we met the requirements
 
@@ -422,13 +428,15 @@ If more complex moves are attempted it may become necessary to test this platfor
 
 
 \renewcommand{\arraystretch}{2}
-\section{Discussion}
+\section{Discussion - NOT DONE}
 
 	- detailed analysis of how our design did in relation to the requirements
 	- I made some tables so we just have discuss why we met some requirements and how we didn't met others, it says every requirement must be touched on so I just made a table for each type of requirement...
 	- talk about why some requirements could not be met or only partially met
 	- talk about major issues throughout the project
 	- recommendations if anyone expands on this project in the future -- recommendation do something more exciting
+    
+    \subsection{Functional and Performance Requirements}
 
 	\begin{table}
 	    \small
@@ -448,6 +456,7 @@ PR-01 & The Turtlebot shall be able to identify and locate OpenCV's ArUco shapes
 
     The requirements for the Turtlebot can be seen in \ref{table:turtlbotresults}. The reason FR-04 was not satisfied on the Turtlebot is the same reason that was discussed in the results section. FR-05 also was not fully satisfied, the Turtlebot was able to recognize multiple obstacles at once and register each as a potential obstacle. It is the same reason, the obstacle avoidance system, why the requirement was not met. 
     The obstacle avoidance system did not met the requirements on either platform.  
+    
 
 	\begin{table}
 	    \small
@@ -467,6 +476,7 @@ PR-03 & The Flying Robot shall be able to navigate an environment and detect up 
 		\label{table:uavresults}
     \end{table}
 
+    \subsection{Interface Requirements}
 
 	\begin{table}
 	    \small
@@ -481,6 +491,8 @@ IT-04 & A simple interface, perhaps command line, will allow a user to select a 
 		\caption{Summary of Results for the Interface Requirements}
 		\label{table:interresults}
     \end{table}
+    
+    \subsection{Simulation Requirements}
 
 	\begin{table}
 	    \small
@@ -495,6 +507,8 @@ SimR-03 & An environment with obstacles will be created a Flying Robot shall nav
 		\label{table:simresults}
     \end{table}
 
+    \subsection{Implementation Requirements}
+    
 	\begin{table}
 	    \small
 		\begin{tabular}{p{2cm} p{8cm} p{2cm} p{3cm}}
@@ -509,6 +523,8 @@ ImpR-05 & The obstacle avoidance algorithm used for a Flying Robot will be imple
 		\caption{Summary of Results for the Implementation Requirements}
 		\label{table:impresults}
     \end{table}
+    
+    \subsection{Schedule Requirements}
 
 	\begin{table}
 	    \small
