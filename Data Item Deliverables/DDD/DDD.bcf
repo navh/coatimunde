@@ -1976,14 +1976,16 @@
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="1">sor</bcf:citekey>
-    <bcf:citekey order="2">pdd</bcf:citekey>
-    <bcf:citekey order="3">schupd</bcf:citekey>
-    <bcf:citekey order="4">opencv</bcf:citekey>
-    <bcf:citekey order="5">wise_foote_2011</bcf:citekey>
-    <bcf:citekey order="6">asctec</bcf:citekey>
-    <bcf:citekey order="7">hwang1992potential</bcf:citekey>
-    <bcf:citekey order="8">bortoff2000path</bcf:citekey>
-    <bcf:citekey order="9">williams2010combining</bcf:citekey>
+    <bcf:citekey order="2">barry2015pushbroom</bcf:citekey>
+    <bcf:citekey order="3">pdd</bcf:citekey>
+    <bcf:citekey order="4">schupd</bcf:citekey>
+    <bcf:citekey order="5">opencv</bcf:citekey>
+    <bcf:citekey order="6">wise_foote_2011</bcf:citekey>
+    <bcf:citekey order="7">asctec</bcf:citekey>
+    <bcf:citekey order="8">hwang1992potential</bcf:citekey>
+    <bcf:citekey order="9">bortoff2000path</bcf:citekey>
+    <bcf:citekey order="10">williams2010combining</bcf:citekey>
+    <bcf:citekey order="11">sor</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

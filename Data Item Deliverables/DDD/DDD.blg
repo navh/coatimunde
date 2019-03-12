@@ -1,19 +1,15 @@
 [0] Config.pm:302> INFO - This is Biber 2.11
 [0] Config.pm:305> INFO - Logfile is 'DDD.blg'
-[37] biber-MSWIN64:313> INFO - === 
-[73] Biber.pm:371> INFO - Reading 'DDD.bcf'
-[182] Biber.pm:857> INFO - Found 9 citekeys in bib section 0
-[200] Biber.pm:3976> INFO - Processing section 0
-[218] Biber.pm:4136> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
-[222] bibtex.pm:1500> INFO - LaTeX decoding ...
-[241] bibtex.pm:1316> INFO - Found BibTeX data source 'bibliography.bib'
-[270] Utils.pm:193> WARN - I didn't find a database entry for 'sor' (section 0)
-[270] Utils.pm:193> WARN - I didn't find a database entry for 'pdd' (section 0)
-[270] Utils.pm:193> WARN - I didn't find a database entry for 'schupd' (section 0)
-[285] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[285] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[285] Biber.pm:3804> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[285] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
-[296] bbl.pm:617> INFO - Writing 'DDD.bbl' with encoding 'UTF-8'
-[298] bbl.pm:720> INFO - Output to DDD.bbl
-[300] Biber.pm:110> INFO - WARNINGS: 3
+[46] biber-MSWIN64:313> INFO - === 
+[113] Biber.pm:371> INFO - Reading 'DDD.bcf'
+[217] Biber.pm:857> INFO - Found 10 citekeys in bib section 0
+[237] Biber.pm:3976> INFO - Processing section 0
+[266] Biber.pm:4136> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
+[274] bibtex.pm:1500> INFO - LaTeX decoding ...
+[298] bibtex.pm:1316> INFO - Found BibTeX data source 'bibliography.bib'
+[364] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[364] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[364] Biber.pm:3804> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[364] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
+[399] bbl.pm:617> INFO - Writing 'DDD.bbl' with encoding 'UTF-8'
+[403] bbl.pm:720> INFO - Output to DDD.bbl
