@@ -19,12 +19,131 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global}
+    \entry{sor}{unpublished}{}
+      \name{author}{2}{}{%
+        {{hash=f70479d0dec367fce36d548986569023}{%
+           family={Stephan},
+           familyi={S\bibinitperiod},
+           given={Kara},
+           giveni={K\bibinitperiod}}}%
+        {{hash=3b37bb6ea717fb4e2fa4f9fa014639aa}{%
+           family={Hebb},
+           familyi={H\bibinitperiod},
+           given={Amos\bibnamedelima Navarre},
+           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{0e5ce1c583cb72a98f557df946d0ec27}
+      \strng{fullhash}{0e5ce1c583cb72a98f557df946d0ec27}
+      \strng{bibnamehash}{0e5ce1c583cb72a98f557df946d0ec27}
+      \strng{authorbibnamehash}{0e5ce1c583cb72a98f557df946d0ec27}
+      \strng{authornamehash}{0e5ce1c583cb72a98f557df946d0ec27}
+      \strng{authorfullhash}{0e5ce1c583cb72a98f557df946d0ec27}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Data Item Deliverable 03- Statement of Requirements}
+      \field{year}{2018}
+    \endentry
+    \entry{barry2015pushbroom}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=2250e5a54a8889ec9375d450b1a17da1}{%
+           family={Barry},
+           familyi={B\bibinitperiod},
+           given={Andrew\bibnamedelima J},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=480d067fbc7c00be4a01a0e4902c984e}{%
+           family={Tedrake},
+           familyi={T\bibinitperiod},
+           given={Russ},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{cc519899890f0a67ca6297fd7f938b1a}
+      \strng{fullhash}{cc519899890f0a67ca6297fd7f938b1a}
+      \strng{bibnamehash}{cc519899890f0a67ca6297fd7f938b1a}
+      \strng{authorbibnamehash}{cc519899890f0a67ca6297fd7f938b1a}
+      \strng{authornamehash}{cc519899890f0a67ca6297fd7f938b1a}
+      \strng{authorfullhash}{cc519899890f0a67ca6297fd7f938b1a}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Robotics and automation (icra), 2015 ieee international conference on}
+      \field{title}{Pushbroom stereo for high-speed navigation in cluttered environments}
+      \field{year}{2015}
+      \field{pages}{3046\bibrangedash 3052}
+      \range{pages}{7}
+    \endentry
+    \entry{pdd}{unpublished}{}
+      \name{author}{2}{}{%
+        {{hash=f70479d0dec367fce36d548986569023}{%
+           family={Stephan},
+           familyi={S\bibinitperiod},
+           given={Kara},
+           giveni={K\bibinitperiod}}}%
+        {{hash=3b37bb6ea717fb4e2fa4f9fa014639aa}{%
+           family={Hebb},
+           familyi={H\bibinitperiod},
+           given={Amos\bibnamedelima Navarre},
+           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{0e5ce1c583cb72a98f557df946d0ec27}
+      \strng{fullhash}{0e5ce1c583cb72a98f557df946d0ec27}
+      \strng{bibnamehash}{0e5ce1c583cb72a98f557df946d0ec27}
+      \strng{authorbibnamehash}{0e5ce1c583cb72a98f557df946d0ec27}
+      \strng{authornamehash}{0e5ce1c583cb72a98f557df946d0ec27}
+      \strng{authorfullhash}{0e5ce1c583cb72a98f557df946d0ec27}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Data Item Deliverable 04- Preliminary Design Specification}
+      \field{year}{2018}
+    \endentry
+    \entry{schupd}{unpublished}{}
+      \name{author}{2}{}{%
+        {{hash=f70479d0dec367fce36d548986569023}{%
+           family={Stephan},
+           familyi={S\bibinitperiod},
+           given={Kara},
+           giveni={K\bibinitperiod}}}%
+        {{hash=3b37bb6ea717fb4e2fa4f9fa014639aa}{%
+           family={Hebb},
+           familyi={H\bibinitperiod},
+           given={Amos\bibnamedelima Navarre},
+           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{0e5ce1c583cb72a98f557df946d0ec27}
+      \strng{fullhash}{0e5ce1c583cb72a98f557df946d0ec27}
+      \strng{bibnamehash}{0e5ce1c583cb72a98f557df946d0ec27}
+      \strng{authorbibnamehash}{0e5ce1c583cb72a98f557df946d0ec27}
+      \strng{authornamehash}{0e5ce1c583cb72a98f557df946d0ec27}
+      \strng{authorfullhash}{0e5ce1c583cb72a98f557df946d0ec27}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Data Item Deliverable 06- Schedule Update}
+      \field{year}{2019}
+    \endentry
     \entry{opencv}{misc}{}
       \list{publisher}{1}{%
         {OpenCV Team}%
       }
-      \field{sortinit}{4}
-      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
       \field{labeltitlesource}{title}
       \field{journaltitle}{OpenCV}
       \field{title}{About - OpenCV library}
@@ -57,8 +176,8 @@
       \strng{authorbibnamehash}{2740f898bfc1ef5fe7dd3586c715ccd5}
       \strng{authornamehash}{2740f898bfc1ef5fe7dd3586c715ccd5}
       \strng{authorfullhash}{2740f898bfc1ef5fe7dd3586c715ccd5}
-      \field{sortinit}{5}
-      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{ROS.org}
@@ -73,8 +192,8 @@
       \endverb
     \endentry
     \entry{asctec}{misc}{}
-      \field{sortinit}{6}
-      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Ascending Technologies}
       \field{title}{AscTec Pelican - UAS for Computer Vision and SLAM}
@@ -107,8 +226,8 @@
       \strng{authorbibnamehash}{11c80fdb97c9e570ace6acf9758ff6f0}
       \strng{authornamehash}{11c80fdb97c9e570ace6acf9758ff6f0}
       \strng{authorfullhash}{11c80fdb97c9e570ace6acf9758ff6f0}
-      \field{sortinit}{7}
-      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{sortinit}{8}
+      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Robotics and Automation}
@@ -136,8 +255,8 @@
       \strng{authorbibnamehash}{09569a76e31e019ab337bad224cd32bd}
       \strng{authornamehash}{09569a76e31e019ab337bad224cd32bd}
       \strng{authorfullhash}{09569a76e31e019ab337bad224cd32bd}
-      \field{sortinit}{8}
-      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{sortinit}{9}
+      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{American Control Conference, 2000. Proceedings of the 2000}
@@ -170,8 +289,8 @@
       \strng{authorbibnamehash}{e66461a45149a93e25ab21ed1d0f09ce}
       \strng{authornamehash}{e66461a45149a93e25ab21ed1d0f09ce}
       \strng{authorfullhash}{e66461a45149a93e25ab21ed1d0f09ce}
-      \field{sortinit}{9}
-      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Robotics and Automation (ICRA), 2010 IEEE International Conference on}
@@ -181,9 +300,6 @@
       \range{pages}{7}
     \endentry
   \enddatalist
-  \missing{pdd}
-  \missing{schupd}
-  \missing{sor}
 \endrefsection
 \endinput
 
