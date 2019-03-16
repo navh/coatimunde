@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.6)  10 MAR 2019 22:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.6)  16 MAR 2019 16:19
 entering extended mode
 **./DDD.tex
 (DDD.tex
@@ -543,15 +543,15 @@ LaTeX Font Info:    ... okay on input line 23.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: twoside 
-* h-part:(L,W,R)=(79.6678pt, 454.9594pt, 79.6678pt)
-* v-part:(T,H,B)=(79.6678pt, 635.63438pt, 79.6678pt)
+* h-part:(L,W,R)=(71.13188pt, 472.03123pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 652.70622pt, 71.13188pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=454.9594pt
-* \textheight=635.63438pt
-* \oddsidemargin=7.39781pt
-* \evensidemargin=7.39781pt
-* \topmargin=-29.60219pt
+* \textwidth=472.03123pt
+* \textheight=652.70622pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-38.1381pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=10.0pt
@@ -624,11 +624,11 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-<rmcLogo.png, id=215, 191.9672pt x 368.87813pt>
+<rmcLogo.png, id=307, 191.9672pt x 368.87813pt>
 File: rmcLogo.png Graphic file (type png)
 <use rmcLogo.png>
 Package pdftex.def Info: rmcLogo.png  used on input line 37.
-(pdftex.def)             Requested size: 136.4892pt x 262.28804pt.
+(pdftex.def)             Requested size: 141.61081pt x 272.13249pt.
  [1
 
 {C:/Users/Navarre/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./rmcLogo
@@ -643,202 +643,215 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout6 = `DDD.toc'.
 
  [3]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 90.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 92.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 90.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 92.
 
-[4] [5] [6] [7]
-<BlockDiagram.png, id=328, 685.20993pt x 478.78876pt>
+[4] [5] [6] [7] [8]
+<BlockDiagram.png, id=459, 685.20993pt x 478.78876pt>
 File: BlockDiagram.png Graphic file (type png)
 <use BlockDiagram.png>
-Package pdftex.def Info: BlockDiagram.png  used on input line 199.
-(pdftex.def)             Requested size: 454.9594pt x 317.90834pt.
- [8]
-<TargetDiagram.png, id=333, 632.3625pt x 99.37125pt>
-File: TargetDiagram.png Graphic file (type png)
-<use TargetDiagram.png>
-Package pdftex.def Info: TargetDiagram.png  used on input line 214.
-(pdftex.def)             Requested size: 409.46068pt x 64.3449pt.
+Package pdftex.def Info: BlockDiagram.png  used on input line 235.
+(pdftex.def)             Requested size: 472.03123pt x 329.83858pt.
  [9pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.218 
+l.243 
        <./BlockDiagram.png>]
-<DepthDiagram.png, id=338, 650.43pt x 105.2432pt>
+<TargetDiagram.png, id=464, 632.3625pt x 99.37125pt>
+File: TargetDiagram.png Graphic file (type png)
+<use TargetDiagram.png>
+Package pdftex.def Info: TargetDiagram.png  used on input line 250.
+(pdftex.def)             Requested size: 424.82523pt x 66.75882pt.
+<DepthDiagram.png, id=465, 650.43pt x 105.2432pt>
 File: DepthDiagram.png Graphic file (type png)
 <use DepthDiagram.png>
-Package pdftex.def Info: DepthDiagram.png  used on input line 227.
-(pdftex.def)             Requested size: 409.46068pt x 66.25377pt.
-<OdometryDigram.png, id=339, 596.2275pt x 99.37125pt>
-File: OdometryDigram.png Graphic file (type png)
-<use OdometryDigram.png>
-Package pdftex.def Info: OdometryDigram.png  used on input line 242.
-(pdftex.def)             Requested size: 409.46068pt x 68.24326pt.
+Package pdftex.def Info: DepthDiagram.png  used on input line 263.
+(pdftex.def)             Requested size: 424.82523pt x 68.74127pt.
  [10pdfTeX warning (ext4): destination with the same identifier (name{figure.2}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.248 	
+l.271 	
        pdfTeX warning (ext4): destination with the same identifier (name{figure
 .3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.248 	
-       pdfTeX warning (ext4): destination with the same identifier (name{figure
-.4}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.248 	
-        <./TargetDiagram.png> <./DepthDiagram.png> <./OdometryDigram.png>]
-<PathFinderDiagram.png, id=347, 307.1475pt x 307.1475pt>
+l.271 	
+        <./TargetDiagram.png> <./DepthDiagram.png>]
+<OdometryDigram.png, id=472, 596.2275pt x 99.37125pt>
+File: OdometryDigram.png Graphic file (type png)
+<use OdometryDigram.png>
+Package pdftex.def Info: OdometryDigram.png  used on input line 288.
+(pdftex.def)             Requested size: 424.82523pt x 70.80426pt.
+<PathFinderDiagram.png, id=473, 307.1475pt x 307.1475pt>
 File: PathFinderDiagram.png Graphic file (type png)
 <use PathFinderDiagram.png>
-Package pdftex.def Info: PathFinderDiagram.png  used on input line 257.
-(pdftex.def)             Requested size: 272.97841pt x 272.99484pt.
-
-[11pdfTeX warning (ext4): destination with the same identifier (name{figure.5})
- has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.273 
-       <./PathFinderDiagram.png>]
-<NodeDiagram.png, id=353, 415.5525pt x 307.1475pt>
-File: NodeDiagram.png Graphic file (type png)
-<use NodeDiagram.png>
-Package pdftex.def Info: NodeDiagram.png  used on input line 278.
-(pdftex.def)             Requested size: 363.9689pt x 269.0299pt.
- [12pdfTeX warning (ext4): destination with the same identifier (name{figure.6}
+Package pdftex.def Info: PathFinderDiagram.png  used on input line 308.
+(pdftex.def)             Requested size: 283.22162pt x 283.23994pt.
+ [11pdfTeX warning (ext4): destination with the same identifier (name{figure.4}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.301 
-       <./NodeDiagram.png>]
+l.312 
+       <./OdometryDigram.png>] [12pdfTeX warning (ext4): destination with the s
+ame identifier (name{figure.5}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.327 	
+        <./PathFinderDiagram.png>]
+<NodeDiagram.png, id=484, 415.5525pt x 307.1475pt>
+File: NodeDiagram.png Graphic file (type png)
+<use NodeDiagram.png>
+Package pdftex.def Info: NodeDiagram.png  used on input line 344.
+(pdftex.def)             Requested size: 377.62642pt x 279.12503pt.
+ [13] [14pdfTeX warning (ext4): destination with the same identifier (name{figu
+re.6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.367 	
+        <./NodeDiagram.png>]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 322.
+(Font)              <9> on input line 394.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 322.
+(Font)              <6> on input line 394.
 
 
-LaTeX Warning: Float too large for page by 17.6544pt on input line 385.
+LaTeX Warning: Float too large for page by 0.58257pt on input line 457.
 
-[13] [14pdfTeX warning (ext4): destination with the same identifier (name{table
+[15] [16pdfTeX warning (ext4): destination with the same identifier (name{table
 .1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.404 	
-       ]
-Underfull \hbox (badness 1014) in paragraph at lines 448--449
-\OT1/cmr/m/n/9 say-ing we com-ment
- []
-
-
-Underfull \hbox (badness 1859) in paragraph at lines 449--450
-\OT1/cmr/m/n/9 ti-ple ob-sta-cles, not
- []
-
-
-Overfull \hbox (19.83191pt too wide) in paragraph at lines 442--452
+l.464 	
+       ] [17] [18]
+Overfull \hbox (2.76007pt too wide) in paragraph at lines 571--581
 [][]
  []
 
-
-Overfull \hbox (19.83191pt too wide) in paragraph at lines 462--474
-[][]
- []
-
-
-Overfull \hbox (19.83191pt too wide) in paragraph at lines 482--490
-[][]
- []
-
-[15] [16pdfTeX warning (ext4): destination with the same identifier (name{table
-.2}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.492     \end{table}
-                     pdfTeX warning (ext4): destination with the same identifie
-r (name{table.3}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.492     \end{table}
-                     ]
-Underfull \hbox (badness 2088) in paragraph at lines 501--502
-\OT1/cmr/m/n/9 did this last
- []
-
-
-Overfull \hbox (19.83191pt too wide) in paragraph at lines 498--505
-[][]
- []
-
-
-Overfull \hbox (19.83191pt too wide) in paragraph at lines 513--522
-[][]
- []
-
-
-Overfull \hbox (19.83191pt too wide) in paragraph at lines 530--539
-[][]
- []
-
-[17pdfTeX warning (ext4): destination with the same identifier (name{table.4}) 
+[19pdfTeX warning (ext4): destination with the same identifier (name{table.2}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.549 \newpage
-              pdfTeX warning (ext4): destination with the same identifier (name
-{table.5}) has been already used, duplicate ignored
+l.586 
+      ]
+Underfull \hbox (badness 10000) in paragraph at lines 593--594
+[]\OT1/cmr/m/n/9 By sub-scrib-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 593--594
+\OT1/cmr/m/n/9 to Fly-ing Robots
+ []
+
+
+Underfull \hbox (badness 6961) in paragraph at lines 594--595
+[]\OT1/cmr/m/n/9 Depth from sin-gle
+ []
+
+
+Overfull \hbox (2.76007pt too wide) in paragraph at lines 589--601
+[][]
+ []
+
+
+Overfull \hbox (2.76007pt too wide) in paragraph at lines 611--619
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 630--631
+[]\OT1/cmr/m/n/9 Environments were
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 632--632
+[]\OT1/cmr/m/n/9 Flying Robot was
+ []
+
+
+Overfull \hbox (2.76007pt too wide) in paragraph at lines 627--634
+[][]
+ []
+
+[20pdfTeX warning (ext4): destination with the same identifier (name{table.3}) 
+has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.549 \newpage
-              ] [18pdfTeX warning (ext4): destination with the same identifier 
-(name{table.6}) has been already used, duplicate ignored
+l.637 
+      pdfTeX warning (ext4): destination with the same identifier (name{table.4
+}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.549 \newpage
-              pdfTeX warning (ext4): destination with the same identifier (name
-{table.7}) has been already used, duplicate ignored
+l.637 
+      ]
+Underfull \hbox (badness 10000) in paragraph at lines 649--650
+[]\OT1/cmr/m/n/9 Initial con-fir-ma-tion
+ []
+
+
+Overfull \hbox (2.76007pt too wide) in paragraph at lines 644--653
+[][]
+ []
+
+
+Overfull \hbox (2.76007pt too wide) in paragraph at lines 662--671
+[][]
+ []
+
+[21pdfTeX warning (ext4): destination with the same identifier (name{table.5}) 
+has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.549 \newpage
-              ] [19]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 552.
- [20]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 552.
+l.674 
+      pdfTeX warning (ext4): destination with the same identifier (name{table.6
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.674 
+      ] [22pdfTeX warning (ext4): destination with the same identifier (name{ta
+ble.7}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.678 \newpage
+              ]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 681.
+ [23]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 681.
  (DDD.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 552.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 552.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 681.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 681.
 Package rerunfilecheck Info: File `DDD.out' has not changed.
-(rerunfilecheck)             Checksum: 461E203B1E13EA4AE0A58865DFCAF571;3723.
+(rerunfilecheck)             Checksum: DCF75135C2AFB7C564EF1196AE800805;5444.
 Package logreq Info: Writing requests to 'DDD.run.xml'.
 \openout1 = `DDD.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 13680 strings out of 492973
- 230152 string characters out of 3135927
- 710277 words of memory out of 3000000
- 17307 multiletter control sequences out of 15000+200000
+ 13746 strings out of 492973
+ 231662 string characters out of 3135927
+ 711630 words of memory out of 3000000
+ 17342 multiletter control sequences out of 15000+200000
  8704 words of font info for 31 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,13n,45p,1029b,3430s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,13n,45p,1066b,3430s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTe
@@ -849,9 +862,9 @@ amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
 m/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.p
 fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/P
 rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on DDD.pdf (20 pages, 416223 bytes).
+Output written on DDD.pdf (23 pages, 459280 bytes).
 PDF statistics:
- 474 PDF objects out of 1000 (max. 8388607)
- 99 named destinations out of 1000 (max. 500000)
- 460 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 622 PDF objects out of 1000 (max. 8388607)
+ 130 named destinations out of 1000 (max. 500000)
+ 644 words of extra memory for PDF output out of 10000 (max. 10000000)
 
