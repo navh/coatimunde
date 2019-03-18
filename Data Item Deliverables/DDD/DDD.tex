@@ -98,7 +98,7 @@
 
 		\subsubsection{Scope}
 	
-		The project started through the use of a ground robot then progressing to a flying robot. The project used computer vision to find targets and for avoiding multiple obstacles. Both robots are be highly autonomous, requiring only user input to commence. 
+		The project started through the use of a ground robot then progressing to a flying robot. The project used computer vision to find targets and for avoiding multiple obstacles. Both robots are highly autonomous, requiring only user input to commence. 
 
 		The scope of the project was limited due to only being able to test indoors. Ideally the UAV would be operating at a high speed and identifying an arbitrary target in an unpredictable environment. In this case though the testing was completed within the confines of a relatively small robotics laboratory. Smaller obstacles were used indoors simply due to space constraints. Lower speeds were used as well, again due to the lack of space. 
 
@@ -111,7 +111,7 @@
 
 		\subsubsection{Preliminary Design }
 		
-		The preliminary design document outlines out the initial design for the project \cite{pdd}. The initial design was fairly robust, but certain aspects had intentionally not yet been selected. The main block diagram Figure \ref{fig:blockdiagram} remains totally unchanged, the only additions are the specific topics being subscribed to by each of the custom modules. 
+		The preliminary design document outlines the initial design for the project \cite{pdd}. The initial design was fairly robust, but certain aspects had intentionally not yet been selected. The main block diagram Figure \ref{fig:blockdiagram} remains totally unchanged, the only additions are the specific topics being subscribed to by each of the custom modules. 
 		
 		The most substantial changes come to the actual actions to be performed by each node, given that the nodes were intentionally left fairly undefined and only their specific input and output were described this allowed for fairly substantial changes to the underlying logic that allows these nodes to complete their tasks.
 
@@ -160,27 +160,27 @@
 		
 		\subsubsection{gmapping}
 		
-		OpenSLAM has developed gmapping to create grid maps from laser range data. It uses a Rao-Blackwellized particle filter wheare each particle carries an individual map of the environment, and then the number of particles needed are reduced to create a more accurate map with significantly reduced uncertainty.\cite{grisetti_stachniss_burgard}
+		OpenSLAM has developed gmapping to create grid maps from laser range data. It uses a Rao-Blackwellized particle filter whe are each particle carries an individual map of the environment, and then the number of particles needed are reduced to create a more accurate map with significantly reduced uncertainty.\cite{grisetti_stachniss_burgard}
 		
 		While this process does rely on laser information, and it was only ever used in its unmodified form for this project, the intent was to port it to work with a slice from a depth registered image to allow it to work on a platform with only a single camera, a process that has been shown to turn a three-dimensional field into a two-dimensional map accurately.\cite{2018nanomap}
 		
 		
 		\subsubsection{TurtleBot}
 		
-		The TurtleBot is a robot kit with open-source design and software. A TurtleBot is a robot built to the specification for TurtleBot Compatible Platforms\cite{wise_foote_2011}. In this case the turtlebto has a Kobuki Base, an Acer Netbook running Ubuntu with ROS packages added, an X-Box Kinect, and some mounting plates. 
+		The TurtleBot is a robot kit with open-source design and software. A TurtleBot is a robot built to the specification for TurtleBot Compatible Platforms\cite{wise_foote_2011}. In this case the TurtleBot has a Kobuki Base, an Acer Netbook running Ubuntu with ROS packages added, an X-Box Kinect, and some mounting plates. 
 		
 		The resulting robot looks like a disk supporting some circular shelves with a small laptop and a camera on the shelves. The base disk is 35.4cm in diameter, the topmost shelf is 42cm from the ground. The robot has a maximum speed of 0.65m/s. 
 		
 		\subsubsection{AscTec Pelican}
 		
-		The Ascending Technologies Pelican is a 65.1cm by 65.1cm quad-copter designed for research purposes\cite{asctec}. It includes a camera, a high level and low level processor set up for computer vision, and simultaneous localization and mapping (SLAM) research. It is also capable of interfacing easily with other controllers and can carry up to a kilogram of additional gear. This particular flying robot comes installed with a single camera, which was used to collect stereo data which was later used for depth information.
+		The Ascending Technologies Pelican is a 65.1cm by 65.1cm quad-copter designed for research purposes\cite{asctec}. It includes a camera, a high level and low level processor set up for computer vision, and simultaneous localization and mapping (SLAM) research. It is also capable of interfacing easily with other controllers and can carry up to a kilogram of additional gear. This particular flying robot comes installed with a single camera, that was used to collect stereo data which was later used for depth information.
 
 		
 \section{Design}
 	
 	\subsection{Computer Vision}
 	
-	Computer optics was used as the robot employed a camera to identify objects in the surrounding environment, specifically targets and obstacles. There are three unique manners that computer vision was used as an input source for this project; these are target finding, obstacle finding, and optical flow. The implementation of all three created a navigation kit that uses exclusively a camera as input resulting in a very transferable and lightweight package for flying robots.
+	Computer optics was used as the robot employed a camera to identify objects in the surrounding environment, specifically targets and obstacles. There are three unique manners that computer vision was used as an input source for this project; these are target finding, obstacle finding, and optical flow. The implementation of all three created a navigation kit that exclusively uses a camera as input, resulting in a very transferable and lightweight package for flying robots.
 	
 		\subsubsection{Target Finding}
 		
@@ -196,20 +196,27 @@
 		
 		\subsubsection{Pinhole Camera}
 		
-		The pinhole camera, in this context, is not an existing camera, but a mathematical construct which models the relationship between objects in three-dimensional space, and a projection onto an image plane. Images are grids of pixels, and ideally a straight line from any point on this grid, through a single point in front of the plane, would terminate at the real location in three-dimensional space of the object in the photo. Real cameras use lenses and imperfect capture devices which introduce distortion. This is ignored for the most part, and only objects in the center of the camera's field of vision are used for the most part in this project, this is computationally inexpensive and allows software to be ported between different cameras quickly. 
+		The pinhole camera, in this context, is not an existing camera, but a mathematical construct which models the relationship between objects in three-dimensional space, and a projection onto an image plane. Images are grids of pixels, and ideally a straight line from any point on this grid, through a single point in front of the plane, would terminate at the real location in three-dimensional space of the object in the photo. Real cameras use lenses and imperfect capture devices which introduce distortion. This is ignored for the most part, and only objects in the center of the camera's field of vision are used in this project, this is computationally inexpensive and allows software to be ported between different cameras quickly. 
 		
 		\subsubsection{Depth Registered Image}
 		
-		An image where pixels have an extra value: a distance in real space at a known scale, allowing for distances to targets and interesting points to be easily extracted from the image. These can be created in hardware using advanced sensors like the Astra Pro on the Turtlebot 2, or using other post-processing techniques.
+		An image where pixels have an extra value: a distance in real space at a known scale, allowing for distances to targets and interesting points to be easily extracted from the image. These can be created in hardware using advanced sensors like the Astra Pro on the TurtleBot 2, or using other post-processing techniques.
 		
 		\subsubsection{Stereo Depth Estimation}
 		
 		By using two vantage points, depth information can be extracted by examining interesting points in the two vantage panels. Several pre-processing steps are required for this technique to be most effective, all of which are built in to OpenCV. Undoing distortion caused by cameras allows comparisons to be made between images and a three dimensional image to be rectified. This rectified image can be corrected using a known scale, then mapped back to one of the input images, creating a depth-registered image.
 		
+		\subsubsection{amcl}
+		
+		amcl is a probabilistic localization system for a robot moving in two dimensional space. Using adaptive Monte Carlo localization \cite{doucet_freitas_gordon_2001} it is able to quickly estimate the pose of a robot against a known two dimensional map. It is implemented as an already existing node in the standard ROS navigation stack, a stack containing code related to finding where the robot is and how it can get somewhere else.
+		
+		\subsubsection{RViz}
+		
+		RViz is a visualization tool for ROS, it contains many tools to observe output from various ROS topics. Most notably, there are mechanisms that allow for the visualization of the amcl mapping and goal finding processes showing the robot is a point navigating a two dimensional birds-eye-view of what it perceives its environment looks like.
 	
 	\subsection{Analyzing Trajectories}
 	
-	Analyzing trajectories is a term that refers to the robot completing movements to go towards the target. To do path planning the project will implement potential fields. Potential fields function through creating vectors pointing to objects in the environment and assigning them positive or negative. The positive vectors attracts the robot towards the target and the negative makes obstacles repulsive to the robot \cite{hwang1992potential}. This algorithm was selected to do path planning as the robot will not have to build a map of the environment to create path to the target \cite{bortoff2000path}. Potential fields allow for the robot to change its path along the way if it discovers new obstacles. This approach to movement does not require complete knowledge of the environment it is navigating. In its simplest implementations the environment must be sparsely populated with obstacles, or simple things like straight lines can become `wall traps' and a robot can become impossibly lost.
+	Analyzing trajectories is a term that refers to the robot completing movements to go towards the target. To do path planning the project will implement potential fields. Potential fields function through creating vectors pointing to objects in the environment and assigning them positive or negative values. The negative vectors attracts the robot towards the target and the positive vectors make obstacles repulsive to the robot \cite{hwang1992potential}. This algorithm was selected to do path planning as the robot will not have to build a map of the environment to create path to the target \cite{bortoff2000path}. Potential fields allow for the robot to change its path along the way if it discovers new obstacles. This approach to movement does not require complete knowledge of the environment it is navigating. In its simplest implementations the environment must be sparsely populated with obstacles, or simple things like straight lines can become `wall traps' and a robot can become impossibly lost.
 
 	\subsection{Obstacle Avoidance}
 	
@@ -224,9 +231,9 @@
 
 	\subsection{Block Diagram}
 	
-	The block diagram that is shown in Figure \ref{fig:blockdiagram} contains the outline of the \textsc{coatimunde} project. It is a very high level overview and does not contain references to most of the hardware in use for two reasons: the actual robot and laptop being used are relatively arbitrary as long as the software included is present on both. ROS also includes many nodes which are not represented on the block diagram. Only the nodes that are most important to our project, have been specifically added to ROS, or have been custom created are included on our system block diagram shown below.
+	The block diagram that is shown in Figure \ref{fig:blockdiagram} contains the outline of the \textsc{coatimunde} project. It is a very high level overview and does not contain references to most of the hardware in use for two reasons: the actual robot and laptop being used are relatively arbitrary as long as the software included is present on both. ROS also includes many nodes which are not represented on the block diagram. Only the nodes that are most important to our project, have been specifically added to ROS, or have been custom created are included on our system block diagram.
 	
-	The laptop contains the initialization, target selection, and RViz. The laptop also takes the user input when necessary and processes it appropriately.  The robot does all the target identification, obstacle avoidance, and movement decisions autonomously. This means it takes the input from the camera into a video processing node and then create a corresponding ROS message to be sent to the other systems on the robot. These messages are created and used throughout the different systems on the robot. The model of the robot's environment is found through subscribing to messages from the obstacle finder node, target finder node, and the state estimate node. This model then creates a message to pass to the route planning node which tells the movement node how to update its position and speed. 
+	The laptop contains the initialization, target selection, and RViz. The laptop also takes the user input when necessary and processes it appropriately.  The robot does all the target identification, obstacle avoidance, and movement decisions autonomously. This means it takes the input from the camera into a video processing node and then creates a corresponding ROS message to be sent to the other systems on the robot. These messages are created and used throughout the different systems on the robot. The model of the robot's environment is found through subscribing to messages from the obstacle finder node, target finder node, and the state estimate node. This model then creates a message to pass to the route planning node which tells the movement node how to update its position and speed. 
 	
 	Most of the nodes used in this project are either being used stock, or are very minimally modified from provided libraries. The four nodes, highlighted in grey, which have been custom built for this project are the State Estimate, Target Finder, and Obstacle Finder. Along with each of these functional names assigned, the actual nodal name for each of the project's custom nodes are listed.
 
@@ -241,7 +248,7 @@
 	
  All of the nodes that were written for this project were written in Python and then built in ROS to be implemented on the robot. Python was used for this project because C++ and Python are the most supported languages for both ROS Nodes and OpenCV. While C++ could possibly be faster in execution, we believe that most of our bottlenecks occur from the actual processing of images. The library calls to OpenCV were still executing in the lower level C that OpenCV was written in, so there would be minimal gains had we written it in C++.
  
- The Camera node has been referenced in many locations. The camera node is built into ROS and provides image data in various formats. Processes can subscribe to these different image formats. In general the raw image information was used by some of the custom nodes and many other built in ones. Common transformations that must be applied to all photographs will be added to the camera node. These transformations are to correct for the distortion that any camera has due to its own geometry.
+ The Camera node has been referenced in many locations. The camera node is built into ROS and provides image data in various formats. Processes can subscribe to these different image formats. In general the raw image information was used by some of the custom nodes and many other built in nodes. Common transformations that must be applied to all photographs will be added to the camera node. These transformations are to correct for the distortion that any camera has due to its own geometry.
 	
 	\subsubsection{Target Finding}
 	
@@ -252,9 +259,9 @@
 		\label{fig:target}
 	\end{figure}
 
-	Camera data, after being processed by the camera node, goes into the target finder node. The target finder is mostly implementing the ArUco symbol finding libraries in OpenCV. ArUco symbols are intended for augmented reality purposes and provide very accurate position, orientation, and distance information. These values are inserted into a marker coordinate message that the other systems on the robot can understand and be published at least 10 times per second.
+	Camera data, after being processed by the camera node, goes into the target finder node. The target finder is mostly implementing the ArUco symbol finding libraries in OpenCV. ArUco symbols are intended for augmented reality purposes and provide very accurate position, orientation, and distance information. These values are inserted into a marker coordinate message that the other systems on the robot can understand and be published at least ten times per second.
 	
-	Given the limited field of view of the robot, it cannot always be able to see the target. The robot, in the pfinder node, saves a dictionary of points that are associated with targets that have been resolved. Only the most recent 'citing' of a target is recorded, but as the robot moves its position relative to that target is updated as well.
+	Given the limited field of view of the robot, it cannot always be able to see the target. The robot, in the pfinder node, saves a dictionary of points that are associated with targets that have been resolved. Only the most recent `citing' of a target is recorded, and as soon as odometry updates are provided about the location of a target the last known location will be updated with these transformations.
 	
 	\subsubsection{Obstacle Finding}
 	
@@ -265,11 +272,11 @@
 		\label{fig:obstacle}
 	\end{figure}
 
-	Finding obstacles with depth information is difficult using monocular vision. The approach currently is to take advantage of the efficiency of the quaternion math allowing the finder node to update many points at once, and to simply sample many points along a plane at all times. When an image is processed, the depths along a row of pixels through the center of the image are converted into depth vectors which are published constantly. 
+	Finding obstacles with depth information is difficult using monocular vision. The approach currently is to take advantage of the efficiency of the quaternion math allowing the finder node to update many points at once, and to sample many points along a plane at all times. When an image is processed, the depths along a row of pixels through the center of the image are converted into depth vectors which are published constantly. 
 	
-	Getting depth information from a single camera is difficult. The TurtleBot also has a suite of depth sensors built in with the camera so these may be used initially instead of trying to use parallax information from a camera to allow for testing other aspects of the system. Currently the approach, which will not work on the flying platform with simpler cameras, is to simply combine the depth information from another sensor with the image information, and then to sample depths from this.
+	Getting depth information from a single camera is still a topic of ongoing research to which there are no simple existing solutions. The TurtleBot also has a suite of depth sensors built in with the camera so these may be used initially instead of trying to use parallax information from a camera to allow for testing other aspects of the system. Currently the approach, which will not work on the flying platform with simpler cameras, is to combine the depth information from another sensor with the image information, and then to sample depths from this.
 	
-	A node should be created which uses the results from a CNN trained to extract depth information from images to create a similarly depth registered image file with the camera on the flying platform from a single camera source.
+	A node should be created which uses the results from a convolutional neural network trained to extract depth information from images to create a similarly depth registered image file with the camera on the flying platform from a single camera source.
 	
 	Targets, extracted from the images as well, report the depth to a point exactly in the centre of the target, and the same geometry used to calculate angles away on a camera is used to calculate where the vector to the target should be recorded. All targets are assumed to be in an even plane to the robot, so any x or y rotations are ignored, and it is assumed that targets only have z rotations and absolute distances. The current program, lacking a non-distorted image, only registers new targets that are in the centre of the camera range, and assumes that they are straight ahead.
  
@@ -310,7 +317,7 @@
 		\label{fig:routeplanning}
 	\end{figure}
 
-	Route planning takes input from the other three custom nodes and determines a route that should carry it toward the target. The implemented solution was to create a potential field where positive vectors that repel the robot are attached to all obstacles while a large negative vector is attached to the target location.
+	Route planning takes input from the other three custom nodes and determines a route that should carry it toward the target as shown in Figure \ref{fig:routeplanning}. The implemented solution was to create a potential field where positive vectors that repel the robot are attached to all obstacles while a large negative vector is attached to the target location.
 	
 	As the route node receives more information about the robot moving through the environment it applies transformations to all of the contained vectors to keep them up to date with where they are as the robot changes position in the environment. 
 	
@@ -327,15 +334,15 @@
 	
 	\subsubsection{PFinder v2}
 	
-	The navigation suite for ROS comes with many tools for more accurate state estimation. The biggest problem with PFinder v1 was the rate at which errors would accumulate, making any attempts to navigate even on the ground robot fairly useless, and surely on the flying robot estimates would be totally useless.
+	The navigation suite for ROS comes with many tools for more accurate state estimation. The biggest problem with PFinder v1 was the rate at which errors would accumulate, making any attempts to navigate with the ground robot not successful, and surely on the flying robot estimates would be totally useless.
 	
-	The most interesting tool for our purposes is amcl. amcl is a localization system for robots moving in two dimensional planes, which according to our scope both the turtlebot and the flying robot will do, which uses a very simple particle filter to track the pose of a robot. While this is the simplest, and therefore easiest to understand, approach to probabilistic localization, it also relies heavily on a known map, something our project definition does not allow.
+	The most interesting tool for our purposes is amcl. amcl is a localization system for robots moving in two dimensional planes. According to our scope both the TurtleBot and the flying robot will be able to do this using a very simple particle filter to track the pose of a robot. While this is the simplest, and therefore easiest to understand, approach to probabilistic localization, it also relies heavily on a known map, something our project definition does not allow.
 	
 	In a small lab environment with a fairly high density of objects, slower but more accurate movement is desirable. So the decision to quickly develop a map and then try to navigate this was made. GMapping was used to create a map on startup, and then amcl would be used to navigate this newly created map. New maps could be created any time the robot became lost, allowing for the use of very short-ranged sensors and to enable navigation of a mostly unknown environment.
 	
 	The PFinder v2 first rotates in place while running the gmapping node and records the locations in real space of all of the ArUco markers that are discovered using the existing output. These points are then stored in an array relative to the absolute position of a fixed marker, defined arbitrarily by the gmapping node. gmapping at the same time is creating a map using laser depth information from the Astra Pro, although the intention is to modify this behaviour to allow it to record information from the depth-registered image the depth node is still generating from the camera output.
 	
-	Once a full rotation has been performed, the amcl node is launched, and PFinder provides a user with targets to select from. Once a user has selected a target for the robot to navigate toward, and this absolute location is passed into the \texttt{/move\_base\_simple/goal} topic as a goal. Solving the navigation to this goal is achieved using both the map created initially, overlaid with any currently occupied areas discovered by amcl. amcl naturally updates these locations based on current laser data, and will remove them if an obstacle is removed. This allows for the robot to make very accurate decisions while avoiding obstacles in real time. 
+	Once a full rotation has been performed, the amcl node is launched, and PFinder provides a user with targets to select from. Once a user has selected a target for the robot to navigate toward its absolute location is passed into the \texttt{/move\_base\_simple/goal} topic as a goal to which ROS has existing logic to navigate toward. Solving the navigation to this goal is achieved using both the map created initially, overlaid with any currently occupied areas discovered by amcl. amcl naturally updates these locations based on current laser data, and will remove them if an obstacle is removed. This allows for the robot to make very accurate decisions while avoiding obstacles in real time. 
 	
 	\subsection{Node Diagram}
 
@@ -363,7 +370,7 @@
 		
 		The limitations to this approach are the limited accuracy of the very small quaternions that result from real time odometry information from the robot, and the rate at which error accumulates when blindly trusting all robot odometry. 
 		
-		To add two vectors, they are simply multiplied together. The result is a very accurate representation when both vectors are quite accurate and are similar in size, but when repeatedly multiplying a very small vector with a larger vector the errors compound very quickly and points diverge and become useless far faster than we had anticipated.
+		To combine two vectors, they are multiplied together. The result is a very accurate representation when both vectors are quite accurate and are similar in size, but when repeatedly multiplying a very small vector with a larger vector the errors compound very quickly and points diverge and become useless far faster than we had anticipated.
 	
 		\subsubsection{Pose Estimation}
 	
@@ -387,14 +394,14 @@
 	
 	A large number of items are being used in this project, most are arbitrary and may be changed in future iterations. Part way through our project we intend to re-implement the entire solution onto a different platform. A naming convention has been developed for all of our components using a three character code.
 	
-	The first letter, ascending from A for hardware and descending from Z for software, represents the subsystem or general classification the equipment falls under. The second character represents a generic piece of equipment, and the third is for a particular example that we are using for our project. Any part with the same two first letters should be able to be substituted freely, an example may be two cameras. One camera (CAA) may be used on the Turtlebot as it is built in to the Turtlebot frame, while another (CAB) may be used on the flying robot as it is much lighter. The generic camera (CA-) can refer to any camera which provides the same information to the same nodes. The equipment table is shown in Table \ref{table:equipment}.
+	The first letter, ascending from A for hardware and descending from Z for software, represents the subsystem or general classification the equipment falls under. The second character represents a generic piece of equipment, and the third is for a particular example that we are using for our project. Any part with the same two first letters should be able to be substituted freely, an example may be two cameras. One camera (CAA) may be used on the TurtleBot as it is built in to the TurtleBot frame, while another (CAB) may be used on the flying robot as it is much lighter. The generic camera (CA-) can refer to any camera which provides the same information to the same nodes. The equipment table is shown in Table \ref{table:equipment}.
 	
 	\begin{table}
 		\small
 		\begin{tabular}{|rl|rl|rl|}
 			\hline
 			\multicolumn{2}{|c|}{\textbf{Purpose}} & \multicolumn{2}{c|}{\textbf{Description}} & \multicolumn{2}{c|}{\textbf{Equipment}} \\ \hline
-			A & Ground Based Robot     & A & Robot              & A   & Clearpath Robotics Turtlebot 2    \\
+			A & Ground Based Robot     & A & Robot              & A   & Clearpath Robotics TurtleBot 2    \\
 			A & Ground Based Robot     & B & Robot Controller   & A   & Acer Aspire E-11                  \\
 			A & Ground Based Robot     & C & Robot Base         & A   & Kobuki Robot Base                 \\
 			A & Ground Based Robot     & D & Sensors            & A   & Stepper Motor Feedback            \\
@@ -474,7 +481,7 @@
 	
 	\subsubsection{coati\_odom tests}
 	
-	The incoming odometry data is parsed and passed along, due to the high frequency which this data arrives at, the transformations are all very small. It is easy to print a stream of values as they are moving along to verify that they make sense, and because the robot will return values even when not being driven it is possible to turn both the turtlebot and the astec pelican by hand and observe what values the odometry reports back.
+	The incoming odometry data is parsed and passed along, due to the high frequency which this data arrives at, the transformations are all very small. It is easy to print a stream of values as they are moving along to verify that they make sense, and because the robot will return values even when not being driven it is possible to turn both the TurtleBot and the AscTec Pelican by hand and observe what values the odometry reports back.
 	
 	If a version of odometry was created that did try to use optical flow from visual information, it would be possible to compare the values it generated against those collected by the sensors on the robot.
 	
@@ -488,7 +495,7 @@
 	
 	Gazebo is a simulation environment that runs nodes that give similar input and output to nodes being executed on a real robot moving around in a real environment. This includes camera feeds, and allows for the insertion of obstacles and ArUco shapes. Testing of custom written nodes were done in Gazebo congruently with unit-tests to ensure that nodes which rely on subscribing to other nodes are behaving as expected before executing code on an actual robot.
 	
-	Gazebo ended up not being employed extensively due to the simplicity of actually executing code on the turtlebot, combined with the difficulty of creating environments in Gazebo with all of the aspects we would like compared with the simplicity of moving boxes around in the lab and placing arbitrary ArUco markers wherever they were wanted.
+	Gazebo ended up not being employed extensively due to the simplicity of actually executing code on the TurtleBot, combined with the difficulty of creating environments in Gazebo with all of the aspects we would like compared with the simplicity of moving boxes around in the lab and placing arbitrary ArUco markers wherever they were wanted.
 	
 	\subsection{Camera Tests}
 	
@@ -498,7 +505,7 @@
 	
 	\subsection{Ground Based Robot}
 	
-	Testing the code on a ground based robot was necessary to ensure that the logic in the movement nodes is sound. Initial testing was done through simply having the robot follow moving targets or turn to face targets that are not head on. As obstacle avoidance was getting developed ensuring that the robot does avoid the obstacles was enough. When the project was sufficiently developed the testing was having the robot avoid obstacles and move towards a target. As the project moved closer to porting to the flying robot, the ground robot was tested to ensure it met the requirement outlined in the SOR \cite{sor}. 
+	Testing the code on a ground based robot was necessary to ensure that the logic in the movement nodes is sound. Initial testing was done through simply having the robot follow moving targets or turn to face targets that are not head on. Initially simply watching the robot move away from obstacles was considered sufficient testing. When the project was sufficiently developed the testing was having the robot avoid obstacles and move towards a target. As the project moved closer to porting to the flying robot, the ground robot was tested to ensure it met the requirement outlined in the SOR \cite{sor}. 
 
 	\subsection{Flying Robot}
 	
@@ -544,19 +551,19 @@ Given that all of our solutions have been left highly portable, there is no soft
 
 \subsection{Major Issues}
 
-The biggest issue that plagued us for the entire duration of the project was the challenge of extracting depth information from a monocular camera. The flying robots only came with a monocular camera, and although initially we had intended to simply attach a second the decision to use this single camera was taken.
+The biggest issue that plagued us for the entire duration of the project was the challenge of extracting depth information from a monocular camera. The flying robots only came with a monocular camera, and although initially we had intended to simply attach a second camera the decision to use this single camera was taken.
 
 After a significant amount of time trying to parse depth information using OpenCV modules, it was discovered that it may be easier to use some sort of approach rooted in more modern machine learning algorithms.
 
-The machine learning approach did result in interesting results, but it was never implemented into a depth module. The depth module simply used the hardware registered depth information that was available from the turtlebot's onboard sensors. These sensors did provide very accurate information, but were implemented later than useful simply to allow for the development of other modules, and would not be able to be ported over to the flying robot. 
+The machine learning approach did provide interesting results, but it was never implemented into a depth module. The depth module simply used the hardware registered depth information that was available from the TurtleBot's onboard sensors. These sensors did provide very accurate information, but were implemented later than useful simply to allow for the development of other modules, and would not be able to be ported over to the flying robot. 
 
 Not having a verified manner to parse depth information that could be implemented on the flying robot left us wanting to push the driving platform to be able to perform more interesting obstacle avoidance.
 
 \subsection{Recommendations for Future Expansion}
 
-To expand further on this project, it would be necessary to find a testing environment that allows for more interesting tests to take place. Even on the turtlebot there were space limitations inside the lab to lay out obstacles in ways that could be navigated while still leaving far walls observable some of the time. 
+To expand further on this project, it would be necessary to find a testing environment that allows for more complex tests to take place. Even on the TurtleBot there were space limitations inside the lab to lay out obstacles in ways that could be navigated while still leaving far walls observable some of the time. 
 
-Obtaining permission to test in a larger enclosed space would enable far more testing on both the ground and flying platform at speeds where the models used may actually be able to produce useful results. 
+Obtaining permission to test in a larger enclosed space would enable far more testing on both the ground and flying platforms at speeds where the models used may actually be able to produce useful results. 
 
 The reactive and totally potential field based navigation was somewhat overkill when useful, and then when used with many obstacles and lower speeds became inadequate due to the way errors would accumulate.
 
@@ -571,18 +578,18 @@ Using either the pushbroom algorithm or some other mechanism of sensing depth in
 		\begin{tabular}{p{2cm} p{8cm} p{2cm} p{3cm}} 
 			\hline
 			{\textbf{Index}} & {\textbf{Description of Requirement}} & {\textbf{Result}} & {\textbf{Comment}} \\ \hline
-FR-01 & The Turtlebot shall move towards a target under control & Met & \\
-FR-02 & The Turtlebot shall recognize optically an OpenCV's ArUco shape and be able to give information on the location of the target relative to the robot & Met & \\
-FR-03 & The Turtlebot shall recognize obstacles in its environment and identify where they are relative to itself & Met & Simply as areas that are occupied \\
-FR-04 & The Turtlebot shall be able to make a deviation from its current movement pattern to avoid an obstacle in its path and then return to its pattern & Met & \\
-FR-05 & The Turtlebot shall be able to identify multiple obstacles and avoid them accordingly & Partially Met & No concept of a particular obstacle, only points that are close \\
-PR-01 & The Turtlebot shall be able to identify and locate OpenCV's ArUco shapes within a 15m radius & Met & \\ \hline
+FR-01 & The TurtleBot shall move towards a target under control & Met & \\
+FR-02 & The TurtleBot shall recognize optically an OpenCV's ArUco shape and be able to give information on the location of the target relative to the robot & Met & \\
+FR-03 & The TurtleBot shall recognize obstacles in its environment and identify where they are relative to itself & Met & Simply as areas that are occupied \\
+FR-04 & The TurtleBot shall be able to make a deviation from its current movement pattern to avoid an obstacle in its path and then return to its pattern & Met & \\
+FR-05 & The TurtleBot shall be able to identify multiple obstacles and avoid them accordingly & Partially Met & No concept of a particular obstacle, only points that are close \\
+PR-01 & The TurtleBot shall be able to identify and locate OpenCV's ArUco shapes within a 15m radius & Met & \\ \hline
      \end{tabular}
-     \caption{Summary of Results for the Turtlebot}
+     \caption{Summary of Results for the TurtleBot}
      \label{table:turtlbotresults}
  \end{table}
 
- The requirements for the Turtlebot can be seen in \ref{table:turtlbotresults}. The reason FR-04 was not satisfied on the Turtlebot is the same reason that was discussed in the results section. FR-05 also was not fully satisfied, the Turtlebot was able to recognize multiple obstacles at once and register each as a potential obstacle. The ability to avoid multiple obstacles, or to remember obstacles as objects based on having seen them multiple times from different angles, does not exist as the memory is too short term.
+ The requirements for the TurtleBot can be seen in Table \ref{table:turtlbotresults}. The reason FR-04 was not satisfied on the TurtleBot is the same reason that was discussed in the results section. FR-05 also was not fully satisfied, the TurtleBot was able to recognize multiple obstacles at once and register each as a potential obstacle. The ability to avoid multiple obstacles, or to remember obstacles as objects based on having seen them multiple times from different angles, does not exist as the memory is too short term.
 
 	\begin{table}[H]
   \small
@@ -612,7 +619,7 @@ Given that the flying robot was not implemented, most of these requirements are 
 			\hline
 			{\textbf{Index}} & {\textbf{Description of Requirement}} & {\textbf{Result}} & {\textbf{Comment}} \\ \hline
 IT-01 & The Gazebo simulator shall be run on a laptop and robots within the simulation will be interfaced through ROS & Met & \\
-IT-02 & Communication to the Turtlebot will be done through ROS over USB & Met & \\
+IT-02 & Communication to the TurtleBot will be done through ROS over USB & Met & \\
 IT-03 & The Flying Robot will be communicating through ROS over WiFi wireless network & Met &\\
 IT-04 & A simple interface, perhaps command line, will allow a user to select a marker as a target to start the robot's movement towards the target and this signal should be received over wireless transmission & Met & \\ \hline
 		\end{tabular}
@@ -628,14 +635,14 @@ IT-04 & A simple interface, perhaps command line, will allow a user to select a 
 			\hline
 			{\textbf{Index}} & {\textbf{Description of Requirement}} & {\textbf{Result}} & {\textbf{Comment}} \\ \hline
 SimR-01 & A Gazebo simulation environment which roughly approximates a lab environment with marker placed around will be created & Partially Met & Environments were created but not used\\
-SimR-02 & Stationary obstacles will be added to the lab simulation environment and a Turtlebot shall navigate toward markers in the lab while avoiding obstacles & Not Met & \\
+SimR-02 & Stationary obstacles will be added to the lab simulation environment and a TurtleBot shall navigate toward markers in the lab while avoiding obstacles & Not Met & \\
 SimR-03 & An environment with obstacles will be created a Flying Robot shall navigate toward markers in the simulation while avoiding obstacles & Not Met & Flying Robot was never used in Gazebo \\ \hline
 		\end{tabular}
 		\caption{Summary of Results for the Simulation Requirements}
 		\label{table:simresults}
  \end{table}
 
-The use of simulation was limited due to the ease of operating the turtlebot in the lab, combined with the ease of modifying the lab environment by simply moving boxes instead of having to make changes to the simulation environment.
+The use of simulation was limited due to the ease of operating the TurtleBot in the lab, combined with the ease of modifying the lab environment by simply moving boxes instead of having to make changes to the simulation environment.
 
  \subsection{Implementation Requirements}
  
@@ -645,9 +652,9 @@ The use of simulation was limited due to the ease of operating the turtlebot in 
 			\hline
 			{\textbf{Index}} & {\textbf{Description of Requirement}} & {\textbf{Result}} & {\textbf{Comment}} \\ \hline 
 ImpR-01 & OpenCV programs shall be created that can use a single video stream and identify both markers and obstacles & Met & \\ 
-ImpR-02 & Prior to testing on the Turtlebot, the program shall be implemented on the gazebo simulation & Met & \\
+ImpR-02 & Prior to testing on the TurtleBot, the program shall be implemented on the gazebo simulation & Met & \\
 ImpR-03 & Using the robot in the simulation environment the appropriate components, tools, and libraries to interpret and OpenCV stream, make decisions based on the environment, and execute instructions will be developed & Partially Met & Initial confirmation performed in Gazebo \\
-ImpR-04 & The simplest obstacle avoidance algorithm must be implemented on a Turtlebot using ROS & Met & \\
+ImpR-04 & The simplest obstacle avoidance algorithm must be implemented on a TurtleBot using ROS & Met & \\
 ImpR-05 & The obstacle avoidance algorithm used for a Flying Robot will be implemented in a simulation & Not Met & \\ \hline
 		\end{tabular}
 		\caption{Summary of Results for the Implementation Requirements}
@@ -662,8 +669,8 @@ ImpR-05 & The obstacle avoidance algorithm used for a Flying Robot will be imple
 		\begin{tabular}{p{2cm} p{8cm} p{2cm} p{3cm}}
 			\hline
 			{\textbf{Index}} & {\textbf{Description of Requirement}} & {\textbf{Result}} & {\textbf{Comment}} \\ \hline 
-SchR-01 & The first Turtlebot simulation shall be able to operate in a Gazebo environment no later than November \nth{5} & Met & \\
-SchR-02 & The first functional prototype shall be a Turtlebot robot capable of positively identifying a marker, moving towards the marker, and avoiding an obstacle placed in its environment no later than December \nth{18} & Met & \\
+SchR-01 & The first TurtleBot simulation shall be able to operate in a Gazebo environment no later than November \nth{5} & Met & \\
+SchR-02 & The first functional prototype shall be a TurtleBot robot capable of positively identifying a marker, moving towards the marker, and avoiding an obstacle placed in its environment no later than December \nth{18} & Met & \\
 SchR-03 & The first functional prototype shall be capable of identifying a marker, moving towards the marker, and avoiding an obstacle placed in its environment no later than February \nth{18} & Met & \\
 SchR-04 & Data Item Descriptions (DID) to be presented are DID-04: Preliminary Design Specification due November \nth{22}, DID-05: Preliminary Design Review Presentations due November \nth{29}, and the DID-06: Schedule Update is due January \nth{17}. The DID-07: Final Detailed Design Document is due March \nth{21}, the Final Project Presentation, DID-08, is March \nth{28} and the Final Project Demonstration, DID-09, is on April \nth{9} & Met & \\
 & & & \\ \hline

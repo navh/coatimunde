@@ -59,96 +59,100 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {2.1.6}Stereo Depth Estimation}{8}{subsubsection.2.1.6}
 \defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.1.7}amcl}{8}{subsubsection.2.1.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.1.8}RViz}{8}{subsubsection.2.1.8}
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2}Analyzing Trajectories}{8}{subsection.2.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3}Obstacle Avoidance}{8}{subsection.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4}Unknown and Navigation Denied Environments}{8}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.4}Unknown and Navigation Denied Environments}{9}{subsection.2.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.5}Block Diagram}{9}{subsection.2.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.6}Custom Nodes}{10}{subsection.2.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.6.1}Target Finding}{10}{subsubsection.2.6.1}
+\contentsline {subsubsection}{\numberline {2.6.1}Target Finding}{11}{subsubsection.2.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.6.2}Obstacle Finding}{10}{subsubsection.2.6.2}
+\contentsline {subsubsection}{\numberline {2.6.2}Obstacle Finding}{11}{subsubsection.2.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.6.3}Limitations of Obstacle Finding Approach}{11}{subsubsection.2.6.3}
+\contentsline {subsubsection}{\numberline {2.6.3}Limitations of Obstacle Finding Approach}{12}{subsubsection.2.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.6.4}State Estimator}{11}{subsubsection.2.6.4}
+\contentsline {subsubsection}{\numberline {2.6.4}State Estimator}{12}{subsubsection.2.6.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.6.5}Route Planning}{12}{subsubsection.2.6.5}
+\contentsline {subsubsection}{\numberline {2.6.5}Route Planning}{13}{subsubsection.2.6.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.6.6}PFinder v1}{12}{subsubsection.2.6.6}
+\contentsline {subsubsection}{\numberline {2.6.6}PFinder v1}{13}{subsubsection.2.6.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.6.7}PFinder v2}{13}{subsubsection.2.6.7}
+\contentsline {subsubsection}{\numberline {2.6.7}PFinder v2}{14}{subsubsection.2.6.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.7}Node Diagram}{14}{subsection.2.7}
+\contentsline {subsection}{\numberline {2.7}Node Diagram}{15}{subsection.2.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.8}Mathematical Modeling}{14}{subsection.2.8}
+\contentsline {subsection}{\numberline {2.8}Mathematical Modeling}{15}{subsection.2.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.8.1}Flying Robot}{14}{subsubsection.2.8.1}
+\contentsline {subsubsection}{\numberline {2.8.1}Flying Robot}{15}{subsubsection.2.8.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.8.2}Initial Approach to Robot in 3D Space}{14}{subsubsection.2.8.2}
+\contentsline {subsubsection}{\numberline {2.8.2}Initial Approach to Robot in 3D Space}{15}{subsubsection.2.8.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.8.3}Pose Estimation}{15}{subsubsection.2.8.3}
+\contentsline {subsubsection}{\numberline {2.8.3}Pose Estimation}{16}{subsubsection.2.8.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.8.4}Dieter Fox's Monte Carlo Localization}{15}{subsubsection.2.8.4}
+\contentsline {subsubsection}{\numberline {2.8.4}Dieter Fox's Monte Carlo Localization}{16}{subsubsection.2.8.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.9}Interfacing}{15}{subsection.2.9}
+\contentsline {subsection}{\numberline {2.9}Interfacing}{16}{subsection.2.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Equipment}{15}{section.3}
+\contentsline {section}{\numberline {3}Equipment}{16}{section.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Equipment Table}{15}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.1}Equipment Table}{16}{subsection.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Verification and Validation}{15}{section.4}
+\contentsline {section}{\numberline {4}Verification and Validation}{16}{section.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Unit Tests}{15}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.1}Unit Tests}{16}{subsection.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.1}coati\_target tests}{17}{subsubsection.4.1.1}
+\contentsline {subsubsection}{\numberline {4.1.1}coati\_target tests}{18}{subsubsection.4.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.2}coati\_depth tests}{17}{subsubsection.4.1.2}
+\contentsline {subsubsection}{\numberline {4.1.2}coati\_depth tests}{18}{subsubsection.4.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.3}coati\_odom tests}{17}{subsubsection.4.1.3}
+\contentsline {subsubsection}{\numberline {4.1.3}coati\_odom tests}{18}{subsubsection.4.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.4}coati\_pfinder tests}{17}{subsubsection.4.1.4}
+\contentsline {subsubsection}{\numberline {4.1.4}coati\_pfinder tests}{18}{subsubsection.4.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}Gazebo}{17}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.2}Gazebo}{18}{subsection.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3}Camera Tests}{17}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.3}Camera Tests}{18}{subsection.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4}Ground Based Robot}{18}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.4}Ground Based Robot}{19}{subsection.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5}Flying Robot}{18}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.5}Flying Robot}{19}{subsection.4.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Results - NOT DONE}{18}{section.5}
+\contentsline {section}{\numberline {5}Results - NOT DONE}{19}{section.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1}Finding Targets}{18}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.1}Finding Targets}{19}{subsection.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2}Extracting Depth Information}{18}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.2}Extracting Depth Information}{19}{subsection.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3}Compiling Odometry Information}{18}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.3}Compiling Odometry Information}{19}{subsection.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4}Path Finding}{18}{subsection.5.4}
+\contentsline {subsection}{\numberline {5.4}Path Finding}{19}{subsection.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Discussion}{18}{section.6}
+\contentsline {section}{\numberline {6}Discussion}{19}{section.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1}Overview}{18}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.1}Overview}{19}{subsection.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2}Flying Robot Requirements}{18}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.2}Flying Robot Requirements}{19}{subsection.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3}Major Issues}{19}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.3}Major Issues}{20}{subsection.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.4}Recommendations for Future Expansion}{19}{subsection.6.4}
+\contentsline {subsection}{\numberline {6.4}Recommendations for Future Expansion}{20}{subsection.6.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.5}Functional and Performance Requirements}{19}{subsection.6.5}
+\contentsline {subsection}{\numberline {6.5}Functional and Performance Requirements}{20}{subsection.6.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.6}Interface Requirements}{20}{subsection.6.6}
+\contentsline {subsection}{\numberline {6.6}Interface Requirements}{21}{subsection.6.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.7}Simulation Requirements}{21}{subsection.6.7}
+\contentsline {subsection}{\numberline {6.7}Simulation Requirements}{22}{subsection.6.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.8}Implementation Requirements}{21}{subsection.6.8}
+\contentsline {subsection}{\numberline {6.8}Implementation Requirements}{22}{subsection.6.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.9}Schedule Requirements}{22}{subsection.6.9}
+\contentsline {subsection}{\numberline {6.9}Schedule Requirements}{23}{subsection.6.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Conclusion}{22}{section.7}
+\contentsline {section}{\numberline {7}Conclusion}{23}{section.7}

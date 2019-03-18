@@ -1985,12 +1985,13 @@
     <bcf:citekey order="8">2018nanomap</bcf:citekey>
     <bcf:citekey order="9">wise_foote_2011</bcf:citekey>
     <bcf:citekey order="10">asctec</bcf:citekey>
-    <bcf:citekey order="11">hwang1992potential</bcf:citekey>
-    <bcf:citekey order="12">bortoff2000path</bcf:citekey>
-    <bcf:citekey order="13">barry2018high</bcf:citekey>
-    <bcf:citekey order="14">doucet_freitas_gordon_2001</bcf:citekey>
-    <bcf:citekey order="15">williams2010combining</bcf:citekey>
-    <bcf:citekey order="16">sor</bcf:citekey>
+    <bcf:citekey order="11">doucet_freitas_gordon_2001</bcf:citekey>
+    <bcf:citekey order="12">hwang1992potential</bcf:citekey>
+    <bcf:citekey order="13">bortoff2000path</bcf:citekey>
+    <bcf:citekey order="14">barry2018high</bcf:citekey>
+    <bcf:citekey order="15">doucet_freitas_gordon_2001</bcf:citekey>
+    <bcf:citekey order="16">williams2010combining</bcf:citekey>
+    <bcf:citekey order="17">sor</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
