@@ -109,34 +109,24 @@
       \field{title}{Data Item Deliverable 04- Preliminary Design Specification}
       \field{year}{2018}
     \endentry
-    \entry{schupd}{unpublished}{}
-      \name{author}{2}{}{%
-        {{hash=f70479d0dec367fce36d548986569023}{%
-           family={Stephan},
-           familyi={S\bibinitperiod},
-           given={Kara},
-           giveni={K\bibinitperiod}}}%
-        {{hash=3b37bb6ea717fb4e2fa4f9fa014639aa}{%
-           family={Hebb},
-           familyi={H\bibinitperiod},
-           given={Amos\bibnamedelima Navarre},
-           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+    \entry{RPAS}{misc}{}
+      \list{publisher}{2}{%
+        {National Defence}%
+        {Royal Canadian Air Force}%
       }
-      \list{organization}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{0e5ce1c583cb72a98f557df946d0ec27}
-      \strng{fullhash}{0e5ce1c583cb72a98f557df946d0ec27}
-      \strng{bibnamehash}{0e5ce1c583cb72a98f557df946d0ec27}
-      \strng{authorbibnamehash}{0e5ce1c583cb72a98f557df946d0ec27}
-      \strng{authornamehash}{0e5ce1c583cb72a98f557df946d0ec27}
-      \strng{authorfullhash}{0e5ce1c583cb72a98f557df946d0ec27}
       \field{sortinit}{4}
       \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
-      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Data Item Deliverable 06- Schedule Update}
-      \field{year}{2019}
+      \field{journaltitle}{On Windswept Heights II | RCAF | Historical | Royal Canadian Air Force}
+      \field{month}{7}
+      \field{title}{Royal Canadian Air Force | News Article | Update and new name for the Joint Unmanned Surveillance Target Acquisition System (JUSTAS) project}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb http://www.rcaf-arc.forces.gc.ca/en/article-template-standard.page?doc=update-and-new-name-for-the-joint-unmanned-surveillance-target-acquisition-system-justas-project/j9u7rzyf
+      \endverb
+      \verb{url}
+      \verb http://www.rcaf-arc.forces.gc.ca/en/article-template-standard.page?doc=update-and-new-name-for-the-joint-unmanned-surveillance-target-acquisition-system-justas-project/j9u7rzyf
+      \endverb
     \endentry
     \entry{opencv}{misc}{}
       \list{publisher}{1}{%
@@ -153,6 +143,115 @@
       \verb{url}
       \verb https://opencv.org/about.html
       \endverb
+    \endentry
+    \entry{woods2015dynamic}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=c3e0de525f549d167016a4ca3db78dc6}{%
+           family={Woods},
+           familyi={W\bibinitperiod},
+           given={Alexander\bibnamedelima C},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=a5a9bf1d9bce717c66eb1acc1b45edab}{%
+           family={La},
+           familyi={L\bibinitperiod},
+           given={Hung\bibnamedelima M},
+           giveni={H\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{b18180a0f2b381d66f5b5f2b719da127}
+      \strng{fullhash}{b18180a0f2b381d66f5b5f2b719da127}
+      \strng{bibnamehash}{b18180a0f2b381d66f5b5f2b719da127}
+      \strng{authorbibnamehash}{b18180a0f2b381d66f5b5f2b719da127}
+      \strng{authornamehash}{b18180a0f2b381d66f5b5f2b719da127}
+      \strng{authorfullhash}{b18180a0f2b381d66f5b5f2b719da127}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{International Symposium on Visual Computing}
+      \field{title}{Dynamic target tracking and obstacle avoidance using a drone}
+      \field{year}{2015}
+      \field{pages}{857\bibrangedash 866}
+      \range{pages}{10}
+    \endentry
+    \entry{grisetti_stachniss_burgard}{misc}{}
+      \name{author}{3}{}{%
+        {{hash=1aa4adfed9f6f5be21fca54e130eacb5}{%
+           family={Grisetti},
+           familyi={G\bibinitperiod},
+           given={Giorgio},
+           giveni={G\bibinitperiod}}}%
+        {{hash=5d87e0c36213202151bff64fdd9346a3}{%
+           family={Stachniss},
+           familyi={S\bibinitperiod},
+           given={Cyrill},
+           giveni={C\bibinitperiod}}}%
+        {{hash=98f4ab1bc2ac191d8f8a0651315ce9c0}{%
+           family={Burgard},
+           familyi={B\bibinitperiod},
+           given={Wolfram},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {OpenSLAM}%
+      }
+      \strng{namehash}{46e0c8d908edcfca5bd82f3ddfe938a4}
+      \strng{fullhash}{46e0c8d908edcfca5bd82f3ddfe938a4}
+      \strng{bibnamehash}{46e0c8d908edcfca5bd82f3ddfe938a4}
+      \strng{authorbibnamehash}{46e0c8d908edcfca5bd82f3ddfe938a4}
+      \strng{authornamehash}{46e0c8d908edcfca5bd82f3ddfe938a4}
+      \strng{authorfullhash}{46e0c8d908edcfca5bd82f3ddfe938a4}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{OpenSLAM.org}
+      \field{title}{GMapping}
+      \verb{urlraw}
+      \verb https://openslam-org.github.io/gmapping.html
+      \endverb
+      \verb{url}
+      \verb https://openslam-org.github.io/gmapping.html
+      \endverb
+    \endentry
+    \entry{2018nanomap}{article}{}
+      \name{author}{4}{}{%
+        {{hash=020692730c149a079cb8cf434f8cd7a8}{%
+           family={Florence},
+           familyi={F\bibinitperiod},
+           given={Peter\bibnamedelima R},
+           giveni={P\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=abdd9ad1eb92af4ac27eda8caad32697}{%
+           family={Carter},
+           familyi={C\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=6fea7020361589b9e17db5def6df9b66}{%
+           family={Ware},
+           familyi={W\bibinitperiod},
+           given={Jake},
+           giveni={J\bibinitperiod}}}%
+        {{hash=480d067fbc7c00be4a01a0e4902c984e}{%
+           family={Tedrake},
+           familyi={T\bibinitperiod},
+           given={Russ},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{d71e33a587a6771f1797558b9cec0eae}
+      \strng{fullhash}{3970802295558d6fe4a4c0efdb8907fd}
+      \strng{bibnamehash}{3970802295558d6fe4a4c0efdb8907fd}
+      \strng{authorbibnamehash}{3970802295558d6fe4a4c0efdb8907fd}
+      \strng{authornamehash}{d71e33a587a6771f1797558b9cec0eae}
+      \strng{authorfullhash}{3970802295558d6fe4a4c0efdb8907fd}
+      \field{sortinit}{8}
+      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1802.09076}
+      \field{title}{Nanomap: Fast, uncertainty-aware proximity queries with lazy search over local 3d data}
+      \field{year}{2018}
     \endentry
     \entry{wise_foote_2011}{misc}{}
       \name{author}{2}{}{%
@@ -176,8 +275,8 @@
       \strng{authorbibnamehash}{2740f898bfc1ef5fe7dd3586c715ccd5}
       \strng{authornamehash}{2740f898bfc1ef5fe7dd3586c715ccd5}
       \strng{authorfullhash}{2740f898bfc1ef5fe7dd3586c715ccd5}
-      \field{sortinit}{6}
-      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{sortinit}{9}
+      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{ROS.org}
@@ -192,8 +291,8 @@
       \endverb
     \endentry
     \entry{asctec}{misc}{}
-      \field{sortinit}{7}
-      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Ascending Technologies}
       \field{title}{AscTec Pelican - UAS for Computer Vision and SLAM}
@@ -226,8 +325,8 @@
       \strng{authorbibnamehash}{11c80fdb97c9e570ace6acf9758ff6f0}
       \strng{authornamehash}{11c80fdb97c9e570ace6acf9758ff6f0}
       \strng{authorfullhash}{11c80fdb97c9e570ace6acf9758ff6f0}
-      \field{sortinit}{8}
-      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Robotics and Automation}
@@ -255,8 +354,8 @@
       \strng{authorbibnamehash}{09569a76e31e019ab337bad224cd32bd}
       \strng{authornamehash}{09569a76e31e019ab337bad224cd32bd}
       \strng{authorfullhash}{09569a76e31e019ab337bad224cd32bd}
-      \field{sortinit}{9}
-      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{American Control Conference, 2000. Proceedings of the 2000}
@@ -266,6 +365,79 @@
       \field{year}{2000}
       \field{pages}{364\bibrangedash 368}
       \range{pages}{5}
+    \endentry
+    \entry{barry2018high}{article}{}
+      \name{author}{3}{}{%
+        {{hash=2250e5a54a8889ec9375d450b1a17da1}{%
+           family={Barry},
+           familyi={B\bibinitperiod},
+           given={Andrew\bibnamedelima J},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=020692730c149a079cb8cf434f8cd7a8}{%
+           family={Florence},
+           familyi={F\bibinitperiod},
+           given={Peter\bibnamedelima R},
+           giveni={P\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=480d067fbc7c00be4a01a0e4902c984e}{%
+           family={Tedrake},
+           familyi={T\bibinitperiod},
+           given={Russ},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
+      }
+      \strng{namehash}{5207f46a01db5f699e1be8a4b5f1e350}
+      \strng{fullhash}{5207f46a01db5f699e1be8a4b5f1e350}
+      \strng{bibnamehash}{5207f46a01db5f699e1be8a4b5f1e350}
+      \strng{authorbibnamehash}{5207f46a01db5f699e1be8a4b5f1e350}
+      \strng{authornamehash}{5207f46a01db5f699e1be8a4b5f1e350}
+      \strng{authorfullhash}{5207f46a01db5f699e1be8a4b5f1e350}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Field Robotics}
+      \field{number}{1}
+      \field{title}{High-speed autonomous obstacle avoidance with pushbroom stereo}
+      \field{volume}{35}
+      \field{year}{2018}
+      \field{pages}{52\bibrangedash 68}
+      \range{pages}{17}
+    \endentry
+    \entry{doucet_freitas_gordon_2001}{book}{}
+      \name{author}{3}{}{%
+        {{hash=aca5faad8b57b96b59c12fc59d0b6eb4}{%
+           family={Doucet},
+           familyi={D\bibinitperiod},
+           given={Arnaud},
+           giveni={A\bibinitperiod}}}%
+        {{hash=8ab4bc7425a52b7c173874eb8ce81f91}{%
+           family={Freitas},
+           familyi={F\bibinitperiod},
+           given={Nando\bibnamedelima De},
+           giveni={N\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=df9469128a8542e7ec681f48d2615e22}{%
+           family={Gordon},
+           familyi={G\bibinitperiod},
+           given={Neil},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{a4b3f80920c5c9ed7499dfa851f6d268}
+      \strng{fullhash}{a4b3f80920c5c9ed7499dfa851f6d268}
+      \strng{bibnamehash}{a4b3f80920c5c9ed7499dfa851f6d268}
+      \strng{authorbibnamehash}{a4b3f80920c5c9ed7499dfa851f6d268}
+      \strng{authornamehash}{a4b3f80920c5c9ed7499dfa851f6d268}
+      \strng{authorfullhash}{a4b3f80920c5c9ed7499dfa851f6d268}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Sequential Monte Carlo methods in practice}
+      \field{year}{2001}
     \endentry
     \entry{williams2010combining}{inproceedings}{}
       \name{author}{2}{}{%

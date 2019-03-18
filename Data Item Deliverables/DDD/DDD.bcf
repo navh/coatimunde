@@ -1978,14 +1978,20 @@
     <bcf:citekey order="1">sor</bcf:citekey>
     <bcf:citekey order="2">barry2015pushbroom</bcf:citekey>
     <bcf:citekey order="3">pdd</bcf:citekey>
-    <bcf:citekey order="4">schupd</bcf:citekey>
+    <bcf:citekey order="4">RPAS</bcf:citekey>
     <bcf:citekey order="5">opencv</bcf:citekey>
-    <bcf:citekey order="6">wise_foote_2011</bcf:citekey>
-    <bcf:citekey order="7">asctec</bcf:citekey>
-    <bcf:citekey order="8">hwang1992potential</bcf:citekey>
-    <bcf:citekey order="9">bortoff2000path</bcf:citekey>
-    <bcf:citekey order="10">williams2010combining</bcf:citekey>
-    <bcf:citekey order="11">sor</bcf:citekey>
+    <bcf:citekey order="6">woods2015dynamic</bcf:citekey>
+    <bcf:citekey order="7">grisetti_stachniss_burgard</bcf:citekey>
+    <bcf:citekey order="8">2018nanomap</bcf:citekey>
+    <bcf:citekey order="9">wise_foote_2011</bcf:citekey>
+    <bcf:citekey order="10">asctec</bcf:citekey>
+    <bcf:citekey order="11">doucet_freitas_gordon_2001</bcf:citekey>
+    <bcf:citekey order="12">hwang1992potential</bcf:citekey>
+    <bcf:citekey order="13">bortoff2000path</bcf:citekey>
+    <bcf:citekey order="14">barry2018high</bcf:citekey>
+    <bcf:citekey order="15">doucet_freitas_gordon_2001</bcf:citekey>
+    <bcf:citekey order="16">williams2010combining</bcf:citekey>
+    <bcf:citekey order="17">sor</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
