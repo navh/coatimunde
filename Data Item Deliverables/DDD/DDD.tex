@@ -60,21 +60,33 @@
 	\end{center}
 \end{titlepage}
 
-\begin{abstract}
-	The COATIMUNDE project attempts to extract target and depth information from a single camera feed source using the Robot Operating System as both an underlying architecture and a design philosophy. Four custom `nodes' are created which interact with existing nodes necessary to execute Robot Operating System code. These nodes identify targets, identify depth information, record movement of the robot, and compile it into a single set of points which allow the program to send appropriate commands to the robot to navigate toward targets while avoiding obstacles.
+\pagenumbering{roman}
+
+\section*{Acknowledgement}
+
+We would like to thank our supervisor, Dr. Sidney Givigi, for first introducing us to the problem of real time obstacle avoidance and providing us access to the tools and robots we used to complete our work.
+
+\section*{Abstract}
+
+The COATIMUNDE project attempts to extract target and depth information from a single camera feed source using the Robot Operating System as both an underlying architecture and a design philosophy. Four custom `nodes' are created which interact with existing nodes necessary to execute Robot Operating System code. These nodes identify targets, identify depth information, record movement of the robot, and compile it into a single set of points which allow the program to send appropriate commands to the robot to navigate toward targets while avoiding obstacles.
 	
-\end{abstract}
+\tableofcontents \newpage
 
+\pagenumbering{arabic}
 
-\tableofcontents
-
-\newpage
 
 \section{Introduction}
 
 	\subsection{Document Purpose}
 	
-	Using Computer Optics for Analyzing Trajectories in Mostly Unknown, Navigation Denied, Environments (\textsc{coatimunde}) is the goal of this project. The purpose of this document is to outline the detailed design for \textsc{coatimunde}. That is, any deviations from the original design/plan, what the final design was, how it was built, and how this met the requirements of the project.  The requirements for the project have been outlined in the Statement of Requirements. This design of the project is shown, through design artifacts, and discussed in the Design Section. The final results of the project are presented in the Results section, and the tests done to obtain these results are presented in the Verification and Validation section. This document will then provide a summary of the degree of success of the project and provide feedback on the course experience as a whole.
+	Using Computer Optics for Analyzing Trajectories in Mostly Unknown, Navigation Denied, Environments (\textsc{coatimunde}) is the goal of this project. The purpose of this document is to outline the detailed design for \textsc{coatimunde}. That is, any deviations from the original design/plan, what the final design was, how it was built, and how this met the requirements of the project.  The requirements for the project have been outlined in the Statement of Requirements. This design of the project is shown, through design artifacts, and discussed in the Design Section. The final results of the project are presented in the Results section, and the tests done to obtain these results are presented in the Verification and Validation section, some of which produced images like those shown in Figure \ref{fig:prettyresultsimage}. This document will then provide a summary of the degree of success of the project and provide feedback on the course experience as a whole.
+	
+	\begin{figure}[]
+		\centering
+		\includegraphics[width=0.95\linewidth]{results}
+		\caption{Visual Output of Running COATIMUNDE Software}
+		\label{fig:prettyresultsimage}
+	\end{figure}
 	
 	\subsection{Background}
 	
@@ -212,7 +224,14 @@
 		
 		\subsubsection{RViz}
 		
-		RViz is a visualization tool for ROS, it contains many tools to observe output from various ROS topics. Most notably, there are mechanisms that allow for the visualization of the amcl mapping and goal finding processes showing the robot is a point navigating a two dimensional birds-eye-view of what it perceives its environment looks like.
+		\begin{figure}[]
+			\centering
+			\includegraphics[width=0.5\linewidth]{rviz_screenshot}
+			\caption{RViz Visualization of amcl Localization in Angled Hallway}
+			\label{fig:rviz}
+		\end{figure}
+		
+		RViz is a visualization tool for ROS, it contains many tools to observe output from various ROS topics. Most notably, there are mechanisms that allow for the visualization of the amcl mapping and goal finding processes showing the robot is a point navigating a two dimensional birds-eye-view of what it perceives its environment looks like. An example of typical RViz output while running amcl is seen in Figure \ref{fig:rviz}.
 	
 	\subsection{Analyzing Trajectories}
 	
@@ -259,7 +278,7 @@
 		\label{fig:target}
 	\end{figure}
 
-	Camera data, after being processed by the camera node, goes into the target finder node. The target finder is mostly implementing the ArUco symbol finding libraries in OpenCV. ArUco symbols are intended for augmented reality purposes and provide very accurate position, orientation, and distance information. These values are inserted into a marker coordinate message that the other systems on the robot can understand and be published at least ten times per second.
+	Camera data, after being processed by the camera node, goes into the target finder node. The target finder is mostly implementing the ArUco symbol finding libraries in OpenCV passing messages as shown in Figure \ref{fig:target}. ArUco symbols are intended for augmented reality purposes and provide very accurate position, orientation, and distance information. These values are inserted into a marker coordinate message that the other systems on the robot can understand and be published at least ten times per second.
 	
 	Given the limited field of view of the robot, it cannot always be able to see the target. The robot, in the pfinder node, saves a dictionary of points that are associated with targets that have been resolved. Only the most recent `citing' of a target is recorded, and as soon as odometry updates are provided about the location of a target the last known location will be updated with these transformations.
 	
@@ -272,7 +291,7 @@
 		\label{fig:obstacle}
 	\end{figure}
 
-	Finding obstacles with depth information is difficult using monocular vision. The approach currently is to take advantage of the efficiency of the quaternion math allowing the finder node to update many points at once, and to sample many points along a plane at all times. When an image is processed, the depths along a row of pixels through the center of the image are converted into depth vectors which are published constantly. 
+	Finding obstacles with depth information is difficult using monocular vision. The approach currently is to take advantage of the efficiency of the quaternion math allowing the finder node to update many points at once, and to sample many points along a plane at all times. When an image is processed, the depths along a row of pixels through the center of the image are converted into depth vectors which are published constantly according to the block diagram shown in Figure \ref{fig:obstacle}. 
 	
 	Getting depth information from a single camera is still a topic of ongoing research to which there are no simple existing solutions. The TurtleBot also has a suite of depth sensors built in with the camera so these may be used initially instead of trying to use parallax information from a camera to allow for testing other aspects of the system. Currently the approach, which will not work on the flying platform with simpler cameras, is to combine the depth information from another sensor with the image information, and then to sample depths from this.
 	
@@ -303,7 +322,7 @@
 	
 	Creation of a reliable system to extract pose information from camera information is well beyond the scope of this project.
 	
-	These simpler forms of measuring the robot moving through the environment were used and the odometry node subscribed to the robot's odometry updates. This node turns all state updates into quaternions and publishes them for the route planner. The route planning node then adjusts the vectors to nearby obstacles and targets according to how much the robot has moved. 
+	These simpler forms of measuring the robot moving through the environment were used and the odometry node subscribed to the robot's odometry updates, according to Figure \ref{fig:state}. This node turns all state updates into quaternions and publishes them for the route planner. The route planning node then adjusts the vectors to nearby obstacles and targets according to how much the robot has moved. 
 	
 	New position estimates should be provided at least 10 times every second in the form of a quaternion from the last position that the robot was in passed over a ROS message.
 	
@@ -501,7 +520,14 @@
 	
 	Given that most of the project's custom nodes revolve around transforming camera data to extract information, the ArUco shapes for targets, parallax shift for obstacles, and optical flow for odometry, tests performed with only the camera and OpenCV outside of a node can be created and and executed without being contained within a ROS node. This was useful as one can use OpenCV's feature highlighting capabilities to ensure that the targets and obstacles were being identified while moving a camera through an environment. 
 	
-	Large collections of images taken with calibration grids were used when running different tests of the camera. These image sets allowed for significantly quicker verification of all aspects of the camera.
+	\begin{figure}[]
+		\centering
+		\includegraphics[width=0.5\linewidth]{calibration}
+		\caption{Example of Calibration Image}
+		\label{fig:calbcalbcalb}
+	\end{figure}
+	
+	Large collections of images taken with calibration grids, like those shown in Figure \ref{fig:calbcalbcalb}, were used when running different tests of the camera. These image sets allowed for significantly quicker verification of all aspects of the camera.
 	
 	\subsection{Ground Based Robot}
 	
@@ -527,7 +553,27 @@
 
 \subsection{Finding Targets}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.45\linewidth]{resultsTarget}
+	\caption{Positive Target Identification}
+	\label{fig:targ}
+\end{figure}
+
+Finding targets, especially how they were defined, was fairly simple to perform by leveraging existing libraries. Every image that is published to the camera topic on by the robot is taken in and saved both in colour and in grayscale. The grayscale image is then passed into an ArUco searching library, which returns an array containing arrays which contain the id and corners of every marker discovered in the image.
+
+Overlaying these corners on the colour image, as well as outputing the id number and any other necessary information was the easiest way to ensure that this program was discovering targets reliably. This frame is then published as its own image topic, an example of this output is shown in Figure \ref{fig:targ}.
+
 \subsection{Extracting Depth Information}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.45\linewidth]{verificationDepth}
+	\caption{Registered Depth Image}
+	\label{fig:deeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeep}
+\end{figure}
+
+Extracting depth information, while using the TurtleBot, was done by using the depth registered images which use Astra Pro hardware to combine image information with depth information from a Lidar. This composite image can be coloured based on the depth values alone, and targets can be plotted on it for easy verification that samples are being taken from appropriate locations and interesting points. An example of the depth information is shown in Figure \ref{fig:deeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeep}, which shows multiple boxes at different depths displaying an obvious gradient in colours.
 
 \subsection{Compiling Odometry Information}
 
