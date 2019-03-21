@@ -599,7 +599,7 @@ Given that all of our solutions have been left highly portable, there is no soft
 
 The biggest issue that plagued us for the entire duration of the project was the challenge of extracting depth information from a monocular camera. The flying robots only came with a monocular camera, and although initially we had intended to simply attach a second camera the decision to use this single camera was taken.
 
-After a significant amount of time trying to parse depth information using OpenCV modules, it was discovered that it may be easier to use some sort of approach rooted in more modern machine learning algorithms.
+After a significant amount of time trying to parse depth information using OpenCV modules, it was discovered that it may be easier to use some sort of approach rooted in more modern machine learning algorithms. One of the most successful implementations discovered, which also provided all information needed to create custom models from relatively simple training sets, was Chaoyang Wang's approach.\cite{Wang_2018_CVPR} 
 
 The machine learning approach did provide interesting results, but it was never implemented into a depth module. The depth module simply used the hardware registered depth information that was available from the TurtleBot's onboard sensors. These sensors did provide very accurate information, but were implemented later than useful simply to allow for the development of other modules, and would not be able to be ported over to the flying robot. 
 
