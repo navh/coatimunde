@@ -79,7 +79,7 @@ The COATIMUNDE project attempts to extract target and depth information from a s
 
 	\subsection{Document Purpose}
 	
-	Using Computer Optics for Analyzing Trajectories in Mostly Unknown, Navigation Denied, Environments (\textsc{coatimunde}) is the goal of this project. The purpose of this document is to outline the detailed design for \textsc{coatimunde}. That is, any deviations from the original design, what the final design is, how it was built, and how this met the requirements of the project.  The requirements for the project are outlined in the Statement of Requirements. This design of the project is shown, through design artifacts, and discussed in the Design Section. The final results of the project are presented in the Results section, and the tests done to obtain these results are presented in the Verification and Validation section, some of which produced images like those shown in Figure \ref{fig:prettyresultsimage}. This document will then provide a summary of the degree of success of the project and provide feedback on the course experience as a whole.
+	Using Computer Optics for Analyzing Trajectories in Mostly Unknown, Navigation Denied, Environments (\textsc{coatimunde}) is the goal of this project. The purpose of this document is to outline the detailed design for \textsc{coatimunde}. That is, any deviations from the original design, what the final design is, how it was built, and how this met the requirements of the project.  The requirements for the project are outlined in the Statement of Requirements. This design of the project is shown, through design artifacts, and discussed in the Design Section. The final results of the project are presented in the Results section, and the tests done to obtain these results are presented in the Verification and Validation section, some of which produced images like those shown in Figure \ref{fig:prettyresultsimage}. This document then provides a summary of the degree of success of the project and provide feedback on the course experience as a whole.
 	
 	\begin{figure}[]
 		\centering
@@ -90,11 +90,11 @@ The COATIMUNDE project attempts to extract target and depth information from a s
 	
 	\subsection{Background}
 	
-	The use of autonomous aerial vehicles is growing quickly, both in the consumer and professional sectors. Currently these vehicles rely on skilled pilots to accomplish a very limited set of tasks. Adding obstacle avoidance capabilities to these vehicles and simplifying the task of following targets could greatly expand the utility of these vehicles and allow for them to be used in many more situations. This section will give a quick background on obstacle avoidance, unmanned aircraft systems, computer vision, and the platforms we intend to use in this project.
+	The use of autonomous aerial vehicles is growing quickly, both in the consumer and professional sectors. Currently these vehicles rely on skilled pilots to accomplish a very limited set of tasks. Adding obstacle avoidance capabilities to these vehicles and simplifying the task of following targets could greatly expand the utility of these vehicles and allow for them to be used in many more situations. This section gives a quick background on obstacle avoidance, unmanned aircraft systems, computer vision, and the platforms we intend to use in this project.
 
 		\subsubsection{Aim}
 	
-		The aim of this project was to design a high level control system that will allow an air robot to identify a target and move towards it, avoiding any obstacles that are in the way. The ultimate goal of this project was tracking targets of interest in complex environments with a flying robot. To accomplish this goal we used a TurtleBot and then a flying robot with only the use of a single camera to identify targets and obstacles. 
+		The aim of this project is to design a high level control system that will allow an air robot to identify a target and move towards it, avoiding any obstacles that are in the way. The ultimate goal of this project is tracking targets of interest in complex environments with a flying robot. To accomplish this goal a TurtleBot and then a flying robot are used with only the use of a single camera to identify targets and obstacles. 
 		
 		\subsubsection{Benefits}
 		
@@ -119,7 +119,7 @@ The COATIMUNDE project attempts to extract target and depth information from a s
 		
 		The requirements for the project are described in the Statement of Requirements (DID-03) \cite{sor}. The main functional requirements for this project were identification and movement towards a target within 15m radius and identification and avoidance of multiple obstacles. 
 	
-		The initial requirements show certain assumptions that were made which can be attributed to ignorance at the time. The most notable of these was the use of a single video stream and exclusively OpenCV to parse depth data. It proved very difficult to extract reliable depth information from a single camera. Although we initially had identified a method using stereo cameras, the push-broom approach \cite{barry2015pushbroom} we had initially explored, we had abandoned this due to a belief that depth from a single camera would be similarly visible, and thus constrained ourselves in the requirements phase to this.
+		The initial requirements show certain assumptions that were made which can be attributed to ignorance at the time. The most notable of these is the use of a single video stream and exclusively OpenCV to parse depth data. It proved very difficult to extract reliable depth information from a single camera. Although initially a method using stereo cameras had been identified, the push-broom approach \cite{barry2015pushbroom} had been explored, it was abandoned due to a belief that depth from a single camera would be similarly visible, and thus constrained ourselves in the requirements phase to this.
 
 		\subsubsection{Preliminary Design}
 		
@@ -141,7 +141,7 @@ This initial design has been changed since the document was presented. It was mo
 	
 	\subsubsection{Porting to UAV}
 	
-	Presumably delayed forever, the inertia to simply make this execute on a platform that allows very reliable feedback and predictable reactions to inputs means that, given our lack of exposure to the flying platform, it will not be implemented in its final form on a flying platform. 
+	Presumably delayed forever, the inertia to simply make this execute on a platform that allows very reliable feedback and predictable reactions to inputs means that, given our lack of exposure to the flying platform, it is not implemented in its final form on a flying platform. 
 
 	\subsection{Definitions}
 	
@@ -199,7 +199,7 @@ This initial design has been changed since the document was presented. It was mo
 	
 		\subsubsection{Target Finding}
 		
-		While finding arbitrary targets was preferable, this project was limited to finding special targets designed to be easily identified in a busy environment. These targets are called ArUco shapes. There are existing libraries in OpenCV that are useful for identifying ArUco shapes with very little overhead. 
+		While finding arbitrary targets is preferable, this project is limited to finding special targets designed to be easily identified in a busy environment. These targets are called ArUco shapes. There are existing libraries in OpenCV that are useful for identifying ArUco shapes with very little overhead. 
 		
 		\subsubsection{Obstacle Finding}
 		
@@ -238,22 +238,22 @@ A depth registered image is one where pixels hold an extra value. This value is 
 	
 	\subsection{Analyzing Trajectories}
 	
-	Analyzing trajectories is a term that refers to the robot completing movements to go towards the target. To do path planning the project will implement potential fields. Potential fields function through creating vectors pointing to objects in the environment and assigning them positive or negative values. The negative vectors attracts the robot towards the target and the positive vectors make obstacles repulsive to the robot \cite{hwang1992potential}. This algorithm was selected to do path planning as the robot will not have to build a map of the environment to create path to the target \cite{bortoff2000path}. Potential fields allow for the robot to change its path along the way if it discovers new obstacles. This approach to movement does not require complete knowledge of the environment it is navigating. In its simplest implementations the environment must be sparsely populated with obstacles, or simple things like straight lines can become `wall traps' and a robot can become impossibly lost.
+	Analyzing trajectories is a term that refers to the robot completing movements towards the target. To do path planning, the project will implement potential fields. Potential fields function through creating vectors pointing to objects in the environment and assigning them positive or negative values. The negative vectors attract the robot towards the target and the positive vectors make obstacles repulsive to the robot \cite{hwang1992potential}. This algorithm was selected to do path planning as the robot will not have to build a map of the environment to create path to the target \cite{bortoff2000path}. Potential fields allow for the robot to change its path along the way if it discovers new obstacles. This approach to movement does not require complete knowledge of the environment it is navigating. In its simplest implementation the environment must be sparsely populated with obstacles, or simple things like straight lines can become `wall traps' and a robot can become impossibly lost.
 
 	\subsection{Obstacle Avoidance}
 	
 	There are multiple approaches to obstacle avoidance. The simplest require no prior knowledge of the environment they are navigating and simply react to obstacles as they appear. This approach can be useful for high-speed applications with sparse obstacles, \cite{barry2018high} but become more limited in smaller spaces.
 	
-	Using more complex algorithms that require more memory of the environment end up being easier when a complete map is saved. For this project the amcl localization system was used, which relies on a known map and fairly simple path planning algorithms which are able to solve more complex routes, at the expense of needing to spend more time estimating the robots position in the environment.\cite{doucet_freitas_gordon_2001}
+	Using more complex algorithms that require more knowledge of the environment end up being easier when a complete map is saved. For this project the amcl localization system is used, which relies on a known map and fairly simple path planning algorithms which are able to solve more complex routes, at the expense of needing to spend more time estimating the robots position in the environment.\cite{doucet_freitas_gordon_2001}
 
 	\subsection{Unknown and Navigation Denied Environments}
 
-	The robot must always remember where identified target and obstacles are in relation to itself even when its own position changes. Navigation denied means that the robot will not have access to a GPS to locate itself, so it must search its unknown environment to identify targets and obstacles. An unknown environment can be defined as an environment in which the robot has no prior knowledge of its surroundings and must identify objects in this environment itself through computer vision. Potential fields will be used to track the location of the target and obstacles through updating each objects vector. These vectors will be used in the state machine to properly create a path to the target, as they are either negative for the target or positive for obstacles. This once again is the reason that the project will be using potential fields to plan the path to the target. 
+	The robot must always remember where identified targets and obstacles are in relation to itself even when its own position changes. Navigation denied means that the robot does not have access to a GPS to locate itself, so it must search its unknown environment to identify targets and obstacles. An unknown environment can be defined as an environment in which the robot has no prior knowledge of its surroundings and must identify objects in this environment itself through computer vision. Potential fields are be used to track the location of the target and obstacles through updating the vector of each object. These vectors are used in the state machine to properly create a path to the target, as they are either negative for the target or positive for obstacles. This is the reason that the project is using potential fields to plan the path to the target. 
 
 
 	\subsection{Block Diagram}
 	
-	The block diagram that is shown in Figure \ref{fig:blockdiagram} contains the outline of the \textsc{coatimunde} project. It is a very high level overview and does not contain references to most of the hardware in use for two reasons: the actual robot and laptop being used are relatively arbitrary as long as the software included is present on both. ROS also includes many nodes which are not represented on the block diagram. Only the nodes that are most important to our project, have been specifically added to ROS, or have been custom created are included on our system block diagram.
+	The block diagram that is shown in Figure \ref{fig:blockdiagram} contains the outline of the \textsc{coatimunde} project. It is a very high level overview and does not contain references to most of the hardware in use for a main reason, the actual robot and laptop being used are relatively arbitrary as long as the software included is present on both. ROS also includes many nodes which are not represented on the block diagram. Only the nodes that are most important to our project have been specifically added to ROS, or have been custom created are included on our system block diagram.
 	
 	The laptop contains the initialization, target selection, and RViz. The laptop also takes the user input when necessary and processes it appropriately.  The robot does all the target identification, obstacle avoidance, and movement decisions autonomously. This means it takes the input from the camera into a video processing node and then creates a corresponding ROS message to be sent to the other systems on the robot. These messages are created and used throughout the different systems on the robot. The model of the robot's environment is found through subscribing to messages from the obstacle finder node, target finder node, and the state estimate node. This model then creates a message to pass to the route planning node which tells the movement node how to update its position and speed. 
 	
@@ -268,9 +268,9 @@ A depth registered image is one where pixels hold an extra value. This value is 
 
 	\subsection{Custom Nodes}
 	
- All of the nodes that were written for this project were written in Python and then built in ROS to be implemented on the robot. Python was used for this project because C++ and Python are the most supported languages for both ROS Nodes and OpenCV. While C++ could possibly be faster in execution, we believe that most of our bottlenecks occur from the actual processing of images. The library calls to OpenCV were still executing in the lower level C that OpenCV was written in, so there would be minimal gains had we written it in C++.
+ All of the nodes written for this project are written in Python and then built in ROS to be implemented on the robot. Python is used for this project because C++ and Python are the most supported languages for both ROS Nodes and OpenCV. While C++ could possibly be faster in execution, most of our bottlenecks occur from the actual processing of images. The library calls to OpenCV are still executing in the lower level C that OpenCV was written in, so there would be minimal gains had we written it in C++.
  
- The Camera node has been referenced in many locations. The camera node is built into ROS and provides image data in various formats. Processes can subscribe to these different image formats. In general the raw image information was used by some of the custom nodes and many other built in nodes. Common transformations that must be applied to all photographs will be added to the camera node. These transformations are to correct for the distortion that any camera has due to its own geometry.
+ The Camera node is referenced in many locations. The camera node is built into ROS and provides image data in various formats. Processes can subscribe to these different image formats. In general the raw image information is used by some of the custom nodes and many other built in nodes. Common transformations that must be applied to all photographs was added to the camera node. These transformations are to correct for the distortion that any camera has due to its own geometry.
 	
 	\subsubsection{Target Finding}
 	
@@ -283,7 +283,7 @@ A depth registered image is one where pixels hold an extra value. This value is 
 
 	Camera data, after being processed by the camera node, goes into the target finder node. The target finder is mostly implementing the ArUco symbol finding libraries in OpenCV passing messages as shown in Figure \ref{fig:target}. ArUco symbols are intended for augmented reality purposes and provide very accurate position, orientation, and distance information. These values are inserted into a marker coordinate message that the other systems on the robot can understand and be published at least ten times per second.
 	
-	Given the limited field of view of the robot, it cannot always be able to see the target. The robot, in the pfinder node, saves a dictionary of points that are associated with targets that have been resolved. Only the most recent `citing' of a target is recorded, and as soon as odometry updates are provided about the location of a target the last known location will be updated with these transformations.
+	Given the limited field of view of the robot, it cannot always be able to see the target. The robot, in the pfinder node, saves a dictionary of points that are associated with targets that have been resolved. Only the most recent `citing' of a target is recorded, and as soon as odometry updates are provided about the location of a target the last known location is updated with these transformations.
 	
 	\subsubsection{Obstacle Finding}
 	
