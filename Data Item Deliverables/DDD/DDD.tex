@@ -42,7 +42,7 @@
 		
 		\vspace{0.2cm}
 		
-		\normalsize{Computer Optics Analyzing Trajectories In Mostly Unknown, Navigation Denied, Environments}
+		\normalsize{Computer Optics Analyzing Trajectories In Mostly Unknown, Navigation Denied Environments}
 		
 		\vspace{0.1cm}
 		
@@ -79,7 +79,7 @@ The COATIMUNDE project attempts to extract target and depth information from a s
 
 	\subsection{Document Purpose}
 	
-	Using Computer Optics for Analyzing Trajectories in Mostly Unknown, Navigation Denied, Environments (\textsc{coatimunde}) is the goal of this project. The purpose of this document is to outline the detailed design for \textsc{coatimunde}. That is, any deviations from the original design/plan, what the final design was, how it was built, and how this met the requirements of the project.  The requirements for the project have been outlined in the Statement of Requirements. This design of the project is shown, through design artifacts, and discussed in the Design Section. The final results of the project are presented in the Results section, and the tests done to obtain these results are presented in the Verification and Validation section, some of which produced images like those shown in Figure \ref{fig:prettyresultsimage}. This document will then provide a summary of the degree of success of the project and provide feedback on the course experience as a whole.
+	Using Computer Optics for Analyzing Trajectories in Mostly Unknown, Navigation Denied, Environments (\textsc{coatimunde}) is the goal of this project. The purpose of this document is to outline the detailed design for \textsc{coatimunde}. That is, any deviations from the original design, what the final design is, how it was built, and how this met the requirements of the project.  The requirements for the project are outlined in the Statement of Requirements. This design of the project is shown, through design artifacts, and discussed in the Design Section. The final results of the project are presented in the Results section, and the tests done to obtain these results are presented in the Verification and Validation section, some of which produced images like those shown in Figure \ref{fig:prettyresultsimage}. This document will then provide a summary of the degree of success of the project and provide feedback on the course experience as a whole.
 	
 	\begin{figure}[]
 		\centering
@@ -90,63 +90,58 @@ The COATIMUNDE project attempts to extract target and depth information from a s
 	
 	\subsection{Background}
 	
-	Both in the consumer and professional sectors the use of autonomous aerial vehicles is growing quickly. Currently these vehicles rely on skilled pilots to accomplish a very limited set of tasks. Adding obstacle avoidance capabilities to these vehicles and simplifying the task of following targets could allow for these systems to be used in many more situations. This section will give a quick background on obstacle avoidance, unmanned aircraft systems, computer vision, and the platforms we intend to use in this project.
+	The use of autonomous aerial vehicles is growing quickly, both in the consumer and professional sectors. Currently these vehicles rely on skilled pilots to accomplish a very limited set of tasks. Adding obstacle avoidance capabilities to these vehicles and simplifying the task of following targets could greatly expand the utility of these vehicles and allow for them to be used in many more situations. This section will give a quick background on obstacle avoidance, unmanned aircraft systems, computer vision, and the platforms we intend to use in this project.
 
 		\subsubsection{Aim}
 	
-		The aim of this project was to design a high level control system that will allow an air robot to identify a target and move toward it, avoiding any obstacles that are in the way. Tracking targets of interest in complex environments with a flying robot was the ultimate goal of this project. To accomplish this goal we used a TurtleBot and then a flying robot through only the use of a camera to identify targets and obstacles. 
+		The aim of this project was to design a high level control system that will allow an air robot to identify a target and move towards it, avoiding any obstacles that are in the way. The ultimate goal of this project was tracking targets of interest in complex environments with a flying robot. To accomplish this goal we used a TurtleBot and then a flying robot with only the use of a single camera to identify targets and obstacles. 
 		
 		\subsubsection{Benefits}
 		
-		Having a flying robot capable of accomplishing the project's tasks while totally autonomous will allow for the use of flying robots in environments closer to the ground, and will assist pilots in complex environments. These general requirements can be used in many situations. These benefits for society are the motivation behind this project.
+		Having a flying robot capable of accomplishing the desired tasks while remaining totally autonomous will hopefully translate into improved performance from flying robots in environments closer to the ground, and will assist pilots in complex environments. These general requirements can be used in many situations. These potential benefits to society as a whole are the motivation behind this project.
 		
 		\begin{itemize}
 			\item \textbf{Surveillance:} The robot could follow an interesting object, especially in an urban environment, without colliding with obstacles.
-			\item \textbf{Search and Rescue:} The robot could move toward visual way-points set by pilots while avoiding obstacles in complex environments assisting in search efforts.
-			\item \textbf{Inspections:} The robot could inspect objects in hard to reach environments and complex environments like rooftops or bridges.
-			\item \textbf{Disaster Relief:} The robot could check inside buildings that may have compromised structural integrity, rubble on ground, \textit{\&c}.
-			\item \textbf{Agriculture:} The robot could inspect tree-fruit or crops that can not be observed from overhead or check assets in remote locations such as irrigation equipment.
+			\item \textbf{Search and Rescue:} The robot could assist in search efforts by moving towards visual way-points set by pilots while avoiding obstacles in complex environments.
+			\item \textbf{Inspections:} The robot could inspect objects in hard to reach and complex environments like rooftops or bridges.
+			\item \textbf{Disaster Relief:} The robot could check inside of buildings that may have compromised structural integrity, rubble on ground, \textit{\&c}.
+			\item \textbf{Agriculture:} The robot could inspect tree-fruit or crops that cannot be observed from overhead and it could check assets in remote locations such as irrigation equipment.
 		\end{itemize}
 
 		\subsubsection{Scope}
 	
-		The project started through the use of a ground robot then progressing to a flying robot. The project used computer vision to find targets and for avoiding multiple obstacles. Both robots are highly autonomous, requiring only user input to commence. 
+		The project started through the use of a ground robot and then progressing to a flying robot. The project used computer vision to find targets and for avoiding multiple obstacles. Both robots are highly autonomous, requiring only user input to commence. 
 
-		The scope of the project was limited due to only being able to test indoors. Ideally the UAV would be operating at a high speed and identifying an arbitrary target in an unpredictable environment. In this case though the testing was completed within the confines of a relatively small robotics laboratory. Smaller obstacles were used indoors simply due to space constraints. Lower speeds were used as well, again due to the lack of space. 
+		The scope of the project was limited due to being restricted to testing indoors. Ideally the unmanned aerial vehicle (UAV) would be operating at a high speed and identifying an arbitrary target in an unpredictable environment. In this case, the testing was completed within the confines of a relatively small robotics laboratory. Smaller obstacles were used indoors simply due to space constraints. Lower speeds were used as well, again due to the lack of space. 
 
 
 		\subsubsection{Requirements}
 		
-		The requirements for the project are described in the Statement of Requirements (DID-03) \cite{sor}. The main functional requirements for this project were identification and movement towards a target within 15m radius, and identification and avoidance of multiple obstacles. 
+		The requirements for the project are described in the Statement of Requirements (DID-03) \cite{sor}. The main functional requirements for this project were identification and movement towards a target within 15m radius and identification and avoidance of multiple obstacles. 
 	
-		The initial requirements show certain assumptions that were made which can be attributed to ignorance at the time. The most notable of these, the use of a single video stream and exclusively OpenCV to parse depth data. It proved very difficult to extract reliable depth information from a single camera. Although we initially had identified a method using stereo cameras, the push-broom approach \cite{barry2015pushbroom} we had initially explored, we had abandon this due to a belief that depth from a single camera would be similarly visible, and constrained ourselves in the requirements phase to this.
+		The initial requirements show certain assumptions that were made which can be attributed to ignorance at the time. The most notable of these was the use of a single video stream and exclusively OpenCV to parse depth data. It proved very difficult to extract reliable depth information from a single camera. Although we initially had identified a method using stereo cameras, the push-broom approach \cite{barry2015pushbroom} we had initially explored, we had abandoned this due to a belief that depth from a single camera would be similarly visible, and thus constrained ourselves in the requirements phase to this.
 
-		\subsubsection{Preliminary Design }
+		\subsubsection{Preliminary Design}
 		
 		The preliminary design document outlines the initial design for the project \cite{pdd}. The initial design was fairly robust, but certain aspects had intentionally not yet been selected. The main block diagram Figure \ref{fig:blockdiagram} remains totally unchanged, the only additions are the specific topics being subscribed to by each of the custom modules. 
 		
-		The most substantial changes come to the actual actions to be performed by each node, given that the nodes were intentionally left fairly undefined and only their specific input and output were described this allowed for fairly substantial changes to the underlying logic that allows these nodes to complete their tasks.
+		The most substantial changes came to the actual actions to be performed by each node. Given that the nodes were intentionally left fairly undefined and only their specific input and output were described, this allowed for fairly substantial changes to the underlying logic that allows these nodes to complete their tasks.
 
-<<<<<<< HEAD
+
 This initial design has been changed since the document was presented. It was modified as unforeseen problems with the design came to light and deviations were made to ensure the project was meeting the requirements.
 
-		\subsubsection{Changes to Schedule - NOT DONE}
-
-The change of schedule document was handed in at the beginning of January \cite{schupd}. This outlined any deadlines that were modified due to delays in other functionalities. The area that look longer than expected was getting the camera to consistently recognize ArUco markers on the Turtlebot. This extension caused all other deadline to get delayed or shorten as this task was on the critical path for the project. 
-=======
 
 		\subsubsection{Changes to Schedule}
 	
-	While ROS is a very flexible framework for writing robot software, there is a significant understanding of the underlying plumbing needed before some of the higher level capabilities can be used. Most of the changes to the schedule are a result of over-estimating how difficult it would be to implement some of the higher level aspects of this project, and significantly under-estimating how much time it would take to do simpler tasks.
+	While Robot Operating System (ROS) is a very flexible framework for writing robot software, there was a significant understanding of the underlying plumbing needed before some of the higher level capabilities could be used. Most of the changes to the schedule are a result of over-estimating how difficult it would be to implement some of the higher level aspects of this project, and significantly under-estimating how much time it would take to do simpler tasks.
 	
 		\subsubsection{Changes to Custom Nodes}
 	
-	There are many existing nodes that are similar to the nodes we had intended to create, but for the sake of simplicity these were initially ignored to create a very simple set of nodes according to our preliminary design. The most notable changes are only in what specific information was passed between different nodes, in particular, the way that depth information was parsed from a registered depth image. By parsing all information from a single depth image, including information about ArUco markers locations instead of attempting to use other mechanisms, the hope was that on the flying platform this information could be extracted in exactly the same way once a mechanism to extract depth information from a single camera image was developed.
+	Rather than using a pre-existing set of nodes, custom nodes were created in accordance with the preliminary design. The most notable changes are only in what specific information was passed between different nodes, in particular the way that depth information was parsed from a registered depth image. By parsing all information from a single depth image and including information about ArUco marker locations instead of attempting to use other mechanisms, the intent was that on the flying platform, this information could be extracted in exactly the same way once a mechanism to extract depth information from a single camera image was developed.
 	
 	\subsubsection{Porting to UAV}
 	
 	Presumably delayed forever, the inertia to simply make this execute on a platform that allows very reliable feedback and predictable reactions to inputs means that, given our lack of exposure to the flying platform, it will not be implemented in its final form on a flying platform. 
->>>>>>> 0047ab2d4f2faf1a2045247c787c2ea5cbec0f61
 
 	\subsection{Definitions}
 	
@@ -156,15 +151,15 @@ The change of schedule document was handed in at the beginning of January \cite{
 		
 		\subsubsection{Unmanned Aircraft Systems}
 		
-		Very generally any powered vehicle that uses aerodynamic forces to provide lift, without a human operator being carried, can be considered an unmanned aerial vehicle. Currently most of these vehicles make up a single component of a larger unmanned aircraft system. An Unmanned aircraft system (UAS), or remotely piloted aircraft system (RPAS), is an aircraft without a human pilot on-board, instead controlled from an operator on the ground. Such a system can have varying levels of autonomy, something as simple as a model aircraft could be considered a UAS without any automation capabilities.\cite{RPAS}
+		Very generally, any powered vehicle that uses aerodynamic forces to provide lift, without a human operator being carried, can be considered an unmanned aerial vehicle. Currently most of these vehicles make up a single component of a larger unmanned aircraft system. An Unmanned aircraft system (UAS), or remotely piloted aircraft system (RPAS), is an aircraft without a human pilot on-board, instead controlled by an operator on the ground. Such a system can have varying levels of autonomy, something as simple as a model aircraft could be considered a UAS without any automation capabilities.\cite{RPAS}
 		
 		\subsubsection{Computer Vision}
 		
-		Currently there are many different ways that computers can make high-level decisions based on digital image information. There are many methods to acquire, process, and analyze data from the real world using a camera. While this is a very broad field, we intend to focus on motion estimation and object recognition. Both will be working with a video stream taken from a camera. 
+		Currently there are many different ways that computers can make high-level decisions based on digital image information. There are many methods to acquire, process, and analyze data from the real world using a camera. While this is a very broad field, the intended focus is on motion estimation and object recognition, using a video stream taken from a camera. 
 		
-		Motion estimation can be accomplished using direct methods which compare whole fields of pixels to each other over successive frames, compared to indirect methods which look for specific features. The information resulting from motion estimation streams can be used to both compensate for motion while analyzing other aspects of an image, and update a state machine.
+		Motion estimation can be accomplished using direct methods which compare whole fields of pixels to each other over successive frames, compared to other indirect methods which look for specific features. The information resulting from motion estimation streams can be used to both compensate for motion while analyzing other aspects of an image, and to update a state machine.
 		
-		Object recognition in our project will be accomplishing two tasks: identifying a marker or target which will require more involved object recognition calculations, and very simple techniques, such as edge detection, to identify obstacles that exist in the path of the robot.
+		Object recognition in our project will accomplish two tasks: identifying a marker or target which will require more involved object recognition calculations, and very simple techniques, such as edge detection, identifying obstacles that exist in the path of the robot.
 		
 		\subsubsection{OpenCV}
 		
@@ -172,55 +167,55 @@ The change of schedule document was handed in at the beginning of January \cite{
 		
 		\subsubsection{Gazebo}
 		
-		Gazebo is a robot simulator that allows for creation of a realistic environment which includes both obstacles and markers similar to those being used in the lab. It was then used to rapidly test algorithms.
+		Gazebo is a robot simulator that allows for the creation of a realistic environment which includes both obstacles and markers similar to those being used in the laboratory testing environment. It was then used to rapidly test algorithms.
 		
 		\subsubsection{Robot Operating System}
 		
-		The Robot Operating System (ROS) is a distributed message system that allows for various sensors and processors to work together to control a robot. It is open source and has been integrated already with OpenCV and Gazebo. There are many additional tools for detecting obstacles, mapping the environment, planning paths, and much more. It is also a robust messaging system that has been proven to be capable of real-time processes.
+		The Robot Operating System (ROS) is a distributed message system that allows for various sensors and processors to work together to control a robot. It is open source and has been integrated already with OpenCV and Gazebo. There are many additional tools for detecting obstacles, mapping the environment, planning paths, and much more. ROS is also a robust messaging system that has been proven to be capable of real-time processes.
 		
 		\subsubsection{gmapping}
 		
-		OpenSLAM has developed gmapping to create grid maps from laser range data. It uses a Rao-Blackwellized particle filter whe are each particle carries an individual map of the environment, and then the number of particles needed are reduced to create a more accurate map with significantly reduced uncertainty.\cite{grisetti_stachniss_burgard}
+		OpenSLAM has developed gmapping to create grid maps from laser range data. It uses a Rao-Blackwellized particle filter where each particle carries an individual map of the environment. Then the number of particles needed are reduced to create a more accurate map with significantly reduced uncertainty.\cite{grisetti_stachniss_burgard}
 		
-		While this process does rely on laser information, and it was only ever used in its unmodified form for this project, the intent was to port it to work with a slice from a depth registered image to allow it to work on a platform with only a single camera, a process that has been shown to turn a three-dimensional field into a two-dimensional map accurately.\cite{2018nanomap}
+		While this process relies on laser information, and it is only ever used in its unmodified form for this project, the intent was to port it, so it would work with a slice from a depth registered image. This would allow it to work on a platform with only a single camera, a process that has been shown to turn a three-dimensional field into a two-dimensional map accurately.\cite{2018nanomap}
 		
 		
 		\subsubsection{TurtleBot}
 		
-		The TurtleBot is a robot kit with open-source design and software. A TurtleBot is a robot built to the specification for TurtleBot Compatible Platforms\cite{wise_foote_2011}. In this case the TurtleBot has a Kobuki Base, an Acer Netbook running Ubuntu with ROS packages added, an X-Box Kinect, and some mounting plates. 
+		The TurtleBot is a robot kit with open-source design and software. It is built to the specification for TurtleBot Compatible Platforms\cite{wise_foote_2011}. In this case the TurtleBot has a Kobuki Base, an Acer Netbook running Ubuntu with ROS packages added, an X-Box Kinect, and some mounting plates. 
 		
 		The resulting robot looks like a disk supporting some circular shelves with a small laptop and a camera on the shelves. The base disk is 35.4cm in diameter, the topmost shelf is 42cm from the ground. The robot has a maximum speed of 0.65m/s. 
 		
 		\subsubsection{AscTec Pelican}
 		
-		The Ascending Technologies Pelican is a 65.1cm by 65.1cm quad-copter designed for research purposes\cite{asctec}. It includes a camera, a high level and low level processor set up for computer vision, and simultaneous localization and mapping (SLAM) research. It is also capable of interfacing easily with other controllers and can carry up to a kilogram of additional gear. This particular flying robot comes installed with a single camera, that was used to collect stereo data which was later used for depth information.
+		The Ascending Technologies Pelican is a 65.1cm by 65.1cm quad-copter designed for research purposes\cite{asctec}. It includes a camera, a high level and low level processor set up for computer vision, and simultaneous localization and mapping (SLAM) research. It is also capable of interfacing easily with other controllers and can carry up to a kilogram of additional gear. This particular flying robot comes installed with a single camera, that was used to collect stereo data and was later used for depth information.
 
 		
 \section{Design}
 	
 	\subsection{Computer Vision}
 	
-	Computer optics was used as the robot employed a camera to identify objects in the surrounding environment, specifically targets and obstacles. There are three unique manners that computer vision was used as an input source for this project; these are target finding, obstacle finding, and optical flow. The implementation of all three created a navigation kit that exclusively uses a camera as input, resulting in a very transferable and lightweight package for flying robots.
+	Computer optics is used as the robot employed a camera to identify objects in the surrounding environment, specifically targets and obstacles. Computer vision was used as an input source for this project in three unique manners; these are target finding, obstacle finding, and optical flow. The implementation of all three created a navigation kit that exclusively uses a camera as input, resulting in a very transferable and lightweight package for flying robots.
 	
 		\subsubsection{Target Finding}
 		
-		While finding arbitrary targets would be preferred, this project is going to be limited to finding special targets designed to be easily identified in a busy environment called ArUco shapes. There are existing libraries in OpenCV that are useful for identifying ArUco shapes with very little overhead. 
+		While finding arbitrary targets was preferable, this project was limited to finding special targets designed to be easily identified in a busy environment. These targets are called ArUco shapes. There are existing libraries in OpenCV that are useful for identifying ArUco shapes with very little overhead. 
 		
 		\subsubsection{Obstacle Finding}
 		
-		Finding obstacles will be a considerable aspect of this project. There are various algorithms which leverage the robot's motion through the environment to extract key features of the environment, indicating the potential presence of obstacles. Parallax shift is the tendency for items that are closer to a camera to appear to move more or change in size more than a background that is further away and can be used to indicate where items are and how close they are. Occlusion is where one item moves in front of another item and covers it up, this indicates that the item still in view is closer to the camera than the item that has been hidden. OpenCV contains libraries for both of these tasks, as well as others that may end up being employed to identify obstacles in the environment.
+		Finding obstacles is a considerable aspect of this project. There are various algorithms which leverage the robot's motion through the environment to extract key features of the environment, indicating the potential presence of obstacles. Parallax shift is the tendency for items that are closer to a camera to appear to move more or change in size more than a background that is further away. This shift can be used to indicate where items are and how close they are. Occlusion is where one item moves in front of another item and covers it up. When this occurs it indicates that the item still in view is closer to the camera than the item that has been hidden. OpenCV contains libraries for both of these tasks, as well as others that may end up being employed to identify obstacles in the environment.
 		
 		\subsubsection{Optical Flow}
 		
-		Optical Flow is a possible source of motion information for the robot. As a camera is moved through an environment the entire image will appear to scale larger as the camera moves forward, rotate left and right as a robot rolls, and shift left, right, up, and down as the robot pitches and yaws. Calculating shifts from one frame to another for global shifts caused by movement of the camera is a mathematically intensive process beyond the scope of this project. OpenCV contains libraries to try to parse this information, but it requires a considerable amount of effort to combine this information with a model of a robot to get useful position estimation. Given the extreme difficulty of extracting meaningful information from a camera, especially given the very constrained geometry of a single camera, means that this approach was not used in this project.
+		Optical Flow is a possible source of motion information for the robot. As a camera is moved through an environment, the entire image will appear to scale larger as the camera moves forward, rotate left and right as a robot rolls, and shift left, right, up, and down as the robot pitches and yaws. Calculating shifts from one frame to another for global shifts caused by movement of the camera is a mathematically intensive process beyond the scope of this project. OpenCV contains libraries to try to parse this information, but it requires a considerable amount of effort to combine this information with a model of a robot to get useful position estimation. Given the extreme difficulty of extracting meaningful information from a camera, especially given the very constrained geometry of a single camera, means that this approach was not used in this project.
 		
 		\subsubsection{Pinhole Camera}
 		
 		The pinhole camera, in this context, is not an existing camera, but a mathematical construct which models the relationship between objects in three-dimensional space, and a projection onto an image plane. Images are grids of pixels, and ideally a straight line from any point on this grid, through a single point in front of the plane, would terminate at the real location in three-dimensional space of the object in the photo. Real cameras use lenses and imperfect capture devices which introduce distortion. This is ignored for the most part, and only objects in the center of the camera's field of vision are used in this project, this is computationally inexpensive and allows software to be ported between different cameras quickly. 
 		
 		\subsubsection{Depth Registered Image}
-		
-		An image where pixels have an extra value: a distance in real space at a known scale, allowing for distances to targets and interesting points to be easily extracted from the image. These can be created in hardware using advanced sensors like the Astra Pro on the TurtleBot 2, or using other post-processing techniques.
+
+A depth registered image is one where pixels hold an extra value. This value is a distance in real space at a known scale. This allows for distances to targets and interesting points to be easily extracted from the image. These can be created in hardware using advanced sensors like the Astra Pro on the TurtleBot 2, or using other post-processing techniques.
 		
 		\subsubsection{Stereo Depth Estimation}
 		
