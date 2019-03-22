@@ -512,9 +512,8 @@ RESULTS- After verifying that the depth registered versions of images are accura
 	\subsubsection{coati\_odom tests}
 	
 	The incoming odometry data is parsed and passed along and the transformations are all very small due to the high frequency which this data arrives at. A stream of values output from the odometry node containing the odometry information was printed to the screen. This allows for confirmation that the values seen make sense with the movements the robot is currently performing. 
-It is easy to print a stream of values to be verified as the robot is moving along to ensure they make sense. 
-Also the robot return values even when not being driven it is possible to turn both the TurtleBot and the AscTec Pelican by hand and observe what values the odometry reports back.
-	
+	To solely test this aspect of the project, the odometry node was used and the robot was turned by hand, and this still reports back an odometry result. This value is able to be tested much more accuracy as the exact movement is known and could be compared to the result from the odometry node. 
+
 	If a version of odometry was created that did try to use optical flow from visual information, it would be possible to compare the values it generated against those collected by the sensors on the robot.
 	
 	\subsubsection{coati\_pfinder tests}
@@ -573,7 +572,7 @@ Also the robot return values even when not being driven it is possible to turn b
 	\label{fig:targ}
 \end{figure}
 
-Finding targets, especially how they were defined, was fairly simple to perform by leveraging existing libraries. Every image that is published to the camera topic on by the robot is taken in and saved both in colour and in grayscale. The grayscale image is then passed into an ArUco searching library, which returns an array containing arrays which contain the id and corners of every marker discovered in the image.
+Finding targets, especially how they were defined, is fairly simple to perform by leveraging existing libraries. Every image that is published to the camera topic on by the robot is taken in and saved both in colour and in grayscale. The grayscale image is then passed into an ArUco searching library, which returns an array containing arrays which contain the id and corners of every marker discovered in the image.
 
 Overlaying these corners on the colour image, as well as outputing the id number and any other necessary information was the easiest way to ensure that this program was discovering targets reliably. This frame is then published as its own image topic, an example of this output is shown in Figure \ref{fig:targ}.
 
