@@ -1996,6 +1996,7 @@
     <bcf:citekey order="19">thrun2005probabilistic</bcf:citekey>
     <bcf:citekey order="20">sor</bcf:citekey>
     <bcf:citekey order="21">Wang_2018_CVPR</bcf:citekey>
+    <bcf:citekey order="22">Wang_2018_CVPR</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

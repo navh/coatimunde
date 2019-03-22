@@ -29,23 +29,25 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {1.3.2}Unmanned Aircraft Systems}{3}{subsubsection.1.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.3}Computer Vision}{3}{subsubsection.1.3.3}
+\contentsline {subsubsection}{\numberline {1.3.3}Quaternion}{3}{subsubsection.1.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.4}OpenCV}{4}{subsubsection.1.3.4}
+\contentsline {subsubsection}{\numberline {1.3.4}Computer Vision}{3}{subsubsection.1.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.5}Gazebo}{4}{subsubsection.1.3.5}
+\contentsline {subsubsection}{\numberline {1.3.5}OpenCV}{4}{subsubsection.1.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.6}Robot Operating System}{4}{subsubsection.1.3.6}
+\contentsline {subsubsection}{\numberline {1.3.6}Gazebo}{4}{subsubsection.1.3.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.7}gmapping}{4}{subsubsection.1.3.7}
+\contentsline {subsubsection}{\numberline {1.3.7}Robot Operating System}{4}{subsubsection.1.3.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.8}TurtleBot}{4}{subsubsection.1.3.8}
+\contentsline {subsubsection}{\numberline {1.3.8}gmapping}{4}{subsubsection.1.3.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.9}AscTec Pelican}{4}{subsubsection.1.3.9}
+\contentsline {subsubsection}{\numberline {1.3.9}TurtleBot}{4}{subsubsection.1.3.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Design}{4}{section.2}
+\contentsline {subsubsection}{\numberline {1.3.10}AscTec Pelican}{4}{subsubsection.1.3.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1}Computer Vision}{4}{subsection.2.1}
+\contentsline {section}{\numberline {2}Design}{5}{section.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1}Computer Vision}{5}{subsection.2.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {2.1.1}Target Finding}{5}{subsubsection.2.1.1}
 \defcounter {refsection}{0}\relax 
@@ -71,15 +73,15 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {2.5.2}RViz}{7}{subsubsection.2.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.6}Architecture}{8}{subsection.2.6}
+\contentsline {subsection}{\numberline {2.6}Architecture}{7}{subsection.2.6}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.7}Custom Nodes}{9}{subsection.2.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.7.1}Target Finding}{10}{subsubsection.2.7.1}
+\contentsline {subsubsection}{\numberline {2.7.1}Target Finding}{9}{subsubsection.2.7.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {2.7.2}Obstacle Finding}{10}{subsubsection.2.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.7.3}Limitations of Obstacle Finding Approach}{11}{subsubsection.2.7.3}
+\contentsline {subsubsection}{\numberline {2.7.3}Limitations of Obstacle Finding Approach}{10}{subsubsection.2.7.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {2.7.4}State Estimator}{11}{subsubsection.2.7.4}
 \defcounter {refsection}{0}\relax 
@@ -127,7 +129,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.5}Flying Robot}{19}{subsection.4.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Results - NOT DONE}{19}{section.5}
+\contentsline {section}{\numberline {5}Results}{19}{section.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.1}Finding Targets}{19}{subsection.5.1}
 \defcounter {refsection}{0}\relax 
@@ -137,23 +139,23 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.4}Path Finding}{20}{subsection.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Discussion}{20}{section.6}
+\contentsline {section}{\numberline {6}Discussion}{21}{section.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1}Overview}{20}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.1}Overview}{21}{subsection.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2}Flying Robot Requirements}{20}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.2}Flying Robot Requirements}{21}{subsection.6.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.3}Major Issues}{21}{subsection.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.4}Recommendations for Future Expansion}{21}{subsection.6.4}
+\contentsline {subsection}{\numberline {6.4}Recommendations for Future Expansion}{22}{subsection.6.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.5}Functional and Performance Requirements}{21}{subsection.6.5}
+\contentsline {subsection}{\numberline {6.5}Functional and Performance Requirements}{22}{subsection.6.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.6}Interface Requirements}{22}{subsection.6.6}
+\contentsline {subsection}{\numberline {6.6}Interface Requirements}{23}{subsection.6.6}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.7}Simulation Requirements}{23}{subsection.6.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.8}Implementation Requirements}{23}{subsection.6.8}
+\contentsline {subsection}{\numberline {6.8}Implementation Requirements}{24}{subsection.6.8}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.9}Schedule Requirements}{24}{subsection.6.9}
 \defcounter {refsection}{0}\relax 

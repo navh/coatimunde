@@ -95,7 +95,7 @@ This design of the project is shown, through design artifacts, and discussed in 
 	
 	\subsection{Background}
 	
-	The use of autonomous aerial vehicles is growing quickly, both in the consumer and professional sectors. Currently these vehicles rely on skilled pilots to accomplish a very limited set of tasks. Adding obstacle avoidance capabilities to these vehicles and simplifying the task of following targets could greatly expand the utility of these vehicles and allow for them to be used in many more situations. This section gives a quick background on obstacle avoidance, unmanned aircraft systems, computer vision, and the platforms we intend to use in this project.
+	The use of autonomous aerial vehicles is growing quickly, both in the consumer and professional sectors. Currently these vehicles rely on skilled pilots to accomplish a very limited set of tasks. Adding obstacle avoidance capabilities to these vehicles and simplifying the task of following targets could greatly expand the utility of these vehicles and allow for them to be used in many more situations. This section gives a quick background on obstacle avoidance, unmanned aircraft systems, computer vision, and the platforms intended for use in this project.
 
 		\subsubsection{Aim}
 	
@@ -116,7 +116,7 @@ This design of the project is shown, through design artifacts, and discussed in 
 	
 		The project started through the use of a ground robot and then progressing to a flying robot. The project used computer vision to find targets and for avoiding multiple obstacles. Both robots are highly autonomous, requiring only user input to commence. 
 
-		The scope of the project was limited due to being restricted to testing indoors. Ideally the unmanned aerial vehicle (UAV) would be operating at a high speed and identifying an arbitrary target in an unpredictable environment. In this case, the testing was completed within the confines of a relatively small robotics laboratory. Smaller obstacles were used indoors simply due to space constraints. Lower speeds were used as well, again due to the lack of space. 
+		The scope of the project is limited due to being restricted to testing indoors. Ideally the unmanned aerial vehicle (UAV) would be operating at a high speed and identifying an arbitrary target in an unpredictable environment. In this case, the testing is completed within the confines of a relatively small robotics laboratory. Smaller obstacles were used indoors simply due to space constraints. Lower speeds were used as well, again due to the lack of space. 
 
 
 		\subsubsection{Requirements}
@@ -132,7 +132,7 @@ This design of the project is shown, through design artifacts, and discussed in 
 		The most substantial changes came to the actual actions to be performed by each node. Given that the nodes were intentionally left fairly undefined and only their specific input and output were described, this allowed for fairly substantial changes to the underlying logic that allows these nodes to complete their tasks.
 
 
-This initial design has been changed since the document was presented. It was modified as unforeseen problems with the design came to light and deviations were made to ensure the project was meeting the requirements.
+This initial design has been changed since the document was presented. It was modified as unforeseen problems with the design came to light and deviations were made to ensure the project is meeting the requirements.
 
 
 		\subsubsection{Changes to Schedule}
@@ -157,21 +157,25 @@ This initial design has been changed since the document was presented. It was mo
 		
 		Very generally, any powered vehicle that uses aerodynamic forces to provide lift, without a human operator being carried, can be considered an unmanned aerial vehicle. Currently most of these vehicles make up a single component of a larger unmanned aircraft system. An Unmanned aircraft system (UAS), or remotely piloted aircraft system (RPAS), is an aircraft without a human pilot on-board, instead controlled by an operator on the ground. Such a system can have varying levels of autonomy, something as simple as a model aircraft could be considered a UAS without any automation capabilities.\cite{RPAS}
 		
+		\subsubsection{Quaternion}
+		
+		A quaternion is a four dimensional vector, in this project always represented as a matrix containing $[x,y,z,w]$ where the $x,y,$ and $z$ components are imaginary, and the last component $w$ is the real component. They were chosen for low computational cost, compatibility with ROS, and lack of gimbal lock which can occur with other representations of three dimensional space. Generally only the $z$ and $w$ components are used, representing a real distance and a rotation on a two dimensional plane.
+		
 		\subsubsection{Computer Vision}
 		
 		Currently there are many different ways that computers can make high-level decisions based on digital image information. There are many methods to acquire, process, and analyze data from the real world using a camera. While this is a very broad field, the intended focus is on motion estimation and object recognition, using a video stream taken from a camera. 
 		
 		Motion estimation can be accomplished using direct methods which compare whole fields of pixels to each other over successive frames, compared to other indirect methods which look for specific features. The information resulting from motion estimation streams can be used to both compensate for motion while analyzing other aspects of an image, and to update a state machine.
 		
-		Object recognition in our project will accomplish two tasks: identifying a marker or target which will require more involved object recognition calculations, and very simple techniques, such as edge detection, identifying obstacles that exist in the path of the robot.
+		Object recognition in this project will accomplish two tasks: identifying a marker or target which will require more involved object recognition calculations, and very simple techniques, such as edge detection, identifying obstacles that exist in the path of the robot.
 		
 		\subsubsection{OpenCV}
 		
-		The Open Source Computer Vision Library (OpenCV) of programming functions is a cross-platform and free for use collection of functions primarily aimed at real-time computer vision.\cite{opencv} Most well documented techniques to accomplish all of the computer vision goals of our project have already been created and refined in OpenCV.\cite{woods2015dynamic} For this reason this project utilized many preexisting OpenCV functions.
+		The Open Source Computer Vision Library (OpenCV) of programming functions is a cross-platform and free for use collection of functions primarily aimed at real-time computer vision.\cite{opencv} Most well documented techniques to accomplish all of the computer vision goals of this project have already been created and refined in OpenCV.\cite{woods2015dynamic} For this reason this project utilized many preexisting OpenCV functions.
 		
 		\subsubsection{Gazebo}
 		
-		Gazebo is a robot simulator that allows for the creation of a realistic environment which includes both obstacles and markers similar to those being used in the laboratory testing environment. It was then used to rapidly test algorithms.
+		Gazebo is a robot simulator that allows for the creation of a realistic environment which includes both obstacles and markers similar to those being used in the laboratory testing environment. It is then used to rapidly test algorithms.
 		
 		\subsubsection{Robot Operating System}
 		
@@ -184,7 +188,6 @@ This initial design has been changed since the document was presented. It was mo
 		While this process relies on laser information, and it is only ever used in its unmodified form for this project, the intent was to port it, so it would work with a slice from a depth registered image. This would allow it to work on a platform with only a single camera, a process that has been shown to turn a three-dimensional field into a two-dimensional map accurately.\cite{2018nanomap}
 		
 		
-		
 		\subsubsection{TurtleBot}
 		
 		The TurtleBot is a robot kit with open-source design and software. It is built to the specification for TurtleBot Compatible Platforms. \cite{wise_foote_2011} In this case the TurtleBot has a Kobuki Base, an Acer Netbook running Ubuntu with ROS packages added, an X-Box Kinect, and some mounting plates. 
@@ -193,20 +196,20 @@ This initial design has been changed since the document was presented. It was mo
 		
 		\subsubsection{AscTec Pelican}
 		
-		The Ascending Technologies Pelican is a 65.1cm by 65.1cm quad-copter designed for research purposes.\cite{asctec} It includes a camera, a high level and low level processor set up for computer vision, and simultaneous localization and mapping (SLAM) research. It is also capable of interfacing easily with other controllers and can carry up to a kilogram of additional gear. This particular flying robot comes installed with a single camera, that was used to collect stereo data and was later used for depth information.
+		The Ascending Technologies Pelican is a 65.1cm by 65.1cm quad-copter designed for research purposes.\cite{asctec} It includes a camera, a high level and low level processor set up for computer vision, and simultaneous localization and mapping (SLAM) research. It is also capable of interfacing easily with other controllers and can carry up to a kilogram of additional gear. This particular flying robot comes installed with a single camera, that is used to collect stereo data and is later used for depth information.
 
 		
 \section{Design}
 	
 	\subsection{Computer Vision}
 	
-	Computer vision as defined prior is acquiring, processing, and analyzing data from the real world using a camera. Computer vision identifies objects in the surrounding environment, specifically targets and obstacles. Computer vision was used as an input source for this project in seven unique manners; these are target finding,obstacle finding, pinhole camera, depth registered image, stereo depth estimation, \texttt{amcl}, and RViz. Computer vision was also attempted with optical flow but that was found to be out of the scope for the project. The implementation of these created a navigation kit that exclusively uses a camera as input, resulting in a very transferable and lightweight package for flying robots. Computer vision using a single camera is also a constraint of the design as laid out by the statement of requirements. \cite{sor}
+	Computer vision as defined prior is acquiring, processing, and analyzing data from the real world using a camera. Computer vision identifies objects in the surrounding environment, specifically targets and obstacles. Computer vision is used as an input source for this project in seven unique manners; these are target finding,obstacle finding, pinhole camera, depth registered image, stereo depth estimation, \texttt{amcl}, and RViz. Computer vision was also attempted with optical flow but that was found to be out of the scope for the project. The implementation of these created a navigation kit that exclusively uses a camera as input, resulting in a very transferable and lightweight package for flying robots. Computer vision using a single camera is also a constraint of the design as laid out by the statement of requirements. \cite{sor}
 	
 	The motivation behind choosing to use computer vision is due to the low cost and light weight sensor to add, and more importantly is often already found on most consumer drones. Creating a system which takes advantage of existing and inexpensive hardware means that this is a more portable solution. Many other sensor suites exist, but are not commonly found on consumer products.
 
 		\subsubsection{Target Finding}
 		
-		This project is limited to finding special targets designed to be easily identified in a busy environment. These targets are called ArUco markers. There are existing libraries in OpenCV that are useful for identifying ArUco markers with very little computational overhead. These algorithms have been demonstrated to be reliable on flying platforms. \cite{bacik2017autonomous} The identification of these targets was done through computer vision and extracting the key features from these markers. 
+		This project is limited to finding special targets designed to be easily identified in a busy environment. These targets are called ArUco markers. There are existing libraries in OpenCV that are useful for identifying ArUco markers with very little computational overhead. These algorithms have been demonstrated to be reliable on flying platforms. \cite{bacik2017autonomous} The identification of these targets is done through computer vision and extracting the key features from these markers. 
 		
 		No information about the markers is saved other than their location and a key value. In the future it would be easy to extend this target finding method to identify other types of targets.
 		
@@ -224,7 +227,7 @@ This initial design has been changed since the document was presented. It was mo
 		
 		The pinhole camera, in this context, is not an existing camera, but a mathematical construct which models the relationship between objects in three-dimensional space, and a projection onto an image plane. Images are grids of pixels, and ideally a straight line from any point on this grid, through a single point in front of the plane, would terminate at the real location in three-dimensional space of the object in the photo. Real cameras use lenses and imperfect capture devices which introduce distortion. This is ignored for the most part, and only objects in the centre of the camera's field of vision are used in this project, this is computationally inexpensive and allows software to be ported between different cameras quickly.
 		
-		The assumption that the normal camera acts sufficiently like a pinhole camera was used when only sampling objects from the center of the image, and when accurate directions are not necessary. By calibrating cameras using checker-board patterns, `camera matrices' and `distortion coefficient matrices' are obtained which can be applied to an image from a particular to allow for samples to be taken from it which behave like the pinhole model. When creating these matrices, using sets of more than one hundred images from many angles and distances ensures that these matrices are able to reduce distortion over all ranges encountered in the lab.
+		The assumption that the normal camera acts sufficiently like a pinhole camera is used when only sampling objects from the center of the image, and when accurate directions are not necessary. By calibrating cameras using checker-board patterns, `camera matrices' and `distortion coefficient matrices' are obtained which can be applied to an image from a particular to allow for samples to be taken from it which behave like the pinhole model. When creating these matrices, using sets of more than one hundred images from many angles and distances ensures that these matrices are able to reduce distortion over all ranges encountered in the lab.
 		
 		\subsubsection{Depth Registered Image}
 
@@ -237,7 +240,7 @@ A depth registered image is one where pixels hold an extra value. This value is 
 	
 	\subsection{Decision Making}
 	
-	To allow for the robot to complete its task of navigating toward targets while avoiding obstacles, a node which was capable of issuing movement instructions to the robot based on the input from the other nodes needed to be created. 
+	To allow for the robot to complete its task of navigating toward targets while avoiding obstacles, a node which is capable of issuing movement instructions to the robot based on the input from the other nodes needed to be created. 
 	
 The first solution is using potential fields. With potential fields, a robot perceives an attractive or repulsive force (represented by vectors) originating from objects in the environment. The robot achieves the required behaviour by appropriately reacting to these forces, expressed a single resulting force vector that is the sum of all perceived forces. \cite{hwang1992potential}
 
@@ -261,7 +264,7 @@ This algorithm is used for decision making as the robot does not have to build a
 
 	\subsection{Localization}
 	
-	The decision to use localization techniques was made to enable more complex decision making around denser sets of obstacles at lower speeds, something which is easier to create in the lab environment. 
+	The decision to use localization techniques is made to enable more complex decision making around denser sets of obstacles at lower speeds, something which is easier to create in the lab environment. 
 	
 	\subsubsection{\texttt{amcl}}
 	
@@ -280,7 +283,7 @@ This algorithm is used for decision making as the robot does not have to build a
 
 	\subsection{Architecture}
 	
-	The architecture of \textsc{coatimunde} can be seen in Figure \ref{fig:blockdiagram}. It is a very high level overview and does not contain references to most of the hardware in use for a main reason, the actual robot and laptop being used are relatively arbitrary as long as the software included is present on both. ROS also includes many nodes which are not represented on the block diagram. Only the nodes that are most important to our project have been specifically added to ROS, or have been custom created are included on our system block diagram.
+	The architecture of \textsc{coatimunde} can be seen in Figure \ref{fig:blockdiagram}. It is a very high level overview and does not contain references to most of the hardware in use for a main reason, the actual robot and laptop being used are relatively arbitrary as long as the software included is present on both. ROS also includes many nodes which are not represented on the block diagram. Only the nodes that are most important to this project have been specifically added to ROS, or have been custom created are included on this system block diagram.
 	
 	The laptop contains the initialization, target selection, and RViz. The laptop also takes the user input when necessary and processes it appropriately.  The robot does all the target identification, obstacle avoidance, and movement decisions autonomously. This means it takes the input from the camera into a video processing node and then creates a corresponding ROS message to be sent to the other systems on the robot. These messages are created and used throughout the different systems on the robot. The model of the robot's environment is found through subscribing to messages from the obstacle finder node, target finder node, and the state estimate node. This model then creates a message to pass to the route planning node which tells the movement node how to update its position and speed. 
 	
@@ -295,9 +298,9 @@ This algorithm is used for decision making as the robot does not have to build a
 
 	\subsection{Custom Nodes}
 	
- All of the nodes written for this project are written in Python and then built in ROS to be implemented on the robot. Python is used for this project because C++ and Python are the most supported languages for both ROS Nodes and OpenCV. While C++ could possibly be faster in execution, most of our bottlenecks occur from the actual processing of images. The library calls to OpenCV are still executing in the lower level C that OpenCV was written in, so there would be minimal gains had we written it in C++.
+ All of the nodes written for this project are written in Python and then built in ROS to be implemented on the robot. Python is used for this project because C++ and Python are the most supported languages for both ROS Nodes and OpenCV. While C++ could possibly be faster in execution, most of the bottlenecks occur from the actual processing of images. The library calls to OpenCV are still executing in the lower level C that OpenCV was written in, so there would be minimal gains if written in C++.
  
- The Camera node is referenced in many locations. The camera node is built into ROS and provides image data in various formats. Processes can subscribe to these different image formats. In general the raw image information is used by some of the custom nodes and many other built in nodes. Common transformations that must be applied to all photographs was added to the camera node. These transformations are to correct for the distortion that any camera has due to its own geometry.
+ The Camera node is referenced in many locations. The camera node is built into ROS and provides image data in various formats. Processes can subscribe to these different image formats. In general the raw image information is used by some of the custom nodes and many other built in nodes. Common transformations that must be applied to all photographs are added to the camera node. These transformations are to correct for the distortion that any camera has due to its own geometry.
 	
 	\subsubsection{Target Finding}
 	
@@ -348,13 +351,13 @@ This algorithm is used for decision making as the robot does not have to build a
 
 	State estimating from camera information is very difficult and computationally expensive. The TurtleBot has stepper motors that can measure distances fairly reliably, and the Quadcopter has accelerometers that provide changes in position more reliably than image information could. 
 	
-	Even given these fairly reliable sources of odometry, error in the robots knowledge of its location in the environment were shockingly error prone. The need for location estimation beyond dead reckoning is required, however, this was outside the scope of the project.
+	Even given these fairly reliable sources of odometry, error in the robots knowledge of its location in the environment were shockingly error prone. The need for location estimation beyond dead reckoning is required, however, this is outside the scope of the project.
 	
 	Creation of a reliable system to extract pose information from camera information is well beyond the scope of this project.
 	
 	These simpler forms of measuring the robot moving through the environment are used and the odometry node subscribed to the robot's odometry updates, according to Figure \ref{fig:state}. This node turns all state updates into quaternions and publishes them for the route planner. The route planning node then adjusts the vectors to nearby obstacles and targets according to how much the robot has moved. 
 	
-	New position estimates are provided at least 10 times every second in the form of a quaternion from the last position that the robot was in passed over a ROS message.
+	New position estimates are provided at least ten times every second in the form of a quaternion from the last position that the robot was in passed over a ROS message.
 	
 
 	\subsubsection{Route Planning}
@@ -385,7 +388,7 @@ This algorithm is used for decision making as the robot does not have to build a
 	
 	The navigation suite for ROS comes with many tools for more accurate state estimation. The biggest problem with PFinder v1 is the rate at which errors accumulate, making any attempts to navigate with the ground robot unsuccessful, and estimations on the flying robot are useless.
 	
-	The most interesting tool for our purposes is \texttt{amcl}. \texttt{amcl} is a localization system for robots moving in two dimensional planes. According to our scope both the TurtleBot and the flying robot should be able to do this using a very simple particle filter to track the pose of a robot. While this approach to probabilistic localization is the simplest, and therefore easiest to understand, it also relies heavily on a known map, something our project definition does not allow.
+	The most interesting tool for this project is \texttt{amcl}. \texttt{amcl} is a localization system for robots moving in two dimensional planes. According to the scope both the TurtleBot and the flying robot should be able to do this using a very simple particle filter to track the pose of a robot. While this approach to probabilistic localization is the simplest, and therefore easiest to understand, it also relies heavily on a known map, something this project definition does not allow.
 	
 	In a small lab environment with a fairly high density of objects, slower but more accurate movement is desirable. So the decision to quickly develop a map and then try to navigate this was made. GMapping was used to create a map on startup, and then \texttt{amcl} would be used to navigate this newly created map. New maps could be created any time the robot became lost, allowing for the use of very short-ranged sensors and to enable navigation of a mostly unknown environment.
 	
@@ -423,7 +426,7 @@ This algorithm is used for decision making as the robot does not have to build a
 	
 		\subsubsection{Pose Estimation}
 	
-		Initially feedback from inertial sensors is used for pose estimation, but ideally a version of Optical Flow is used to estimate the position of the robot in 3D space. There are some libraries in OpenCV that have addressed generalized pose estimation in 6 degrees of freedom, but it requires a significant amount of computational power, a higher frame rate than our goal of 10Hz to be used for real time performance, and hundreds of visual odometry measurements must be made in every frame requiring a visually busy background. None of these libraries were explored seriously after seeing how fast error accumulated with the presumably far simpler to access and more reliable inertial sensors on board the platforms being used. Any optical flow based solution to pose estimation would need to be combined with a very robust probabilistic model of robot motion to be of any use at all.
+		Initially feedback from inertial sensors is used for pose estimation, but ideally a version of Optical Flow is used to estimate the position of the robot in 3D space. There are some libraries in OpenCV that have addressed generalized pose estimation in 6 degrees of freedom, but it requires a significant amount of computational power, a higher frame rate than the goal of ten hertz to be used for real time performance, and hundreds of visual odometry measurements must be made in every frame requiring a visually busy background. None of these libraries were explored seriously after seeing how fast error accumulated with the presumably far simpler to access and more reliable inertial sensors on board the platforms being used. Any optical flow based solution to pose estimation would need to be combined with a very robust probabilistic model of robot motion to be of any use at all.
 		
 		\subsubsection{Dieter Fox's Monte Carlo Localization}
 		
@@ -538,7 +541,7 @@ This algorithm is used for decision making as the robot does not have to build a
 	
 	\subsubsection{coati\_odom tests}
 	
-	The incoming odometry data is parsed and passed along and the transformations are all very small due to the high frequency which this data arrives at. A stream of values output from the odometry node containing the odometry information was printed to the screen. This allows for confirmation that the values seen make sense with the movements the robot is currently performing. 
+	The incoming odometry data is parsed and passed along and the transformations are all very small due to the high frequency which this data arrives at. A stream of values output from the odometry node containing the odometry information is printed to the screen. This allows for confirmation that the values seen make sense with the movements the robot is currently performing. 
 	
 	To solely test this aspect of the project, the odometry node was used and the robot was turned by hand, and this still reports back an odometry result. This value is able to be tested much more accuracy as the exact movement is known and could be compared to the result from the odometry node. 
 
@@ -556,7 +559,7 @@ This algorithm is used for decision making as the robot does not have to build a
 	
 	Gazebo is a simulation environment that runs nodes that give similar input and output to nodes being executed on a real robot moving around in a real environment. This includes camera feeds, and allows for the insertion of obstacles and ArUco shapes. Testing of custom written nodes were done in Gazebo congruently with unit-tests to ensure that nodes which rely on subscribing to other nodes are behaving as expected before executing code on an actual robot.
 	
-	Gazebo ended up not being employed extensively due to the simplicity of actually executing code on the TurtleBot, combined with the difficulty of creating environments in Gazebo with all of the aspects we would like compared with the simplicity of moving boxes around in the lab and placing arbitrary ArUco markers wherever they were wanted.
+	Gazebo ended up not being employed extensively due to the simplicity of actually executing code on the TurtleBot, combined with the difficulty of creating environments in Gazebo with all of the aspects desired compared with the simplicity of moving boxes around in the lab and placing arbitrary ArUco markers wherever they were wanted.
 	
 	\subsection{Camera Tests}
 	
@@ -582,16 +585,7 @@ This algorithm is used for decision making as the robot does not have to build a
 	The cameras used in developing the monocular to depth vision were those mounted on the flying robots and the video collected was using these platforms. 
 
 	
-\section{Results - NOT DONE}
-
-	- presentation of results
-- prove we met the requirements
-
-- we need to get some data points to prove the target and obstacles are found
-- depth readings
-- able to move towards the target? 
-- talk about what happened with the obstacle avoidance and why it doesn't work
-
+\section{Results}
 
 \subsection{Finding Targets}
 
@@ -602,9 +596,9 @@ This algorithm is used for decision making as the robot does not have to build a
 	\label{fig:targ}
 \end{figure}
 
-Finding targets, especially how they were defined, is fairly simple to perform by leveraging existing libraries. Every image that is published to the camera topic on by the robot is taken in and saved both in colour and in grayscale. The grayscale image is then passed into an ArUco searching library, which returns an array containing arrays which contain the id and corners of every marker discovered in the image.
+Finding targets, especially how they were defined, is fairly simple to perform by leveraging existing libraries. Every image that is published to the camera topic on by the robot is taken in and saved both in colour and in grayscale. The grayscale image is then passed into an ArUco searching library, which returns an array containing arrays which contain the ID and corners of every marker discovered in the image.
 
-Overlaying these corners on the colour image, as well as outputing the id number and any other necessary information was the easiest way to ensure that this program was discovering targets reliably. This frame is then published as its own image topic, an example of this output is shown in Figure \ref{fig:targ}.
+Overlaying these corners on the colour image, as well as outputing the ID number and any other necessary information was the easiest way to ensure that this program was discovering targets reliably. This frame is then published as its own image topic, an example of this output is shown in Figure \ref{fig:targ}.
 
 \subsection{Extracting Depth Information}
 
@@ -619,8 +613,15 @@ Extracting depth information, while using the TurtleBot, was done by using the d
 
 \subsection{Compiling Odometry Information}
 
+Odometry information comes in two forms with the TurtleBot. These are called `pose' and `twist'. The `twist' messages represent instantaneous movement by the TurtleBot, and are used to update the model of where targets are located in the environment with the potential fields solution. These messages are harder to verify, as they represent only a small division of time. The `pose' message that comes along with every odometry message represents the accumulated `twist' messages since the robot has started moving. By moving the robot manually a known distance, it is possible to verify that the resulting `pose' is changed by the expected amount. Using this technique also gave insight into the relationship between the $w$ field of a quaternion and the $z$ rotation.
+
 \subsection{Path Finding}
 
+The expected behaviour is not observed. The robot, when using potential fields, would navigate until it approached a target, but when nearing it very unexpected behaviour would take place. 
+
+One of these emergent behaviours included `ramming' toward targets at high speeds and reporting that they are long distances away. Generally the robot would accurately report distance away from a robot between $1500mm$ and $800mm$, but when the target is occluded by the lid of the TurtleBot, it would quickly estimate that the target is kilometers away. The distances reported appeared to often be roughly $2\mathrm{e}{6}mm$ away, but given the forgiving nature of Python's duck typing, and testing with larger numbers, it is not believed that this is the result of any form of memory error or roll-over. 
+
+Another behaviour is when a target is on a solid wall; the robot would sometimes rapidly oscillate forward and backward violently. The robot accurately reports distances to both the target and the wall while oscillating. It is again assumed that this emergent behaviour is a result of over-estimating the change in the targets location when it is not being updated based on citing but instead when small quaternions are multiplied together.  
 
 \section{Discussion}
 
@@ -650,7 +651,7 @@ Not having a verified manner to parse depth information that could be implemente
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6\linewidth]{stereo}
-	\caption{Registered Depth Image}
+	\caption{Stereo Image Testing}
 	\label{fig:stereostereo}
 \end{figure}
 
@@ -666,7 +667,7 @@ The reactive and totally potential field based navigation is somewhat overkill w
 
 The \texttt{amcl}  approach is able to navigate quite complex environments, but would be useless in truly unknown environments or while moving at higher speeds. 
 
-Using either the pushbroom algorithm or some other mechanism of sensing depth in the environment would result in a significantly more reliable system, and modeling more things as vectors against a central `odom' or `map' point would also prevent accumulating errors from causing as many problems as our earlier pfinder modules ran in to.
+Using either the pushbroom algorithm or some other mechanism of sensing depth in the environment would result in a significantly more reliable system, and modeling more things as vectors against a central `odom' or `map' point would also prevent accumulating errors from causing as many problems as the earlier pfinder modules ran in to.
  
  \subsection{Functional and Performance Requirements}
 
@@ -706,7 +707,7 @@ PR-03 & The Flying Robot shall be able to navigate an environment and detect up 
 		\label{table:uavresults}
  \end{table}
 
-Given that the flying robot is not implemented, most of these requirements are not met simply for the reason that it is not possible to verify if our solutions did work as expected on the flying robot.
+Given that the flying robot is not implemented, most of these requirements are not met simply for the reason that it is not possible to verify if the solutions did work as expected on the flying robot.
 
  \subsection{Interface Requirements}
 
