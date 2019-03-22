@@ -596,36 +596,36 @@ Extracting depth information, while using the TurtleBot, was done by using the d
 
 \subsection{Overview}
 
-	The design chosen was very capable of moving toward targets under control, and could even recognize, in the most abstract sense of the term, obstacles in its environment. Using a totally reactive approach felt overly simplistic, and was not interesting especially given the extremely small working space the lab provided.
+	The design chosen is very capable of moving toward targets under control, and could even recognize, in the most abstract sense of the term, obstacles in its environment. Using a totally reactive approach felt overly simplistic, and is not interesting especially given the extremely small working space the lab provided.
 	
 	This caused the change in scope that resulted in this project not being ported to the flying robot. Instead of focusing on implementing an overly simplistic avoidance algorithm on an increasingly difficult platform to operate, the choice to build a greater memory into the program was made to allow for more complex obstacle avoidance.
 	
 	
 \subsection{Flying Robot Requirements}
 
-The majority of the requirements outlined were related to implementing code on a flying robot, so although there is existing solutions that have been verified to most of the requirements, the requirement that they be done on a flying robot leaves them not met.
+The majority of the requirements outlined are related to implementing code on a flying robot, so although there are existing solutions that have been verified to most of the requirements, the requirement that they be done on a flying robot leaves them not met.
 
-Given that all of our solutions have been left highly portable, there is no software bound reason that our solution would not execute the same on board the flying robot, but the difficulty of operating a flying robot has prevented us from having opportunities to verify that everything performs as expected.
+Given that all of the solutions have been left highly portable, there is no software bound reason that the solution would not execute the same on board the flying robot, but the difficulty of operating a flying robot has prevented the project from to verifying that everything performs as expected.
 
 \subsection{Major Issues}
 
-The biggest issue that plagued us for the entire duration of the project was the challenge of extracting depth information from a monocular camera. The flying robots only came with a monocular camera, and although initially we had intended to simply attach a second camera the decision to use this single camera was taken.
+The biggest issue for the entire duration of the project is the challenge of extracting depth information from a monocular camera. The flying robots only came with a monocular camera, and although initially it was intended to simply attach a second camera the decision to use this single camera was taken.
 
-After a significant amount of time trying to parse depth information using OpenCV modules, it was discovered that it may be easier to use some sort of approach rooted in more modern machine learning algorithms. One of the most successful implementations discovered, which also provided all information needed to create custom models from relatively simple training sets, was Chaoyang Wang's approach.\cite{Wang_2018_CVPR} 
+After a significant amount of time trying to parse depth information using OpenCV modules, it was discovered that it may be easier to use some sort of approach rooted in more modern machine learning algorithms. One of the most successful implementations discovered, which also provided all information needed to create custom models from relatively simple training sets, is Chaoyang Wang's approach.\cite{Wang_2018_CVPR} 
 
-The machine learning approach did provide interesting results, but it was never implemented into a depth module. The depth module simply used the hardware registered depth information that was available from the TurtleBot's onboard sensors. These sensors did provide very accurate information, but were implemented later than useful simply to allow for the development of other modules, and would not be able to be ported over to the flying robot. 
+The machine learning approach did provide interesting results, but it has never been implemented into a depth module. The depth module simply uses the hardware registered depth information that is available from the TurtleBot's onboard sensors. These sensors did provide very accurate information, but are implemented later than useful simply to allow for the development of other modules, and would not be able to be ported over to the flying robot. 
 
 Not having a verified manner to parse depth information that could be implemented on the flying robot left us wanting to push the driving platform to be able to perform more interesting obstacle avoidance.
 
 \subsection{Recommendations for Future Expansion}
 
-To expand further on this project, it would be necessary to find a testing environment that allows for more complex tests to take place. Even on the TurtleBot there were space limitations inside the lab to lay out obstacles in ways that could be navigated while still leaving far walls observable some of the time. 
+To expand further on this project, it would be necessary to find a testing environment that allows for more complex tests to take place. Even on the TurtleBot there are space limitations inside the lab to lay out obstacles in ways that could be navigated while still leaving far walls observable some of the time. 
 
 Obtaining permission to test in a larger enclosed space would enable far more testing on both the ground and flying platforms at speeds where the models used may actually be able to produce useful results. 
 
-The reactive and totally potential field based navigation was somewhat overkill when useful, and then when used with many obstacles and lower speeds became inadequate due to the way errors would accumulate.
+The reactive and totally potential field based navigation is somewhat overkill when useful, and then when used with many obstacles and lower speeds became inadequate due to the way errors would accumulate.
 
-The amcl approach was able to navigate quite complex environments, but would be useless in truly unknown environments or while moving at higher speeds. 
+The amcl approach is able to navigate quite complex environments, but would be useless in truly unknown environments or while moving at higher speeds. 
 
 Using either the pushbroom algorithm or some other mechanism of sensing depth in the environment would result in a significantly more reliable system, and modeling more things as vectors against a central `odom' or `map' point would also prevent accumulating errors from causing as many problems as our earlier pfinder modules ran in to.
  
