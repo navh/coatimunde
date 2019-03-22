@@ -1985,13 +1985,17 @@
     <bcf:citekey order="8">2018nanomap</bcf:citekey>
     <bcf:citekey order="9">wise_foote_2011</bcf:citekey>
     <bcf:citekey order="10">asctec</bcf:citekey>
-    <bcf:citekey order="11">doucet_freitas_gordon_2001</bcf:citekey>
-    <bcf:citekey order="12">hwang1992potential</bcf:citekey>
-    <bcf:citekey order="13">bortoff2000path</bcf:citekey>
-    <bcf:citekey order="14">barry2018high</bcf:citekey>
-    <bcf:citekey order="15">doucet_freitas_gordon_2001</bcf:citekey>
-    <bcf:citekey order="16">williams2010combining</bcf:citekey>
-    <bcf:citekey order="17">sor</bcf:citekey>
+    <bcf:citekey order="11">sor</bcf:citekey>
+    <bcf:citekey order="12">bacik2017autonomous</bcf:citekey>
+    <bcf:citekey order="13">hwang1992potential</bcf:citekey>
+    <bcf:citekey order="14">bortoff2000path</bcf:citekey>
+    <bcf:citekey order="15">barry2018high</bcf:citekey>
+    <bcf:citekey order="16">doucet_freitas_gordon_2001</bcf:citekey>
+    <bcf:citekey order="17">doucet_freitas_gordon_2001</bcf:citekey>
+    <bcf:citekey order="18">williams2010combining</bcf:citekey>
+    <bcf:citekey order="19">thrun2005probabilistic</bcf:citekey>
+    <bcf:citekey order="20">sor</bcf:citekey>
+    <bcf:citekey order="21">Wang_2018_CVPR</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

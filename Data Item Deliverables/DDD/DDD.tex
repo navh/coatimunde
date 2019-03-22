@@ -66,9 +66,13 @@
 
 We would like to thank our supervisor, Dr. Sidney Givigi, for first introducing us to the problem of real time obstacle avoidance and providing us access to the tools and robots we used to complete our work.
 
+\newpage
+
 \section*{Abstract}
 
 The C\textsc{coatimunde} project attempts to extract target and depth information from a single camera feed source using the Robot Operating System as both an underlying architecture and a design philosophy. Four custom `nodes' are created which interact with existing nodes necessary to execute Robot Operating System code. These nodes identify targets, identify depth information, record movement of the robot, and compile it into a single set of points which allow the program to send appropriate commands to the robot to navigate toward targets while avoiding obstacles.
+
+\newpage
 	
 \tableofcontents \newpage
 
@@ -117,13 +121,13 @@ This design of the project is shown, through design artifacts, and discussed in 
 
 		\subsubsection{Requirements}
 		
-		The requirements for the project are described in the Statement of Requirements (DID-03) \cite{sor}. The main functional requirements for this project were identification and movement towards a target within 15m radius and identification and avoidance of multiple obstacles. 
+		The requirements for the project are described in the Statement of Requirements (DID-03). \cite{sor} The main functional requirements for this project were identification and movement towards a target within 15m radius and identification and avoidance of multiple obstacles. 
 	
 		The initial requirements show certain assumptions that were made which can be attributed to ignorance at the time. The most notable of these is the use of a single video stream and exclusively OpenCV to parse depth data. It proved very difficult to extract reliable depth information from a single camera. Although initially a method using stereo cameras had been identified, the push-broom approach \cite{barry2015pushbroom} had been explored, it was abandoned due to a belief that depth from a single camera would be similarly visible, and thus constrained ourselves in the requirements phase to this.
 
 		\subsubsection{Preliminary Design}
 		
-		The preliminary design document outlines the initial design for the project \cite{pdd}. The initial design was fairly robust, but certain aspects had intentionally not yet been selected. The main block diagram Figure \ref{fig:blockdiagram} remains unchanged, the only additions are the specific topics being subscribed to by each of the custom modules. 
+		The preliminary design document outlines the initial design for the project. \cite{pdd} The initial design was fairly robust, but certain aspects had intentionally not yet been selected. The main block diagram Figure \ref{fig:blockdiagram} remains unchanged, the only additions are the specific topics being subscribed to by each of the custom modules. 
 		
 		The most substantial changes came to the actual actions to be performed by each node. Given that the nodes were intentionally left fairly undefined and only their specific input and output were described, this allowed for fairly substantial changes to the underlying logic that allows these nodes to complete their tasks.
 
@@ -163,7 +167,7 @@ This initial design has been changed since the document was presented. It was mo
 		
 		\subsubsection{OpenCV}
 		
-		The Open Source Computer Vision Library (OpenCV) of programming functions is a cross-platform and free for use collection of functions primarily aimed at real-time computer vision\cite{opencv}. Most well documented techniques to accomplish all of the computer vision goals of our project have already been created and refined in OpenCV.\cite{woods2015dynamic} For this reason this project utilized many preexisting OpenCV functions.
+		The Open Source Computer Vision Library (OpenCV) of programming functions is a cross-platform and free for use collection of functions primarily aimed at real-time computer vision.\cite{opencv} Most well documented techniques to accomplish all of the computer vision goals of our project have already been created and refined in OpenCV.\cite{woods2015dynamic} For this reason this project utilized many preexisting OpenCV functions.
 		
 		\subsubsection{Gazebo}
 		
@@ -180,30 +184,37 @@ This initial design has been changed since the document was presented. It was mo
 		While this process relies on laser information, and it is only ever used in its unmodified form for this project, the intent was to port it, so it would work with a slice from a depth registered image. This would allow it to work on a platform with only a single camera, a process that has been shown to turn a three-dimensional field into a two-dimensional map accurately.\cite{2018nanomap}
 		
 		
+		
 		\subsubsection{TurtleBot}
 		
-		The TurtleBot is a robot kit with open-source design and software. It is built to the specification for TurtleBot Compatible Platforms\cite{wise_foote_2011}. In this case the TurtleBot has a Kobuki Base, an Acer Netbook running Ubuntu with ROS packages added, an X-Box Kinect, and some mounting plates. 
+		The TurtleBot is a robot kit with open-source design and software. It is built to the specification for TurtleBot Compatible Platforms. \cite{wise_foote_2011} In this case the TurtleBot has a Kobuki Base, an Acer Netbook running Ubuntu with ROS packages added, an X-Box Kinect, and some mounting plates. 
 		
 		The resulting robot looks like a disk supporting some circular shelves with a small laptop and a camera on the shelves. The base disk is 35.4cm in diameter, the topmost shelf is 42cm from the ground. The robot has a maximum speed of 0.65m/s. 
 		
 		\subsubsection{AscTec Pelican}
 		
-		The Ascending Technologies Pelican is a 65.1cm by 65.1cm quad-copter designed for research purposes\cite{asctec}. It includes a camera, a high level and low level processor set up for computer vision, and simultaneous localization and mapping (SLAM) research. It is also capable of interfacing easily with other controllers and can carry up to a kilogram of additional gear. This particular flying robot comes installed with a single camera, that was used to collect stereo data and was later used for depth information.
+		The Ascending Technologies Pelican is a 65.1cm by 65.1cm quad-copter designed for research purposes.\cite{asctec} It includes a camera, a high level and low level processor set up for computer vision, and simultaneous localization and mapping (SLAM) research. It is also capable of interfacing easily with other controllers and can carry up to a kilogram of additional gear. This particular flying robot comes installed with a single camera, that was used to collect stereo data and was later used for depth information.
 
 		
 \section{Design}
 	
 	\subsection{Computer Vision}
 	
-	Computer vision as defined prior is acquiring, processing, and analyzing data from the real world using a camera. Computer vision identifies objects in the surrounding environment, specifically targets and obstacles. Computer vision was used as an input source for this project in seven unique manners; these are target finding,obstacle finding, pinhole camera, depth registered image, stereo depth estimation, amcl, and RViz. Computer vision was also attempted with optical flow but that was found to be out of the scope for the project. The implementation of these created a navigation kit that exclusively uses a camera as input, resulting in a very transferable and lightweight package for flying robots. Computer vision using a single camera is also a constraint of the design as laid out by the SOR \cite{sor}.
+	Computer vision as defined prior is acquiring, processing, and analyzing data from the real world using a camera. Computer vision identifies objects in the surrounding environment, specifically targets and obstacles. Computer vision was used as an input source for this project in seven unique manners; these are target finding,obstacle finding, pinhole camera, depth registered image, stereo depth estimation, \texttt{amcl}, and RViz. Computer vision was also attempted with optical flow but that was found to be out of the scope for the project. The implementation of these created a navigation kit that exclusively uses a camera as input, resulting in a very transferable and lightweight package for flying robots. Computer vision using a single camera is also a constraint of the design as laid out by the statement of requirements. \cite{sor}
+	
+	The motivation behind choosing to use computer vision is due to the low cost and light weight sensor to add, and more importantly is often already found on most consumer drones. Creating a system which takes advantage of existing and inexpensive hardware means that this is a more portable solution. Many other sensor suites exist, but are not commonly found on consumer products.
 
 		\subsubsection{Target Finding}
 		
-		While finding arbitrary targets is preferable, this project is limited to finding special targets designed to be easily identified in a busy environment. These targets are called ArUco shapes. There are existing libraries in OpenCV that are useful for identifying ArUco shapes with very little overhead. The identification of the targets was done through computer vision and extracting the key features from these markers. 
+		This project is limited to finding special targets designed to be easily identified in a busy environment. These targets are called ArUco markers. There are existing libraries in OpenCV that are useful for identifying ArUco markers with very little computational overhead. These algorithms have been demonstrated to be reliable on flying platforms. \cite{bacik2017autonomous} The identification of these targets was done through computer vision and extracting the key features from these markers. 
+		
+		No information about the markers is saved other than their location and a key value. In the future it would be easy to extend this target finding method to identify other types of targets.
 		
 		\subsubsection{Obstacle Finding}
 		
-		Finding obstacles is a considerable aspect of this project. There are various algorithms which leverage the robot's motion through the environment to extract key features of the environment, indicating the potential presence of obstacles. Parallax shift is the tendency for items that are closer to a camera to appear to move more or change in size more than a background that is further away. This shift can be used to indicate where items are and how close they are. Occlusion is where one item moves in front of another item and covers it up. When this occurs it indicates that the item still in view is closer to the camera than the item that has been hidden. OpenCV contains libraries for both of these tasks, as well as others that may end up being employed to identify obstacles in the environment.
+		Finding obstacles is a considerable aspect of this project. There are various algorithms which leverage the robot's motion through the environment to extract key features of the environment, indicating the potential presence of obstacles. Parallax shift is the tendency for items that are closer to a camera to appear to move more or change in size more than a background that is further away. This shift can be used to indicate where items are and how close they are. Occlusion is where one item moves in front of another item and covers it up. When this occurs it indicates that the item still in view is closer to the camera than the item that has been hidden. OpenCV contains libraries for both of these tasks.
+		
+		Instead of defining obstacles as geometric forms in the environment, both solutions sample distances in front of the robot and make decisions based on when objects that are not the target are nearing the robot.
 		
 		\subsubsection{Optical Flow}
 		
@@ -211,7 +222,9 @@ This initial design has been changed since the document was presented. It was mo
 		
 		\subsubsection{Pinhole Camera}
 		
-		The pinhole camera, in this context, is not an existing camera, but a mathematical construct which models the relationship between objects in three-dimensional space, and a projection onto an image plane. Images are grids of pixels, and ideally a straight line from any point on this grid, through a single point in front of the plane, would terminate at the real location in three-dimensional space of the object in the photo. Real cameras use lenses and imperfect capture devices which introduce distortion. This is ignored for the most part, and only objects in the centre of the camera's field of vision are used in this project, this is computationally inexpensive and allows software to be ported between different cameras quickly. 
+		The pinhole camera, in this context, is not an existing camera, but a mathematical construct which models the relationship between objects in three-dimensional space, and a projection onto an image plane. Images are grids of pixels, and ideally a straight line from any point on this grid, through a single point in front of the plane, would terminate at the real location in three-dimensional space of the object in the photo. Real cameras use lenses and imperfect capture devices which introduce distortion. This is ignored for the most part, and only objects in the centre of the camera's field of vision are used in this project, this is computationally inexpensive and allows software to be ported between different cameras quickly.
+		
+		The assumption that the normal camera acts sufficiently like a pinhole camera was used when only sampling objects from the center of the image, and when accurate directions are not necessary. By calibrating cameras using checker-board patterns, `camera matrices' and `distortion coefficient matrices' are obtained which can be applied to an image from a particular to allow for samples to be taken from it which behave like the pinhole model. When creating these matrices, using sets of more than one hundred images from many angles and distances ensures that these matrices are able to reduce distortion over all ranges encountered in the lab.
 		
 		\subsubsection{Depth Registered Image}
 
@@ -221,40 +234,49 @@ A depth registered image is one where pixels hold an extra value. This value is 
 		
 		By using two vantage points, depth information can be extracted by examining interesting points in the two vantage panels. Several pre-processing steps are required for this technique to be most effective, all of which are built in to OpenCV. Undoing distortion caused by cameras allows comparisons to be made between images and a three dimensional image to be rectified. This rectified image can be corrected using a known scale, then mapped back to one of the input images, creating a depth-registered image. The correction of distorted images is important as it ensures the depths read from the depth registered image are correct. As depth registered images are necessary for the project ensuring the values in these images is imperative.
 		
-		\subsubsection{amcl}
-		
-		amcl is a probabilistic localization system for a robot moving in two dimensional space. Using adaptive Monte Carlo localization \cite{doucet_freitas_gordon_2001} it is able to quickly estimate the pose of a robot against a known two dimensional map. It is implemented as an already existing node in the standard ROS navigation stack, a stack containing code related to finding where the robot is and how it can get somewhere else.
-		
-		\subsubsection{RViz}
-		
-		\begin{figure}[]
-			\centering
-			\includegraphics[width=0.5\linewidth]{rviz_screenshot}
-			\caption{RViz Visualization of amcl Localization in Angled Hallway}
-			\label{fig:rviz}
-		\end{figure}
-		
-		RViz is a visualization tool for ROS, it contains many tools to observe output from various ROS topics. Most notably, there are mechanisms that allow for the visualization of the amcl mapping and goal finding processes showing the robot is a point navigating a two dimensional birds-eye-view of what it perceives its environment looks like. An example of typical RViz output while running amcl is seen in Figure \ref{fig:rviz}.
 	
-	\subsection{Analyzing Trajectories}
+	\subsection{Decision Making}
 	
-	Analyzing trajectories is a term that refers to the robot completing movements towards the target.
-To do path planning, the project will implement potential fields. With potential fields, a robot perceives an attractive or repulsive force (represented by vectors) originating from objects in the environment. The robot achieves the required behaviour by appropriately  reacting to these forces, expressed a single resulting force vector that is the sum of all perceived forces \cite{hwang1992potential}.
-The use of potential fields allows for the path finding node to decide what movement, in the moment, is best to get closer to the target and further from obstacles.  
+	To allow for the robot to complete its task of navigating toward targets while avoiding obstacles, a node which was capable of issuing movement instructions to the robot based on the input from the other nodes needed to be created. 
+	
+The first solution is using potential fields. With potential fields, a robot perceives an attractive or repulsive force (represented by vectors) originating from objects in the environment. The robot achieves the required behaviour by appropriately reacting to these forces, expressed a single resulting force vector that is the sum of all perceived forces. \cite{hwang1992potential}
+
+The use of potential fields allows for the path finding node to decide what movement, in the moment, is best to get closer to the target and further from obstacles. 
  
-This algorithm was selected to do path planning as the robot will not have to build a map of the environment to create path to the target \cite{bortoff2000path}. Potential fields allow for the robot to change its path along the way if it discovers new obstacles. This approach to movement does not require complete knowledge of the environment it is navigating. In its simplest implementation the environment must be sparsely populated with obstacles, or simple things like straight lines can become `wall traps' and a robot can become impossibly lost.
+This algorithm is used for decision making as the robot does not have to build a map of the environment to create path to the target. \cite{bortoff2000path} Potential fields allow for the robot to change its path along the way if it discovers new obstacles. This approach to movement does not require complete knowledge of the environment it is navigating. In its simplest implementation the environment must be sparsely populated with obstacles, or simple things like straight lines can become `wall traps' and a robot can become impossibly lost.
 
 	\subsection{Obstacle Avoidance}
 	
 	There are multiple approaches to obstacle avoidance. The simplest require no prior knowledge of the environment they are navigating and simply react to obstacles as they appear. This approach can be useful for high-speed applications with sparse obstacles, \cite{barry2018high} but become more limited in smaller spaces.
 	
-	Using more complex algorithms that require more knowledge of the environment end up being easier when a complete map is saved. For this project the amcl localization system is used, which relies on a known map and fairly simple path planning algorithms which are able to solve more complex routes, at the expense of needing to spend more time estimating the robots position in the environment.\cite{doucet_freitas_gordon_2001}
+	Using more complex algorithms that require more knowledge of the environment end up being easier when a complete map is saved. For this project two solutions were created, the first uses a simple potential field which relies on no past environmental information. A second solution uses the \texttt{amcl} localization system, which relies on a known map and fairly simple path planning algorithms which are able to solve more complex routes, at the expense of needing to spend more time estimating the robots position in the environment.\cite{doucet_freitas_gordon_2001} To conform to the requirements set out for this project and to still effectively employ the \texttt{amcl} node, a map of the environment is constructed at run-time using gmapping meaning that the system is still able to navigate an unknown environment in real time.
 
 	\subsection{Unknown and Navigation Denied Environments}
 
 	The robot must always remember where identified targets and obstacles are in relation to itself even when its own position changes. Navigation denied means that the robot does not have access to a GPS to locate itself, so it must search its unknown environment to identify targets and obstacles. An unknown environment can be defined as an environment in which the robot has no prior knowledge of its surroundings and must identify objects in this environment itself through computer vision. 
-Target and obstacles are recorded and their vectors are updated in the potential fields to track the locations of each object. These vectors are used in the state machine to properly create a path to the target, as they are either negative for the target or positive for obstacles. This is the reason that the project is using potential fields to be able to plan the path to the target. 
+	
+	Targets and obstacles are recorded and their vectors are updated in the potential fields to track the locations of each object. These vectors are used in the state machine to allow the robot to move towards the target. Potential fields are negative for the target or positive for obstacles, and decisions are made based on minimizing the sum of the vectors. This solution causes unpredictable behaviour in obstacle dense environments, and close to targets which were near walls.
+	
+	A second solution for use in the lab environment creates a grid based map at run time and stores targets as absolute locations on this grid as it moves around and discovers obstacles in its environment. 
 
+	\subsection{Localization}
+	
+	The decision to use localization techniques was made to enable more complex decision making around denser sets of obstacles at lower speeds, something which is easier to create in the lab environment. 
+	
+	\subsubsection{\texttt{amcl}}
+	
+	\texttt{amcl} is a probabilistic localization system for a robot moving in two dimensional space. Using adaptive Monte Carlo localization \cite{doucet_freitas_gordon_2001} it is able to quickly estimate the pose of a robot against a known two dimensional map. It is implemented as an already existing node in the standard ROS navigation stack, a stack containing code related to finding where the robot is and how it can get somewhere else.
+	
+	\subsubsection{RViz}
+	
+	\begin{figure}[]
+		\centering
+		\includegraphics[width=0.5\linewidth]{rviz_screenshot}
+		\caption{RViz Visualization of \texttt{amcl} Localization in Angled Hallway}
+		\label{fig:rviz}
+	\end{figure}
+	
+	RViz is a visualization tool for ROS, it contains many tools to observe output from various ROS topics. Most notably, there are mechanisms that allow for the visualization of the \texttt{amcl} mapping and goal finding processes showing the robot is a point navigating a two dimensional birds-eye-view of what it perceives its environment looks like. An example of typical RViz output while running \texttt{amcl} is seen in Figure \ref{fig:rviz}. RViz serves as a verification tool to ensure that the robot is behaving as expected, properly drawing obstacles on the map as expected, and is aware of its own location in relation to those obstacles when planning paths around them. The obstacles, assumed location of the robot, and paths planned are all displayed in RViz.
 
 	\subsection{Architecture}
 	
@@ -361,15 +383,15 @@ Target and obstacles are recorded and their vectors are updated in the potential
 	
 	\subsubsection{PFinder v2}
 	
-	The navigation suite for ROS comes with many tools for more accurate state estimation. The biggest problem with PFinder v1 is the rate at which errors accumulate, making any attempts to navigate with the ground robot unsuccessful, and estimations on the flying robot are totally useless.
+	The navigation suite for ROS comes with many tools for more accurate state estimation. The biggest problem with PFinder v1 is the rate at which errors accumulate, making any attempts to navigate with the ground robot unsuccessful, and estimations on the flying robot are useless.
 	
-	The most interesting tool for our purposes is amcl. amcl is a localization system for robots moving in two dimensional planes. According to our scope both the TurtleBot and the flying robot should be able to do this using a very simple particle filter to track the pose of a robot. While this approach to probabilistic localization is the simplest, and therefore easiest to understand, it also relies heavily on a known map, something our project definition does not allow.
+	The most interesting tool for our purposes is \texttt{amcl}. \texttt{amcl} is a localization system for robots moving in two dimensional planes. According to our scope both the TurtleBot and the flying robot should be able to do this using a very simple particle filter to track the pose of a robot. While this approach to probabilistic localization is the simplest, and therefore easiest to understand, it also relies heavily on a known map, something our project definition does not allow.
 	
-	In a small lab environment with a fairly high density of objects, slower but more accurate movement is desirable. So the decision to quickly develop a map and then try to navigate this was made. GMapping was used to create a map on startup, and then amcl would be used to navigate this newly created map. New maps could be created any time the robot became lost, allowing for the use of very short-ranged sensors and to enable navigation of a mostly unknown environment.
+	In a small lab environment with a fairly high density of objects, slower but more accurate movement is desirable. So the decision to quickly develop a map and then try to navigate this was made. GMapping was used to create a map on startup, and then \texttt{amcl} would be used to navigate this newly created map. New maps could be created any time the robot became lost, allowing for the use of very short-ranged sensors and to enable navigation of a mostly unknown environment.
 	
 	The PFinder v2 first rotates in place while running the gmapping node and records the locations in real space of all of the ArUco markers that are discovered using the existing output. These points are then stored in an array relative to the absolute position of a fixed marker, defined arbitrarily by the gmapping node. At the same time, gmapping is creating a map using laser depth information from the Astra Pro, although the intention is to modify this behaviour to allow it to record information from the depth-registered image the depth node is still generating from the camera output.
 	
-	Once a full rotation has been performed, the amcl node is launched, and PFinder provides a user with targets to select from. Once a user has selected a target for the robot to navigate toward its absolute location is passed into the \texttt{/move\_base\_simple/goal} topic as a goal to which ROS has existing logic to navigate toward. Solving the navigation to this goal is achieved using both the map created initially, overlaid with any currently occupied areas discovered by amcl. amcl naturally updates these locations based on current laser data, and removes them if an obstacle is removed. This allows for the robot to make very accurate decisions while avoiding obstacles in real time. 
+	Once a full rotation has been performed, the \texttt{amcl} node is launched, and PFinder provides a user with targets to select from. Once a user has selected a target for the robot to navigate toward its absolute location is passed into the \texttt{/move\_base\_simple/goal} topic as a goal to which ROS has existing logic to navigate toward. Solving the navigation to this goal is achieved using both the map created initially, overlaid with any currently occupied areas discovered by \texttt{amcl}. \texttt{amcl} naturally updates these locations based on current laser data, and removes them if an obstacle is removed. This allows for the robot to make very accurate decisions while avoiding obstacles in real time. 
 	
 	\subsection{Node Diagram}
 
@@ -393,7 +415,7 @@ Target and obstacles are recorded and their vectors are updated in the potential
 	
 		\subsubsection{Initial Approach to Robot in 3D Space}
 		
-		The robot itself needs to remember where it is located in its environment. Remembering where targets are located relative to the robot is necessary, and presumably remembering the locations of obstacles are used as well. Using quaternion vectors relative to the robot allows for simple transformations on these vectors while using very little computational power \cite{williams2010combining}. ROS contains methods and messages to easily communicate, convert, and apply transformations to quaternions.
+		The robot itself needs to remember where it is located in its environment. To enable navigation between multiple targets, and continuing to navigate toward obstacles while they are occluded by obstacles, remembering where targets are located relative to the robot is necessary. Using quaternion vectors relative to the robot allows for simple transformations on these vectors while using very little computational power. \cite{williams2010combining} ROS contains methods and messages to easily communicate, convert, and apply transformations to quaternions.
 		
 		The limitations to this approach are the limited accuracy of the very small quaternions that result from real time odometry information from the robot, and the rate at which error accumulates when blindly trusting all robot odometry. 
 		
@@ -404,6 +426,8 @@ Target and obstacles are recorded and their vectors are updated in the potential
 		Initially feedback from inertial sensors is used for pose estimation, but ideally a version of Optical Flow is used to estimate the position of the robot in 3D space. There are some libraries in OpenCV that have addressed generalized pose estimation in 6 degrees of freedom, but it requires a significant amount of computational power, a higher frame rate than our goal of 10Hz to be used for real time performance, and hundreds of visual odometry measurements must be made in every frame requiring a visually busy background. None of these libraries were explored seriously after seeing how fast error accumulated with the presumably far simpler to access and more reliable inertial sensors on board the platforms being used. Any optical flow based solution to pose estimation would need to be combined with a very robust probabilistic model of robot motion to be of any use at all.
 		
 		\subsubsection{Dieter Fox's Monte Carlo Localization}
+		
+		Monte Carlo localization dictates \texttt{amcl}'s pose estimation and path planning.\cite{thrun2005probabilistic} An understanding of this technique was necessary to extend the behaviour of \texttt{amcl}.
 		
 		This approach to real-time localization attempts to find a match between a robot's current laser scan, and a known laser map generated before-hand. This is done using a particle filter, which is updated based on information from the robot's odometry information. 
 		
@@ -499,19 +523,23 @@ Target and obstacles are recorded and their vectors are updated in the potential
 	\subsubsection{coati\_target tests}
 	
 	The target node is the easiest to verify, as it is only looking for the markers in their positions within an image. Testing the robot's ability to identify the targets was done by writing the identification number (ID) of the found marker on the screen. Each ArUco maker has a unique ID number associated with it. Writing the ID number is possible as the ArUco marker library has tools built in to draw an outline around the images, and write the number on the screen. 
-When a marker with a known ID number is placed in the line of sight for the robot, the expected behaviour is that the ID number displayed on the screen matches that of the known value. As well the box drawn around the marker is expected to be properly outlining the ArUco marker. In the final version of the target node, the ID number is placed in the upper left corner of the image to allow other information to be placed on the image. Both tests functioning mean that the robot is able to properly identify ArUco markers. 
+	
+	When a marker with a known ID number is placed in the line of sight for the robot, the expected behaviour is that the ID number displayed on the screen matches that of the known value. As well the box drawn around the marker is expected to be properly outlining the ArUco marker. In the final version of the target node, the ID number is placed in the upper left corner of the image to allow other information to be placed on the image, this was used to determine that depth finding behaviour was as expected. Both tests functioning mean that the robot is able to properly identify ArUco markers and determine their distance. 
 	
 	\subsubsection{coati\_depth tests}
 	
 	The depth node requires more extensive verification. It exists in two forms, but the version that was verified is using the depth registered images which combine lidar and camera feeds into a unified image. A qualitative test was conducted, in which images from the lidar/camera were normalized and a colour gradient corresponding to pixel depth was applied. Images consisted of objects at various depths, and it is expected that objects will be colour coded according to their depth, with <colour> representing close objects and <other colour> representing farther objects. 
-For more accurate testing, objects of known distances are checked against the value generated in the program. The range of distances tested were ?-?m. The expected accuracy of the readings were ???. The depth reading matching those of the known distances means the depth node is able to properly parse out depth information from the depth registered image.
- The depth readings being accurate ensure that robot custom nodes can properly build the potential fields and met the requirements for the project through moving towards the target and avoiding obstacles. 
+	
+	For more accurate testing, objects of known distances are checked against the value generated in the program. The range of distances tested were $600-15000mm$. The expected accuracy of the readings were $\pm 150mm$, normally done by counting the 12 inch tiles in the lab. The depth reading matching those of the known distances means the depth node is able to properly parse out depth information from the depth registered image.
 
-RESULTS- After verifying that the depth registered versions of images are accurate, the depth registered images from the combined sensor source are used as a reference to verify other methods of parsing depth information.
+	The depth readings being accurate ensure that robot custom nodes can properly build the potential fields and met the requirements for the project through moving towards the target and avoiding obstacles. 
+
+	After verifying that the depth registered versions of images are accurate, the depth registered images from the combined sensor source are used as a reference to verify other methods of parsing depth information.
 	
 	\subsubsection{coati\_odom tests}
 	
 	The incoming odometry data is parsed and passed along and the transformations are all very small due to the high frequency which this data arrives at. A stream of values output from the odometry node containing the odometry information was printed to the screen. This allows for confirmation that the values seen make sense with the movements the robot is currently performing. 
+	
 	To solely test this aspect of the project, the odometry node was used and the robot was turned by hand, and this still reports back an odometry result. This value is able to be tested much more accuracy as the exact movement is known and could be compared to the result from the odometry node. 
 
 	If a version of odometry was created that did try to use optical flow from visual information, it would be possible to compare the values it generated against those collected by the sensors on the robot.
@@ -521,6 +549,8 @@ RESULTS- After verifying that the depth registered versions of images are accura
 	PFinder is the highest level of logic on the robot, and therefore relied on all of the lower level nodes co-operating. 
 	
 	Given that all of the other nodes were verified independently, it was obvious that the unexpected and undesirable behaviour, most notably just driving directly into targets, was a result of over-reliance on odometry information and errors in the models being used. 
+	
+	The expected behaviour would be for the robot to navigate toward markers in a predictable and intentional manner while avoiding obstacles. Given that this was not accomplished, efforts to measure the accuracy with which it was doing so was not possible.
 	
 	\subsection{Gazebo}
 	
@@ -543,7 +573,7 @@ RESULTS- After verifying that the depth registered versions of images are accura
 	
 	\subsection{Ground Based Robot}
 	
-	Testing the code on a ground based robot was necessary to ensure that the logic in the movement nodes is sound. Initial testing was done through simply having the robot follow moving targets or turn to face targets that are not head on. Initially simply watching the robot move away from obstacles was considered sufficient testing. When the project was sufficiently developed the testing was having the robot avoid obstacles and move towards a target. As the project moved closer to porting to the flying robot, the ground robot was tested to ensure it met the requirement outlined in the SOR \cite{sor}. 
+	Testing the code on a ground based robot was necessary to ensure that the logic in the movement nodes is sound. Initial testing was done through simply having the robot follow moving targets or turn to face targets that are not head on. Initially simply watching the robot move away from obstacles was considered sufficient testing. When the project was sufficiently developed the testing was having the robot avoid obstacles and move towards a target. As the project moved closer to porting to the flying robot, the ground robot was tested to ensure it met the requirement outlined in the statement of requirements. \cite{sor}
 
 	\subsection{Flying Robot}
 	
@@ -596,7 +626,7 @@ Extracting depth information, while using the TurtleBot, was done by using the d
 
 \subsection{Overview}
 
-	The design chosen was very capable of moving toward targets under control, and could even recognize, in the most abstract sense of the term, obstacles in its environment. Using a totally reactive approach felt overly simplistic, and was not interesting especially given the extremely small working space the lab provided.
+	The design chosen was very capable of moving toward targets under control, and could even recognize, in the most abstract sense of the term, obstacles in its environment. Using a reactive approach felt overly simplistic, and was not interesting especially given the extremely small working space the lab provided.
 	
 	This caused the change in scope that resulted in this project not being ported to the flying robot. Instead of focusing on implementing an overly simplistic avoidance algorithm on an increasingly difficult platform to operate, the choice to build a greater memory into the program was made to allow for more complex obstacle avoidance.
 	
@@ -617,15 +647,24 @@ The machine learning approach did provide interesting results, but it was never 
 
 Not having a verified manner to parse depth information that could be implemented on the flying robot left us wanting to push the driving platform to be able to perform more interesting obstacle avoidance.
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\linewidth]{stereo}
+	\caption{Registered Depth Image}
+	\label{fig:stereostereo}
+\end{figure}
+
+In figure \ref{fig:stereostereo} output from an attempt to combine stereo data and depth information to create a training set which can be used in the Wang \cite{Wang_2018_CVPR} approach to parsing depth information can be seen. While over 57000 synchronized pairs of images were collected in the lab, these images were not used to train a model, only used to verify attempts to parse depth information from stereo imagery.
+
 \subsection{Recommendations for Future Expansion}
 
 To expand further on this project, it would be necessary to find a testing environment that allows for more complex tests to take place. Even on the TurtleBot there were space limitations inside the lab to lay out obstacles in ways that could be navigated while still leaving far walls observable some of the time. 
 
 Obtaining permission to test in a larger enclosed space would enable far more testing on both the ground and flying platforms at speeds where the models used may actually be able to produce useful results. 
 
-The reactive and totally potential field based navigation was somewhat overkill when useful, and then when used with many obstacles and lower speeds became inadequate due to the way errors would accumulate.
+The reactive and potential field based navigation was somewhat overkill when useful, and then when used with many obstacles and lower speeds became inadequate due to the way errors would accumulate.
 
-The amcl approach was able to navigate quite complex environments, but would be useless in truly unknown environments or while moving at higher speeds. 
+The \texttt{amcl} approach was able to navigate quite complex environments, but would be useless in truly unknown environments or while moving at higher speeds. 
 
 Using either the pushbroom algorithm or some other mechanism of sensing depth in the environment would result in a significantly more reliable system, and modeling more things as vectors against a central `odom' or `map' point would also prevent accumulating errors from causing as many problems as our earlier pfinder modules ran in to.
  

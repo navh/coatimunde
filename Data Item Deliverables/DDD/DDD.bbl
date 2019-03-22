@@ -303,6 +303,50 @@
       \verb http://www.asctec.de/en/uav-uas-drones-rpas-roav/asctec-pelican/
       \endverb
     \endentry
+    \entry{bacik2017autonomous}{article}{}
+      \name{author}{4}{}{%
+        {{hash=3eee47e3760f11bc072a31584d5c2727}{%
+           family={Bacik},
+           familyi={B\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=ac6b856bc00501c0fafc8bcbbcfb22e1}{%
+           family={Durovsky},
+           familyi={D\bibinitperiod},
+           given={Frantisek},
+           giveni={F\bibinitperiod}}}%
+        {{hash=78363abc5b801cc20c71532996df6cda}{%
+           family={Fedor},
+           familyi={F\bibinitperiod},
+           given={Pavol},
+           giveni={P\bibinitperiod}}}%
+        {{hash=50076ee897381984618cf2ffcb962c43}{%
+           family={Perdukova},
+           familyi={P\bibinitperiod},
+           given={Daniela},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{6c6f4f1667a35951c0f6199cca1737f5}
+      \strng{fullhash}{d616de4f4b1f927a52bbbe61b5b4e8c3}
+      \strng{bibnamehash}{d616de4f4b1f927a52bbbe61b5b4e8c3}
+      \strng{authorbibnamehash}{d616de4f4b1f927a52bbbe61b5b4e8c3}
+      \strng{authornamehash}{6c6f4f1667a35951c0f6199cca1737f5}
+      \strng{authorfullhash}{d616de4f4b1f927a52bbbe61b5b4e8c3}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Intelligent Service Robotics}
+      \field{number}{3}
+      \field{title}{Autonomous flying with quadrocopter using fuzzy control and ArUco markers}
+      \field{volume}{10}
+      \field{year}{2017}
+      \field{pages}{185\bibrangedash 194}
+      \range{pages}{10}
+    \endentry
     \entry{hwang1992potential}{article}{}
       \name{author}{2}{}{%
         {{hash=7320daa7ddc93afce7b8c8b7115ff5bd}{%
@@ -470,6 +514,78 @@
       \field{year}{2010}
       \field{pages}{3494\bibrangedash 3500}
       \range{pages}{7}
+    \endentry
+    \entry{thrun2005probabilistic}{book}{}
+      \name{author}{3}{}{%
+        {{hash=5112ea130eadef0764fce0145b8b9f91}{%
+           family={Thrun},
+           familyi={T\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+        {{hash=98f4ab1bc2ac191d8f8a0651315ce9c0}{%
+           family={Burgard},
+           familyi={B\bibinitperiod},
+           given={Wolfram},
+           giveni={W\bibinitperiod}}}%
+        {{hash=93b0c4a7857a82a8f94e256475887c74}{%
+           family={Fox},
+           familyi={F\bibinitperiod},
+           given={Dieter},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {MIT press}%
+      }
+      \strng{namehash}{cb3e97dbc1e8d4a631a5b656776c23d3}
+      \strng{fullhash}{cb3e97dbc1e8d4a631a5b656776c23d3}
+      \strng{bibnamehash}{cb3e97dbc1e8d4a631a5b656776c23d3}
+      \strng{authorbibnamehash}{cb3e97dbc1e8d4a631a5b656776c23d3}
+      \strng{authornamehash}{cb3e97dbc1e8d4a631a5b656776c23d3}
+      \strng{authorfullhash}{cb3e97dbc1e8d4a631a5b656776c23d3}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Probabilistic robotics}
+      \field{year}{2005}
+    \endentry
+    \entry{Wang_2018_CVPR}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=e49ed018aec5a87191f4d44b232aea34}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Chaoyang},
+           giveni={C\bibinitperiod}}}%
+        {{hash=2d59ccca16500d940d4a09f93ca166e6}{%
+           family={Miguel\bibnamedelima Buenaposada},
+           familyi={M\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={José},
+           giveni={J\bibinitperiod}}}%
+        {{hash=a409fcd3e2f9ae4fd6790ca28b9be27a}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Rui},
+           giveni={R\bibinitperiod}}}%
+        {{hash=061075e8245a617dab62fc875f316a39}{%
+           family={Lucey},
+           familyi={L\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{6a60663a1fbf74c1f1e50a7c85dbdb2a}
+      \strng{fullhash}{8198dd825fb361a18575e09403dd2b39}
+      \strng{bibnamehash}{8198dd825fb361a18575e09403dd2b39}
+      \strng{authorbibnamehash}{8198dd825fb361a18575e09403dd2b39}
+      \strng{authornamehash}{6a60663a1fbf74c1f1e50a7c85dbdb2a}
+      \strng{authorfullhash}{8198dd825fb361a18575e09403dd2b39}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)}
+      \field{month}{6}
+      \field{title}{Learning Depth From Monocular Videos Using Direct Methods}
+      \field{year}{2018}
     \endentry
   \enddatalist
 \endrefsection

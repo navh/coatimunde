@@ -1,15 +1,17 @@
 [0] Config.pm:302> INFO - This is Biber 2.11
 [0] Config.pm:305> INFO - Logfile is 'DDD.blg'
-[42] biber-MSWIN64:313> INFO - === 
-[76] Biber.pm:371> INFO - Reading 'DDD.bcf'
-[181] Biber.pm:857> INFO - Found 15 citekeys in bib section 0
-[199] Biber.pm:3976> INFO - Processing section 0
-[217] Biber.pm:4136> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
-[221] bibtex.pm:1500> INFO - LaTeX decoding ...
-[245] bibtex.pm:1316> INFO - Found BibTeX data source 'bibliography.bib'
-[340] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[341] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[341] Biber.pm:3804> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[341] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
-[357] bbl.pm:617> INFO - Writing 'DDD.bbl' with encoding 'UTF-8'
-[363] bbl.pm:720> INFO - Output to DDD.bbl
+[38] biber-MSWIN64:313> INFO - === 
+[72] Biber.pm:371> INFO - Reading 'DDD.bcf'
+[190] Biber.pm:857> INFO - Found 18 citekeys in bib section 0
+[208] Biber.pm:3976> INFO - Processing section 0
+[225] Biber.pm:4136> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
+[229] bibtex.pm:1500> INFO - LaTeX decoding ...
+[256] bibtex.pm:1316> INFO - Found BibTeX data source 'bibliography.bib'
+[351] Utils.pm:193> WARN - month field 'June' in entry 'Wang_2018_CVPR' is not an integer - this will probably not sort properly.
+[378] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[378] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[378] Biber.pm:3804> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[378] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
+[399] bbl.pm:617> INFO - Writing 'DDD.bbl' with encoding 'UTF-8'
+[405] bbl.pm:720> INFO - Output to DDD.bbl
+[409] Biber.pm:110> INFO - WARNINGS: 1
